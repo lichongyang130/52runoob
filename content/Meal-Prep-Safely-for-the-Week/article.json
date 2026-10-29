@@ -175,7 +175,7 @@
           "title": "Reheat until it is hot and steaming through",
           "body": "Leftovers of any kind should reach a hundred and sixty-five degrees Fahrenheit before you eat them. In a microwave, cover the food, stir or rotate it partway through, then let it stand for a minute so the heat evens out, because microwaves leave cold spots that a quick stir will not fix. Check with a thermometer rather than judging by how hot the outside feels.",
           "tip": "Reheat only the portion you are about to eat. Heating and cooling a whole batch repeatedly burns through the time you have left.",
-          "imageTodo": {
+          "image": {
             "base": "14-reheat",
             "alt": "A bowl of food being lifted out of a microwave with a cloth, steam rising from the surface."
           }
@@ -184,7 +184,7 @@
           "title": "Throw out anything you cannot account for",
           "body": "If a container is unlabelled, has been in the fridge longer than four days, or was left out overnight, discard it. Food that has spent hours in the danger zone can look, smell and taste entirely normal, because the bacteria that cause illness are not the ones that cause spoilage. Tasting a doubtful portion is not a test of whether it is safe; it is the exposure itself.",
           "tip": "Clear and wipe the fridge on the same day each week. It takes five minutes and it resets the whole system.",
-          "imageTodo": {
+          "image": {
             "base": "15-discard",
             "alt": "A container being emptied into a kitchen caddy beside the sink, with a washed container draining on the rack."
           }
@@ -276,18 +276,15 @@
     "wordCount": null,
     "internalLinkCount": 3,
     "imageCount": 16,
-    "imagePending": 2,
+    "imagePending": 0,
     "expertReviewed": false,
     "reviewNote": "Food-safety guidance. A suitably qualified human reviewer must check every temperature, time limit and storage window against current USDA FSIS and FoodSafety.gov material before publication; no human review has happened in this repository."
   },
   "imageStatus": {
     "heroReady": true,
-    "stepImagesReady": 13,
-    "stepImagesPending": [
-      "14-reheat",
-      "15-discard"
-    ],
-    "note": "14 of 16 illustrations drawn. 2 still outstanding; the guide cannot be packaged or published until every one is present."
+    "stepImagesReady": 15,
+    "stepImagesPending": [],
+    "note": "All illustrations were drawn for this guide; none are reused from another article."
   },
   "dateModified": "2026-10-30"
 }

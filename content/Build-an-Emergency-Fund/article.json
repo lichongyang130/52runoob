@@ -31,7 +31,7 @@
   "media": {
     "hero": {
       "base": "00-hero",
-      "alt": "A person at a kitchen table in evening light with a notebook, a laptop and a cup of tea, working through a list of figures."
+      "alt": "A person sitting at a kitchen table in evening lamplight, pencil in hand over an open notebook, with a closed laptop and a cup of tea beside them and dusk at the window."
     },
     "style": "Naturalistic hand-painted editorial illustration, soft oil-and-watercolor texture, warm muted palette; scenes vary by step.",
     "stylePending": [],
@@ -46,7 +46,7 @@
           "title": "Write down the last three unplanned expenses you had",
           "body": "Before choosing a target, look backwards. Go through a year of statements and pull out the costs you did not plan for: the car repair, the boiler, the dental bill, the last-minute flight. The CFPB suggests exactly this, on the grounds that the emergencies most likely to hit you are the kind that already have. Three real numbers from your own life beat any general rule about months of expenses.",
           "tip": "Include the ones you put on a credit card. Those are precisely the emergencies the fund exists to replace.",
-          "imageTodo": {
+          "image": {
             "base": "01-past-expenses",
             "alt": "A person at a desk turning through a stack of printed bank statements, with a pen and a calculator beside them."
           }
@@ -55,7 +55,7 @@
           "title": "Set a first milestone you can reach",
           "body": "A target of six months of expenses is paralysing when you are starting from nothing. Pick a first milestone that is visible from where you stand: enough to cover the typical surprise you found in step one, or a round number you could reach in three or four months. Hitting a small target changes behaviour far more reliably than admiring a large one for a year.",
           "tip": "Write the milestone somewhere you will see it. A goal that lives only in your head quietly moves.",
-          "imageTodo": {
+          "image": {
             "base": "02-first-milestone",
             "alt": "A hand pressing a pale sticky note onto the edge of a laptop screen on a tidy desk."
           }
@@ -64,7 +64,7 @@
           "title": "Keep it separate from everything else",
           "body": "Put the fund in its own account, at a different institution from your current account if that helps. Money sitting next to your everyday balance gets spent without a decision ever being made, because it never looks like a separate thing. A named account with its own balance makes every withdrawal deliberate, and that friction is the entire mechanism.",
           "tip": "Name the account for what it is. 'Emergency fund' is harder to raid than 'Savings 2'.",
-          "imageTodo": {
+          "image": {
             "base": "03-separate-account",
             "alt": "A phone held above a kitchen table, its screen showing two soft panels of colour, with a cup of tea beside it."
           }
@@ -73,7 +73,7 @@
           "title": "Decide in advance what counts as an emergency",
           "body": "Write a short list and keep it with the account: loss of income, medical costs, urgent home or vehicle repairs, travel for a family crisis. Then write what does not count, which is usually the harder list. Deciding this in the calm beforehand is far more reliable than deciding in the moment, when every expense feels urgent and the money is sitting right there.",
           "tip": "A holiday deposit is not an emergency. Save for that separately so the two never compete for the same balance.",
-          "imageTodo": {
+          "image": {
             "base": "04-define-emergency",
             "alt": "A small card propped against a lidded jar on a kitchen shelf, with a pen resting across it."
           }
@@ -82,9 +82,9 @@
           "title": "Work out what you can move each payday",
           "body": "Look at the gap between what comes in and what has to go out, then commit a fixed amount from that gap. If your income varies, set the figure against your worst recent month rather than your best. The size matters less than whether it survives a bad month untouched, because a contribution you cancel twice becomes a contribution you stop making altogether.",
           "tip": "If the honest answer is a very small amount, start there anyway. The habit is the asset; the balance follows it.",
-          "imageTodo": {
+          "image": {
             "base": "05-payday-amount",
-            "alt": "A notebook page ruled into two columns beside an open laptop, with a pen and a coffee cup on the desk."
+            "alt": "An open notebook seen from above with handwritten columns down both pages and a pen resting in the gutter, an open laptop at the top of the desk and a coffee cup to one side."
           }
         }
       ]
@@ -97,7 +97,7 @@
           "title": "Automate the transfer for payday",
           "body": "Set up a recurring transfer that leaves your current account the day after you are paid, not at the end of the month. The CFPB puts automatic transfers near the top of its list of saving strategies for a reason: money moved before you see it is not an argument you have to win every month. Month-end transfers compete with whatever is left, which is frequently nothing.",
           "tip": "If your pay date shifts, set the transfer a day later rather than earlier. A failed transfer can trigger a fee.",
-          "imageTodo": {
+          "image": {
             "base": "06-automate",
             "alt": "Hands setting up a transfer on a laptop at a kitchen table, with a bank card lying beside the keyboard."
           }
@@ -106,7 +106,7 @@
           "title": "Start small enough that you never cancel it",
           "body": "The most common failure is setting an ambitious figure, feeling the squeeze for two months, then switching the whole thing off. Pick an amount you would barely notice leaving, run it for three months, then raise it. An automatic transfer that has run uninterrupted for a year is worth more than one twice the size that keeps getting paused and restarted.",
           "tip": "Raise the amount on the day a pay rise lands, before the new figure turns into normal spending.",
-          "imageTodo": {
+          "image": {
             "base": "07-start-small",
             "alt": "A small stack of coins and a few folded notes on a table beside a glass jar, lit by a window."
           }
@@ -276,21 +276,14 @@
     "wordCount": null,
     "internalLinkCount": 3,
     "imageCount": 16,
-    "imagePending": 16,
+    "imagePending": 8,
     "expertReviewed": false,
     "reviewNote": "Personal-finance guidance (YMYL). A suitably qualified human reviewer must check the savings, debt-priority and deposit-protection statements, and confirm the jurisdiction they apply to, before publication; no human review has happened in this repository."
   },
   "imageStatus": {
-    "heroReady": false,
-    "stepImagesReady": 0,
+    "heroReady": true,
+    "stepImagesReady": 7,
     "stepImagesPending": [
-      "01-past-expenses",
-      "02-first-milestone",
-      "03-separate-account",
-      "04-define-emergency",
-      "05-payday-amount",
-      "06-automate",
-      "07-start-small",
       "08-windfall",
       "09-bill-timing",
       "10-track-progress",
@@ -300,7 +293,7 @@
       "14-use-fund",
       "15-refill"
     ],
-    "note": "0 of 16 illustrations drawn. 16 still outstanding; the guide cannot be packaged or published until every one is present."
+    "note": "8 of 16 illustrations drawn. 8 still outstanding; the guide cannot be packaged or published until every one is present."
   },
   "dateModified": "2026-10-30"
 }

@@ -1,5 +1,3 @@
-> DRAFT — do not publish or package: 2 of 16 illustrations are still missing, and the article has not been reviewed by a person.
-
 # How to Meal Prep Safely for the Week
 
 *Batch cooking saves time and money right up until a container sits out too long. The safety part is four numbers and one habit.*
@@ -132,7 +130,7 @@ Anything you will not eat within four days should go into the freezer on the day
 
 ### Step 14 — Reheat until it is hot and steaming through
 
-> IMAGE PENDING for step 14: A bowl of food being lifted out of a microwave with a cloth, steam rising from the surface.
+![A bowl of food being lifted out of a microwave with a cloth, steam rising from the surface.](images/14-reheat-960.webp)
 
 Leftovers of any kind should reach a hundred and sixty-five degrees Fahrenheit before you eat them. In a microwave, cover the food, stir or rotate it partway through, then let it stand for a minute so the heat evens out, because microwaves leave cold spots that a quick stir will not fix. Check with a thermometer rather than judging by how hot the outside feels.
 
@@ -140,7 +138,7 @@ Leftovers of any kind should reach a hundred and sixty-five degrees Fahrenheit b
 
 ### Step 15 — Throw out anything you cannot account for
 
-> IMAGE PENDING for step 15: A container being emptied into a kitchen caddy beside the sink, with a washed container draining on the rack.
+![A container being emptied into a kitchen caddy beside the sink, with a washed container draining on the rack.](images/15-discard-960.webp)
 
 If a container is unlabelled, has been in the fridge longer than four days, or was left out overnight, discard it. Food that has spent hours in the danger zone can look, smell and taste entirely normal, because the bacteria that cause illness are not the ones that cause spoilage. Tasting a doubtful portion is not a test of whether it is safe; it is the exposure itself.
 

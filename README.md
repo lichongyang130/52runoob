@@ -13,11 +13,11 @@
 - `downloads/First-5K-Upload.zip`：上述稿件的独立网页和人工上传素材包；页面上有待审校提示。
 - `content/Repot-a-Houseplant/`：15 步英文稿，16 张插画全部为本文新制，体检 0 error；素材包 `downloads/Repot-a-Houseplant-Upload.zip`。待真人审校，未发布。
 - `content/Plan-a-Run-Walk-Workout/`：15 步英文稿，16 张插画全部为本文新制，体检 0 error；素材包 `downloads/Run-Walk-Workout-Upload.zip`。待真人审校，未发布。
-- `downloads/All-5-Articles-Upload.zip`：5 篇成稿的合集包，内含各篇独立文件夹与一个本地总目录页；每篇内容与对应单篇包逐字节一致。
+- `downloads/All-6-Articles-Upload.zip`：6 篇成稿的合集包，内含各篇独立文件夹与一个本地总目录页；每篇内容与对应单篇包逐字节一致。
 - `content/Back-Up-Your-Photos/`：15 步英文稿，16 张插画全部为本文新制，体检 0 error；素材包 `downloads/Back-Up-Your-Photos-Upload.zip`。待真人审校，未发布。
 - `content/Check-Your-Tire-Pressure/`（Cars and Other Vehicles）：15 步英文稿，16 张插画全部为本文新制，体检 0 error；资料取自 NHTSA；素材包 `downloads/Check-Your-Tire-Pressure-Upload.zip`。待真人审校，未发布。
-- `content/Meal-Prep-Safely-for-the-Week/`（Food and Entertaining）：15 步英文文字稿已完成，资料取自 USDA FSIS 与 FoodSafety.gov；**配图 14/16**，还缺 2 张。
-- `content/Build-an-Emergency-Fund/`（Finance and Business）：15 步英文文字稿已完成，资料取自 CFPB；**配图 0/16**。
+- `content/Meal-Prep-Safely-for-the-Week/`（Food and Entertaining）：15 步英文稿，16 张插画全部为本文新制，体检 0 error；资料取自 USDA FSIS 与 FoodSafety.gov；素材包 `downloads/Meal-Prep-Safely-for-the-Week-Upload.zip`。待食品安全专业人士审校，未发布。
+- `content/Build-an-Emergency-Fund/`（Finance and Business）：15 步英文文字稿已完成，资料取自 CFPB；**配图 8/16**（封面 + 步骤 1–7），还缺 8 张。
 - 缺图稿件无法通过质量检查，因此不打包、不算完成；缺图清单见 `article.json` 的 `imageStatus.stepImagesPending`。未绘制的步骤在 JSON 里用 `imageTodo` 而非 `image`，这是测试强制的约定。
 - `preview/All-Finished-Articles.html`：仓库内成稿目录页，由 `tools/make_preview_index.py` 生成，缺图稿会被拒绝列入。
 - 其余 88 篇为选题，尚未完成正文与配图。`expanded-plan.csv` 是进度记录，不要将选题当成成品。

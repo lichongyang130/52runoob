@@ -1,4 +1,4 @@
-> DRAFT — do not publish or package: 16 of 16 illustrations are still missing, and the article has not been reviewed by a person.
+> DRAFT — do not publish or package: 8 of 16 illustrations are still missing, and the article has not been reviewed by a person.
 
 # How to Build an Emergency Fund
 
@@ -18,13 +18,13 @@
 
 An emergency fund is a cash reserve set aside for the unplanned: a car repair, a boiler, a medical bill, a month without work. The Consumer Financial Protection Bureau makes a point of not prescribing a single figure, because the right size depends entirely on how exposed you are. What it does say is that the people who struggle most after a financial shock are the ones with nothing set aside, who end up on credit cards or pulling from retirement savings to cover a cost that was never really a surprise. This guide builds the fund from the other end: a target you can see from where you are standing, an automatic transfer you will not cancel, and a written rule about what the money is for.
 
-![A person at a kitchen table in evening light with a notebook, a laptop and a cup of tea, working through a list of figures.](images/00-hero-1600.webp)
+![A person sitting at a kitchen table in evening lamplight, pencil in hand over an open notebook, with a closed laptop and a cup of tea beside them and dusk at the window.](images/00-hero-1600.webp)
 
 ## Part 1 of 3 — Set a Target You Will Actually Hit
 
 ### Step 1 — Write down the last three unplanned expenses you had
 
-> IMAGE PENDING for step 1: A person at a desk turning through a stack of printed bank statements, with a pen and a calculator beside them.
+![A person at a desk turning through a stack of printed bank statements, with a pen and a calculator beside them.](images/01-past-expenses-960.webp)
 
 Before choosing a target, look backwards. Go through a year of statements and pull out the costs you did not plan for: the car repair, the boiler, the dental bill, the last-minute flight. The CFPB suggests exactly this, on the grounds that the emergencies most likely to hit you are the kind that already have. Three real numbers from your own life beat any general rule about months of expenses.
 
@@ -32,7 +32,7 @@ Before choosing a target, look backwards. Go through a year of statements and pu
 
 ### Step 2 — Set a first milestone you can reach
 
-> IMAGE PENDING for step 2: A hand pressing a pale sticky note onto the edge of a laptop screen on a tidy desk.
+![A hand pressing a pale sticky note onto the edge of a laptop screen on a tidy desk.](images/02-first-milestone-960.webp)
 
 A target of six months of expenses is paralysing when you are starting from nothing. Pick a first milestone that is visible from where you stand: enough to cover the typical surprise you found in step one, or a round number you could reach in three or four months. Hitting a small target changes behaviour far more reliably than admiring a large one for a year.
 
@@ -40,7 +40,7 @@ A target of six months of expenses is paralysing when you are starting from noth
 
 ### Step 3 — Keep it separate from everything else
 
-> IMAGE PENDING for step 3: A phone held above a kitchen table, its screen showing two soft panels of colour, with a cup of tea beside it.
+![A phone held above a kitchen table, its screen showing two soft panels of colour, with a cup of tea beside it.](images/03-separate-account-960.webp)
 
 Put the fund in its own account, at a different institution from your current account if that helps. Money sitting next to your everyday balance gets spent without a decision ever being made, because it never looks like a separate thing. A named account with its own balance makes every withdrawal deliberate, and that friction is the entire mechanism.
 
@@ -48,7 +48,7 @@ Put the fund in its own account, at a different institution from your current ac
 
 ### Step 4 — Decide in advance what counts as an emergency
 
-> IMAGE PENDING for step 4: A small card propped against a lidded jar on a kitchen shelf, with a pen resting across it.
+![A small card propped against a lidded jar on a kitchen shelf, with a pen resting across it.](images/04-define-emergency-960.webp)
 
 Write a short list and keep it with the account: loss of income, medical costs, urgent home or vehicle repairs, travel for a family crisis. Then write what does not count, which is usually the harder list. Deciding this in the calm beforehand is far more reliable than deciding in the moment, when every expense feels urgent and the money is sitting right there.
 
@@ -56,7 +56,7 @@ Write a short list and keep it with the account: loss of income, medical costs, 
 
 ### Step 5 — Work out what you can move each payday
 
-> IMAGE PENDING for step 5: A notebook page ruled into two columns beside an open laptop, with a pen and a coffee cup on the desk.
+![An open notebook seen from above with handwritten columns down both pages and a pen resting in the gutter, an open laptop at the top of the desk and a coffee cup to one side.](images/05-payday-amount-960.webp)
 
 Look at the gap between what comes in and what has to go out, then commit a fixed amount from that gap. If your income varies, set the figure against your worst recent month rather than your best. The size matters less than whether it survives a bad month untouched, because a contribution you cancel twice becomes a contribution you stop making altogether.
 
@@ -66,7 +66,7 @@ Look at the gap between what comes in and what has to go out, then commit a fixe
 
 ### Step 6 — Automate the transfer for payday
 
-> IMAGE PENDING for step 6: Hands setting up a transfer on a laptop at a kitchen table, with a bank card lying beside the keyboard.
+![Hands setting up a transfer on a laptop at a kitchen table, with a bank card lying beside the keyboard.](images/06-automate-960.webp)
 
 Set up a recurring transfer that leaves your current account the day after you are paid, not at the end of the month. The CFPB puts automatic transfers near the top of its list of saving strategies for a reason: money moved before you see it is not an argument you have to win every month. Month-end transfers compete with whatever is left, which is frequently nothing.
 
@@ -74,7 +74,7 @@ Set up a recurring transfer that leaves your current account the day after you a
 
 ### Step 7 — Start small enough that you never cancel it
 
-> IMAGE PENDING for step 7: A small stack of coins and a few folded notes on a table beside a glass jar, lit by a window.
+![A small stack of coins and a few folded notes on a table beside a glass jar, lit by a window.](images/07-start-small-960.webp)
 
 The most common failure is setting an ambitious figure, feeling the squeeze for two months, then switching the whole thing off. Pick an amount you would barely notice leaving, run it for three months, then raise it. An automatic transfer that has run uninterrupted for a year is worth more than one twice the size that keeps getting paused and restarted.
 
