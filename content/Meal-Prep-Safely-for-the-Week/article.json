@@ -73,7 +73,7 @@
           "title": "Check the fridge is actually cold enough",
           "body": "A refrigerator needs to hold food at forty degrees Fahrenheit or below, and a freezer at zero. The dial on the door is a setting, not a measurement. Put a cheap appliance thermometer on the middle shelf and read it after a full day. Fridges that are packed solid, or opened constantly, often run several degrees warmer than the dial suggests.",
           "tip": "Leave a gap at the back of each shelf. Cold air has to circulate, and a crammed fridge develops warm pockets.",
-          "imageTodo": {
+          "image": {
             "base": "04-fridge-temp",
             "alt": "An open refrigerator with a small dial thermometer resting on the middle shelf among stacked containers of food."
           }
@@ -82,7 +82,7 @@
           "title": "Start with clean hands and clean surfaces",
           "body": "Wash your hands with soap and warm water for at least twenty seconds before you start, and again after handling raw meat, poultry, eggs or fish. Wipe down the worktop and put out a fresh cloth rather than the one that has been beside the sink since Tuesday. Most cross-contamination in a home kitchen travels on hands, cloths and the handle of the fridge door.",
           "tip": "Twenty seconds is longer than it feels. It is roughly as long as humming a chorus twice through.",
-          "imageTodo": {
+          "image": {
             "base": "05-clean-hands",
             "alt": "Soapy hands under a running tap at a kitchen sink, with a clean folded towel on the worktop beside it."
           }
@@ -97,7 +97,7 @@
           "title": "Keep raw meat away from everything else",
           "body": "Give raw meat, poultry and fish their own board and their own corner of the worktop, and keep them on the lowest shelf of the fridge where nothing can drip onto the food below. Prepare vegetables and anything you will eat uncooked first, while the surfaces are still clean. Wash the board, the knife and your hands before they touch anything ready to eat.",
           "tip": "Two boards in different colours cost very little and take the decision out of your hands entirely.",
-          "imageTodo": {
+          "image": {
             "base": "06-separate-raw",
             "alt": "Two chopping boards set apart on a worktop, one holding sliced vegetables and the other raw chicken pieces."
           }
@@ -106,16 +106,16 @@
           "title": "Cook each food to its safe internal temperature",
           "body": "The targets are specific rather than general. Poultry of every kind, including ground poultry and any stuffing cooked inside a bird, needs 165 degrees Fahrenheit. Ground meat and sausage need 160. Whole cuts of beef, pork, lamb and veal need 145 with a three-minute rest, and fish 145 or until the flesh separates easily with a fork. Egg dishes land at 160 and casseroles at 165.",
           "tip": "Tape the temperature chart inside a cupboard door. Nobody memorises six numbers in the first week.",
-          "imageTodo": {
+          "image": {
             "base": "07-safe-temps",
-            "alt": "A probe thermometer pushed into the thickest part of a roasted chicken breast resting on a baking tray."
+            "alt": "A hand pushing a probe thermometer into a whole roasted chicken resting on a baking tray, steam rising, a folded cloth under the tray."
           }
         },
         {
           "title": "Trust the thermometer, not the colour",
           "body": "Browning tells you about the heat at the surface, not in the middle. Minced beef can turn grey well before it is safe, and a chicken thigh can look done while the centre is still short. Push the probe into the thickest part, away from bone and away from the pan itself, and wait for the reading to settle before you pull it out.",
           "tip": "Check the thickest piece in the batch, not the convenient one at the edge of the tray.",
-          "imageTodo": {
+          "image": {
             "base": "08-probe-thickest",
             "alt": "A hand holding a digital probe thermometer in a pan of browned minced meat on a hob."
           }
@@ -124,7 +124,7 @@
           "title": "Divide hot food into shallow containers",
           "body": "A deep pot of stew left on the hob can take hours to cool through the middle, and improper cooling of cooked food is one of the most common causes of foodborne illness. Portion everything into shallow containers no more than about two inches deep, leave the lids ajar while the steam escapes, and spread them across the worktop instead of stacking them.",
           "tip": "A tray of cold water in the sink under the containers pulls heat out far faster than air alone.",
-          "imageTodo": {
+          "image": {
             "base": "09-shallow-containers",
             "alt": "Several shallow containers of stew and rice spread across a worktop with steam rising, their lids resting beside them."
           }
@@ -133,7 +133,7 @@
           "title": "Get it into the fridge within two hours",
           "body": "Cooked food must be refrigerated at forty degrees or below within two hours of leaving the heat, or within one hour if the kitchen is above ninety. Bacteria multiply fastest between forty and a hundred and forty degrees, doubling in number in as little as twenty minutes. You do not need to wait for food to reach room temperature first; a modern fridge copes perfectly well with warm containers.",
           "tip": "Start a timer when the pot comes off the hob. Two hours vanishes quickly while you are washing up.",
-          "imageTodo": {
+          "image": {
             "base": "10-two-hour-rule",
             "alt": "Hands sliding a covered container of food onto a refrigerator shelf beside other stacked containers."
           }
@@ -148,7 +148,7 @@
           "title": "Label every container with the date",
           "body": "Write the date the food was cooked on a strip of masking tape and press it onto the lid. Memory is unreliable after three days and useless after five, and a tub of something brown with no date is a tub you will eventually throw out untouched. Labelling also means anyone else in the house can use the food instead of buying lunch.",
           "tip": "Write the day it was cooked, not the day it should be eaten. One is a fact and the other is a guess.",
-          "imageTodo": {
+          "image": {
             "base": "11-label-date",
             "alt": "A hand pressing a strip of masking tape onto the lid of a food container, with a marker pen lying on the worktop."
           }
@@ -157,16 +157,16 @@
           "title": "Work to the three-to-four-day rule",
           "body": "Cooked meat and poultry, soups, stews and pasta dishes keep three to four days in the refrigerator. Egg, chicken, ham, tuna and macaroni salads are the same. That window is about safety rather than taste, and it does not reset because the food still smells fine. Arrange the shelf so the oldest container sits at the front and gets eaten first.",
           "tip": "Sunday cooking reaches Wednesday or Thursday, not Friday. Plan the back half of the week as a separate exercise.",
-          "imageTodo": {
+          "image": {
             "base": "12-rotate-shelf",
-            "alt": "An open refrigerator shelf with labelled containers lined up front to back, a hand reaching for the one nearest the front."
+            "alt": "An open refrigerator shelf with containers lined up front to back, each with a small strip of pale tape on its lid, and a hand lifting out the one nearest the front."
           }
         },
         {
           "title": "Freeze what you will not reach in time",
           "body": "Anything you will not eat within four days should go into the freezer on the day it is cooked, not on day three when half of it has already gone. Food held continuously at zero degrees Fahrenheit stays safe indefinitely, and the time limits printed on freezer charts are about quality rather than risk. Cooked meat and poultry hold their texture for two to six months.",
           "tip": "Freeze flat in bags rather than in tubs. Flat portions stack, thaw faster and take up half the space.",
-          "imageTodo": {
+          "image": {
             "base": "13-freeze-portions",
             "alt": "Flat sealed bags of cooked food stacked in a freezer drawer, one being slid into the gap between the others."
           }
@@ -276,28 +276,18 @@
     "wordCount": null,
     "internalLinkCount": 3,
     "imageCount": 16,
-    "imagePending": 12,
+    "imagePending": 2,
     "expertReviewed": false,
     "reviewNote": "Food-safety guidance. A suitably qualified human reviewer must check every temperature, time limit and storage window against current USDA FSIS and FoodSafety.gov material before publication; no human review has happened in this repository."
   },
   "imageStatus": {
     "heroReady": true,
-    "stepImagesReady": 3,
+    "stepImagesReady": 13,
     "stepImagesPending": [
-      "04-fridge-temp",
-      "05-clean-hands",
-      "06-separate-raw",
-      "07-safe-temps",
-      "08-probe-thickest",
-      "09-shallow-containers",
-      "10-two-hour-rule",
-      "11-label-date",
-      "12-rotate-shelf",
-      "13-freeze-portions",
       "14-reheat",
       "15-discard"
     ],
-    "note": "4 of 16 illustrations drawn. 12 still outstanding; the guide cannot be packaged or published until every one is present."
+    "note": "14 of 16 illustrations drawn. 2 still outstanding; the guide cannot be packaged or published until every one is present."
   },
   "dateModified": "2026-10-30"
 }

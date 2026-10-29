@@ -1,4 +1,4 @@
-> DRAFT — do not publish or package: 12 of 16 illustrations are still missing, and the article has not been reviewed by a person.
+> DRAFT — do not publish or package: 2 of 16 illustrations are still missing, and the article has not been reviewed by a person.
 
 # How to Meal Prep Safely for the Week
 
@@ -48,7 +48,7 @@ Pick up chilled and frozen items last, pack them together in one bag, and go str
 
 ### Step 4 — Check the fridge is actually cold enough
 
-> IMAGE PENDING for step 4: An open refrigerator with a small dial thermometer resting on the middle shelf among stacked containers of food.
+![An open refrigerator with a small dial thermometer resting on the middle shelf among stacked containers of food.](images/04-fridge-temp-960.webp)
 
 A refrigerator needs to hold food at forty degrees Fahrenheit or below, and a freezer at zero. The dial on the door is a setting, not a measurement. Put a cheap appliance thermometer on the middle shelf and read it after a full day. Fridges that are packed solid, or opened constantly, often run several degrees warmer than the dial suggests.
 
@@ -56,7 +56,7 @@ A refrigerator needs to hold food at forty degrees Fahrenheit or below, and a fr
 
 ### Step 5 — Start with clean hands and clean surfaces
 
-> IMAGE PENDING for step 5: Soapy hands under a running tap at a kitchen sink, with a clean folded towel on the worktop beside it.
+![Soapy hands under a running tap at a kitchen sink, with a clean folded towel on the worktop beside it.](images/05-clean-hands-960.webp)
 
 Wash your hands with soap and warm water for at least twenty seconds before you start, and again after handling raw meat, poultry, eggs or fish. Wipe down the worktop and put out a fresh cloth rather than the one that has been beside the sink since Tuesday. Most cross-contamination in a home kitchen travels on hands, cloths and the handle of the fridge door.
 
@@ -66,7 +66,7 @@ Wash your hands with soap and warm water for at least twenty seconds before you 
 
 ### Step 6 — Keep raw meat away from everything else
 
-> IMAGE PENDING for step 6: Two chopping boards set apart on a worktop, one holding sliced vegetables and the other raw chicken pieces.
+![Two chopping boards set apart on a worktop, one holding sliced vegetables and the other raw chicken pieces.](images/06-separate-raw-960.webp)
 
 Give raw meat, poultry and fish their own board and their own corner of the worktop, and keep them on the lowest shelf of the fridge where nothing can drip onto the food below. Prepare vegetables and anything you will eat uncooked first, while the surfaces are still clean. Wash the board, the knife and your hands before they touch anything ready to eat.
 
@@ -74,7 +74,7 @@ Give raw meat, poultry and fish their own board and their own corner of the work
 
 ### Step 7 — Cook each food to its safe internal temperature
 
-> IMAGE PENDING for step 7: A probe thermometer pushed into the thickest part of a roasted chicken breast resting on a baking tray.
+![A hand pushing a probe thermometer into a whole roasted chicken resting on a baking tray, steam rising, a folded cloth under the tray.](images/07-safe-temps-960.webp)
 
 The targets are specific rather than general. Poultry of every kind, including ground poultry and any stuffing cooked inside a bird, needs 165 degrees Fahrenheit. Ground meat and sausage need 160. Whole cuts of beef, pork, lamb and veal need 145 with a three-minute rest, and fish 145 or until the flesh separates easily with a fork. Egg dishes land at 160 and casseroles at 165.
 
@@ -82,7 +82,7 @@ The targets are specific rather than general. Poultry of every kind, including g
 
 ### Step 8 — Trust the thermometer, not the colour
 
-> IMAGE PENDING for step 8: A hand holding a digital probe thermometer in a pan of browned minced meat on a hob.
+![A hand holding a digital probe thermometer in a pan of browned minced meat on a hob.](images/08-probe-thickest-960.webp)
 
 Browning tells you about the heat at the surface, not in the middle. Minced beef can turn grey well before it is safe, and a chicken thigh can look done while the centre is still short. Push the probe into the thickest part, away from bone and away from the pan itself, and wait for the reading to settle before you pull it out.
 
@@ -90,7 +90,7 @@ Browning tells you about the heat at the surface, not in the middle. Minced beef
 
 ### Step 9 — Divide hot food into shallow containers
 
-> IMAGE PENDING for step 9: Several shallow containers of stew and rice spread across a worktop with steam rising, their lids resting beside them.
+![Several shallow containers of stew and rice spread across a worktop with steam rising, their lids resting beside them.](images/09-shallow-containers-960.webp)
 
 A deep pot of stew left on the hob can take hours to cool through the middle, and improper cooling of cooked food is one of the most common causes of foodborne illness. Portion everything into shallow containers no more than about two inches deep, leave the lids ajar while the steam escapes, and spread them across the worktop instead of stacking them.
 
@@ -98,7 +98,7 @@ A deep pot of stew left on the hob can take hours to cool through the middle, an
 
 ### Step 10 — Get it into the fridge within two hours
 
-> IMAGE PENDING for step 10: Hands sliding a covered container of food onto a refrigerator shelf beside other stacked containers.
+![Hands sliding a covered container of food onto a refrigerator shelf beside other stacked containers.](images/10-two-hour-rule-960.webp)
 
 Cooked food must be refrigerated at forty degrees or below within two hours of leaving the heat, or within one hour if the kitchen is above ninety. Bacteria multiply fastest between forty and a hundred and forty degrees, doubling in number in as little as twenty minutes. You do not need to wait for food to reach room temperature first; a modern fridge copes perfectly well with warm containers.
 
@@ -108,7 +108,7 @@ Cooked food must be refrigerated at forty degrees or below within two hours of l
 
 ### Step 11 — Label every container with the date
 
-> IMAGE PENDING for step 11: A hand pressing a strip of masking tape onto the lid of a food container, with a marker pen lying on the worktop.
+![A hand pressing a strip of masking tape onto the lid of a food container, with a marker pen lying on the worktop.](images/11-label-date-960.webp)
 
 Write the date the food was cooked on a strip of masking tape and press it onto the lid. Memory is unreliable after three days and useless after five, and a tub of something brown with no date is a tub you will eventually throw out untouched. Labelling also means anyone else in the house can use the food instead of buying lunch.
 
@@ -116,7 +116,7 @@ Write the date the food was cooked on a strip of masking tape and press it onto 
 
 ### Step 12 — Work to the three-to-four-day rule
 
-> IMAGE PENDING for step 12: An open refrigerator shelf with labelled containers lined up front to back, a hand reaching for the one nearest the front.
+![An open refrigerator shelf with containers lined up front to back, each with a small strip of pale tape on its lid, and a hand lifting out the one nearest the front.](images/12-rotate-shelf-960.webp)
 
 Cooked meat and poultry, soups, stews and pasta dishes keep three to four days in the refrigerator. Egg, chicken, ham, tuna and macaroni salads are the same. That window is about safety rather than taste, and it does not reset because the food still smells fine. Arrange the shelf so the oldest container sits at the front and gets eaten first.
 
@@ -124,7 +124,7 @@ Cooked meat and poultry, soups, stews and pasta dishes keep three to four days i
 
 ### Step 13 — Freeze what you will not reach in time
 
-> IMAGE PENDING for step 13: Flat sealed bags of cooked food stacked in a freezer drawer, one being slid into the gap between the others.
+![Flat sealed bags of cooked food stacked in a freezer drawer, one being slid into the gap between the others.](images/13-freeze-portions-960.webp)
 
 Anything you will not eat within four days should go into the freezer on the day it is cooked, not on day three when half of it has already gone. Food held continuously at zero degrees Fahrenheit stays safe indefinitely, and the time limits printed on freezer charts are about quality rather than risk. Cooked meat and poultry hold their texture for two to six months.
 
