@@ -1,57 +1,35 @@
 # 52runoob — 56juqingba.com 内容与配图生产仓库
 
-给英文 how-to 站 **56juqingba.com（Howly 版式）** 生产文章与配图的可复用流水线。
-内容以 JSON 为单一源，脚本负责渲染成 Markdown、CMS 导入包和本地预览页，并在发布前做质量体检。
+为英文 how-to 网站制作图文指南。文章以 JSON 为内容源，另生成可人工阅读的英文稿和独立网页素材包。素材包不是已验证的 CMS 导入包，也不会自动发布或进入网站原有分类。
 
-## 目录
+## 当前任务与进度
 
-```
-content/
-  _template/article.json            空白模板（复制它开新稿）
-  content-plan.csv                  25 条选题池（priority / slug / 关键词 / 内链）
-  Keep-Running-Through-Winter/      样板：12 步 + 13 张手绘风插图，待 API 发布验证
-    article.json                    单一内容源；media.stylePending 列出待替换图片
-    article.md                      审稿用 Markdown（自动生成）
-    import-payload.json             CMS 导入用（自动生成）
-    images/                         960w + 1600w WebP
-  Run-Your-First-5K/                12 步草稿，13 张新风格图待生成
-docs/
-  内容增长方案.md                    诊断 + 架构 + 选题 + SOP + 排期
-  image-prompt-template.md          参考图风格、场景多样性与 prompt 模板
-tools/
-  render_article.py                 JSON -> MD / payload / 预览页
-  check_article.py                  发布前体检（12 项规则）
-  make_images.sh                    PNG -> 双尺寸 WebP
-  probe_site.sh                     本机隐藏输入密钥并执行只读探测
-  upload_hero.sh                    经确认后只上传一张封面，不创建文章
-  upload_steps.sh                   复用封面状态并安全上传 12 张步骤图
-  api/                              API 客户端、检查、受控上传及待验证发布器
-preview/                            渲染出的本地预览页
-```
+新要求：**19 个现有分类各新增至少 5 篇**，每篇标题以 “How to” 开头、15–20 步、每步一张图另配封面，并有站内链接、出站链接和参考资料。详见 `docs/批量内容生产计划.md` 和 `content/expanded-plan.csv`。
 
-## 常用命令
+- `content/Run-Your-First-5K/`：15 步图文稿、16 张不同的图片（本轮新制 10 张，6 张沿用相关冬季跑步插画）、4 条站内链接、3 条站外资源和 4 条参考资料。运动健康内容仍需真人审校，尚未发布。
+- `downloads/First-5K-Upload.zip`：上述稿件的独立网页和人工上传素材包；页面上有待审校提示。
+- `content/Repot-a-Houseplant/`、`content/Back-Up-Your-Photos/`：各 15 步英文文字草稿；各自的 16 张图片尚未生成，质量检查会阻止打包。
+- 其余 92 篇为选题，尚未完成正文与配图。`expanded-plan.csv` 是进度记录，不要将选题当成成品。
+- `content/Keep-Running-Through-Winter/`：此前制作的旧版 12 步样稿及 13 张插画；其原素材包为 `downloads/Winter-Running-Upload.zip`。公开网站的分类和详情页现已显示该稿，但旧稿不计入本批 15–20 步的新稿目标。
+
+## 生产规范
+
+1. 新稿 `requirements` 设置 `stepMin: 15`、`stepMax: 20`、`externalLinksMin: 2`、`uniqueImagesWithinArticle: true`。每一步与封面都要有不同的图片和准确 alt；使用旧图须记录来源。手绘画风参考本地参考图，不复制其人物或背景。
+2. 至少 3 条有关的站内链接、2 条可点击的站外资源、3 条带网址的参考资料；优先使用已验证可访问的权威来源。发布前再次核对链接和时效。
+3. 生成 1600×900 和 960×540 WebP 两种尺寸。医学、运动、财务、宠物、汽车等内容须由合适的真人进行事实和安全审校；不虚填作者或专家审校信息。
+4. 缺图、缺链接或未通过体检的文章只能作为草稿，不得声称制作完成。独立网页包在服务器静态目录解压后才可能获得网址；不会自动进入原网站文章数据库。
+
+## 开发与校验
 
 ```bash
-# 1. 渲染
-python3 tools/render_article.py content/Keep-Running-Through-Winter/article.json
-
-# 2. 体检（0 error 才能发；新风格配图未完成时会报错）
-python3 tools/check_article.py content/Keep-Running-Through-Winter/article.json
-
-# 3. 新配图转码（原图放 images/raw/*.png）
-bash tools/make_images.sh content/Keep-Running-Through-Winter/images
-
-# 4. 在可访问站点的电脑上只读探测（隐藏输入密钥，不写 shell 历史）
-bash tools/probe_site.sh --details
-# 通用发布器的创建 / 更新仍被锁定；封面上传已验证。
-# 确认后可上传余下步骤图（真实写入媒体库，不创建文章）：
-# bash tools/upload_steps.sh --confirm
-# 详见 docs/API发布说明.md
+# 生成可读稿、预览与未经 CMS 契约验证的 payload 草案
+python3 tools/render_article.py content/Run-Your-First-5K/article.json
+# 新稿严格校验 15–20 步、逐步配图、出站链接等
+python3 tools/check_article.py content/Run-Your-First-5K/article.json
+# 仅在正文、配图和链接检查通过后生成独立网页素材包
+python3 tools/package_article.py content/Run-Your-First-5K/article.json downloads/First-5K-Upload.zip
+# 回归测试
+python3 -m unittest discover -s tests -v
 ```
 
-## 写一篇新稿
-
-1. `cp -r content/_template content/Your-Article-Slug`，把 `article.json` 填满（12 步 / 3 Part）；
-2. 按 `docs/image-prompt-template.md` 生成 1 张 hero + 每步 1 张；参考画风但根据步骤变换背景，原图放进 `images/raw/`（该目录不提交 Git）；
-3. 跑 `make_images.sh` → `render_article.py` → `check_article.py`；若有旧风格占位图，在 `media.stylePending` 中列出，全部替换后清空；
-4. 由真人核查安全内容、图片与参考文献；已验证文章与媒体读取及单张封面上传，文章创建接口仍待确认。通用发布器的写入被锁定，图片可经确认分步上传。详见 `docs/API发布说明.md`。
+旧文章没有新 `requirements` 时沿用旧的 9–14 步检查范围，不代表旧稿符合新要求。`docs/API发布说明.md` 中的 API 探测和封面上传是历史技术记录；通用发布器的真实写入仍被锁定，用户当前选择人工下载素材，不需要运行 API 工具。

@@ -1,0 +1,275 @@
+{
+  "schema": "howly-guide/v1",
+  "requirements": {
+    "stepMin": 15,
+    "stepMax": 20,
+    "externalLinksMin": 2,
+    "uniqueImagesWithinArticle": true
+  },
+  "slug": "Repot-a-Houseplant",
+  "url": "/Repot-a-Houseplant",
+  "category": "Home and Garden",
+  "categoryUrl": "/Category/Home-and-Garden",
+  "title": "How to Repot a Houseplant",
+  "h1": "How to Repot a Houseplant",
+  "deck": "Give a crowded houseplant fresh space and suitable mix without burying the stem, damaging healthy roots, or leaving the pot standing in water.",
+  "intro": "A plant does not need a bigger pot simply because time has passed. Check its roots, drainage, and species-specific needs first. These steps explain how to prepare a suitable container, move a common indoor plant gently, and care for it afterwards, with exceptions for plants such as orchids and succulents.",
+  "seo": {
+    "titleTag": "How to Repot a Houseplant: 15 Steps | Howly",
+    "metaDescription": "Repot a houseplant with a suitable pot, fresh mix, gentle root handling, and practical aftercare in 15 beginner-friendly steps.",
+    "keywords": [
+      "how to repot a houseplant"
+    ],
+    "primaryKeyword": "how to repot a houseplant",
+    "searchIntent": "informational"
+  },
+  "media": {
+    "hero": {
+      "base": "00-hero",
+      "alt": "A gardener placing a leafy houseplant into a clean pot at a bright potting table."
+    },
+    "style": "Naturalistic hand-painted editorial illustration, soft oil-and-watercolor texture, warm muted palette; scenes vary by step.",
+    "stylePending": [
+      "00-hero"
+    ]
+  },
+  "parts": [
+    {
+      "title": "Decide Whether to Repot",
+      "steps": [
+        {
+          "title": "Look for signs the plant needs space",
+          "body": "Check whether roots are circling densely, emerging from drainage holes, or pushing the plant out of its pot. A pot that tips repeatedly or mix that dries unusually quickly can also be a clue. No single sign proves the plant needs a larger pot; look at the roots and the plant's normal growth pattern together.",
+          "tip": "Some slow-growing plants need fresh mix more often than a larger container.",
+          "imageTodo": {
+            "base": "01-signs",
+            "alt": "A gardener inspecting roots visible at the drainage holes of a small indoor plant pot."
+          }
+        },
+        {
+          "title": "Identify the plant and its needs",
+          "body": "Find the plant's name and check whether it has special root, mix, or watering requirements. Common leafy houseplants, succulents, and orchids do not all use the same growing medium. If you cannot identify the plant, ask a local extension service or knowledgeable nursery before assuming a general repotting method will suit it.",
+          "tip": "Keep the plant label or a photo of it with your care notes.",
+          "imageTodo": {
+            "base": "02-identify",
+            "alt": "A person checking a leafy houseplant beside a small blank plant tag in a bright room."
+          }
+        },
+        {
+          "title": "Pick a suitable time",
+          "body": "Many houseplants recover well when they are actively growing, though urgent drainage or container problems may need attention sooner. Avoid unnecessary repotting while a plant is severely stressed, unless its pot or root conditions are part of the problem. Follow species-specific advice and do not assume all plants follow the same seasonal calendar.",
+          "tip": "If the pot is damaged or water cannot drain, assess that problem rather than waiting for a perfect season.",
+          "imageTodo": {
+            "base": "03-timing",
+            "alt": "A healthy potted houseplant beside a window with fresh spring leaves and a plain calendar nearby."
+          }
+        },
+        {
+          "title": "Prepare a clean work area",
+          "body": "Cover a stable table or work outdoors where loose mix is easy to collect. Gather a clean pot, suitable fresh potting mix, a saucer, and a small scoop. Use gloves if you prefer, keep the work area away from food, and wash your hands afterwards. Keep potting materials and plants away from curious children and pets.",
+          "tip": "Place an old tray or sheet under the work area to catch spills.",
+          "imageTodo": {
+            "base": "04-workspace",
+            "alt": "Gloved hands arranging a small pot, scoop and potting mix on a protected outdoor table."
+          }
+        },
+        {
+          "title": "Choose a pot with drainage",
+          "body": "Select a container with an open drainage hole. If the plant needs more room, a pot roughly one to two inches wider than the current one is often a useful starting point; the right size depends on the species and root ball. A decorative pot without holes can hold a separate, draining nursery pot.",
+          "tip": "A much larger pot may hold more wet mix than a small root system can use.",
+          "imageTodo": {
+            "base": "05-pot",
+            "alt": "Two clean plant pots of slightly different sizes, with a visible drainage hole in the larger pot."
+          }
+        }
+      ]
+    },
+    {
+      "title": "Move the Plant Carefully",
+      "steps": [
+        {
+          "title": "Select a mix for the species",
+          "body": "Choose a fresh, porous potting mix suited to your plant rather than using garden soil by default. Orchids and many succulents have different needs from common foliage plants, so follow a reliable plant-specific guide. Check whether the mix already contains fertilizer, and follow the package directions for handling and use.",
+          "tip": "Do not add a deep gravel layer to the bottom as a substitute for drainage holes.",
+          "imageTodo": {
+            "base": "06-mix",
+            "alt": "A small scoop next to a bowl of loose potting mix and an indoor plant, seen from above."
+          }
+        },
+        {
+          "title": "Check the moisture before moving",
+          "body": "If the mix is very dry, water according to the plant's needs before repotting and allow excess water to drain. Slightly moist mix can be easier to handle than a dry, crumbling root ball. Do not soak a waterlogged plant just to follow a schedule; assess the existing moisture and any signs of root problems first.",
+          "tip": "A clean, stable root ball is easier to support while you remove the old pot.",
+          "imageTodo": {
+            "base": "07-moisture",
+            "alt": "A gardener checking potting mix with a finger beside a small watering can."
+          }
+        },
+        {
+          "title": "Release the plant from its old pot",
+          "body": "Support the plant near the soil line with one hand and gently tilt the container. Squeeze a flexible pot or tap its sides to loosen the root ball. Ease the pot away instead of pulling hard on the stems. If roots are attached to the container, work slowly and consider cutting a disposable plastic pot rather than tearing the plant.",
+          "tip": "Protect long leaves or stems with your free hand while turning the pot.",
+          "imageTodo": {
+            "base": "08-remove",
+            "alt": "Hands gently sliding a leafy houseplant and its root ball out of a flexible nursery pot."
+          }
+        },
+        {
+          "title": "Inspect the roots and old mix",
+          "body": "Look at the root ball before changing it. Healthy roots vary by species but are usually firm; soft, decayed roots or a sour smell can indicate a problem. Remove loose, degraded mix gently. If many roots appear damaged or you are unsure what you are seeing, ask an extension service or plant professional for advice.",
+          "tip": "Do not assume a brown root is dead based on color alone.",
+          "imageTodo": {
+            "base": "09-inspect",
+            "alt": "Close view of a gardener carefully examining a houseplant root ball over a tray."
+          }
+        },
+        {
+          "title": "Loosen crowded roots gently",
+          "body": "If roots form a tight circle around the outside, tease a few loose with clean fingers so they can extend into the new mix. Avoid pulling aggressively or removing healthy roots without a reason. Some plants are sensitive to disturbance, so use gentler handling or species-specific instructions if the root system is delicate.",
+          "tip": "Work on the outside of the root ball and keep as much healthy root tissue intact as possible.",
+          "imageTodo": {
+            "base": "10-loosen",
+            "alt": "Fingers gently loosening roots at the edge of a compact houseplant root ball."
+          }
+        }
+      ]
+    },
+    {
+      "title": "Settle the Plant In",
+      "steps": [
+        {
+          "title": "Place fresh mix in the base",
+          "body": "Add enough potting mix to the bottom of the new container so the plant will sit at about its previous soil depth, with space below the rim for watering. Test the height with the root ball in place, then add or remove mix as needed. Keep the drainage opening clear rather than filling the bottom with gravel.",
+          "tip": "A small piece of mesh can keep loose mix from falling through a large drainage hole.",
+          "imageTodo": {
+            "base": "11-base",
+            "alt": "A gardener adding a shallow layer of potting mix to a clean pot with a small scoop."
+          }
+        },
+        {
+          "title": "Center the plant at its former depth",
+          "body": "Set the root ball in the middle of the pot and check that the point where the stems meet the mix is not buried deeper than before. Adjust the base layer until the plant sits upright with room below the rim. Larger or top-heavy plants may need a sturdy container or suitable support.",
+          "tip": "Look at the plant from more than one side before filling around it.",
+          "imageTodo": {
+            "base": "12-depth",
+            "alt": "A gardener holding a houseplant upright in the center of a larger pot and checking its height."
+          }
+        },
+        {
+          "title": "Fill around the root ball",
+          "body": "Add fresh mix around the sides in small amounts. Tap the pot lightly and use your fingers to settle the mix into gaps without packing it hard. Keep the original soil line visible and leave enough headroom to water without spilling over. Add support if needed without forcing a stake through the main root mass.",
+          "tip": "Firm enough to hold the plant upright while keeping the mix airy.",
+          "imageTodo": {
+            "base": "13-fill",
+            "alt": "Hands adding fresh potting mix around a houseplant in a pot at a potting table."
+          }
+        },
+        {
+          "title": "Water and let the pot drain",
+          "body": "For many common foliage plants, water after repotting until excess drains, then empty the saucer. Follow a different schedule if the species or root condition requires it; some succulents need specific handling. Do not leave the container standing in drainage water. Check the new mix over the following days rather than watering automatically.",
+          "tip": "Place the pot in a sink or tray while the excess water drains.",
+          "imageTodo": {
+            "base": "14-water",
+            "alt": "A person watering a freshly repotted leafy plant over a sink, water draining from the pot."
+          }
+        },
+        {
+          "title": "Return it to suitable light and observe",
+          "body": "Place the plant in light appropriate for its species, avoiding an abrupt move into harsh direct sun. For the next few weeks, check the mix, leaves, and drainage before making further changes. Brief adjustment can occur, but persistent wilting may have several causes. Hold off on extra fertilizer unless reliable care instructions and the mix label indicate it is needed.",
+          "tip": "Record the repotting date so you can track how the plant settles in.",
+          "imageTodo": {
+            "base": "15-aftercare",
+            "alt": "A newly potted leafy plant on a bright shelf away from a direct beam of sunlight."
+          }
+        }
+      ]
+    }
+  ],
+  "tips": [
+    "Inspect roots before buying a larger pot.",
+    "Choose a pot and mix suited to the species.",
+    "Keep the drainage hole open and empty collected water.",
+    "Make one change at a time so you can see how the plant responds."
+  ],
+  "warnings": [
+    "Keep potting mix and plant parts away from children and pets; some plants can be toxic if eaten.",
+    "Wear gloves if appropriate and wash hands after handling potting mix.",
+    "Do not add gravel to compensate for a pot without drainage.",
+    "Specialist plants, damaged roots, and serious pest problems may need species-specific or professional advice."
+  ],
+  "faq": [
+    {
+      "q": "How often should I repot a houseplant?",
+      "a": "There is no universal schedule. Look for crowded roots, poor drainage, degraded mix, or a pot that no longer supports the plant. Growth rate and species matter; a slow-growing plant may need fresh mix without a larger container."
+    },
+    {
+      "q": "How much bigger should the new pot be?",
+      "a": "For many common houseplants, a pot one to two inches wider is a reasonable starting point if the roots need more space. Match the size to the root ball and species, and choose a container with drainage. A very large pot can retain too much wet mix."
+    },
+    {
+      "q": "Can I use a decorative pot without a hole?",
+      "a": "Yes, as an outer cover for a separate nursery pot with drainage. Remove the inner pot to water and allow it to drain, then empty any collected water before returning it to the cover."
+    },
+    {
+      "q": "Should I trim the roots?",
+      "a": "Gently loosen crowded outer roots when appropriate, but avoid cutting healthy roots without a reason. Species differ, and extensive root damage needs careful assessment. Seek reliable species-specific advice if you are unsure."
+    },
+    {
+      "q": "Should I fertilize immediately?",
+      "a": "Check the species and the potting-mix label. Many mixes already contain nutrients, and newly disturbed roots may not need extra fertilizer immediately. Resume a suitable feeding routine when appropriate rather than adding fertilizer automatically."
+    }
+  ],
+  "externalLinks": [
+    {
+      "label": "University of Maryland: Potting and Repotting Indoor Plants",
+      "url": "https://extension.umd.edu/resource/potting-and-repotting-indoor-plants/",
+      "note": "Repotting steps, containers, and different mixes."
+    },
+    {
+      "label": "University of Minnesota: Winter Houseplant Tips",
+      "url": "https://extension.umn.edu/about/our-stories/news/winter-houseplant-tips",
+      "note": "Signs of a crowded pot and drainage advice."
+    },
+    {
+      "label": "University of Maryland: Watering Indoor Plants",
+      "url": "https://extension.umd.edu/resource/watering-indoor-plants/",
+      "note": "How to check the mix and drain excess water."
+    }
+  ],
+  "references": [
+    "University of Maryland Extension. Potting and Repotting Indoor Plants. Updated March 10, 2023. https://extension.umd.edu/resource/potting-and-repotting-indoor-plants/",
+    "University of Minnesota Extension. Winter Houseplant Tips. February 2, 2026. https://extension.umn.edu/about/our-stories/news/winter-houseplant-tips",
+    "University of Maryland Extension. Watering Indoor Plants. Updated March 10, 2023. https://extension.umd.edu/resource/watering-indoor-plants/"
+  ],
+  "internalLinks": [
+    {
+      "label": "How to Care for a Houseplant",
+      "url": "/Care-for-a-Houseplant"
+    },
+    {
+      "label": "More Home and Garden guides",
+      "url": "/Category/Home-and-Garden"
+    },
+    {
+      "label": "How to Start a Nature Journal",
+      "url": "/Start-a-Nature-Journal"
+    }
+  ],
+  "quizIdea": {
+    "title": "",
+    "questions": 0,
+    "note": ""
+  },
+  "publishing": {
+    "status": "draft_missing_images",
+    "author": "Editorial draft",
+    "reviewer": "",
+    "datePublished": null,
+    "dateModified": "2026-10-29",
+    "readingTimeMinutes": 8,
+    "wordCount": null,
+    "internalLinkCount": 3,
+    "imageCount": 16,
+    "imagePending": 16
+  }
+}

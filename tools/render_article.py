@@ -34,16 +34,37 @@ def img_path(article_dir, base, width):
     return os.path.join(article_dir, "images", f"{base}-{width}.webp")
 
 
-def picture(rel_prefix, base, alt, cls=""):
-    """Responsive <picture> with the two webp widths the site uses."""
+def picture(rel_prefix, base, alt, cls="", responsive=True):
+    """Render either the two site variants or one self-contained 1600px asset."""
     src960 = f"{rel_prefix}{base}-960.webp"
     src1600 = f"{rel_prefix}{base}-1600.webp"
+    if not responsive:
+        return (
+            f'<img class="{cls}" src="{esc(src1600)}" '
+            f'alt="{esc(alt)}" width="1600" height="900" loading="lazy" decoding="async">'
+        )
     return (
         f'<img class="{cls}" src="{esc(src960)}" '
         f'srcset="{esc(src960)} 960w, {esc(src1600)} 1600w" '
         f'sizes="(min-width: 900px) 760px, 100vw" '
         f'alt="{esc(alt)}" width="960" height="540" loading="lazy" decoding="async">'
     )
+
+
+def reference_html(reference):
+    """Link literal HTTP(S) reference URLs without accepting markup from the source."""
+    result = []
+    position = 0
+    for match in re.finditer(r'https?://[^\s<>"\']+', reference):
+        raw = match.group(0)
+        url = raw.rstrip('.,;')
+        suffix = raw[len(url):]
+        result.append(esc(reference[position:match.start()]))
+        result.append(f'<a href="{esc(url)}" rel="noopener noreferrer">{esc(url)}</a>')
+        result.append(esc(suffix))
+        position = match.end()
+    result.append(esc(reference[position:]))
+    return "".join(result)
 
 
 def pending_placeholder(step_no):
@@ -63,9 +84,9 @@ def render_markdown(doc):
     L = []
     L.append(f"# {doc['title']}\n")
     L.append(f"*{doc['deck']}*\n")
-    L.append(f"**Category:** {doc['category']}  ")
-    L.append(f"**Slug:** `{doc['url']}`  ")
-    L.append(f"**Primary keyword:** {doc['seo']['primaryKeyword']}  ")
+    L.append(f"**Category:** {doc['category']}\n")
+    L.append(f"**Slug:** `{doc['url']}`\n")
+    L.append(f"**Primary keyword:** {doc['seo']['primaryKeyword']}\n")
     L.append(f"**Meta description:** {doc['seo']['metaDescription']}\n")
     L.append("---\n")
     L.append("## Intro\n")
@@ -79,7 +100,9 @@ def render_markdown(doc):
             n += 1
             L.append(f"### Step {n} — {step['title']}\n")
             if is_pending(step):
-                L.append(f"> IMAGE PENDING for step {n}\n")
+                todo = step.get("imageTodo")
+                scene = todo.get("alt", "") if isinstance(todo, dict) else (todo or "")
+                L.append(f"> IMAGE PENDING for step {n}" + (f": {scene}" if scene else "") + "\n")
             else:
                 L.append(f"![{step['image']['alt']}](images/{step['image']['base']}-960.webp)\n")
             L.append(f"{step['body']}\n")
@@ -96,6 +119,12 @@ def render_markdown(doc):
     for item in doc["faq"]:
         L.append(f"**{item['q']}**\n")
         L.append(f"{item['a']}\n")
+    if doc.get("externalLinks"):
+        L.append("## Useful external resources\n")
+        for link in doc["externalLinks"]:
+            note = f" — {link['note']}" if link.get("note") else ""
+            L.append(f"- [{link['label']}]({link['url']}){note}")
+        L.append("")
     L.append("## References\n")
     for i, ref in enumerate(doc["references"], start=1):
         L.append(f"{i}. {ref}")
@@ -108,7 +137,7 @@ def render_markdown(doc):
 
 
 # ---------------------------------------------------------------- html body
-def render_html_body(doc, rel_prefix, show_style_pending=False):
+def render_html_body(doc, rel_prefix, show_style_pending=False, responsive=True, site_base=""):
     H = []
     style_pending = set(doc.get("media", {}).get("stylePending", [])) if show_style_pending else set()
     H.append('<div class="article-body">')
@@ -129,7 +158,7 @@ def render_html_body(doc, rel_prefix, show_style_pending=False):
             else:
                 if step["image"]["base"] in style_pending:
                     H.append('<p class="style-pending-note">Previous image style — replacement pending.</p>')
-                H.append(picture(rel_prefix, step["image"]["base"], step["image"]["alt"], "step-img"))
+                H.append(picture(rel_prefix, step["image"]["base"], step["image"]["alt"], "step-img", responsive=responsive))
             H.append(f'<p class="step-count">Step {n} of {sum(len(p["steps"]) for p in doc["parts"])}</p>')
             H.append(f'<h3>{esc(step["title"])}</h3>')
             H.append(f"<p>{esc(step['body'])}</p>")
@@ -151,13 +180,23 @@ def render_html_body(doc, rel_prefix, show_style_pending=False):
         )
     H.append("</section>")
 
+    if doc.get("externalLinks"):
+        H.append('<section class="related"><h2>Useful external resources</h2><ul>')
+        for link in doc["externalLinks"]:
+            note = f' — {esc(link["note"])}' if link.get("note") else ""
+            H.append(f'<li><a href="{esc(link["url"])}" rel="noopener noreferrer">{esc(link["label"])}</a>{note}</li>')
+        H.append("</ul></section>")
+
     H.append('<section class="refs"><h2>References</h2><ol>')
-    H.extend(f"<li>{esc(x)}</li>" for x in doc["references"])
+    H.extend(f"<li>{reference_html(x)}</li>" for x in doc["references"])
     H.append("</ol></section>")
 
     H.append('<section class="related"><h2>Related on Howly</h2><ul>')
     for link in doc["internalLinks"]:
-        H.append(f'<li><a href="{esc(link["url"])}">{esc(link["label"])}</a></li>')
+        url = link["url"]
+        if site_base and url.startswith("/") and not url.startswith("//"):
+            url = site_base.rstrip("/") + url
+        H.append(f'<li><a href="{esc(url)}">{esc(link["label"])}</a></li>')
     H.append("</ul></section>")
     H.append("</div>")
     return "\n".join(H)

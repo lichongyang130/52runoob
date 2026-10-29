@@ -1,0 +1,185 @@
+#!/usr/bin/env python3
+"""Regression coverage for the 15–20-step production profile and static ZIP."""
+import contextlib
+import csv
+import io
+import json
+from collections import Counter
+from html.parser import HTMLParser
+from pathlib import Path
+import shutil
+import sys
+import tempfile
+import unittest
+from zipfile import ZipFile
+
+ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / "tools"))
+import check_article  # noqa: E402
+import package_article  # noqa: E402
+import render_article  # noqa: E402
+
+
+class HTMLInventory(HTMLParser):
+    def __init__(self):
+        super().__init__()
+        self.images = []
+        self.links = []
+        self.step_ids = []
+
+    def handle_starttag(self, tag, attrs):
+        attrs = dict(attrs)
+        if tag == "img":
+            self.images.append(attrs)
+        if tag == "a":
+            self.links.append(attrs.get("href", ""))
+        if tag == "article" and attrs.get("id", "").startswith("step-"):
+            self.step_ids.append(attrs["id"])
+
+
+class ExpandedArticleTests(unittest.TestCase):
+    def setUp(self):
+        self.tmp = tempfile.TemporaryDirectory()
+        self.directory = Path(self.tmp.name) / "article"
+        self.directory.mkdir()
+        original = ROOT / "content/Run-Your-First-5K"
+        self.doc = json.loads((original / "article.json").read_text(encoding="utf-8"))
+        (self.directory / "images").mkdir()
+        for image in (original / "images").glob("*.webp"):
+            shutil.copy2(image, self.directory / "images" / image.name)
+        self.docfile = self.directory / "article.json"
+        self.write_doc()
+
+    def tearDown(self):
+        self.tmp.cleanup()
+
+    def write_doc(self):
+        self.docfile.write_text(json.dumps(self.doc), encoding="utf-8")
+
+    def check(self):
+        output = io.StringIO()
+        with contextlib.redirect_stdout(output):
+            code = check_article.main(str(self.docfile))
+        return code, output.getvalue()
+
+    def test_finished_article_passes_and_has_15_steps(self):
+        code, output = self.check()
+        self.assertEqual(code, 0, output)
+        self.assertIn("步骤: 15", output)
+        self.assertIn("0 error / 0 warning", output)
+
+    def test_fourteen_or_twenty_one_steps_do_not_pass(self):
+        original = list(self.doc["parts"][0]["steps"])
+        self.doc["parts"][0]["steps"] = original[:-1]
+        self.write_doc()
+        code, output = self.check()
+        self.assertNotEqual(code, 0)
+        self.assertIn("步骤数 14", output)
+        self.doc["parts"][0]["steps"] = original + [dict(original[0]) for _ in range(6)]
+        self.write_doc()
+        code, output = self.check()
+        self.assertNotEqual(code, 0)
+        self.assertIn("步骤数 21", output)
+
+    def test_missing_image_and_alt_block_the_article(self):
+        del self.doc["parts"][0]["steps"][0]["image"]
+        self.doc["parts"][0]["steps"][1]["image"]["alt"] = ""
+        self.write_doc()
+        code, output = self.check()
+        self.assertNotEqual(code, 0)
+        self.assertIn("Step 1 无配图", output)
+        self.assertIn("Step 2 缺少图片 alt", output)
+
+    def test_duplicate_content_is_blocked_even_with_distinct_filenames(self):
+        images = self.directory / "images"
+        shutil.copyfile(images / "01-goal-1600.webp", images / "02-event-1600.webp")
+        code, output = self.check()
+        self.assertNotEqual(code, 0)
+        self.assertIn("文章内必须互不相同", output)
+
+    def test_missing_or_invalid_external_links_are_blocked(self):
+        self.doc["externalLinks"] = []
+        self.write_doc()
+        code, output = self.check()
+        self.assertNotEqual(code, 0)
+        self.assertIn("出站链接 0 条，至少 2 条", output)
+        self.doc["externalLinks"] = [
+            {"label": "bad", "url": "javascript:alert(1)"},
+            {"label": "internal", "url": "https://www.56juqingba.com/"},
+        ]
+        self.write_doc()
+        code, output = self.check()
+        self.assertNotEqual(code, 0)
+        self.assertIn("站外 HTTPS 地址", output)
+
+    def test_zip_has_all_images_links_and_review_notice(self):
+        output = Path(self.tmp.name) / "output.zip"
+        with contextlib.redirect_stdout(io.StringIO()):
+            package_article.build_package(self.docfile, output)
+        with ZipFile(output) as archive:
+            self.assertIsNone(archive.testzip())
+            root = "Run-Your-First-5K/"
+            paths = set(archive.namelist())
+            self.assertEqual(len(paths), 19)
+            document = archive.read(root + "index.html").decode("utf-8")
+            inventory = HTMLInventory()
+            inventory.feed(document)
+            self.assertEqual(len(inventory.images), 16)
+            self.assertEqual(len(inventory.step_ids), 15)
+            self.assertEqual(len({image["src"] for image in inventory.images}), 16)
+            for image in inventory.images:
+                self.assertTrue(image.get("alt", "").strip())
+                self.assertIn(root + image["src"], paths)
+                self.assertNotIn("srcset", image)
+            for link in self.doc["internalLinks"]:
+                self.assertIn("https://www.56juqingba.com" + link["url"], inventory.links)
+            for link in self.doc["externalLinks"]:
+                self.assertIn(link["url"], inventory.links)
+            self.assertIn("subject-matter review", document)
+            self.assertIn("6 张使用此前制作", archive.read(root + "README-中文.txt").decode("utf-8"))
+            for img in inventory.images:
+                filename = img["src"].split("/")[-1]
+                self.assertEqual(archive.read(root + img["src"]), (self.directory / "images" / filename).read_bytes())
+
+    def test_zip_refuses_legacy_or_incomplete_documents(self):
+        self.doc["requirements"]["stepMin"] = 9
+        self.write_doc()
+        with self.assertRaisesRegex(ValueError, "15–20"):
+            package_article.build_package(self.docfile, Path(self.tmp.name) / "legacy.zip")
+        self.doc["requirements"]["stepMin"] = 15
+        self.doc["parts"][0]["steps"][0].pop("image")
+        self.write_doc()
+        with contextlib.redirect_stdout(io.StringIO()), self.assertRaisesRegex(ValueError, "体检未通过"):
+            package_article.build_package(self.docfile, Path(self.tmp.name) / "incomplete.zip")
+
+    def test_reference_urls_are_links_but_markup_is_escaped(self):
+        output = render_article.reference_html('A <script>alert(1)</script> https://example.org/?a=1&b=2')
+        self.assertNotIn('<script>', output)
+        self.assertIn('&lt;script&gt;', output)
+        self.assertIn('<a href="https://example.org/?a=1&amp;b=2"', output)
+
+
+class InventoryTests(unittest.TestCase):
+    def test_five_distinct_new_topics_per_category(self):
+        with (ROOT / "content/expanded-plan.csv").open(encoding="utf-8", newline="") as file:
+            rows = list(csv.DictReader(file))
+        categories = Counter(row["category"] for row in rows)
+        self.assertEqual(len(categories), 19)
+        self.assertTrue(all(count == 5 for count in categories.values()))
+        self.assertEqual(len({row["slug"].lower() for row in rows}), 95)
+        self.assertTrue(all(row["title"].startswith("How to ") for row in rows))
+        self.assertTrue(all(row["category_url"].startswith("/Category/") for row in rows))
+
+    def test_unillustrated_drafts_cannot_be_packaged(self):
+        for slug in ("Repot-a-Houseplant", "Back-Up-Your-Photos"):
+            path = ROOT / "content" / slug / "article.json"
+            doc = json.loads(path.read_text(encoding="utf-8"))
+            self.assertEqual(sum(len(p["steps"]) for p in doc["parts"]), 15)
+            self.assertEqual(doc["publishing"]["imagePending"], 16)
+            with tempfile.TemporaryDirectory() as tmp, contextlib.redirect_stdout(io.StringIO()):
+                with self.assertRaisesRegex(ValueError, "体检未通过"):
+                    package_article.build_package(path, Path(tmp) / "draft.zip")
+
+
+if __name__ == "__main__":
+    unittest.main()
