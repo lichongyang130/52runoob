@@ -73,7 +73,13 @@ def build_package(article_json, output):
 
     reused = doc.get("media", {}).get("reusedFrom", {})
     reuse_note = (f"其中 {len(reused)} 张使用此前制作的相关插画，封面和各步骤在本文内均不重复。"
-                  if reused else "封面与每个步骤均使用不同的插画。")
+                  if reused else "封面与每个步骤均使用不同的插画，均为本文新制。")
+    # The review sentence must describe this article's own subject, not a hard-coded one.
+    review_note = doc.get("publishing", {}).get("reviewNote", "").strip()
+    review_line = (f"英文文章属于「{doc['category']}」类目，公开前须由合适的真人进行事实与安全审校；"
+                   "不要虚填作者或专家信息。")
+    if review_note:
+        review_line += f"\n仓库记录的审校说明：{review_note}"
     readme = f'''{doc['title']}｜英文文章素材包
 
 包内包含：
@@ -85,7 +91,7 @@ def build_package(article_json, output):
 
 使用方式：下载后解压；如作为独立网页，请把整个文件夹放在服务器上可被网站访问的静态目录，保持 index.html 和 Images 同级。能否通过网址访问取决于服务器配置；上传压缩包本身不会自动发布。
 
-本包不是已验证的文章系统导入包，不会自动进入原网站首页、分类、搜索或数据库。站内链接指向 www.56juqingba.com 的现有页面；网页尚未发布。英文文章涉及运动健康，公开前须由合适的真人进行事实与安全审校；不要虚填作者或专家信息。
+本包不是已验证的文章系统导入包，不会自动进入原网站首页、分类、搜索或数据库。站内链接指向 www.56juqingba.com 的现有页面；网页尚未发布。{review_line}
 '''
     output.parent.mkdir(parents=True, exist_ok=True)
     # Create next to the destination and replace only after a successful CRC check.

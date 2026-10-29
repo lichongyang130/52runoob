@@ -1,5 +1,3 @@
-> DRAFT — do not publish or package: 10 of 16 illustrations are still missing, and the article has not been reviewed by a person.
-
 # How to Repot a Houseplant
 
 *Give a crowded houseplant fresh space and suitable mix without burying the stem, damaging healthy roots, or leaving the pot standing in water.*
@@ -24,7 +22,7 @@ A plant does not need a bigger pot simply because time has passed. Check its roo
 
 ### Step 1 — Look for signs the plant needs space
 
-> IMAGE PENDING for step 1: A gardener inspecting roots visible at the drainage holes of a small indoor plant pot.
+![Hands tilting a potted houseplant on a windowsill to show roots pushing out of the drainage hole at its base.](images/01-signs-960.webp)
 
 Check whether roots are circling densely, emerging from drainage holes, or pushing the plant out of its pot. A pot that tips repeatedly or mix that dries unusually quickly can also be a clue. No single sign proves the plant needs a larger pot; look at the roots and the plant's normal growth pattern together.
 
@@ -32,7 +30,7 @@ Check whether roots are circling densely, emerging from drainage holes, or pushi
 
 ### Step 2 — Identify the plant and its needs
 
-> IMAGE PENDING for step 2: A person checking a leafy houseplant beside a small blank plant tag in a bright room.
+![A person checking a leafy houseplant beside a small blank plant tag in a bright room.](images/02-identify-960.webp)
 
 Find the plant's name and check whether it has special root, mix, or watering requirements. Common leafy houseplants, succulents, and orchids do not all use the same growing medium. If you cannot identify the plant, ask a local extension service or knowledgeable nursery before assuming a general repotting method will suit it.
 
@@ -40,7 +38,7 @@ Find the plant's name and check whether it has special root, mix, or watering re
 
 ### Step 3 — Pick a suitable time
 
-> IMAGE PENDING for step 3: A healthy potted houseplant beside a window with fresh spring leaves and a plain calendar nearby.
+![A healthy houseplant with fresh growth on a bright windowsill beside an empty terracotta pot, with a spring garden outside.](images/03-timing-960.webp)
 
 Many houseplants recover well when they are actively growing, though urgent drainage or container problems may need attention sooner. Avoid unnecessary repotting while a plant is severely stressed, unless its pot or root conditions are part of the problem. Follow species-specific advice and do not assume all plants follow the same seasonal calendar.
 
@@ -48,7 +46,7 @@ Many houseplants recover well when they are actively growing, though urgent drai
 
 ### Step 4 — Prepare a clean work area
 
-> IMAGE PENDING for step 4: Gloved hands arranging a small pot, scoop and potting mix on a protected outdoor table.
+![A clean terracotta pot, scoop, saucer, gardening gloves and an open sack of potting mix laid out on a cloth-covered garden table.](images/04-workspace-960.webp)
 
 Cover a stable table or work outdoors where loose mix is easy to collect. Gather a clean pot, suitable fresh potting mix, a saucer, and a small scoop. Use gloves if you prefer, keep the work area away from food, and wash your hands afterwards. Keep potting materials and plants away from curious children and pets.
 
@@ -66,7 +64,7 @@ Select a container with an open drainage hole. If the plant needs more room, a p
 
 ### Step 6 — Select a mix for the species
 
-> IMAGE PENDING for step 6: A small scoop next to a bowl of loose potting mix and an indoor plant, seen from above.
+![A small scoop next to a bowl of loose potting mix and an indoor plant, seen from above.](images/06-mix-960.webp)
 
 Choose a fresh, porous potting mix suited to your plant rather than using garden soil by default. Orchids and many succulents have different needs from common foliage plants, so follow a reliable plant-specific guide. Check whether the mix already contains fertilizer, and follow the package directions for handling and use.
 
@@ -74,7 +72,7 @@ Choose a fresh, porous potting mix suited to your plant rather than using garden
 
 ### Step 7 — Check the moisture before moving
 
-> IMAGE PENDING for step 7: A gardener checking potting mix with a finger beside a small watering can.
+![A gardener checking potting mix with a finger beside a small watering can.](images/07-moisture-960.webp)
 
 If the mix is very dry, water according to the plant's needs before repotting and allow excess water to drain. Slightly moist mix can be easier to handle than a dry, crumbling root ball. Do not soak a waterlogged plant just to follow a schedule; assess the existing moisture and any signs of root problems first.
 
@@ -90,7 +88,7 @@ Support the plant near the soil line with one hand and gently tilt the container
 
 ### Step 9 — Inspect the roots and old mix
 
-> IMAGE PENDING for step 9: Close view of a gardener carefully examining a houseplant root ball over a tray.
+![A gardener brushing old potting mix from a houseplant root ball held over a metal tray on a potting bench.](images/09-inspect-960.webp)
 
 Look at the root ball before changing it. Healthy roots vary by species but are usually firm; soft, decayed roots or a sour smell can indicate a problem. Remove loose, degraded mix gently. If many roots appear damaged or you are unsure what you are seeing, ask an extension service or plant professional for advice.
 
@@ -108,7 +106,7 @@ If roots form a tight circle around the outside, tease a few loose with clean fi
 
 ### Step 11 — Place fresh mix in the base
 
-> IMAGE PENDING for step 11: A gardener adding a shallow layer of potting mix to a clean pot with a small scoop.
+![A gardener adding a shallow layer of potting mix to a clean pot with a small scoop.](images/11-base-960.webp)
 
 Add enough potting mix to the bottom of the new container so the plant will sit at about its previous soil depth, with space below the rim for watering. Test the height with the root ball in place, then add or remove mix as needed. Keep the drainage opening clear rather than filling the bottom with gravel.
 
@@ -116,7 +114,7 @@ Add enough potting mix to the bottom of the new container so the plant will sit 
 
 ### Step 12 — Center the plant at its former depth
 
-> IMAGE PENDING for step 12: A gardener holding a houseplant upright in the center of a larger pot and checking its height.
+![A gardener holding a houseplant upright in the center of a larger pot and checking its height.](images/12-depth-960.webp)
 
 Set the root ball in the middle of the pot and check that the point where the stems meet the mix is not buried deeper than before. Adjust the base layer until the plant sits upright with room below the rim. Larger or top-heavy plants may need a sturdy container or suitable support.
 
@@ -140,7 +138,7 @@ For many common foliage plants, water after repotting until excess drains, then 
 
 ### Step 15 — Return it to suitable light and observe
 
-> IMAGE PENDING for step 15: A newly potted leafy plant on a bright shelf away from a direct beam of sunlight.
+![A newly potted leafy plant on a bright shelf away from a direct beam of sunlight.](images/15-aftercare-960.webp)
 
 Place the plant in light appropriate for its species, avoiding an abrupt move into harsh direct sun. For the next few weeks, check the mix, leaves, and drainage before making further changes. Brief adjustment can occur, but persistent wilting may have several causes. Hold off on extra fertilizer unless reliable care instructions and the mix label indicate it is needed.
 
