@@ -8,8 +8,9 @@
 ## 2026-10-29 探测记录
 
 - 冬季跑步样板已完成 13 张插画并通过本地体检；请求发布后先推送了 `probe` 标记。
-- 截至本次检查，GitHub Actions 没有生成运行记录；仓库 Actions 权限设置接口对当前 Arena GitHub 集成返回 403，无法确认设置或 Secret 内容。沙盒也无法直接访问站点 API。
-- **尚未发出授权 API 请求，也未发布文章。** 请在仓库 Settings → Actions → General 核对 Actions 是否开启，并在 Arena 重新连接 GitHub、确认授予该仓库 Actions 权限；然后重新触发同一分支的只读 probe。不要把密钥贴到聊天里。
+- 用户确认检查过 Actions 设置和 GitHub 连接后，已再次推送 `probe`；即使移除路径过滤条件，Actions API 仍返回零次运行。沙盒无法直接访问站点 API。
+- 当前 `arena-ai-coding-agent` 安装权限显示 `actions: read`，手动 dispatch 返回 403；仓库 Actions 设置和 Secret 内容无法读取。不能判断未触发的具体原因。
+- **尚未发出授权 API 请求，也未发布文章。** 可由仓库所有者在 GitHub 网页编辑同一分支的 `content/Keep-Running-Through-Winter/PUBLISH`，在 `probe` 前加一个空格并提交；脚本会移除首尾空格，仍只做只读探测。随后查看 Actions 运行结果并提供脱敏错误，不要把密钥贴到聊天里。
 
 ## 一次性配置
 
