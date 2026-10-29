@@ -75,6 +75,19 @@ class StyleTransitionTests(unittest.TestCase):
         self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
         self.assertIn("仅允许 dry-run", result.stdout)
 
+    def test_payload_has_uploaded_images_and_related_links(self):
+        bases = [self.doc["media"]["hero"]["base"]] + [
+            step["image"]["base"] for part in self.doc["parts"] for step in part["steps"]
+        ]
+        images = {base: f"/uploads/{base}.webp" for base in bases}
+        payload = publish.build_payload(self.doc, images)
+        first_step = payload["parts"][0]["steps"][0]
+        self.assertEqual(first_step["imageUrl"], images[first_step["image"]["base"]])
+        self.assertEqual(first_step["imageAlt"], first_step["image"]["alt"])
+        for link in self.doc["internalLinks"]:
+            self.assertIn(link["url"], payload["html"])
+        self.assertEqual(payload["html"].count("<figure>"), len(bases) - 1)
+
     def test_invalid_style_pending_is_rejected(self):
         self.doc["media"]["stylePending"] = "not a list"
         self._write_doc()
@@ -126,6 +139,14 @@ class UploadCacheTests(unittest.TestCase):
                 publish.upload_image("/uploads", str(self.image), cache, False)
         self.assertNotIn("test-secret-123", output.getvalue())
         self.assertEqual(cache, {})
+
+    def test_json_shape_reports_fields_not_values(self):
+        sample = {"data": [{"title": "private example", "steps": [{"text": "body"}]}]}
+        shape = client.json_shape(sample)
+        rendered = json.dumps(shape)
+        self.assertIn('"title": "str"', rendered)
+        self.assertNotIn("private example", rendered)
+        self.assertNotIn('"body"', rendered)
 
     def test_token_with_surrounding_whitespace_is_still_redacted(self):
         with mock.patch.dict(os.environ, {"SITE_API_TOKEN": "  test-secret-123  "}):

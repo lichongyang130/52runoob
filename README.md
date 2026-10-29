@@ -9,7 +9,7 @@
 content/
   _template/article.json            空白模板（复制它开新稿）
   content-plan.csv                  25 条选题池（priority / slug / 关键词 / 内链）
-  Keep-Running-Through-Winter/      样板：12 步；13 张图中 10 张已换为新手绘风
+  Keep-Running-Through-Winter/      样板：12 步 + 13 张手绘风插图，待 API 发布验证
     article.json                    单一内容源；media.stylePending 列出待替换图片
     article.md                      审稿用 Markdown（自动生成）
     import-payload.json             CMS 导入用（自动生成）

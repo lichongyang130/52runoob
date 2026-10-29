@@ -135,20 +135,32 @@ def build_html(doc: dict, img: dict) -> str:
     for f in doc["faq"]:
         h.append(f'<details><summary>{esc(f["q"])}</summary><p>{esc(f["a"])}</p></details>')
     h.append("<h2>References</h2><ol>" + "".join(f"<li>{esc(r)}</li>" for r in doc["references"]) + "</ol>")
+    internal = [link for link in doc.get("internalLinks", [])
+                if isinstance(link.get("url"), str) and link["url"].startswith("/")
+                and not link["url"].startswith("//")]
+    if internal:
+        h.append("<h2>Related guides</h2><ul>" + "".join(
+            f'<li><a href="{esc(link["url"])}">{esc(link["label"])}</a></li>' for link in internal
+        ) + "</ul>")
     return "\n".join(h)
 
 
 def build_payload(doc: dict, img: dict) -> dict:
     steps_all = []
+    structured_parts = []
     for part in doc["parts"]:
+        part_steps = []
         for s in part["steps"]:
-            steps_all.append({
+            enriched = {
                 "title": s["title"],
                 "body": s["body"],
                 "tip": s.get("tip", ""),
                 "imageUrl": img.get(s["image"]["base"], "") if s.get("image") else "",
                 "imageAlt": s["image"]["alt"] if s.get("image") else "",
-            })
+            }
+            steps_all.append(enriched)
+            part_steps.append({**s, **enriched})
+        structured_parts.append({"title": part["title"], "steps": part_steps})
     hero = img.get(doc["media"]["hero"]["base"], "")
     return {
         # 常见字段名做了兼容：正文同时给结构化与 HTML 两种形态
@@ -161,7 +173,7 @@ def build_payload(doc: dict, img: dict) -> dict:
         "intro": doc["intro"],
         "heroImageUrl": hero,
         "heroImageAlt": doc["media"]["hero"]["alt"],
-        "parts": [{"title": p["title"], "steps": p["steps"]} for p in doc["parts"]],
+        "parts": structured_parts,
         "steps": steps_all,
         "tips": doc["tips"],
         "warnings": doc["warnings"],

@@ -64,7 +64,7 @@ python3 tools/api/publish.py content/Keep-Running-Through-Winter
 1. **探测集合路由**：依次试 `GET /articles`、`/posts`、`/guides`，用第一个不是 404 的；
 2. **上传图片**：上传路由和 multipart 字段仍待实测；成功后把返回 URL 与文件 SHA-256 记进 `content/<slug>/publish-state.json`。只有同名且内容哈希相同时才复用，替换插画后会重新上传；旧版仅存 URL 的缓存无法验证，将重新上传；
 3. **组装 payload**：同时给三种常见形态，兼容未知的接口约定
-   - 原始分部结构：`parts[].steps[]`（沿用文章 JSON 的 image base / alt）
+   - 分部结构：`parts[].steps[]`（含原始图片信息和已上传的 `imageUrl` / `imageAlt`）
    - 扁平步骤：`steps[]`（含 `imageUrl` / `imageAlt` / `tip`）
    - 富文本：`html`（与站内版式一致的完整正文）
 4. **发布**：`POST /articles`（或探测到的集合路由），默认 `status: published`；
@@ -92,7 +92,7 @@ python3 tools/api/publish.py content/Keep-Running-Through-Winter
   - Repot a Houseplant：10 步 → 11 张
 - 上传用 1600×900 WebP（站上现有图片也是 1600 宽），960 宽版本留在仓库备用；
 - alt 全部在 `article.json` 里逐张填写，须与实际图片一致，脚本随图上传；
-- 风格过渡时 `media.stylePending` 列出待替换图片，体检与真实上传/发布会拒绝未完成稿件；`--dry-run` 仍可用于检查。冬季跑步样板现有 3 张待替换，5K 草稿的 13 张新风格图片均未完成。
+- 风格过渡时 `media.stylePending` 列出待替换图片，体检与真实上传/发布会拒绝未完成稿件；`--dry-run` 仍可用于检查。冬季跑步样板的 13 张新风格图已齐，5K 草稿的 13 张新风格图片尚未完成。
 
 ## 安全约定
 

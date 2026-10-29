@@ -238,6 +238,7 @@ def render_preview(doc, body_html, hero_rel):
         'image(s) still use the previous style and will be replaced before publication.</p>'
         if style_pending else ""
     )
+    style_notice_line = f"    {style_notice}\n" if style_notice else ""
     reviewer = doc.get("publishing", {}).get("reviewer", "")
     review_note = (f"Reviewed by {esc(reviewer)}." if reviewer and reviewer != "subject-matter reviewer"
                    else "Subject-matter review pending.")
@@ -260,8 +261,7 @@ def render_preview(doc, body_html, hero_rel):
 </div></div>
 <main class="wrap"><article class="page">
   <div class="page-head">
-    {style_notice}
-    <h1>{esc(doc['h1'])}</h1>
+{style_notice_line}    <h1>{esc(doc['h1'])}</h1>
     <p class="dek">{esc(doc['deck'])}</p>
     <div class="meta">
       <span><strong>How to</strong></span>

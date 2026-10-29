@@ -106,17 +106,39 @@ PROBE_UPLOADS = ["/uploads", "/media", "/images", "/assets"]
 PROBE_DOCS = ["/openapi.json", "/docs", "/schema"]
 
 
+def json_shape(value, depth=0):
+    """只报告结构和类型，不输出文章正文或数据值。"""
+    if depth >= 5:
+        return type(value).__name__
+    if isinstance(value, dict):
+        return {str(k): json_shape(v, depth + 1) for k, v in list(value.items())[:50]}
+    if isinstance(value, list):
+        return [json_shape(value[0], depth + 1)] if value else []
+    if value is None:
+        return "null"
+    return type(value).__name__
+
+
 def probe(status_out=print):
     """打印接口能力快照。返回 dict：{'collection': path|None, 'upload': path|None,...}"""
     found = {"collection": None, "upload": None, "docs": {}}
 
     status_out(f"base = {_redact(base())}")
     for p in PROBE_COLLECTIONS:
-        st, _, body = request("GET", p + "?per_page=1")
-        kind = "OK" if st < 300 else ("存在" if st == 404 and "Token" in body else st)
+        try:
+            st, _, body = request("GET", p + "?per_page=1")
+        except ApiError as e:
+            if e.status in (0, 401, 403):
+                raise
+            st, body = e.status, e.body
         status_out(f"  GET {p:12} -> {st}  {_redact(body)[:120]}")
         if st < 300 and not found["collection"]:
             found["collection"] = p
+            try:
+                shape = json_shape(json.loads(body))
+                status_out("  JSON 结构: " + _redact(json.dumps(shape, ensure_ascii=False))[:4000])
+            except (ValueError, TypeError):
+                status_out("  集合返回非 JSON。")
 
     for p in PROBE_UPLOADS:
         # GET 探活：405/400 也说明路由存在
@@ -129,7 +151,12 @@ def probe(status_out=print):
             found["upload"] = p
 
     for p in PROBE_DOCS:
-        st, _, body = request("GET", p)
+        try:
+            st, _, body = request("GET", p)
+        except ApiError as e:
+            if e.status in (0, 401, 403):
+                raise
+            st, body = e.status, e.body
         status_out(f"  GET {p:12} -> {st}")
         if st < 300:
             found["docs"][p] = body
