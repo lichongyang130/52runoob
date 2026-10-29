@@ -13,11 +13,13 @@ on:
         required: true
         type: string
       action:
+        description: "要执行的操作（先选择 probe）"
         required: true
         default: probe
         type: choice
         options: [probe, dry-run, images-only, publish, update]
       branch:
+        description: "包含稿件和工作流的分支"
         required: true
         default: arena/f9a79f56-52runoob
         type: string
