@@ -1,4 +1,4 @@
-> DRAFT — do not publish or package: 12 of 16 illustrations are still missing, and the article has not been reviewed by a person.
+> DRAFT — do not publish or package: 2 of 16 illustrations are still missing, and the article has not been reviewed by a person.
 
 # How to Plan a Run-Walk Workout
 
@@ -24,7 +24,7 @@ A run-walk workout alternates short runs with deliberate walking instead of aski
 
 ### Step 1 — Decide what this session is for
 
-> IMAGE PENDING for step 1: A person writing a short training note at a kitchen table beside a water bottle and trainers
+![A person writing a short training note at a kitchen table beside a water bottle and trainers](images/01-purpose-960.webp)
 
 Name one purpose before you leave the house: getting moving again, practising a steady rhythm, or covering a familiar loop more comfortably. A run-walk workout is a complete session in its own right, not a lesser version of continuous running. Pick a purpose you can meet on an ordinary day rather than on your best day.
 
@@ -32,7 +32,7 @@ Name one purpose before you leave the house: getting moving again, practising a 
 
 ### Step 2 — Check whether to ask a clinician first
 
-> IMAGE PENDING for step 2: An adult talking with a healthcare professional in a bright consulting room
+![An adult talking with a healthcare professional in a bright consulting room](images/02-health-960.webp)
 
 Ask a health professional about a suitable plan if you have a heart or lung condition, a recent injury, if you are pregnant, or if activity brings on symptoms. The NHS also advises speaking to a GP first if you are worried about your health before starting Couch to 5K. Follow individual medical advice over any general plan, including this one.
 
@@ -40,7 +40,7 @@ Ask a health professional about a suitable plan if you have a heart or lung cond
 
 ### Step 3 — Choose a realistic total session length
 
-> IMAGE PENDING for step 3: A hand marking a blank weekly planner beside a mug and a pair of running shoes
+![A hand holding a pencil over the empty grid of an open paper planner, with a mug of tea and a pair of running shoes nearby.](images/03-length-960.webp)
 
 Decide how long the whole workout will take, including the warm-up and cool-down. Many beginner sessions sit near half an hour: the first Couch to 5K run totals about 28 minutes 30 seconds before stretching. Choose a length that fits your week rather than one that depends on everything going perfectly.
 
@@ -48,7 +48,7 @@ Decide how long the whole workout will take, including the warm-up and cool-down
 
 ### Step 4 — Pick a simple, safe route
 
-> IMAGE PENDING for step 4: A runner looking along a quiet looped park path with benches and open grass
+![A runner looking along a quiet looped park path with benches and open grass](images/04-route-960.webp)
 
 Choose a flat, familiar, well-maintained route where you can shorten the session easily, such as a park loop, a quiet path, or a track. Repeating a loop means you are never far from your start point. Check traffic, cyclists, footing, lighting, and the weather, and tell someone your route if you are going alone.
 
@@ -56,7 +56,7 @@ Choose a flat, familiar, well-maintained route where you can shorten the session
 
 ### Step 5 — Gather the few things you need
 
-> IMAGE PENDING for step 5: Running shoes, a water bottle, a reflective band and a plain watch laid out on a wooden bench
+![Running shoes, a water bottle, a reflective band and a plain watch laid out on a wooden bench](images/05-kit-960.webp)
 
 You need shoes that fit comfortably, clothes suited to the weather, and something to keep time. Take water, especially in warm weather or for longer sessions. Add reflective items and a light for low light, and carry any medication you have been advised to keep with you. Nothing here needs to be expensive.
 
@@ -66,7 +66,7 @@ You need shoes that fit comfortably, clothes suited to the weather, and somethin
 
 ### Step 6 — Choose a starting run-walk ratio
 
-> IMAGE PENDING for step 6: A notebook page with blank interval boxes drawn beside a stopwatch on a table
+![A notebook page with blank interval boxes drawn beside a stopwatch on a table](images/06-ratio-960.webp)
 
 Pick a ratio you could repeat several times without straining. One minute of easy running with one minute thirty seconds of walking, repeated seven times, is the first NHS Couch to 5K session. If that feels like too much, shorten the running interval or lengthen the walk. The ratio is a starting point, not a test.
 
@@ -74,7 +74,7 @@ Pick a ratio you could repeat several times without straining. One minute of eas
 
 ### Step 7 — Set a timing method you do not have to watch
 
-> IMAGE PENDING for step 7: A phone propped on a hallway shelf beside headphones and a key, ready for a timed session
+![A phone propped on a hallway shelf beside coiled earphones and a door key, ready before a timed session.](images/07-timing-960.webp)
 
 Use a repeating timer, an audio-guided app, or landmarks such as lamp posts so you are not checking a screen constantly. Timing matters more than distance in a run-walk session, because it keeps both the running and the walking honest. The free NHS app times the intervals for you if you would rather not count.
 
@@ -108,7 +108,7 @@ Run the intervals at an effort you can hold a conversation through. The CDC desc
 
 ### Step 11 — Cool down instead of stopping suddenly
 
-> IMAGE PENDING for step 11: A person walking slowly along a park path at dusk after a workout, shoulders relaxed
+![A person walking slowly along a park path at dusk after a workout, shoulders relaxed](images/11-cooldown-960.webp)
 
 Finish with about five minutes of easy walking. The American Heart Association recommends reducing your walking speed for five to ten minutes so your heart rate comes down gradually, and notes that stopping abruptly can leave you light-headed because heart rate and blood pressure drop quickly.
 
@@ -116,7 +116,7 @@ Finish with about five minutes of easy walking. The American Heart Association r
 
 ### Step 12 — Stretch gently while you are still warm
 
-> IMAGE PENDING for step 12: An adult holding a calf stretch against a low wall in a quiet park after exercising
+![An adult doing a standing calf stretch with both hands on a low dry-stone wall in a quiet park, back leg straight and heel down.](images/12-stretch-960.webp)
 
 Stretching after the cool-down walk can help your muscles recover. The American Heart Association suggests holding each stretch for 10 to 30 seconds, keeping the stretch strong but not painful, breathing through it, and not bouncing. Stop any stretch that causes sharp pain rather than working through it.
 
@@ -124,7 +124,7 @@ Stretching after the cool-down walk can help your muscles recover. The American 
 
 ### Step 13 — Write down what actually happened
 
-> IMAGE PENDING for step 13: A short handwritten training note on a desk beside a water bottle and a plain watch
+![A hand writing a few lines in a notebook on a desk under a warm lamp, beside a water bottle and a plain watch.](images/13-log-960.webp)
 
 Record the intervals you completed, how the effort felt, and anything unusual such as a niggle, poor sleep, or a very warm day. A few lines are enough. Over several weeks the notes show whether sessions are becoming easier, which a single difficult day never tells you.
 

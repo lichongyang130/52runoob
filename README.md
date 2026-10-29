@@ -11,7 +11,7 @@
 - `content/Run-Your-First-5K/`：15 步图文稿、16 张不同的图片（新制 10 张，6 张沿用相关冬季跑步插画）、4 条站内链接、3 条站外资源和 4 条参考资料。2026-10-29 复查该文已在站点可访问并显示 15 步 15 图；发布不是由本仓库执行的。运动健康内容仍需真人审校。
 - `downloads/First-5K-Upload.zip`：上述稿件的独立网页和人工上传素材包；页面上有待审校提示。
 - `content/Repot-a-Houseplant/`：15 步英文稿，16 张插画全部为本文新制，体检 0 error；素材包 `downloads/Repot-a-Houseplant-Upload.zip`。待真人审校，未发布。
-- `content/Plan-a-Run-Walk-Workout/`：15 步英文稿，已有 4/16 张图（全部为新图），缺 12 张。
+- `content/Plan-a-Run-Walk-Workout/`：15 步英文稿，已有 14/16 张图（全部为新图），缺 14-progress、15-symptoms 两张。
 - `content/Back-Up-Your-Photos/`：15 步英文稿，16 张图全部待生成。
 - 上述两篇缺图稿件无法通过质量检查，因此不打包、不算完成；缺图清单见各自 `article.json` 的 `imageStatus.stepImagesPending`。
 - 其余 91 篇为选题，尚未完成正文与配图。`expanded-plan.csv` 是进度记录，不要将选题当成成品。
