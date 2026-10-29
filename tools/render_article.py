@@ -283,18 +283,28 @@ details p{margin:10px 0 2px;color:#3b434c}
 
 def render_preview(doc, body_html, hero_rel):
     steps = sum(len(p["steps"]) for p in doc["parts"])
-    imgs = 1 + sum(1 for p in doc["parts"] for s in p["steps"] if s.get("image"))
-    pending = sum(1 for p in doc["parts"] for s in p["steps"] if not s.get("image"))
+    pending, total_imgs = pending_image_count(doc)
+    imgs = total_imgs - pending
     cap = f"{len(doc['parts'])} methods &middot; {steps} steps &middot; {imgs} illustrations"
     if pending:
         cap += f" ({pending} pending)"
+    # The readable copy already carries this warning; the preview needs it too, or a
+    # part-finished draft looks like a finished page to anyone who opens it in a browser.
+    draft_notice = (
+        f'<p class="style-draft"><strong>Draft — do not publish or package:</strong> '
+        f'{pending} of {total_imgs} illustrations are still missing, and the article has '
+        'not been reviewed by a person.</p>'
+        if pending else ""
+    )
     style_pending = doc.get("media", {}).get("stylePending", [])
     style_notice = (
         f'<p class="style-draft"><strong>Illustration draft:</strong> {len(style_pending)} '
         'image(s) still use the previous style and will be replaced before publication.</p>'
         if style_pending else ""
     )
-    style_notice_line = f"    {style_notice}\n" if style_notice else ""
+    style_notice_line = "".join(
+        f"    {notice}\n" for notice in (draft_notice, style_notice) if notice
+    )
     reviewer = doc.get("publishing", {}).get("reviewer", "")
     review_note = (f"Reviewed by {esc(reviewer)}." if reviewer and reviewer != "subject-matter reviewer"
                    else "Subject-matter review pending.")
