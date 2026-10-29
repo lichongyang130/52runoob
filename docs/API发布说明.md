@@ -8,9 +8,9 @@
 ## 2026-10-29 探测记录
 
 - 冬季跑步样板已完成 13 张插画并通过本地体检；请求发布后先推送了 `probe` 标记。
-- 用户确认检查过 Actions 设置和 GitHub 连接后，已再次推送 `probe`；即使移除路径过滤条件，Actions API 仍返回零次运行。沙盒无法直接访问站点 API。
-- 当前 `arena-ai-coding-agent` 安装权限显示 `actions: read`，手动 dispatch 返回 403；仓库 Actions 设置和 Secret 内容无法读取。不能判断未触发的具体原因。
-- **尚未发出授权 API 请求，也未发布文章。** 可由仓库所有者在 GitHub 网页编辑同一分支的 `content/Keep-Running-Through-Winter/PUBLISH`，在 `probe` 前加一个空格并提交；脚本会移除首尾空格，仍只做只读探测。随后查看 Actions 运行结果并提供脱敏错误，不要把密钥贴到聊天里。
+- 用户确认检查过设置并在网页提交 `probe`（`f20b247`）；GitHub Actions 仍没有生成运行记录。另推送了不含密钥的最小诊断工作流（`5fa0c83`），同样没有生成运行记录；两个工作流均通过语法解析，原因仍无法从当前权限确定。
+- 当前 `arena-ai-coding-agent` 安装权限显示 `actions: read`，手动 dispatch 返回 403；仓库 Actions 设置和 Secret 内容无法读取。沙盒也无法直接访问站点 API。
+- **尚未发出授权 API 请求，也未发布文章。** 在 Actions 问题解决前，可以使用下面的本机只读探测脚本获取接口信息；不要把密钥贴到聊天里。
 
 ## 一次性配置
 
@@ -31,6 +31,18 @@
    | `SITE_API_UPLOAD` | `/uploads` | 图片上传路由 |
 
 3. **允许本地分支跑工作流**（可选）：仓库规模小、分类页少时可选。需要的话在 Settings → Actions → General 里打开 *Allow all actions and reusable workflows*。
+
+## GitHub Actions 无法启动时：从可联网电脑探测
+
+如果仓库 Actions 不生成任务，可在能够访问 `www.56juqingba.com` 的电脑或站点服务器上执行只读探测：
+
+```bash
+git clone --single-branch --branch arena/f9a79f56-52runoob https://github.com/lichongyang130/52runoob.git 52runoob-publish
+cd 52runoob-publish
+bash tools/probe_site.sh
+```
+
+脚本会在本机终端隐藏输入网站 API 密钥，仅传入进程环境，不写文件或命令历史；不会创建文章或上传图片。把脱敏后的输出发给代理，**不要发送密钥**。若此前已经通过安全方式设置 `SITE_API_TOKEN`，脚本会直接使用它。
 
 ## 用法
 
@@ -60,10 +72,12 @@ git push origin arena/f9a79f56-52runoob
 命令行等价：
 
 ```bash
-export SITE_API_TOKEN=...        # 只存在于当前 shell
+# 隐藏输入，不会把密钥写进 shell 命令历史
+read -r -s -p '网站 API 密钥：' SITE_API_TOKEN; echo; export SITE_API_TOKEN
 python3 tools/api/publish.py --probe
 python3 tools/api/publish.py content/Keep-Running-Through-Winter --dry-run
-python3 tools/api/publish.py content/Keep-Running-Through-Winter
+# 确认接口后再执行发布：python3 tools/api/publish.py content/Keep-Running-Through-Winter
+unset SITE_API_TOKEN
 ```
 
 ## 脚本做了什么

@@ -38,11 +38,9 @@ python3 tools/check_article.py content/Keep-Running-Through-Winter/article.json
 # 3. 新配图转码（原图放 images/raw/*.png）
 bash tools/make_images.sh content/Keep-Running-Through-Winter/images
 
-# 4. 发布到站点（密钥走环境变量/Secrets，见 docs/API发布说明.md）
-export SITE_API_TOKEN=...
-python3 tools/api/publish.py --probe
-python3 tools/api/publish.py content/Keep-Running-Through-Winter --dry-run
-python3 tools/api/publish.py content/Keep-Running-Through-Winter
+# 4. 在可访问站点的电脑上只读探测（隐藏输入密钥，不写 shell 历史）
+bash tools/probe_site.sh
+# 真实发布前确认接口和人工审校；详见 docs/API发布说明.md
 ```
 
 ## 写一篇新稿
