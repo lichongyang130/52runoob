@@ -133,7 +133,7 @@
           "title": "Let air out of anything reading high",
           "body": "If a tire is over its target, press the small pin in the centre of the valve using the nub on the back of your gauge. Release in bursts of a second or two and re-measure between each one. Air leaves far faster than it goes in, and overshooting means queueing at the pump again. Only do this on a cold tire; a warm one will read high regardless.",
           "tip": "Never use a screwdriver, a key or a nail on the valve pin. You will damage the seal and create a slow leak.",
-          "imageTodo": {
+          "image": {
             "base": "10-release-air",
             "alt": "A fingertip pressing the centre pin of a tire valve with the back edge of a gauge, a faint blur of escaping air around the stem."
           }
@@ -142,7 +142,7 @@
           "title": "Even up each axle and refit the caps",
           "body": "Compare the two tires on each axle and bring them to the same figure, unless the label specifies different pressures front and rear. A mismatched pair pulls the steering to one side and wears unevenly. Once every tire matches its target, screw the caps back on finger-tight: firm enough to stay put, loose enough that the next person does not need pliers.",
           "tip": "Walk round the car and count four caps before you leave. It is the step everyone skips when it starts raining.",
-          "imageTodo": {
+          "image": {
             "base": "11-refit-caps",
             "alt": "Fingers screwing a valve cap back onto a tire valve, with the side of the car stretching away behind the wheel."
           }
@@ -157,7 +157,7 @@
           "title": "Look at the tread while you are down there",
           "body": "You are already crouched by the wheel, so run a hand across the tread and find the wear bars, the raised strips set across the bottom of the grooves. When the tread wears level with them it has reached two thirty-seconds of an inch and the tire needs replacing. The coin test works too: stand a penny in a groove with Lincoln upside down, and if the top of his head is visible, the tread is finished.",
           "tip": "Wear concentrated on one edge of a single tire usually points to alignment or pressure, not to a faulty tire.",
-          "imageTodo": {
+          "image": {
             "base": "12-tread-check",
             "alt": "A hand pressing a small coin into the groove of a tire tread, close enough to see the texture of the rubber."
           }
@@ -166,7 +166,7 @@
           "title": "Treat the dashboard warning as a last resort",
           "body": "A tire pressure monitoring system only lights up once a tire is significantly underinflated, well past the point where handling, braking and fuel economy have already suffered. It is a warning that something has gone wrong, not a substitute for a monthly check. When the light does appear, put a gauge on all four tires rather than guessing which one set it off.",
           "tip": "A light that flashes for a minute at startup and then stays on usually means a sensor fault rather than low pressure.",
-          "imageTodo": {
+          "image": {
             "base": "13-dash-light",
             "alt": "A driver's seat view of a steering wheel and the lower dashboard, with one small amber symbol glowing in the instrument cluster."
           }
@@ -175,16 +175,16 @@
           "title": "Put the check on a monthly cycle",
           "body": "Set a recurring reminder for the same date each month and attach it to something you already do, such as the first fill-up after payday. Tires lose pressure slowly all by themselves, and roughly a further psi for every ten degrees Fahrenheit the temperature falls. That is why the first genuinely cold week of autumn takes every tire on the street below target at once.",
           "tip": "Re-check a week after any tire work. Fitters set pressures from a generic chart, not from the label on your door.",
-          "imageTodo": {
+          "image": {
             "base": "14-monthly-reminder",
-            "alt": "A phone and a set of car keys lying on a kitchen worktop, the phone screen lit in soft pale colour."
+            "alt": "A phone, a set of car keys and a small tire gauge lying on a pale wooden worktop with a mug behind them, the phone screen glowing in soft washes of colour."
           }
         },
         {
           "title": "Know when to stop and have it inspected",
           "body": "A tire that needs air every week has a leak, and slow leaks have a habit of becoming sudden ones. Stop driving on it and get it looked at. The same goes for a bulge in the sidewall, a cut deep enough to show the cords, or any tire you have driven on while flat, even for a short distance. That damage happens inside the casing and will not be visible from the outside.",
           "tip": "Note the date and the reading each time you top up. A written pattern is far easier to show a fitter than a vague feeling.",
-          "imageTodo": {
+          "image": {
             "base": "15-inspection",
             "alt": "A technician in a workshop crouching beside a wheel that has been removed from a car, examining the inner sidewall under a work lamp."
           }
@@ -275,22 +275,15 @@
     "wordCount": null,
     "internalLinkCount": 3,
     "imageCount": 16,
-    "imagePending": 6,
+    "imagePending": 0,
     "expertReviewed": false,
     "reviewNote": "Vehicle-safety guidance. A suitably qualified human reviewer must check the pressure, tread-depth and tire-damage advice against current NHTSA material before publication; no human review has happened in this repository."
   },
   "imageStatus": {
     "heroReady": true,
-    "stepImagesReady": 9,
-    "stepImagesPending": [
-      "10-release-air",
-      "11-refit-caps",
-      "12-tread-check",
-      "13-dash-light",
-      "14-monthly-reminder",
-      "15-inspection"
-    ],
-    "note": "10 of 16 illustrations drawn. 6 still outstanding; the guide cannot be packaged or published until every one is present."
+    "stepImagesReady": 15,
+    "stepImagesPending": [],
+    "note": "All illustrations were drawn for this guide; none are reused from another article."
   },
   "dateModified": "2026-10-30"
 }

@@ -1,5 +1,3 @@
-> DRAFT — do not publish or package: 6 of 16 illustrations are still missing, and the article has not been reviewed by a person.
-
 # How to Check Your Tire Pressure
 
 *A five-minute job that most drivers get wrong in the same two ways: reading the number off the tire instead of the car, and measuring after a drive.*
@@ -98,7 +96,7 @@ Work out the gap between your reading and the target, then add that much at the 
 
 ### Step 10 — Let air out of anything reading high
 
-> IMAGE PENDING for step 10: A fingertip pressing the centre pin of a tire valve with the back edge of a gauge, a faint blur of escaping air around the stem.
+![A fingertip pressing the centre pin of a tire valve with the back edge of a gauge, a faint blur of escaping air around the stem.](images/10-release-air-960.webp)
 
 If a tire is over its target, press the small pin in the centre of the valve using the nub on the back of your gauge. Release in bursts of a second or two and re-measure between each one. Air leaves far faster than it goes in, and overshooting means queueing at the pump again. Only do this on a cold tire; a warm one will read high regardless.
 
@@ -106,7 +104,7 @@ If a tire is over its target, press the small pin in the centre of the valve usi
 
 ### Step 11 — Even up each axle and refit the caps
 
-> IMAGE PENDING for step 11: Fingers screwing a valve cap back onto a tire valve, with the side of the car stretching away behind the wheel.
+![Fingers screwing a valve cap back onto a tire valve, with the side of the car stretching away behind the wheel.](images/11-refit-caps-960.webp)
 
 Compare the two tires on each axle and bring them to the same figure, unless the label specifies different pressures front and rear. A mismatched pair pulls the steering to one side and wears unevenly. Once every tire matches its target, screw the caps back on finger-tight: firm enough to stay put, loose enough that the next person does not need pliers.
 
@@ -116,7 +114,7 @@ Compare the two tires on each axle and bring them to the same figure, unless the
 
 ### Step 12 — Look at the tread while you are down there
 
-> IMAGE PENDING for step 12: A hand pressing a small coin into the groove of a tire tread, close enough to see the texture of the rubber.
+![A hand pressing a small coin into the groove of a tire tread, close enough to see the texture of the rubber.](images/12-tread-check-960.webp)
 
 You are already crouched by the wheel, so run a hand across the tread and find the wear bars, the raised strips set across the bottom of the grooves. When the tread wears level with them it has reached two thirty-seconds of an inch and the tire needs replacing. The coin test works too: stand a penny in a groove with Lincoln upside down, and if the top of his head is visible, the tread is finished.
 
@@ -124,7 +122,7 @@ You are already crouched by the wheel, so run a hand across the tread and find t
 
 ### Step 13 — Treat the dashboard warning as a last resort
 
-> IMAGE PENDING for step 13: A driver's seat view of a steering wheel and the lower dashboard, with one small amber symbol glowing in the instrument cluster.
+![A driver's seat view of a steering wheel and the lower dashboard, with one small amber symbol glowing in the instrument cluster.](images/13-dash-light-960.webp)
 
 A tire pressure monitoring system only lights up once a tire is significantly underinflated, well past the point where handling, braking and fuel economy have already suffered. It is a warning that something has gone wrong, not a substitute for a monthly check. When the light does appear, put a gauge on all four tires rather than guessing which one set it off.
 
@@ -132,7 +130,7 @@ A tire pressure monitoring system only lights up once a tire is significantly un
 
 ### Step 14 — Put the check on a monthly cycle
 
-> IMAGE PENDING for step 14: A phone and a set of car keys lying on a kitchen worktop, the phone screen lit in soft pale colour.
+![A phone, a set of car keys and a small tire gauge lying on a pale wooden worktop with a mug behind them, the phone screen glowing in soft washes of colour.](images/14-monthly-reminder-960.webp)
 
 Set a recurring reminder for the same date each month and attach it to something you already do, such as the first fill-up after payday. Tires lose pressure slowly all by themselves, and roughly a further psi for every ten degrees Fahrenheit the temperature falls. That is why the first genuinely cold week of autumn takes every tire on the street below target at once.
 
@@ -140,7 +138,7 @@ Set a recurring reminder for the same date each month and attach it to something
 
 ### Step 15 — Know when to stop and have it inspected
 
-> IMAGE PENDING for step 15: A technician in a workshop crouching beside a wheel that has been removed from a car, examining the inner sidewall under a work lamp.
+![A technician in a workshop crouching beside a wheel that has been removed from a car, examining the inner sidewall under a work lamp.](images/15-inspection-960.webp)
 
 A tire that needs air every week has a leak, and slow leaks have a habit of becoming sudden ones. Stop driving on it and get it looked at. The same goes for a bulge in the sidewall, a cut deep enough to show the cords, or any tire you have driven on while flat, even for a short distance. That damage happens inside the casing and will not be visible from the outside.
 

@@ -8,6 +8,7 @@ import json
 from collections import Counter
 from html.parser import HTMLParser
 from pathlib import Path
+import re
 import shutil
 import sys
 import tempfile
@@ -19,6 +20,7 @@ sys.path.insert(0, str(ROOT / "tools"))
 import check_article  # noqa: E402
 import package_article
 import package_bundle  # noqa: E402
+import make_preview_index  # noqa: E402
 import render_article  # noqa: E402
 
 
@@ -235,6 +237,7 @@ class InventoryTests(unittest.TestCase):
             ("Repot-a-Houseplant", "Home and Garden"),
             ("Plan-a-Run-Walk-Workout", "Sports and Fitness"),
             ("Back-Up-Your-Photos", "Computers and Electronics"),
+            ("Check-Your-Tire-Pressure", "Cars and Other Vehicles"),
         ):
             with self.subTest(slug=slug):
                 directory = ROOT / "content" / slug
@@ -347,6 +350,7 @@ class BundleTests(unittest.TestCase):
         "Repot-a-Houseplant",
         "Plan-a-Run-Walk-Workout",
         "Back-Up-Your-Photos",
+        "Check-Your-Tire-Pressure",
     )
 
     def test_bundle_matches_the_single_article_packages_exactly(self):
@@ -359,8 +363,8 @@ class BundleTests(unittest.TestCase):
             with ZipFile(bundle) as archive:
                 self.assertIsNone(archive.testzip())
                 names = set(archive.namelist())
-                # 4 articles x 19 entries, plus the landing page and the bundle readme.
-                self.assertEqual(len(names), 4 * 19 + 2)
+                # One 19-entry folder per article, plus the landing page and bundle readme.
+                self.assertEqual(len(names), len(self.FINISHED) * 19 + 2)
 
                 for slug, source in zip(self.FINISHED, sources):
                     single = tmpdir / f"{slug}-single.zip"
@@ -373,7 +377,7 @@ class BundleTests(unittest.TestCase):
                 landing = archive.read("index.html").decode("utf-8")
                 inventory = HTMLInventory()
                 inventory.feed(landing)
-                self.assertEqual(len(inventory.images), 4)
+                self.assertEqual(len(inventory.images), len(self.FINISHED))
                 for image in inventory.images:
                     self.assertIn(image["src"], names)
                     self.assertTrue(image.get("alt", "").strip())
@@ -384,6 +388,38 @@ class BundleTests(unittest.TestCase):
                 self.assertIn("不是已验证的文章系统导入包", readme)
                 self.assertIn("尚未发布", readme)
                 self.assertIn("真人进行事实与安全审校", readme)
+
+    def test_repo_preview_index_resolves_and_rejects_unfinished_work(self):
+        """The in-repo index must point at real files and must not flatter progress."""
+        sources = [ROOT / "content" / slug / "article.json" for slug in self.FINISHED]
+        with tempfile.TemporaryDirectory() as tmp, contextlib.redirect_stdout(io.StringIO()):
+            output = Path(tmp) / "index.html"
+            make_preview_index.build_index(sources, output)
+            page = output.read_text(encoding="utf-8")
+
+            # Every local reference is resolved against preview/, where the page lives.
+            preview = ROOT / "preview"
+            local = [
+                ref
+                for ref in re.findall(r'(?:src|href)="([^"]+)"', page)
+                if not ref.startswith(("http", "#", "mailto:", "data:"))
+            ]
+            self.assertTrue(local)
+            for ref in local:
+                self.assertTrue((preview / ref).resolve().is_file(), f"dangling {ref}")
+
+            # No bundle-shaped paths survived the rewrite.
+            self.assertNotIn("/index.html\"", page)
+            self.assertNotIn("/Images/", page)
+
+            # A guide that is still missing art cannot be listed as finished.
+            draft = ROOT / "content/Build-an-Emergency-Fund/article.json"
+            self.assertGreater(
+                json.loads(draft.read_text(encoding="utf-8"))["publishing"]["imagePending"], 0
+            )
+            with self.assertRaisesRegex(ValueError, "配图"):
+                make_preview_index.build_index([draft], Path(tmp) / "nope.html")
+            self.assertFalse((Path(tmp) / "nope.html").exists())
 
     def test_bundle_refuses_an_unfinished_article(self):
         """One bad article must fail the whole bundle, not be quietly dropped."""

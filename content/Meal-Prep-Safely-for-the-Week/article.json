@@ -46,7 +46,7 @@
           "title": "Count the meals you will genuinely eat",
           "body": "Work out how many meals you will really eat at home this week, then cook for that number and stop. Most of the waste in a meal prep routine comes from optimism: six lunches made on Sunday, three eaten, three thrown out on Friday. Start with four portions rather than seven. A batch you finish is a batch that never sits in the fridge past its safe window.",
           "tip": "Mark the evenings you are out before you write the shopping list. One meal elsewhere turns a tidy plan into forgotten leftovers.",
-          "imageTodo": {
+          "image": {
             "base": "01-plan-portions",
             "alt": "A person at a kitchen table writing in an open notebook beside a mug, with a paper bag of vegetables at the edge of the table."
           }
@@ -55,7 +55,7 @@
           "title": "Choose dishes that survive four days",
           "body": "Stews, braises, grains, beans, roasted root vegetables and cooked meats all hold up through several days of refrigeration. Dressed salad leaves, fried food and sauces thickened with cornflour do not. If you want something crisp or fresh in the finished meal, prepare it separately and add it on the day. Egg, chicken, ham and tuna salads keep only three to four days, so make those midweek rather than on Sunday.",
           "tip": "Keep sauces and dressings in their own small pots. Food turns soggy long before it turns unsafe.",
-          "imageTodo": {
+          "image": {
             "base": "02-choose-dishes",
             "alt": "An overhead view of a worktop holding a pot of stew, a bowl of cooked grains and a tray of roasted vegetables."
           }
@@ -64,7 +64,7 @@
           "title": "Keep the cold chain on the way home",
           "body": "Pick up chilled and frozen items last, pack them together in one bag, and go straight home. Perishable food should not spend more than two hours out of refrigeration in total, and that drops to one hour once the air is above ninety degrees Fahrenheit. Time in a warm car counts against the same budget, before the food has even reached your kitchen.",
           "tip": "An insulated bag with a frozen gel pack in the boot buys you an hour on a hot day for the price of a sandwich.",
-          "imageTodo": {
+          "image": {
             "base": "03-cold-chain",
             "alt": "A cool bag standing open in the boot of a car, packed with chilled groceries and a flat gel pack."
           }
@@ -276,17 +276,14 @@
     "wordCount": null,
     "internalLinkCount": 3,
     "imageCount": 16,
-    "imagePending": 16,
+    "imagePending": 12,
     "expertReviewed": false,
     "reviewNote": "Food-safety guidance. A suitably qualified human reviewer must check every temperature, time limit and storage window against current USDA FSIS and FoodSafety.gov material before publication; no human review has happened in this repository."
   },
   "imageStatus": {
-    "heroReady": false,
-    "stepImagesReady": 0,
+    "heroReady": true,
+    "stepImagesReady": 3,
     "stepImagesPending": [
-      "01-plan-portions",
-      "02-choose-dishes",
-      "03-cold-chain",
       "04-fridge-temp",
       "05-clean-hands",
       "06-separate-raw",
@@ -300,7 +297,7 @@
       "14-reheat",
       "15-discard"
     ],
-    "note": "0 of 16 illustrations drawn. 16 still outstanding; the guide cannot be packaged or published until every one is present."
+    "note": "4 of 16 illustrations drawn. 12 still outstanding; the guide cannot be packaged or published until every one is present."
   },
   "dateModified": "2026-10-30"
 }

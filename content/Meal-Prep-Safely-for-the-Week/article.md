@@ -1,4 +1,4 @@
-> DRAFT — do not publish or package: 16 of 16 illustrations are still missing, and the article has not been reviewed by a person.
+> DRAFT — do not publish or package: 12 of 16 illustrations are still missing, and the article has not been reviewed by a person.
 
 # How to Meal Prep Safely for the Week
 
@@ -24,7 +24,7 @@ Most meal prep advice is about efficiency: the right containers, the right order
 
 ### Step 1 — Count the meals you will genuinely eat
 
-> IMAGE PENDING for step 1: A person at a kitchen table writing in an open notebook beside a mug, with a paper bag of vegetables at the edge of the table.
+![A person at a kitchen table writing in an open notebook beside a mug, with a paper bag of vegetables at the edge of the table.](images/01-plan-portions-960.webp)
 
 Work out how many meals you will really eat at home this week, then cook for that number and stop. Most of the waste in a meal prep routine comes from optimism: six lunches made on Sunday, three eaten, three thrown out on Friday. Start with four portions rather than seven. A batch you finish is a batch that never sits in the fridge past its safe window.
 
@@ -32,7 +32,7 @@ Work out how many meals you will really eat at home this week, then cook for tha
 
 ### Step 2 — Choose dishes that survive four days
 
-> IMAGE PENDING for step 2: An overhead view of a worktop holding a pot of stew, a bowl of cooked grains and a tray of roasted vegetables.
+![An overhead view of a worktop holding a pot of stew, a bowl of cooked grains and a tray of roasted vegetables.](images/02-choose-dishes-960.webp)
 
 Stews, braises, grains, beans, roasted root vegetables and cooked meats all hold up through several days of refrigeration. Dressed salad leaves, fried food and sauces thickened with cornflour do not. If you want something crisp or fresh in the finished meal, prepare it separately and add it on the day. Egg, chicken, ham and tuna salads keep only three to four days, so make those midweek rather than on Sunday.
 
@@ -40,7 +40,7 @@ Stews, braises, grains, beans, roasted root vegetables and cooked meats all hold
 
 ### Step 3 — Keep the cold chain on the way home
 
-> IMAGE PENDING for step 3: A cool bag standing open in the boot of a car, packed with chilled groceries and a flat gel pack.
+![A cool bag standing open in the boot of a car, packed with chilled groceries and a flat gel pack.](images/03-cold-chain-960.webp)
 
 Pick up chilled and frozen items last, pack them together in one bag, and go straight home. Perishable food should not spend more than two hours out of refrigeration in total, and that drops to one hour once the air is above ninety degrees Fahrenheit. Time in a warm car counts against the same budget, before the food has even reached your kitchen.
 
