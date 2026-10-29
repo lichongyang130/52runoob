@@ -1,4 +1,4 @@
-> DRAFT — do not publish or package: 16 of 16 illustrations are still missing, and the article has not been reviewed by a person.
+> DRAFT — do not publish or package: 8 of 16 illustrations are still missing, and the article has not been reviewed by a person.
 
 # How to Back Up Your Photos
 
@@ -18,13 +18,13 @@
 
 A photo library can disappear through a failed device, an accidental deletion, or a compromised account. Synchronization helps keep devices consistent but is not always an independent backup. Use these 15 steps to locate originals, make separate copies, test a restore, and maintain a routine suited to your devices.
 
-![A person organizing photos on a laptop with a phone and external drive on a desk.](images/00-hero-1600.webp)
+![A person at a sunlit desk holding a printed photograph, with more prints on the wood, a laptop showing a grid of photo thumbnails, a phone and a small external drive.](images/00-hero-1600.webp)
 
 ## Part 1 of 3 — Find and Organize Your Photos
 
 ### Step 1 — List where your photos live
 
-> IMAGE PENDING for step 1: A person arranging a phone, camera, memory card and laptop on a clean desk.
+![Hands arranging a phone, a compact camera, a memory card and a closed laptop into a row on a pale wooden desk, seen from above.](images/01-inventory-960.webp)
 
 Make a list of phones, computers, cameras, memory cards, external drives, and online libraries that contain photos or videos. Include old accounts and shared collections you are allowed to copy. Mark which source has the full-resolution original and which contains edited or exported versions; they may not be stored in the same place.
 
@@ -32,7 +32,7 @@ Make a list of phones, computers, cameras, memory cards, external drives, and on
 
 ### Step 2 — Understand sync versus backup
 
-> IMAGE PENDING for step 2: A person comparing a phone photo library and a laptop at a desk, with no readable screen text.
+![A person at a kitchen table holding up a phone beside an open laptop, comparing the photo thumbnails shown on both screens.](images/02-sync-960.webp)
 
 A synced photo library keeps changes aligned across devices; it does not necessarily preserve an independent copy after deletion. For example, Apple says a photo deleted from iCloud Photos on one device is deleted on other devices using the same account. Check your own service's deletion and retention rules before treating sync as your only protection.
 
@@ -40,7 +40,7 @@ A synced photo library keeps changes aligned across devices; it does not necessa
 
 ### Step 3 — Choose a multi-copy plan
 
-> IMAGE PENDING for step 3: A notebook with three simple unlabelled circles beside a laptop and two different storage devices.
+![An open notebook with three empty hand-drawn circles on the page, beside a laptop and two different external drives on a desk.](images/03-plan-960.webp)
 
 Aim for several independent copies, including one away from home. The 3-2-1 guideline describes three copies on two types of media, with one off-site. For a household, that might include the working library, a separate external-drive backup, and an independent off-site backup; choose storage types and isolation that suit your risks and budget.
 
@@ -48,7 +48,7 @@ Aim for several independent copies, including one away from home. The 3-2-1 guid
 
 ### Step 4 — Check available storage
 
-> IMAGE PENDING for step 4: A hand holding a compact external drive next to a laptop and a stack of printed photos.
+![A hand holding up a small external drive to look at it, with a laptop and a stack of printed photographs on the desk behind.](images/04-capacity-960.webp)
 
 Estimate the total size of your photos, videos, and any original files you want to preserve. Leave room for new pictures and older versions, not just today's library. Check the free space on each destination and any cloud storage limits before starting a large transfer. Plan for video files, which may be much larger than still images.
 
@@ -56,7 +56,7 @@ Estimate the total size of your photos, videos, and any original files you want 
 
 ### Step 5 — Gather files without deleting originals
 
-> IMAGE PENDING for step 5: A person connecting a phone to a laptop with a cable at a quiet desk.
+![A person at a lamplit desk in the evening plugging a cable from a phone into the side of a laptop.](images/05-import-960.webp)
 
 Use your device's supported import or export method to collect the files you want to protect. Keep the source photos in place while you copy, and wait for transfers to finish before disconnecting anything. If a service stores optimized previews on the device, use its instructions to obtain full-resolution originals where needed.
 
@@ -66,7 +66,7 @@ Use your device's supported import or export method to collect the files you wan
 
 ### Step 6 — Preserve originals and useful edits
 
-> IMAGE PENDING for step 6: A person sorting photo files on a laptop with printed photos nearby, no legible screen text.
+![Seen over the shoulder, a person in an armchair sorting photo thumbnails on a laptop, with printed photographs fanned out on the chair arm.](images/06-originals-960.webp)
 
 Decide whether to keep original files, edited versions, videos, and accompanying metadata. Export options differ by app: an edited JPEG may not include the original file or all album organization. Use the app's documented export method and check a small sample before exporting a large library. Record any formats or sidecar files needed to reopen edits.
 
@@ -74,7 +74,7 @@ Decide whether to keep original files, edited versions, videos, and accompanying
 
 ### Step 7 — Copy to a separate local drive
 
-> IMAGE PENDING for step 7: A hand connecting a portable drive to a laptop on a wooden desk.
+![A close view of a hand guiding a cable connector into the side port of a laptop, with a portable drive on the wooden desk beside it.](images/07-local-960.webp)
 
 Connect a reliable external drive and use your chosen backup tool or copy method to make an independent local copy. Organize it in a recognizable folder and wait for the operation to complete. Do not treat a drive that holds the only copy as a backup; the working library and backup must both remain available.
 
@@ -82,7 +82,7 @@ Connect a reliable external drive and use your chosen backup tool or copy method
 
 ### Step 8 — Check that the copy is complete
 
-> IMAGE PENDING for step 8: A person checking photos on a laptop while a portable drive is connected, screen content abstract.
+> IMAGE PENDING for step 8: A person at a laptop comparing a folder of photo thumbnails against a connected portable drive.
 
 Compare the source and destination folder sizes or file counts where your software makes that possible. Open a selection of photos and play several videos directly from the backup, including older and recent items. If your software provides an integrity check, use it as well. Investigate errors or unusually small files before moving on.
 
@@ -90,7 +90,7 @@ Compare the source and destination folder sizes or file counts where your softwa
 
 ### Step 9 — Protect private photos and the key
 
-> IMAGE PENDING for step 9: An external drive beside a closed lockbox and a handwritten blank card, no readable writing.
+> IMAGE PENDING for step 9: An external drive beside a small closed lockbox and a folded card on a desk.
 
 Consider encrypting a removable backup, especially if it might be lost or kept away from home. Use a strong password and store the recovery key separately in a safe, accessible place. Follow the encryption tool's instructions and make sure a trusted person can locate recovery information if needed. Losing the only key can make the backup unusable.
 
@@ -98,7 +98,7 @@ Consider encrypting a removable backup, especially if it might be lost or kept a
 
 ### Step 10 — Keep another copy away from home
 
-> IMAGE PENDING for step 10: A person placing a portable drive in a small padded case beside a bag at a doorway.
+> IMAGE PENDING for step 10: A person tucking a portable drive into a small padded case beside a bag at a front door.
 
 Create an independent off-site copy, such as a versioned online backup or an encrypted drive stored in a secure second location. Check that the service or device actually contains your intended files and retains them under its terms. An off-site copy helps if a fire, theft, or other event affects your home and local drive.
 
@@ -108,7 +108,7 @@ Create an independent off-site copy, such as a versioned online backup or an enc
 
 ### Step 11 — Preserve a disconnected or versioned copy
 
-> IMAGE PENDING for step 11: An unplugged portable drive stored in a protective pouch in a drawer.
+> IMAGE PENDING for step 11: An unplugged portable drive resting in a protective pouch inside an open desk drawer.
 
 Keep a backup disconnected when it is not being updated, or use a service that retains previous versions and deleted files for a period you understand. An always-connected copy can be affected by accidental changes or malicious software. Check retention limits and reconnect the offline drive regularly enough to keep the copy useful.
 
@@ -116,7 +116,7 @@ Keep a backup disconnected when it is not being updated, or use a service that r
 
 ### Step 12 — Practice restoring a few files
 
-> IMAGE PENDING for step 12: A person reviewing a recovered photo on a laptop beside an external drive and notebook.
+> IMAGE PENDING for step 12: A person looking at a single recovered photograph on a laptop, with an external drive and an open notebook beside it.
 
 Restore a small selection to a different folder or device rather than overwriting your working library. Open the recovered images and videos, and check that their quality and important dates are as expected. A successful transfer is not proof that recovery will work; a test makes the process familiar before an emergency.
 
@@ -124,7 +124,7 @@ Restore a small selection to a different folder or device rather than overwritin
 
 ### Step 13 — Schedule regular updates
 
-> IMAGE PENDING for step 13: A hand marking a plain calendar next to a camera and an external drive.
+> IMAGE PENDING for step 13: A hand marking a square on a plain wall calendar, with a camera and an external drive on the shelf below.
 
 Choose how often to back up based on how many new photos you would be willing to lose. Set an automatic schedule where supported and a reminder to update any disconnected drive. After travel or a major event, make an extra copy rather than waiting for the next routine backup. Check that each run actually completes.
 
@@ -132,7 +132,7 @@ Choose how often to back up based on how many new photos you would be willing to
 
 ### Step 14 — Secure account access
 
-> IMAGE PENDING for step 14: A person checking security settings on a laptop with a phone nearby, no readable interface text.
+> IMAGE PENDING for step 14: A person reviewing account settings on a laptop with a phone held in the other hand.
 
 Use a unique password and multi-factor authentication where your backup service supports it. Save recovery methods separately and review who can access shared albums or backup folders. Keep devices and backup software updated. If a backup contains someone else's private photos, agree on appropriate access and storage before copying them.
 
@@ -140,7 +140,7 @@ Use a unique password and multi-factor authentication where your backup service 
 
 ### Step 15 — Review the plan and replace failing media
 
-> IMAGE PENDING for step 15: A person reviewing an external drive and a plain checklist on a bright home desk.
+> IMAGE PENDING for step 15: A person at a bright home desk inspecting an older external drive beside a handwritten checklist.
 
 Periodically check backup dates, storage space, alerts, and whether you can still open older formats. Test restoration again after changing computers or backup services. Replace a drive that reports errors or behaves unreliably, but keep existing copies until the replacement is complete and tested. Update your notes so you know where each copy lives.
 

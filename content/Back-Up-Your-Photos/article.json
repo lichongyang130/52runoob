@@ -26,12 +26,11 @@
   "media": {
     "hero": {
       "base": "00-hero",
-      "alt": "A person organizing photos on a laptop with a phone and external drive on a desk."
+      "alt": "A person at a sunlit desk holding a printed photograph, with more prints on the wood, a laptop showing a grid of photo thumbnails, a phone and a small external drive."
     },
     "style": "Naturalistic hand-painted editorial illustration, soft oil-and-watercolor texture, warm muted palette; scenes vary by step.",
-    "stylePending": [
-      "00-hero"
-    ]
+    "stylePending": [],
+    "reusedFrom": {}
   },
   "parts": [
     {
@@ -41,45 +40,45 @@
           "title": "List where your photos live",
           "body": "Make a list of phones, computers, cameras, memory cards, external drives, and online libraries that contain photos or videos. Include old accounts and shared collections you are allowed to copy. Mark which source has the full-resolution original and which contains edited or exported versions; they may not be stored in the same place.",
           "tip": "Start with the collection you would miss most if a device failed today.",
-          "imageTodo": {
+          "image": {
             "base": "01-inventory",
-            "alt": "A person arranging a phone, camera, memory card and laptop on a clean desk."
+            "alt": "Hands arranging a phone, a compact camera, a memory card and a closed laptop into a row on a pale wooden desk, seen from above."
           }
         },
         {
           "title": "Understand sync versus backup",
           "body": "A synced photo library keeps changes aligned across devices; it does not necessarily preserve an independent copy after deletion. For example, Apple says a photo deleted from iCloud Photos on one device is deleted on other devices using the same account. Check your own service's deletion and retention rules before treating sync as your only protection.",
           "tip": "Keep at least one separate copy that is not automatically deleted when the main library changes.",
-          "imageTodo": {
+          "image": {
             "base": "02-sync",
-            "alt": "A person comparing a phone photo library and a laptop at a desk, with no readable screen text."
+            "alt": "A person at a kitchen table holding up a phone beside an open laptop, comparing the photo thumbnails shown on both screens."
           }
         },
         {
           "title": "Choose a multi-copy plan",
           "body": "Aim for several independent copies, including one away from home. The 3-2-1 guideline describes three copies on two types of media, with one off-site. For a household, that might include the working library, a separate external-drive backup, and an independent off-site backup; choose storage types and isolation that suit your risks and budget.",
           "tip": "A second folder on the same physical drive is not an independent backup.",
-          "imageTodo": {
+          "image": {
             "base": "03-plan",
-            "alt": "A notebook with three simple unlabelled circles beside a laptop and two different storage devices."
+            "alt": "An open notebook with three empty hand-drawn circles on the page, beside a laptop and two different external drives on a desk."
           }
         },
         {
           "title": "Check available storage",
           "body": "Estimate the total size of your photos, videos, and any original files you want to preserve. Leave room for new pictures and older versions, not just today's library. Check the free space on each destination and any cloud storage limits before starting a large transfer. Plan for video files, which may be much larger than still images.",
           "tip": "If a destination fills up, check for a failed or paused backup before relying on it.",
-          "imageTodo": {
+          "image": {
             "base": "04-capacity",
-            "alt": "A hand holding a compact external drive next to a laptop and a stack of printed photos."
+            "alt": "A hand holding up a small external drive to look at it, with a laptop and a stack of printed photographs on the desk behind."
           }
         },
         {
           "title": "Gather files without deleting originals",
           "body": "Use your device's supported import or export method to collect the files you want to protect. Keep the source photos in place while you copy, and wait for transfers to finish before disconnecting anything. If a service stores optimized previews on the device, use its instructions to obtain full-resolution originals where needed.",
           "tip": "Import or copy first; do not choose a move or delete option while the backup is unverified.",
-          "imageTodo": {
+          "image": {
             "base": "05-import",
-            "alt": "A person connecting a phone to a laptop with a cable at a quiet desk."
+            "alt": "A person at a lamplit desk in the evening plugging a cable from a phone into the side of a laptop."
           }
         }
       ]
@@ -91,18 +90,18 @@
           "title": "Preserve originals and useful edits",
           "body": "Decide whether to keep original files, edited versions, videos, and accompanying metadata. Export options differ by app: an edited JPEG may not include the original file or all album organization. Use the app's documented export method and check a small sample before exporting a large library. Record any formats or sidecar files needed to reopen edits.",
           "tip": "Keep the original file as well as a shareable export when both matter to you.",
-          "imageTodo": {
+          "image": {
             "base": "06-originals",
-            "alt": "A person sorting photo files on a laptop with printed photos nearby, no legible screen text."
+            "alt": "Seen over the shoulder, a person in an armchair sorting photo thumbnails on a laptop, with printed photographs fanned out on the chair arm."
           }
         },
         {
           "title": "Copy to a separate local drive",
           "body": "Connect a reliable external drive and use your chosen backup tool or copy method to make an independent local copy. Organize it in a recognizable folder and wait for the operation to complete. Do not treat a drive that holds the only copy as a backup; the working library and backup must both remain available.",
           "tip": "Label the physical drive so it is not mistaken for an empty spare.",
-          "imageTodo": {
+          "image": {
             "base": "07-local",
-            "alt": "A hand connecting a portable drive to a laptop on a wooden desk."
+            "alt": "A close view of a hand guiding a cable connector into the side port of a laptop, with a portable drive on the wooden desk beside it."
           }
         },
         {
@@ -111,7 +110,7 @@
           "tip": "Check representative files from different dates and devices, not just the first photo in a folder.",
           "imageTodo": {
             "base": "08-verify",
-            "alt": "A person checking photos on a laptop while a portable drive is connected, screen content abstract."
+            "alt": "A person at a laptop comparing a folder of photo thumbnails against a connected portable drive."
           }
         },
         {
@@ -120,7 +119,7 @@
           "tip": "Do not store the only recovery key on the same drive it unlocks.",
           "imageTodo": {
             "base": "09-encrypt",
-            "alt": "An external drive beside a closed lockbox and a handwritten blank card, no readable writing."
+            "alt": "An external drive beside a small closed lockbox and a folded card on a desk."
           }
         },
         {
@@ -129,7 +128,7 @@
           "tip": "Review privacy controls before putting sensitive family pictures into a shared account.",
           "imageTodo": {
             "base": "10-offsite",
-            "alt": "A person placing a portable drive in a small padded case beside a bag at a doorway."
+            "alt": "A person tucking a portable drive into a small padded case beside a bag at a front door."
           }
         }
       ]
@@ -143,7 +142,7 @@
           "tip": "Isolation and version history serve different purposes; use both if practical.",
           "imageTodo": {
             "base": "11-offline",
-            "alt": "An unplugged portable drive stored in a protective pouch in a drawer."
+            "alt": "An unplugged portable drive resting in a protective pouch inside an open desk drawer."
           }
         },
         {
@@ -152,7 +151,7 @@
           "tip": "Try restoring an older file and a recent video as well as a favorite photo.",
           "imageTodo": {
             "base": "12-restore",
-            "alt": "A person reviewing a recovered photo on a laptop beside an external drive and notebook."
+            "alt": "A person looking at a single recovered photograph on a laptop, with an external drive and an open notebook beside it."
           }
         },
         {
@@ -161,7 +160,7 @@
           "tip": "A simple recurring reminder is better than a complicated plan you stop using.",
           "imageTodo": {
             "base": "13-schedule",
-            "alt": "A hand marking a plain calendar next to a camera and an external drive."
+            "alt": "A hand marking a square on a plain wall calendar, with a camera and an external drive on the shelf below."
           }
         },
         {
@@ -170,7 +169,7 @@
           "tip": "Test that account recovery works before you depend on a single phone for access.",
           "imageTodo": {
             "base": "14-security",
-            "alt": "A person checking security settings on a laptop with a phone nearby, no readable interface text."
+            "alt": "A person reviewing account settings on a laptop with a phone held in the other hand."
           }
         },
         {
@@ -179,7 +178,7 @@
           "tip": "Recheck your backups after a major system change or an unexpected transfer failure.",
           "imageTodo": {
             "base": "15-maintain",
-            "alt": "A person reviewing an external drive and a plain checklist on a bright home desk."
+            "alt": "A person at a bright home desk inspecting an older external drive beside a handwritten checklist."
           }
         }
       ]
@@ -271,19 +270,12 @@
     "wordCount": null,
     "internalLinkCount": 3,
     "imageCount": 16,
-    "imagePending": 16
+    "imagePending": 8
   },
   "imageStatus": {
-    "heroReady": false,
-    "stepImagesReady": 0,
+    "heroReady": true,
+    "stepImagesReady": 7,
     "stepImagesPending": [
-      "01-inventory",
-      "02-sync",
-      "03-plan",
-      "04-capacity",
-      "05-import",
-      "06-originals",
-      "07-local",
       "08-verify",
       "09-encrypt",
       "10-offsite",
@@ -293,6 +285,7 @@
       "14-security",
       "15-maintain"
     ],
-    "note": "Illustrations are produced in batches of ten per session. The article stays a draft until every step image exists."
-  }
+    "note": "All illustrations were drawn for this guide; none are reused from another article."
+  },
+  "dateModified": "2026-10-29"
 }

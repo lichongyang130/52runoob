@@ -167,7 +167,7 @@
           "title": "Change one thing at a time",
           "body": "When a session feels manageable, make a single change: lengthen the running intervals slightly, add one interval, or reduce the walk a little. Do not lengthen the runs, cut the walks and add a session in the same week. The NHS plan progresses gradually across nine weeks, with three sessions a week and a rest day between runs.",
           "tip": "Keep a change for a couple of sessions before deciding whether it worked.",
-          "imageTodo": {
+          "image": {
             "base": "14-progress",
             "alt": "A runner moving at a steady, easy pace along a gravel path with open fields behind"
           }
@@ -176,7 +176,7 @@
           "title": "Respond to pain and unusual symptoms",
           "body": "Stop the session if you develop pain, dizziness, unusual breathlessness, or anything that feels wrong, and seek medical advice if it persists, worsens, or changes how you walk. Chest pain, fainting, or severe difficulty breathing need emergency help rather than another attempt at the intervals.",
           "tip": "Repeat an easier session instead of trying to make up what you missed.",
-          "imageTodo": {
+          "image": {
             "base": "15-symptoms",
             "alt": "A person sitting on a park bench resting a hand on one knee and checking how it feels"
           }
@@ -269,17 +269,14 @@
     "wordCount": null,
     "internalLinkCount": 4,
     "imageCount": 16,
-    "imagePending": 2,
+    "imagePending": 0,
     "expertReviewed": false,
     "reviewNote": "Exercise guidance. A suitably qualified human reviewer must check the safety and training content before publication; no human review has happened in this repository."
   },
   "imageStatus": {
     "heroReady": true,
-    "stepImagesReady": 13,
-    "stepImagesPending": [
-      "14-progress",
-      "15-symptoms"
-    ],
+    "stepImagesReady": 15,
+    "stepImagesPending": [],
     "note": "All illustrations were drawn for this guide; none are reused from another article."
   },
   "quizIdea": {

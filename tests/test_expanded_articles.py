@@ -172,7 +172,7 @@ class InventoryTests(unittest.TestCase):
 
     def test_partially_illustrated_drafts_cannot_be_packaged(self):
         """A draft stays unpackageable until every step image exists, not just some."""
-        for slug in ("Plan-a-Run-Walk-Workout", "Back-Up-Your-Photos"):
+        for slug in ("Back-Up-Your-Photos",):
             with self.subTest(slug=slug):
                 article_dir = ROOT / "content" / slug
                 path = article_dir / "article.json"
@@ -209,47 +209,57 @@ class InventoryTests(unittest.TestCase):
                     with self.assertRaisesRegex(ValueError, "体检未通过"):
                         package_article.build_package(path, Path(tmp) / "draft.zip")
 
-    def test_repotting_guide_is_fully_illustrated_with_original_art(self):
-        """The second finished guide must be complete and must not recycle other articles' art."""
-        directory = ROOT / "content/Repot-a-Houseplant"
-        doc = json.loads((directory / "article.json").read_text(encoding="utf-8"))
-        steps = [step for part in doc["parts"] for step in part["steps"]]
-        self.assertEqual(len(steps), 15)
-        self.assertEqual(doc["publishing"]["imagePending"], 0)
-        self.assertEqual(doc["media"].get("reusedFrom"), {})
-        self.assertEqual(doc["media"]["stylePending"], [])
-        self.assertFalse(doc["publishing"]["expertReviewed"])
+    def test_finished_guides_are_fully_illustrated_with_original_art(self):
+        """Every guide drawn from scratch must be complete and must not recycle other art."""
+        for slug, category in (
+            ("Repot-a-Houseplant", "Home and Garden"),
+            ("Plan-a-Run-Walk-Workout", "Sports and Fitness"),
+        ):
+            with self.subTest(slug=slug):
+                directory = ROOT / "content" / slug
+                doc = json.loads((directory / "article.json").read_text(encoding="utf-8"))
+                steps = [step for part in doc["parts"] for step in part["steps"]]
+                self.assertEqual(len(steps), 15)
+                self.assertEqual(doc["category"], category)
+                self.assertEqual(doc["publishing"]["imagePending"], 0)
+                self.assertEqual(doc["media"].get("reusedFrom"), {})
+                self.assertEqual(doc["media"]["stylePending"], [])
+                self.assertFalse(doc["publishing"]["expertReviewed"])
 
-        digests = {}
-        for image in [doc["media"]["hero"]] + [step["image"] for step in steps]:
-            self.assertTrue(image["alt"].strip())
-            for width in ("960", "1600"):
-                asset = directory / "images" / f"{image['base']}-{width}.webp"
-                self.assertTrue(asset.is_file(), f"missing {asset}")
-                if width == "1600":
-                    self.assertLessEqual(asset.stat().st_size, 200_000, f"{asset.name} too heavy")
-                    digests.setdefault(asset.read_bytes(), []).append(image["base"])
-        self.assertEqual(len(digests), 16, "cover and step images must all differ")
+                digests = {}
+                for image in [doc["media"]["hero"]] + [step["image"] for step in steps]:
+                    self.assertTrue(image["alt"].strip())
+                    # Alt text describes the picture; it is not a note to the illustrator.
+                    self.assertNotRegex(image["alt"].lower(), r"no readable|no legible|abstract")
+                    for width in ("960", "1600"):
+                        asset = directory / "images" / f"{image['base']}-{width}.webp"
+                        self.assertTrue(asset.is_file(), f"missing {asset}")
+                        if width == "1600":
+                            self.assertLessEqual(
+                                asset.stat().st_size, 200_000, f"{asset.name} too heavy"
+                            )
+                            digests.setdefault(asset.read_bytes(), []).append(image["base"])
+                self.assertEqual(len(digests), 16, "cover and step images must all differ")
 
-        with tempfile.TemporaryDirectory() as tmp, contextlib.redirect_stdout(io.StringIO()):
-            output = Path(tmp) / "repot.zip"
-            package_article.build_package(directory / "article.json", output)
-            with ZipFile(output) as archive:
-                self.assertIsNone(archive.testzip())
-                names = set(archive.namelist())
-                self.assertEqual(len(names), 19)
-                page = archive.read("Repot-a-Houseplant/index.html").decode("utf-8")
-                inventory = HTMLInventory()
-                inventory.feed(page)
-                self.assertEqual(len(inventory.images), 16)
-                self.assertEqual(len(inventory.step_ids), 15)
-                for image in inventory.images:
-                    self.assertIn("Repot-a-Houseplant/" + image["src"], names)
-                readme = archive.read("Repot-a-Houseplant/README-中文.txt").decode("utf-8")
-                self.assertIn("均为本文新制", readme)
-                # The review sentence has to name this article's own category.
-                self.assertIn("Home and Garden", readme)
-                self.assertNotIn("运动健康", readme)
+                with tempfile.TemporaryDirectory() as tmp, contextlib.redirect_stdout(io.StringIO()):
+                    output = Path(tmp) / f"{slug}.zip"
+                    package_article.build_package(directory / "article.json", output)
+                    with ZipFile(output) as archive:
+                        self.assertIsNone(archive.testzip())
+                        names = set(archive.namelist())
+                        self.assertEqual(len(names), 19)
+                        page = archive.read(f"{slug}/index.html").decode("utf-8")
+                        inventory = HTMLInventory()
+                        inventory.feed(page)
+                        self.assertEqual(len(inventory.images), 16)
+                        self.assertEqual(len(inventory.step_ids), 15)
+                        self.assertEqual(len({i["alt"] for i in inventory.images}), 16)
+                        for image in inventory.images:
+                            self.assertIn(f"{slug}/" + image["src"], names)
+                        readme = archive.read(f"{slug}/README-中文.txt").decode("utf-8")
+                        self.assertIn("均为本文新制", readme)
+                        # The review sentence has to name this article's own category.
+                        self.assertIn(category, readme)
 
     def test_plan_status_matches_each_article_on_disk(self):
         with (ROOT / "content/expanded-plan.csv").open(encoding="utf-8", newline="") as file:
@@ -266,7 +276,7 @@ class InventoryTests(unittest.TestCase):
 class RendererRobustnessTests(unittest.TestCase):
     def test_markdown_warns_while_illustrations_are_missing(self):
         """The readable copy must announce an unfinished draft, and stop once it is complete."""
-        doc = json.loads((ROOT / "content/Plan-a-Run-Walk-Workout/article.json").read_text(encoding="utf-8"))
+        doc = json.loads((ROOT / "content/Back-Up-Your-Photos/article.json").read_text(encoding="utf-8"))
         missing, total = render_article.pending_image_count(doc)
         self.assertEqual(total, 16)
         markdown = render_article.render_markdown(doc)

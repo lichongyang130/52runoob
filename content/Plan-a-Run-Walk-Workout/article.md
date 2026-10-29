@@ -1,5 +1,3 @@
-> DRAFT — do not publish or package: 2 of 16 illustrations are still missing, and the article has not been reviewed by a person.
-
 # How to Plan a Run-Walk Workout
 
 *Build a single run-walk session you can repeat: a safe route, timed intervals, an easy warm-up, an effort you can talk through, and a cool-down.*
@@ -132,7 +130,7 @@ Record the intervals you completed, how the effort felt, and anything unusual su
 
 ### Step 14 — Change one thing at a time
 
-> IMAGE PENDING for step 14: A runner moving at a steady, easy pace along a gravel path with open fields behind
+![A runner moving at a steady, easy pace along a gravel path with open fields behind](images/14-progress-960.webp)
 
 When a session feels manageable, make a single change: lengthen the running intervals slightly, add one interval, or reduce the walk a little. Do not lengthen the runs, cut the walks and add a session in the same week. The NHS plan progresses gradually across nine weeks, with three sessions a week and a rest day between runs.
 
@@ -140,7 +138,7 @@ When a session feels manageable, make a single change: lengthen the running inte
 
 ### Step 15 — Respond to pain and unusual symptoms
 
-> IMAGE PENDING for step 15: A person sitting on a park bench resting a hand on one knee and checking how it feels
+![A person sitting on a park bench resting a hand on one knee and checking how it feels](images/15-symptoms-960.webp)
 
 Stop the session if you develop pain, dizziness, unusual breathlessness, or anything that feels wrong, and seek medical advice if it persists, worsens, or changes how you walk. Chest pain, fainting, or severe difficulty breathing need emergency help rather than another attempt at the intervals.
 
