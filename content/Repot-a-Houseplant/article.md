@@ -1,4 +1,4 @@
-> DRAFT: all 16 illustrations are still missing. Do not publish or treat this as a finished article.
+> DRAFT — do not publish or package: 10 of 16 illustrations are still missing, and the article has not been reviewed by a person.
 
 # How to Repot a Houseplant
 
@@ -56,7 +56,7 @@ Cover a stable table or work outdoors where loose mix is easy to collect. Gather
 
 ### Step 5 — Choose a pot with drainage
 
-> IMAGE PENDING for step 5: Two clean plant pots of slightly different sizes, with a visible drainage hole in the larger pot.
+![Two clean plant pots of slightly different sizes, with a visible drainage hole in the larger pot.](images/05-pot-960.webp)
 
 Select a container with an open drainage hole. If the plant needs more room, a pot roughly one to two inches wider than the current one is often a useful starting point; the right size depends on the species and root ball. A decorative pot without holes can hold a separate, draining nursery pot.
 
@@ -82,7 +82,7 @@ If the mix is very dry, water according to the plant's needs before repotting an
 
 ### Step 8 — Release the plant from its old pot
 
-> IMAGE PENDING for step 8: Hands gently sliding a leafy houseplant and its root ball out of a flexible nursery pot.
+![Hands gently sliding a leafy houseplant and its root ball out of a flexible nursery pot.](images/08-remove-960.webp)
 
 Support the plant near the soil line with one hand and gently tilt the container. Squeeze a flexible pot or tap its sides to loosen the root ball. Ease the pot away instead of pulling hard on the stems. If roots are attached to the container, work slowly and consider cutting a disposable plastic pot rather than tearing the plant.
 
@@ -98,7 +98,7 @@ Look at the root ball before changing it. Healthy roots vary by species but are 
 
 ### Step 10 — Loosen crowded roots gently
 
-> IMAGE PENDING for step 10: Fingers gently loosening roots at the edge of a compact houseplant root ball.
+![Fingers gently loosening roots at the edge of a compact houseplant root ball.](images/10-loosen-960.webp)
 
 If roots form a tight circle around the outside, tease a few loose with clean fingers so they can extend into the new mix. Avoid pulling aggressively or removing healthy roots without a reason. Some plants are sensitive to disturbance, so use gentler handling or species-specific instructions if the root system is delicate.
 
@@ -124,7 +124,7 @@ Set the root ball in the middle of the pot and check that the point where the st
 
 ### Step 13 — Fill around the root ball
 
-> IMAGE PENDING for step 13: Hands adding fresh potting mix around a houseplant in a pot at a potting table.
+![Hands adding fresh potting mix around a houseplant in a pot at a potting table.](images/13-fill-960.webp)
 
 Add fresh mix around the sides in small amounts. Tap the pot lightly and use your fingers to settle the mix into gaps without packing it hard. Keep the original soil line visible and leave enough headroom to water without spilling over. Add support if needed without forcing a stake through the main root mass.
 
@@ -132,7 +132,7 @@ Add fresh mix around the sides in small amounts. Tap the pot lightly and use you
 
 ### Step 14 — Water and let the pot drain
 
-> IMAGE PENDING for step 14: A person watering a freshly repotted leafy plant over a sink, water draining from the pot.
+![A person watering a freshly repotted leafy plant over a sink, water draining from the pot.](images/14-water-960.webp)
 
 For many common foliage plants, water after repotting until excess drains, then empty the saucer. Follow a different schedule if the species or root condition requires it; some succulents need specific handling. Do not leave the container standing in drainage water. Check the new mix over the following days rather than watering automatically.
 

@@ -10,3 +10,6 @@ content/*/.publish-state-local*
 # Python bytecode
 __pycache__/
 *.py[cod]
+
+# Scratch results from image search tooling
+image-search/

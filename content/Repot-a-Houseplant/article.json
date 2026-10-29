@@ -29,9 +29,7 @@
       "alt": "A gardener placing a leafy houseplant into a clean pot at a bright potting table."
     },
     "style": "Naturalistic hand-painted editorial illustration, soft oil-and-watercolor texture, warm muted palette; scenes vary by step.",
-    "stylePending": [
-      "00-hero"
-    ]
+    "stylePending": []
   },
   "parts": [
     {
@@ -77,7 +75,7 @@
           "title": "Choose a pot with drainage",
           "body": "Select a container with an open drainage hole. If the plant needs more room, a pot roughly one to two inches wider than the current one is often a useful starting point; the right size depends on the species and root ball. A decorative pot without holes can hold a separate, draining nursery pot.",
           "tip": "A much larger pot may hold more wet mix than a small root system can use.",
-          "imageTodo": {
+          "image": {
             "base": "05-pot",
             "alt": "Two clean plant pots of slightly different sizes, with a visible drainage hole in the larger pot."
           }
@@ -109,7 +107,7 @@
           "title": "Release the plant from its old pot",
           "body": "Support the plant near the soil line with one hand and gently tilt the container. Squeeze a flexible pot or tap its sides to loosen the root ball. Ease the pot away instead of pulling hard on the stems. If roots are attached to the container, work slowly and consider cutting a disposable plastic pot rather than tearing the plant.",
           "tip": "Protect long leaves or stems with your free hand while turning the pot.",
-          "imageTodo": {
+          "image": {
             "base": "08-remove",
             "alt": "Hands gently sliding a leafy houseplant and its root ball out of a flexible nursery pot."
           }
@@ -127,7 +125,7 @@
           "title": "Loosen crowded roots gently",
           "body": "If roots form a tight circle around the outside, tease a few loose with clean fingers so they can extend into the new mix. Avoid pulling aggressively or removing healthy roots without a reason. Some plants are sensitive to disturbance, so use gentler handling or species-specific instructions if the root system is delicate.",
           "tip": "Work on the outside of the root ball and keep as much healthy root tissue intact as possible.",
-          "imageTodo": {
+          "image": {
             "base": "10-loosen",
             "alt": "Fingers gently loosening roots at the edge of a compact houseplant root ball."
           }
@@ -159,7 +157,7 @@
           "title": "Fill around the root ball",
           "body": "Add fresh mix around the sides in small amounts. Tap the pot lightly and use your fingers to settle the mix into gaps without packing it hard. Keep the original soil line visible and leave enough headroom to water without spilling over. Add support if needed without forcing a stake through the main root mass.",
           "tip": "Firm enough to hold the plant upright while keeping the mix airy.",
-          "imageTodo": {
+          "image": {
             "base": "13-fill",
             "alt": "Hands adding fresh potting mix around a houseplant in a pot at a potting table."
           }
@@ -168,7 +166,7 @@
           "title": "Water and let the pot drain",
           "body": "For many common foliage plants, water after repotting until excess drains, then empty the saucer. Follow a different schedule if the species or root condition requires it; some succulents need specific handling. Do not leave the container standing in drainage water. Check the new mix over the following days rather than watering automatically.",
           "tip": "Place the pot in a sink or tray while the excess water drains.",
-          "imageTodo": {
+          "image": {
             "base": "14-water",
             "alt": "A person watering a freshly repotted leafy plant over a sink, water draining from the pot."
           }
@@ -270,6 +268,23 @@
     "wordCount": null,
     "internalLinkCount": 3,
     "imageCount": 16,
-    "imagePending": 16
+    "imagePending": 10
+  },
+  "imageStatus": {
+    "heroReady": true,
+    "stepImagesReady": 5,
+    "stepImagesPending": [
+      "01-signs",
+      "02-identify",
+      "03-timing",
+      "04-workspace",
+      "06-mix",
+      "07-moisture",
+      "09-inspect",
+      "11-base",
+      "12-depth",
+      "15-aftercare"
+    ],
+    "note": "Illustrations are produced in batches of ten per session. The article stays a draft until every step image exists."
   }
 }

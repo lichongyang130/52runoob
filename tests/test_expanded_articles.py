@@ -170,15 +170,89 @@ class InventoryTests(unittest.TestCase):
         self.assertTrue(all(row["title"].startswith("How to ") for row in rows))
         self.assertTrue(all(row["category_url"].startswith("/Category/") for row in rows))
 
-    def test_unillustrated_drafts_cannot_be_packaged(self):
-        for slug in ("Repot-a-Houseplant", "Back-Up-Your-Photos"):
-            path = ROOT / "content" / slug / "article.json"
-            doc = json.loads(path.read_text(encoding="utf-8"))
-            self.assertEqual(sum(len(p["steps"]) for p in doc["parts"]), 15)
-            self.assertEqual(doc["publishing"]["imagePending"], 16)
-            with tempfile.TemporaryDirectory() as tmp, contextlib.redirect_stdout(io.StringIO()):
-                with self.assertRaisesRegex(ValueError, "体检未通过"):
-                    package_article.build_package(path, Path(tmp) / "draft.zip")
+    def test_partially_illustrated_drafts_cannot_be_packaged(self):
+        """A draft stays unpackageable until every step image exists, not just some."""
+        for slug in ("Repot-a-Houseplant", "Plan-a-Run-Walk-Workout", "Back-Up-Your-Photos"):
+            with self.subTest(slug=slug):
+                article_dir = ROOT / "content" / slug
+                path = article_dir / "article.json"
+                doc = json.loads(path.read_text(encoding="utf-8"))
+                steps = [step for part in doc["parts"] for step in part["steps"]]
+                self.assertEqual(len(steps), 15)
+
+                missing = [step for step in steps if not step.get("image")]
+                self.assertTrue(missing, f"{slug} has every image; move it out of the draft list")
+
+                # The recorded counts must match the files actually on disk, so the
+                # progress notes can never drift ahead of the real illustrations.
+                hero_base = doc["media"]["hero"]["base"]
+                hero_ready = all(
+                    (article_dir / "images" / f"{hero_base}-{width}.webp").is_file()
+                    for width in ("960", "1600")
+                )
+                self.assertEqual(doc["imageStatus"]["heroReady"], hero_ready)
+                self.assertEqual(
+                    doc["publishing"]["imagePending"], len(missing) + (0 if hero_ready else 1)
+                )
+                self.assertEqual(
+                    doc["imageStatus"]["stepImagesPending"],
+                    [step["imageTodo"]["base"] for step in missing],
+                )
+                self.assertEqual(doc["imageStatus"]["stepImagesReady"], len(steps) - len(missing))
+                for step in steps:
+                    if step.get("image"):
+                        for width in ("960", "1600"):
+                            asset = article_dir / "images" / f"{step['image']['base']}-{width}.webp"
+                            self.assertTrue(asset.is_file(), f"missing {asset}")
+
+                with tempfile.TemporaryDirectory() as tmp, contextlib.redirect_stdout(io.StringIO()):
+                    with self.assertRaisesRegex(ValueError, "体检未通过"):
+                        package_article.build_package(path, Path(tmp) / "draft.zip")
+
+    def test_plan_status_matches_each_article_on_disk(self):
+        with (ROOT / "content/expanded-plan.csv").open(encoding="utf-8", newline="") as file:
+            rows = {row["slug"]: row for row in csv.DictReader(file)}
+        for slug, row in rows.items():
+            article = ROOT / "content" / slug / "article.json"
+            if row["status"] == "planned":
+                self.assertFalse(article.exists(), f"{slug} has a draft but is still marked planned")
+            else:
+                self.assertTrue(article.exists(), f"{slug} is marked {row['status']} without a draft")
+                self.assertTrue(row["notes"].strip(), f"{slug} needs a progress note")
+
+
+class RendererRobustnessTests(unittest.TestCase):
+    def test_markdown_warns_while_illustrations_are_missing(self):
+        """The readable copy must announce an unfinished draft, and stop once it is complete."""
+        doc = json.loads((ROOT / "content/Plan-a-Run-Walk-Workout/article.json").read_text(encoding="utf-8"))
+        missing, total = render_article.pending_image_count(doc)
+        self.assertEqual(total, 16)
+        markdown = render_article.render_markdown(doc)
+        self.assertIn(f"{missing} of {total} illustrations are still missing", markdown.splitlines()[0])
+
+        finished = json.loads((ROOT / "content/Run-Your-First-5K/article.json").read_text(encoding="utf-8"))
+        self.assertEqual(render_article.pending_image_count(finished)[0], 0)
+        self.assertNotIn("DRAFT — do not publish", render_article.render_markdown(finished))
+
+    def test_payload_survives_a_draft_without_publishing_metadata(self):
+        """Hand-written drafts omit publishing fields; rendering must not crash."""
+        doc = {
+            "schema": "howly-guide/v1",
+            "slug": "Example-Guide",
+            "title": "How to Do Something",
+            "seo": {"titleTag": "How to Do Something", "metaDescription": "Short description."},
+            "category": "Home and Garden",
+            "deck": "A deck.",
+            "media": {"hero": {"base": "00-hero", "alt": "Hero"}},
+            "tips": [],
+            "warnings": [],
+            "faq": [],
+            "references": [],
+        }
+        payload = render_article.render_payload(doc, "<p>body</p>")
+        self.assertEqual(payload["status"], "draft")
+        self.assertEqual(payload["author"], "Editorial draft")
+        self.assertIsNone(payload["datePublished"])
 
 
 if __name__ == "__main__":

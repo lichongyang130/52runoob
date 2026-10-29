@@ -272,5 +272,27 @@
     "internalLinkCount": 3,
     "imageCount": 16,
     "imagePending": 16
+  },
+  "imageStatus": {
+    "heroReady": false,
+    "stepImagesReady": 0,
+    "stepImagesPending": [
+      "01-inventory",
+      "02-sync",
+      "03-plan",
+      "04-capacity",
+      "05-import",
+      "06-originals",
+      "07-local",
+      "08-verify",
+      "09-encrypt",
+      "10-offsite",
+      "11-offline",
+      "12-restore",
+      "13-schedule",
+      "14-security",
+      "15-maintain"
+    ],
+    "note": "Illustrations are produced in batches of ten per session. The article stays a draft until every step image exists."
   }
 }

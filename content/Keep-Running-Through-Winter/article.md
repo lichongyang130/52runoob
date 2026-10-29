@@ -2,9 +2,12 @@
 
 *Winter running is easier to sustain when you plan for the conditions: choose safe footing, use adjustable layers, keep runs flexible, and know when to exercise indoors or rest.*
 
-**Category:** Sports and Fitness  
-**Slug:** `/Keep-Running-Through-Winter`  
-**Primary keyword:** how to keep running through winter  
+**Category:** Sports and Fitness
+
+**Slug:** `/Keep-Running-Through-Winter`
+
+**Primary keyword:** how to keep running through winter
+
 **Meta description:** Keep running through winter with 12 practical steps: how to layer, breathe in cold air, run safely in the dark, handle ice, and restart after a missed week.
 
 ---

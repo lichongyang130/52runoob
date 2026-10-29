@@ -1,4 +1,4 @@
-> DRAFT: all 16 illustrations are still missing. Do not publish or treat this as a finished article.
+> DRAFT — do not publish or package: 16 of 16 illustrations are still missing, and the article has not been reviewed by a person.
 
 # How to Back Up Your Photos
 

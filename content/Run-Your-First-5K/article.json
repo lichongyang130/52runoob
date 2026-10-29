@@ -285,5 +285,11 @@
     "internalLinkCount": 4,
     "imageCount": 16,
     "imagePending": 0
+  },
+  "imageStatus": {
+    "heroReady": true,
+    "stepImagesReady": 15,
+    "stepImagesPending": [],
+    "note": "Illustrations are produced in batches of ten per session. The article stays a draft until every step image exists."
   }
 }

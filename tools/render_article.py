@@ -80,8 +80,25 @@ def slugify(text):
 
 
 # ---------------------------------------------------------------- markdown
+def pending_image_count(doc):
+    """Count illustrations that do not exist yet, cover included."""
+    steps = [s for part in doc.get("parts", []) for s in part["steps"]]
+    missing = sum(1 for s in steps if is_pending(s))
+    if not doc.get("imageStatus", {}).get("heroReady", True):
+        missing += 1
+    return missing, len(steps) + 1
+
+
 def render_markdown(doc):
     L = []
+    missing, total = pending_image_count(doc)
+    if missing:
+        # Keep the warning in the readable copy itself, so a reviewer opening
+        # article.md cannot mistake a part-finished draft for a deliverable.
+        L.append(
+            f"> DRAFT — do not publish or package: {missing} of {total} illustrations are still "
+            "missing, and the article has not been reviewed by a person.\n"
+        )
     L.append(f"# {doc['title']}\n")
     L.append(f"*{doc['deck']}*\n")
     L.append(f"**Category:** {doc['category']}\n")
@@ -324,6 +341,9 @@ def render_preview(doc, body_html, hero_rel):
 
 # ---------------------------------------------------------------- payload
 def render_payload(doc, body_html):
+    # Drafts are written by hand, so treat optional publishing metadata as optional
+    # instead of failing the whole render on a missing key.
+    publishing = doc.get("publishing") or {}
     return {
         "schema": doc["schema"],
         "slug": doc["slug"],
@@ -338,9 +358,9 @@ def render_payload(doc, body_html):
         "warnings": doc["warnings"],
         "faq": doc["faq"],
         "references": doc["references"],
-        "author": doc["publishing"]["author"],
-        "datePublished": doc["publishing"]["datePublished"],
-        "dateModified": doc["publishing"]["dateModified"],
+        "author": publishing.get("author", "Editorial draft"),
+        "datePublished": publishing.get("datePublished"),
+        "dateModified": publishing.get("dateModified"),
         "status": "draft",
     }
 
