@@ -22,11 +22,13 @@ files=("$RAW"/*.png)
 
 for f in "${files[@]}"; do
   b="$(basename "$f" .png)"
-  # 居中裁成 16:9 再缩放，避免不同模型出图比例不一致
-  convert "$f" -gravity center -crop 1365x768+0+0 +repage -resize 1600x900 \
-          -quality 82 -define webp:method=6 "$DIR/$b-1600.webp"
-  convert "$f" -gravity center -crop 1365x768+0+0 +repage -resize 960x540 \
-          -quality 82 -define webp:method=6 "$DIR/$b-960.webp"
+  # 按输出比例缩放后居中裁切，不假设输入固定为 1365x768。
+  # 这样 4:3、方形等原图也能得到精确的 16:9 输出。
+  for size in 1600x900 960x540; do
+    width="${size%x*}"
+    convert "$f" -auto-orient -resize "${size}^" -gravity center -extent "$size" \
+            -strip -quality 82 -define webp:method=6 "$DIR/$b-$width.webp"
+  done
   printf '%-28s %s KB\n' "$b" "$(( $(stat -c%s "$DIR/$b-1600.webp") / 1024 ))"
 done
 

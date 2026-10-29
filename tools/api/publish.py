@@ -2,7 +2,7 @@
 """
 publish.py — 把 content/<slug>/article.json 发布到 56juqingba 的 API
 
-流程（可断点重跑，每一步都幂等或可安全重复）:
+流程（图片可按哈希断点续传；文章创建的幂等性取决于站点 API，未验证前勿盲目重试）:
   1. probe        探测集合路由（/articles 还是 /posts …）
   2. upload       逐张上传 WebP，拿回站内图 URL（已上传过的跳过）
   3. payload      组装文章 JSON（含 parts/steps/faq/references/html）
@@ -26,6 +26,7 @@ publish.py — 把 content/<slug>/article.json 发布到 56juqingba 的 API
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import os
 import re
@@ -66,34 +67,47 @@ def find_upload() -> str:
     raise SystemExit("无法探测上传路由，请用 SITE_API_UPLOAD 指定（例如 /uploads）")
 
 
+def safe_image_url(url: object) -> str:
+    """图片 URL 不得包含 API 密钥，避免写入状态文件或日志。"""
+    if not isinstance(url, str) or not url:
+        raise SystemExit("上传成功但没有有效的图片 URL。")
+    secret = os.environ.get("SITE_API_TOKEN", "").strip()
+    if secret and secret in url:
+        raise SystemExit("图片 URL 包含凭证，已拒绝保存或输出。")
+    return url
+
+
 def upload_image(prefix: str, path: str, cache: dict, dry: bool) -> str:
-    """上传单张图，返回站内 URL。cache 记录 base -> url，避免重复上传。"""
+    """文件内容不变才复用 URL；同名图片替换后必须重新上传。"""
     base = os.path.splitext(os.path.basename(path))[0]
-    if base in cache:
-        return cache[base]
+    with open(path, "rb") as f:
+        blob = f.read()
+    digest = hashlib.sha256(blob).hexdigest()
+    previous = cache.get(base)
+    if isinstance(previous, dict) and previous.get("sha256") == digest and previous.get("url"):
+        return safe_image_url(previous["url"])
     if dry:
-        print(f"  [dry-run] 上传 {os.path.basename(path)} ({os.path.getsize(path)//1024} KB)")
+        print(f"  [dry-run] 上传 {os.path.basename(path)} ({len(blob)//1024} KB)")
         return f"<dry-run>/{os.path.basename(path)}"
 
     field = os.environ.get("SITE_UPLOAD_FIELD", "file")
-    with open(path, "rb") as f:
-        blob = f.read()
     body, ctype = client.multipart({"name": base, "folder": "2026/10"}, {field: (os.path.basename(path), blob)})
     st, _, text = client.request("POST", prefix, raw_body=body, content_type=ctype, timeout=120)
     try:
         data = json.loads(text)
     except json.JSONDecodeError:
-        raise SystemExit(f"上传返回非 JSON: {text[:300]}")
+        raise SystemExit(f"上传返回非 JSON: {client._redact(text)[:300]}")
 
     url = (data.get("url") or data.get("data", {}).get("url")
            or data.get("path") or data.get("data", {}).get("path")
            or data.get("location"))
     if not url:
-        raise SystemExit(f"上传成功但没找到 URL 字段，请按实际响应改 client: {text[:400]}")
+        raise SystemExit(f"上传成功但没找到 URL 字段，请按实际响应改 client: {client._redact(text)[:400]}")
+    url = safe_image_url(url)
     if url.startswith("/"):
         url = "https://www.56juqingba.com" + url
     print(f"  ✓ {os.path.basename(path)} -> {url}")
-    cache[base] = url
+    cache[base] = {"url": url, "sha256": digest}
     return url
 
 
@@ -185,6 +199,15 @@ def main() -> int:
     images_dir = os.path.join(art_dir, "images")
     width = os.environ.get("SITE_IMAGE_WIDTH", "1600")
 
+    style_pending = doc.get("media", {}).get("stylePending", [])
+    if not isinstance(style_pending, list) or any(not isinstance(b, str) for b in style_pending):
+        raise SystemExit("media.stylePending 必须是待替换图片 base 的数组。")
+    if style_pending:
+        message = f"新风格配图尚未完成 ({len(style_pending)} 张): {', '.join(style_pending)}"
+        if not args.dry_run:
+            raise SystemExit(message + "；禁止上传或发布，先完成图片替换。")
+        print("注意：" + message + "；仅允许 dry-run。")
+
     # 图片清单：hero + 每个步骤
     bases = [doc["media"]["hero"]["base"]]
     bases += [s["image"]["base"] for p in doc["parts"] for s in p["steps"] if s.get("image")]
@@ -205,9 +228,17 @@ def main() -> int:
         return 0
 
     upload_prefix = find_upload()
-    print(f"上传端点: POST {upload_prefix}")
+    print(client._redact(f"上传端点: POST {upload_prefix}"))
     cache_path = os.path.join(art_dir, "publish-state.json")
-    cache = json.load(open(cache_path, encoding="utf-8")).get("images", {}) if os.path.exists(cache_path) else {}
+    saved_cache = json.load(open(cache_path, encoding="utf-8")).get("images", {}) if os.path.exists(cache_path) else {}
+    # 旧格式只有 URL，无法验证对应图片，安全起见一律重新上传。
+    # 只保留 URL/哈希两个字段，也避免把服务端返回的其他数据落盘。
+    cache = {}
+    if isinstance(saved_cache, dict):
+        for name, entry in saved_cache.items():
+            if (isinstance(name, str) and isinstance(entry, dict)
+                    and isinstance(entry.get("sha256"), str) and entry.get("url")):
+                cache[name] = {"url": safe_image_url(entry["url"]), "sha256": entry["sha256"]}
 
     img = {}
     for b in bases:
@@ -220,24 +251,24 @@ def main() -> int:
 
     collection = find_collection()
     payload = build_payload(doc, img)
-    print(f"文章端点: {collection}  (payload {len(json.dumps(payload, ensure_ascii=False))//1024} KB)")
+    print(client._redact(f"文章端点: {collection}  (payload {len(json.dumps(payload, ensure_ascii=False))//1024} KB)"))
 
     if args.update:
         st, _, text = client.request("PATCH", f"{collection}/{doc['slug']}", json_body=payload)
-        print(f"PATCH {collection}/{doc['slug']} -> {st}")
+        print(client._redact(f"PATCH {collection}/{doc['slug']} -> {st}"))
     else:
         st, _, text = client.request("POST", collection, json_body=payload)
-        print(f"POST {collection} -> {st}")
+        print(client._redact(f"POST {collection} -> {st}"))
 
     try:
         result = json.loads(text)
     except json.JSONDecodeError:
-        result = {"raw": text[:1000]}
-    print(json.dumps(result, ensure_ascii=False, indent=2)[:2000])
+        result = {"raw": client._redact(text)[:1000]}
+    print(client._redact(json.dumps(result, ensure_ascii=False, indent=2))[:2000])
 
     # 回读校验
     st, _, body = client.request("GET", f"{collection}/{doc['slug']}")
-    print(f"\n回读 GET {collection}/{doc['slug']} -> {st}")
+    print(client._redact(f"\n回读 GET {collection}/{doc['slug']} -> {st}"))
     if st < 300:
         saved = json.loads(body)
         saved = saved.get("data", saved) if isinstance(saved, dict) else saved
@@ -247,7 +278,7 @@ def main() -> int:
         got_steps = len(saved.get("steps", [])) or sum(len(p.get("steps", [])) for p in saved.get("parts", []))
         if got_steps not in (0, len(bases) - 1):
             problems.append(f"步骤数 {got_steps} != {len(bases)-1}")
-        print("校验:", "通过 ✅" if not problems else "问题 → " + "; ".join(problems))
+        print("校验:", "通过 ✅" if not problems else client._redact("问题 → " + "; ".join(problems)))
     return 0
 
 

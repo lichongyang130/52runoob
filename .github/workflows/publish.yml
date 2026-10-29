@@ -1,7 +1,9 @@
 name: Publish to 56juqingba
 
-# 为什么走 Actions：内容沙盒的出网白名单不含你的域名，
-# 这里作为受信任的执行环境，密钥只从仓库 Secrets 读取，不落盘、不进日志。
+# The sandbox cannot reach the site directly. The token is read only from Actions Secrets.
+# Push ONE content/<slug>/PUBLISH marker containing probe, dry-run, images-only,
+# publish, or update. Successful runs remove that marker; invalid input fails closed.
+# workflow_dispatch is available only when this workflow exists on the default branch.
 
 on:
   workflow_dispatch:
@@ -11,32 +13,36 @@ on:
         required: true
         type: string
       action:
-        description: "操作"
         required: true
         default: probe
         type: choice
         options: [probe, dry-run, images-only, publish, update]
       branch:
-        description: "分支"
         required: true
         default: arena/f9a79f56-52runoob
         type: string
-
-concurrency:
-  group: publish-${{ github.event.inputs.article_dir }}
-  cancel-in-progress: false
+  push:
+    branches:
+      - arena/f9a79f56-52runoob
+    paths:
+      - "content/**/PUBLISH"
 
 permissions:
-  contents: read
+  contents: write
+
+concurrency:
+  group: publish-56juqingba
+  cancel-in-progress: false
 
 jobs:
   publish:
     runs-on: ubuntu-24.04
     steps:
+      # Checkout must happen before reading a marker file.
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          ref: ${{ github.event.inputs.branch }}
+          ref: ${{ github.event.inputs.branch || github.ref_name }}
           fetch-depth: 1
 
       - name: Set up Python
@@ -44,45 +50,73 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: Resolve inputs
+        id: inp
+        env:
+          GH_ACTION: ${{ github.event.inputs.action }}
+          GH_DIR: ${{ github.event.inputs.article_dir }}
+          GH_BRANCH: ${{ github.event.inputs.branch }}
+          COMMITS_JSON: ${{ toJSON(github.event.commits) }}
+        run: python3 tools/api/workflow_input.py
+
       - name: Guard — token present
+        if: ${{ steps.inp.outputs.skip != 'true' && steps.inp.outputs.action != 'dry-run' }}
         env:
           TOKEN: ${{ secrets.SITE_API_TOKEN }}
         run: |
           if [ -z "$TOKEN" ]; then
-            echo "::error::Secrets 里没有 SITE_API_TOKEN，请先添加。"
+            echo "::error::仓库 Secrets 里没有 SITE_API_TOKEN，请先添加。"
             exit 1
           fi
 
-      - name: Probe API
-        if: ${{ github.event.inputs.action == 'probe' }}
-        env:
-          SITE_API_TOKEN: ${{ secrets.SITE_API_TOKEN }}
-        run: python3 tools/api/publish.py --probe
-
       - name: Publish
-        if: ${{ github.event.inputs.action != 'probe' }}
+        if: ${{ steps.inp.outputs.skip != 'true' }}
         env:
           SITE_API_TOKEN: ${{ secrets.SITE_API_TOKEN }}
           SITE_API_BASE: ${{ vars.SITE_API_BASE || 'https://www.56juqingba.com/api/v1' }}
           SITE_API_COLLECTION: ${{ vars.SITE_API_COLLECTION }}
           SITE_API_UPLOAD: ${{ vars.SITE_API_UPLOAD }}
+          DIR: ${{ steps.inp.outputs.dir }}
+          ACT: ${{ steps.inp.outputs.action }}
         run: |
           set -euo pipefail
-          DIR='${{ github.event.inputs.article_dir }}'
-          ACT='${{ github.event.inputs.action }}'
+          echo "目录: $DIR   操作: $ACT"
           case "$ACT" in
-            dry-run)      python3 tools/api/publish.py "$DIR" --dry-run ;;
-            images-only)  python3 tools/api/publish.py "$DIR" --only-images ;;
-            update)       python3 tools/api/publish.py "$DIR" --update ;;
-            *)            python3 tools/api/publish.py "$DIR" ;;
+            probe)       python3 tools/api/publish.py --probe ;;
+            dry-run)     python3 tools/api/publish.py "$DIR" --dry-run ;;
+            images-only) python3 tools/api/publish.py "$DIR" --only-images ;;
+            update)      python3 tools/api/publish.py "$DIR" --update ;;
+            publish)     python3 tools/api/publish.py "$DIR" ;;
+            *)           echo "::error::未知操作，已停止。"; exit 1 ;;
           esac
 
+      - name: Commit publish state and clear marker
+        if: ${{ steps.inp.outputs.cleanup == 'true' }}
+        env:
+          PUBFILE: ${{ steps.inp.outputs.pubfile }}
+          DIR: ${{ steps.inp.outputs.dir }}
+          BRANCH: ${{ steps.inp.outputs.branch }}
+        run: |
+          set -euo pipefail
+          rm -f -- "$PUBFILE"
+          git config user.name "publish-bot"
+          git config user.email "publish-bot@users.noreply.github.com"
+          git add -- "$PUBFILE"
+          if [ -f "$DIR/publish-state.json" ]; then
+            git add -- "$DIR/publish-state.json"
+          fi
+          if git diff --cached --quiet; then
+            echo "没有需要提交的变更"
+          else
+            git commit -m "chore: publish state for $DIR"
+            git push origin "HEAD:$BRANCH"
+          fi
+
       - name: Upload run artifact
-        if: always()
+        if: always() && steps.inp.outputs.skip != 'true'
         uses: actions/upload-artifact@v4
         with:
           name: publish-state
-          path: |
-            content/*/publish-state.json
+          path: content/*/publish-state.json
           if-no-files-found: ignore
           retention-days: 7

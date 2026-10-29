@@ -101,6 +101,13 @@ def main(path):
     if pending:
         warn(f"共 {pending} 张配图待生成")
 
+    # 新风格尚未替换的图片不能因为旧文件存在而被误判为可发布。
+    style_pending = d.get("media", {}).get("stylePending", [])
+    if not isinstance(style_pending, list) or any(not isinstance(b, str) for b in style_pending):
+        err("media.stylePending 必须是待替换图片 base 的数组")
+    elif style_pending:
+        err(f"新风格配图仍待替换 {len(style_pending)} 张: {', '.join(style_pending)}")
+
     # --- 内链 / 外链 / E-E-A-T
     links = d.get("internalLinks", [])
     if len(links) < 3:

@@ -11,13 +11,21 @@
   "seo": {
     "titleTag": "How to ...: 12 Steps | Howly",
     "metaDescription": "120–160 字符，含主关键词与 2–3 个长尾变体。",
-    "keywords": ["primary keyword", "variant 1", "variant 2"],
+    "keywords": [
+      "primary keyword",
+      "variant 1",
+      "variant 2"
+    ],
     "primaryKeyword": "how to ...",
     "searchIntent": "informational"
   },
   "media": {
-    "hero": { "base": "00-hero", "alt": "主体 + 动作 + 环境，一句话" },
-    "style": "documentary editorial photography, natural light, muted cool palette, no text or logos"
+    "hero": {
+      "base": "00-hero",
+      "alt": "主体 + 动作 + 环境，一句话"
+    },
+    "style": "Naturalistic hand-painted editorial illustration, soft oil-and-watercolor texture, warm muted palette; scenes vary with each step",
+    "stylePending": []
   },
   "parts": [
     {
@@ -27,29 +35,52 @@
           "title": "动词开头的步骤名",
           "body": "45–110 词。先给判断标准或数字，再给原因，最后给例外情况。不要形容词堆砌。",
           "tip": "一句可执行的口诀或阈值。",
-          "image": { "base": "01-step", "alt": "与步骤动作对应的画面" }
+          "image": {
+            "base": "01-step",
+            "alt": "与步骤动作对应的画面"
+          }
         }
       ]
     }
   ],
-  "tips": ["4 条通用提示，每条一句"],
-  "warnings": ["3–4 条安全提示，健康/汽车/理财类必须写到位"],
+  "tips": [
+    "4 条通用提示，每条一句"
+  ],
+  "warnings": [
+    "3–4 条安全提示，健康/汽车/理财类必须写到位"
+  ],
   "faq": [
-    { "q": "读者真的会搜的问题？", "a": "60–90 词，先回答再解释。" }
+    {
+      "q": "读者真的会搜的问题？",
+      "a": "60–90 词，先回答再解释。"
+    }
   ],
   "references": [
     "机构名. “标题.” 年份.",
     "作者. “标题.” 期刊, 年份."
   ],
   "internalLinks": [
-    { "label": "同类目支柱页", "url": "/Pillar-Article" },
-    { "label": "More {Category} guides", "url": "/Category/{Category}" },
-    { "label": "Search guides like “...”;", "url": "/search?q=..." }
+    {
+      "label": "同类目支柱页",
+      "url": "/Pillar-Article"
+    },
+    {
+      "label": "More {Category} guides",
+      "url": "/Category/{Category}"
+    },
+    {
+      "label": "Search guides like “...”;",
+      "url": "/search?q=..."
+    }
   ],
-  "quizIdea": { "title": "", "questions": 5, "note": "" },
+  "quizIdea": {
+    "title": "",
+    "questions": 5,
+    "note": ""
+  },
   "publishing": {
     "author": "Site Admin",
-    "reviewer": "subject-matter reviewer",
+    "reviewer": "",
     "datePublished": "2026-10-29",
     "dateModified": "2026-10-29",
     "readingTimeMinutes": 7,

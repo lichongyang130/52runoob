@@ -27,7 +27,12 @@
       "base": "00-hero",
       "alt": "A runner in a light insulated jacket, gloves and beanie jogging along a cold coastal path at sunrise, breath visible in the air"
     },
-    "style": "documentary editorial photography, natural light, muted cool palette, no text or logos"
+    "style": "Naturalistic hand-painted editorial illustration, soft oil-and-watercolor texture, warm muted palette; scenes vary with each step",
+    "stylePending": [
+      "09-dry",
+      "10-fuel",
+      "12-restart"
+    ]
   },
   "parts": [
     {
@@ -66,7 +71,7 @@
           "tip": "Test the first fifty metres with a gentle push-off. Ice that fails that test will fail you at speed.",
           "image": {
             "base": "06-grip",
-            "alt": "Close-up of a running shoe with a textured sole gripping wet gravel and thin frost at the edge of a path"
+            "alt": "A close view of the textured tread of a running shoe above a gravel path, with light frost at the edges"
           }
         }
       ]
@@ -121,7 +126,7 @@
           "tip": "Most healthy runners handle about -10°C in layers. Wind, wet and your own health matter more than the number.",
           "image": {
             "base": "11-limits",
-            "alt": "A person in gloves checking the weather forecast on a phone at a snowy residential street corner while light snow falls"
+            "alt": "A person in winter gloves looking at a phone on a snowy residential street, with weather icons nearby"
           }
         },
         {
@@ -231,7 +236,7 @@
   },
   "publishing": {
     "author": "Site Admin",
-    "reviewer": "subject-matter reviewer",
+    "reviewer": "",
     "datePublished": "2026-10-29",
     "dateModified": "2026-10-29",
     "readingTimeMinutes": 7,

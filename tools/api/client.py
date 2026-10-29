@@ -23,8 +23,8 @@ UA = "howly-content-pipeline/1.0"
 class ApiError(RuntimeError):
     def __init__(self, method, url, status, body):
         self.status = status
-        self.body = body
-        super().__init__(f"{method} {url} -> HTTP {status}: {body[:600]}")
+        self.body = _redact(str(body))
+        super().__init__(f"{_redact(str(method))} {_redact(str(url))} -> HTTP {status}: {self.body[:600]}")
 
 
 def token() -> str:
@@ -43,7 +43,7 @@ def base() -> str:
 
 
 def _redact(text: str) -> str:
-    t = os.environ.get(TOKEN_ENV, "")
+    t = os.environ.get(TOKEN_ENV, "").strip()
     if t and t in text:
         text = text.replace(t, "<token>")
     return text
@@ -110,11 +110,11 @@ def probe(status_out=print):
     """打印接口能力快照。返回 dict：{'collection': path|None, 'upload': path|None,...}"""
     found = {"collection": None, "upload": None, "docs": {}}
 
-    status_out(f"base = {base()}")
+    status_out(f"base = {_redact(base())}")
     for p in PROBE_COLLECTIONS:
         st, _, body = request("GET", p + "?per_page=1")
         kind = "OK" if st < 300 else ("存在" if st == 404 and "Token" in body else st)
-        status_out(f"  GET {p:12} -> {st}  {body[:120]}")
+        status_out(f"  GET {p:12} -> {st}  {_redact(body)[:120]}")
         if st < 300 and not found["collection"]:
             found["collection"] = p
 
@@ -124,7 +124,7 @@ def probe(status_out=print):
             st, _, body = request("GET", p)
         except ApiError as e:
             st, body = e.status, e.body
-        status_out(f"  GET {p:12} -> {st}  {body[:120]}")
+        status_out(f"  GET {p:12} -> {st}  {_redact(body)[:120]}")
         if st in (400, 405, 422, 200, 201) and not found["upload"]:
             found["upload"] = p
 

@@ -1,0 +1,9 @@
+# Generated source images are bulky working files; commit the optimized WebP outputs instead.
+content/**/images/raw/
+
+# The user-provided reference is a local working asset, not for redistribution.
+docs/assets/illustration-style-reference.webp
+
+# Python bytecode
+__pycache__/
+*.py[cod]

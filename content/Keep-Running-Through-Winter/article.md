@@ -43,7 +43,7 @@ Cold muscles and cold joints are more easily strained, and standing outside in a
 
 ### Step 4 — Choose the surface before the pace
 
-![Close-up of a running shoe with a textured sole gripping wet gravel and thin frost at the edge of a path](images/06-grip-960.webp)
+![A close view of the textured tread of a running shoe above a gravel path, with light frost at the edges](images/06-grip-960.webp)
 
 In frost and snow, route choice matters more than speed. Prefer cleared, gritted paths and main streets, and avoid shaded north-facing pavements, wooden boardwalks, metal plates and wet leaves, which are slicker than they look. Deeper tread helps on snow, but nothing grips black ice reliably. If a foot slips when you push off gently, walk that section or take another route entirely.
 
@@ -87,7 +87,7 @@ A small headlamp or a chest light lets you see broken pavement, roots and ice, a
 
 ### Step 9 — Set your cold and ice limits in advance
 
-![A person in gloves checking the weather forecast on a phone at a snowy residential street corner while light snow falls](images/11-limits-960.webp)
+![A person in winter gloves looking at a phone on a snowy residential street, with weather icons nearby](images/11-limits-960.webp)
 
 Decide before winter what makes you move indoors or skip: ice on the pavements, windchill below about -15°C, or the tail end of a fever. Deciding in advance removes the negotiation at 6am, when the answer is always the sofa. Keep a backup session ready — stairs, a treadmill, or a brisk twenty-minute walk — so a cancelled run is still a session.
 

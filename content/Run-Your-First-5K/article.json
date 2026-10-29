@@ -1,0 +1,258 @@
+{
+  "schema": "howly-guide/v1",
+  "slug": "Run-Your-First-5K",
+  "url": "/Run-Your-First-5K",
+  "category": "Sports and Fitness",
+  "categoryUrl": "/Category/Sports-and-Fitness",
+  "title": "How to Run Your First 5K",
+  "h1": "How to Run Your First 5K",
+  "deck": "Eight weeks of run-walk intervals will get most beginners to five kilometres without injury. Pick a date, keep three sessions a week, add time before speed, and taper before race day.",
+  "intro": "A first 5K is not a fitness test, it is a scheduling problem. Beginners who finish are the ones who book a race early, run three times a week at a pace that feels too easy, and add a little time each week instead of chasing a pace. Here is an eight-week route from the sofa to the finish line, including what to do in the last ten days.",
+  "seo": {
+    "titleTag": "How to Run Your First 5K: 8-Week Plan | Howly",
+    "metaDescription": "Run your first 5K with an eight-week run-walk plan: schedule three weekly sessions, build gradually, and prepare for race day.",
+    "keywords": [
+      "how to run a 5k",
+      "couch to 5k plan",
+      "first 5k training plan",
+      "8 week 5k plan",
+      "run walk intervals",
+      "5k for beginners"
+    ],
+    "primaryKeyword": "how to run your first 5k",
+    "searchIntent": "informational, high volume, strong seasonal peaks (spring and autumn)"
+  },
+  "media": {
+    "hero": {
+      "base": "00-hero",
+      "alt": "A runner crossing a park finish line tape in early morning light, other runners blurred behind"
+    },
+    "style": "Naturalistic hand-painted editorial illustration, soft oil-and-watercolor texture, warm muted palette; scenes vary with each step",
+    "stylePending": [
+      "00-hero",
+      "01-race-entry",
+      "02-goal",
+      "03-walk-test",
+      "04-shoes",
+      "05-calendar",
+      "06-intervals",
+      "07-long-run",
+      "08-crosstrain",
+      "09-taper",
+      "10-course",
+      "11-race-breakfast",
+      "12-finish"
+    ]
+  },
+  "parts": [
+    {
+      "title": "Before You Start",
+      "steps": [
+        {
+          "title": "Pick a race and a date eight to ten weeks out",
+          "body": "A 5K needs about eight weeks if you can already walk for thirty minutes, and ten to twelve if you cannot. Choose a local event you can reach without a flight, register early, and tell two people. The date does most of the work: it turns an optional Tuesday run into a session that matters, and it stops the plan from sliding week by week until it quietly disappears.",
+          "tip": "Pick an event where walking is normal. Thousands of 5Ks are walker-friendly, and that is the version beginners finish.",
+          "image": {
+            "base": "01-race-entry",
+            "alt": "A person registering for a local race on a laptop at a kitchen table, race bib and trainers beside the keyboard"
+          }
+        },
+        {
+          "title": "Set a finish goal, not a time goal",
+          "body": "Your only target for the first 5K is to cross the line still able to walk. A time goal in week one pushes you to run too fast in week three, which is when beginners get shin pain and stop. If you want a number, make it a number of sessions completed, not minutes per kilometre. You can chase a time in your second or third race with a base under you.",
+          "tip": "Write the goal down as a sentence: 'Finish 5K on 14 March, running or walking.'",
+          "image": {
+            "base": "02-goal",
+            "alt": "A notebook on a table with a handwritten training goal and a pen, a race bib and a water bottle nearby"
+          }
+        },
+        {
+          "title": "Test your starting point with a thirty-minute walk",
+          "body": "Before the plan, walk briskly for thirty minutes and notice what hurts. If you can do that comfortably, start at week one of a run-walk plan. If thirty minutes leaves you breathless or sore, spend two weeks walking five days a week first — that is not a delay, it is the base the running sits on. Anyone with chest pain, joint trouble or a heart condition should see a clinician first.",
+          "tip": "If walking for thirty minutes is hard, running for eight weeks is not the next step. Walking is.",
+          "image": {
+            "base": "03-walk-test",
+            "alt": "A person walking briskly along a park path in the morning, arms swinging, trees on both sides"
+          }
+        },
+        {
+          "title": "Get shoes that fit, not shoes that impress",
+          "body": "You need a shoe that fits, does not pinch, and is not worn out — not the most expensive shoe in the shop. A running shop that watches you walk is worth the visit if you have one; if not, buy a neutral trainer in your normal size with a thumb's width in front of the toes. Replace shoes after roughly 500 to 800 kilometres, and rotate them out when the midsole feels flat.",
+          "tip": "Try shoes on in the evening, when your feet are at their largest, and wear the socks you run in.",
+          "image": {
+            "base": "04-shoes",
+            "alt": "A person trying on a running shoe in a shop, one shoe on and the box beside the bench"
+          }
+        }
+      ]
+    },
+    {
+      "title": "Building the Plan",
+      "steps": [
+        {
+          "title": "Run three days a week, never back to back",
+          "body": "Three sessions with a rest day between them is the beginner standard, because tissue adapts during recovery rather than during the run. Monday, Wednesday and Saturday works for most people. Two days a week maintains fitness; three days builds it. A fourth session is not more training at this stage, it is more injury risk without extra adaptation.",
+          "tip": "Put the three sessions in your calendar with start times before week one begins.",
+          "image": {
+            "base": "05-calendar",
+            "alt": "A wall calendar with three days marked in pencil, running shoes and a watch on the desk below"
+          }
+        },
+        {
+          "title": "Follow a run-walk ladder instead of running continuously",
+          "body": "Start with one minute of running and two minutes of walking, repeated eight times — twenty-four minutes in total. Each week, increase the running and shrink the walking: two minutes on, two off; three on, one and a half off; five on, one off. By week seven most people run twenty to thirty minutes without a walk break. The walking is not a concession, it is how the joints and the aerobic system adapt together.",
+          "tip": "If a week feels hard, repeat it instead of moving up. Repeating a week is progress.",
+          "image": {
+            "base": "06-intervals",
+            "alt": "A runner walking on a park path with a watch on their wrist, mid run-walk session, trees behind"
+          }
+        },
+        {
+          "title": "Add time before you add speed",
+          "body": "Increase the total session time by about ten percent a week, and hold it steady every third or fourth week. Speed work belongs in a second training block, not the first eight weeks — the injuries that end beginner running careers come almost entirely from ramping volume and intensity at the same time. Your long session should be the one you are most careful with.",
+          "tip": "If in doubt, add five minutes instead of a kilometre. Time is easier to control than distance.",
+          "image": {
+            "base": "07-long-run",
+            "alt": "A person jogging steadily on a wide gravel path in a park, long shadows, trees in soft morning light"
+          }
+        },
+        {
+          "title": "Cross-train instead of adding a fourth run",
+          "body": "Cycling, swimming or a brisk walk on an off day adds aerobic work without repeating the same impact on your joints. Keep it genuinely easy: the point is blood flow, not another hard session. Strength work twice a week — squats, calf raises, hip bridges, side planks — does more for injury resistance than extra kilometres at this stage.",
+          "tip": "If something has to give in a busy week, cut the cross-training before you cut a run.",
+          "image": {
+            "base": "08-crosstrain",
+            "alt": "A person cycling on a quiet road at an easy pace, running shoes clipped to the pedals, morning light"
+          }
+        }
+      ]
+    },
+    {
+      "title": "Race Week and the Finish",
+      "steps": [
+        {
+          "title": "Taper the last ten days",
+          "body": "In the final ten days, cut your weekly volume by roughly a third and keep the intensity easy. Beginners often train hardest the week before the race, arrive tired, and mistake fatigue for a bad race. Tapering feels wrong — you will feel restless and doubt the plan — and it is the part that produces a good finish. The last hard session should be eight to ten days out.",
+          "tip": "You cannot gain fitness in the last ten days. You can only lose freshness.",
+          "image": {
+            "base": "09-taper",
+            "alt": "A person sitting on a park bench with feet up, water bottle beside them, running shoes off, calm evening light"
+          }
+        },
+        {
+          "title": "Rehearse the route and the start time",
+          "body": "Run part of the course, or somewhere similar, at the time of day the race starts. Learn where the first kilometre goes and where the last corner is, so race day has fewer unknowns. Check the start-line arrangements, the bag drop and the toilets a day early. Logistics are where first-timers lose the calm they built over eight weeks.",
+          "tip": "Write the start time, the meeting point and the bag drop on your hand the night before.",
+          "image": {
+            "base": "10-course",
+            "alt": "A runner standing at a path junction looking at a printed course map, morning mist and trees behind"
+          }
+        },
+        {
+          "title": "Eat what you already know",
+          "body": "Race-day breakfast is not the moment to try something new. Eat what you eat before a normal morning run, two to three hours before the start, and drink to thirst rather than forcing litres. Nothing you eat on the morning of a 5K will improve your race much; something unfamiliar can ruin it. If you need a gel for a longer race, practise it in training first.",
+          "tip": "Nerves make people over-drink. Sip, don't chug, in the hour before the start.",
+          "image": {
+            "base": "11-race-breakfast",
+            "alt": "A plain breakfast of toast and a banana on a kitchen table in early morning light, race bib and water glass beside it"
+          }
+        },
+        {
+          "title": "Start slower than feels right, then finish strong",
+          "body": "The first kilometre of a 5K is downhill in effort and crowded in reality, so almost everyone goes out too fast and pays for it at three kilometres. Start at a pace where you could talk, let people pass, and pick up only in the last kilometre if you feel good. If you need to walk, walk — a run-walk finish is still a finish, and nobody at the line cares about your splits.",
+          "tip": "Say good morning to someone in the first kilometre. It keeps your breathing controlled and your pace honest.",
+          "image": {
+            "base": "12-finish",
+            "alt": "A runner smiling as they approach a park finish line with a small crowd, morning light behind the trees"
+          }
+        }
+      ]
+    }
+  ],
+  "tips": [
+    "Three sessions a week with rest between them beats five days of enthusiasm in week one.",
+    "Run at a pace where you could hold a conversation; speed comes later, from consistency.",
+    "Repeat a week instead of skipping ahead when life interrupts. The plan bends, it does not break.",
+    "Taper the final ten days. Restlessness before a race is a sign the plan worked."
+  ],
+  "warnings": [
+    "See a clinician before starting if you have chest pain, uncontrolled asthma, a recent injury, or a heart condition, or if you are pregnant and unsure what is safe for you.",
+    "Stop and seek medical help for chest tightness, dizziness or fainting during training or racing.",
+    "Do not run through sharp, one-sided or joint pain. Muscle soreness eases in two days; injuries do not.",
+    "Do not increase weekly time and intensity in the same week, and keep weekly volume increases near ten percent."
+  ],
+  "faq": [
+    {
+      "q": "Can I run a 5K in eight weeks from zero?",
+      "a": "If you can walk briskly for thirty minutes, eight weeks of three run-walk sessions a week is enough for most people to finish a 5K. If walking thirty minutes is hard, spend two weeks building that first. The plan works because it adds time slowly, not because eight weeks is a magic number."
+    },
+    {
+      "q": "How fast should I run as a beginner?",
+      "a": "At a pace where you could speak in full sentences, which for most beginners is slower than they expect — often barely faster than a brisk walk at first. The run-walk intervals handle the rest. Pace improves as a side effect of consistent training, not as a target in the first eight weeks."
+    },
+    {
+      "q": "Is it okay to walk during my first 5K?",
+      "a": "Yes, and most beginner plans include walking deliberately. Walking keeps you below the effort that causes injury while still accumulating time on your feet. Many runners finish their first race using a run-walk ratio and go on to run continuously later."
+    },
+    {
+      "q": "What should I eat before a 5K?",
+      "a": "Something plain and familiar two to three hours before the start — toast, a banana, porridge. Race morning is not the time for a new food or a large meal. Drink to thirst; over-drinking before a short race is more common than under-drinking."
+    },
+    {
+      "q": "What if I miss a week of the plan?",
+      "a": "Repeat the week you were on instead of jumping forward, and do not try to make up the missed sessions. With eight weeks available and a race date fixed, repeating one week is fine; missing three weeks in a row means restarting two weeks back and adjusting your goal to finishing rather than a time."
+    }
+  ],
+  "references": [
+    "American College of Sports Medicine. “ACSM's Guidelines for Exercise Testing and Prescription.” 11th edition, 2018.",
+    "Nielsen, R. O. et al. “Training errors and running related injuries: a systematic review.” International Journal of Sports Physical Therapy, 2012.",
+    "UK Chief Medical Officers. “Physical Activity Guidelines.” 2019.",
+    "Willy, R. W. et al. “The effect of a hip-strengthening program on running injury.” Clinical Journal of Sport Medicine, 2012."
+  ],
+  "related": [
+    {
+      "label": "Start Running When You Hate Running",
+      "url": "/Start-Running-When-You-Hate-Running",
+      "note": "prerequisite"
+    },
+    {
+      "label": "Keep Running Through Winter",
+      "url": "/Keep-Running-Through-Winter",
+      "note": "seasonal"
+    }
+  ],
+  "internalLinks": [
+    {
+      "label": "Start with How to Start Running When You Hate Running",
+      "url": "/Start-Running-When-You-Hate-Running"
+    },
+    {
+      "label": "Running through the cold months: How to Keep Running Through Winter",
+      "url": "/Keep-Running-Through-Winter"
+    },
+    {
+      "label": "More Sports and Fitness guides",
+      "url": "/Category/Sports-and-Fitness"
+    },
+    {
+      "label": "Search guides like “How to Run Your First 5K”",
+      "url": "/search?q=How%20to%20Run%20Your%20First%205K"
+    }
+  ],
+  "quizIdea": {
+    "title": "5K Readiness Check: Is Your Plan Too Fast?",
+    "questions": 5,
+    "note": "Pairs with this guide on /quizzes."
+  },
+  "publishing": {
+    "author": "Site Admin",
+    "reviewer": "",
+    "datePublished": "2026-10-29",
+    "dateModified": "2026-10-29",
+    "readingTimeMinutes": 8,
+    "wordCount": null,
+    "internalLinkCount": 4,
+    "imageCount": 13,
+    "imagePending": 13
+  }
+}

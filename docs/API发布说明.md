@@ -3,7 +3,7 @@
 ## 为什么要经 GitHub Actions 发布
 
 内容沙盒的出网白名单只放行 github.com / npm / PyPI，**无法直连 `www.56juqingba.com`**（API 本身是通的，已确认 `/api/v1/articles` 在无 token 时返回 `{"error":"Token 无效。"}`）。
-因此发布放在 GitHub Actions 里跑：runner 能出网，密钥只从仓库 Secrets 读取，不写进代码、不写进本文件。
+因此计划在 GitHub Actions runner 里调用，密钥只从仓库 Secrets 读取，不写进代码、不写进本文件。**真实授权调用、上传路由、请求字段和创建文章的幂等性尚未验证**；先做只读 probe，遇到发布或回读错误时先查站点是否已创建文章，不要盲目重复 POST。
 
 ## 一次性配置
 
@@ -13,7 +13,7 @@
    |---|---|
    | `SITE_API_TOKEN` | 你的 Bearer 密钥 |
 
-   > ⚠️ 你已经在对话里贴过这串密钥，建议用完后到后台**重置一次**，然后更新这个 Secret。
+   > ⚠️ 凭证曾出现在对话里。请先在站点后台**轮换该密钥**，再把新密钥放入 Secret；不要在聊天、仓库或日志中再次粘贴。
 
 2. （可选）**接口路径覆盖**，若自动探测不准，用 Variables 指定：
 
@@ -27,7 +27,18 @@
 
 ## 用法
 
-仓库 → Actions → **Publish to 56juqingba** → Run workflow：
+工作流目前仅在 `arena/f9a79f56-52runoob` 分支上。先配置 Secret，然后一次只推送一个标记文件来触发（以无写入的探测为例）：
+
+```bash
+printf 'probe\n' > content/Keep-Running-Through-Winter/PUBLISH
+git add content/Keep-Running-Through-Winter/PUBLISH
+git commit -m "chore: probe site API"
+git push origin arena/f9a79f56-52runoob
+```
+
+成功后工作流会提交删除该标记；下次推送前同步远端。标记可写 `probe`、`dry-run`、`images-only`、`publish` 或 `update`；无效内容和同次提交多个标记均会报错，不会默认发布。`publish`/`images-only` 还会被未完成的 `media.stylePending` 拦截。
+
+只有当默认分支也包含此工作流时，GitHub 才会在 Actions 页面提供 **Run workflow**。手动触发时的输入如下：
 
 | 输入 | 作用 |
 |---|---|
@@ -51,10 +62,10 @@ python3 tools/api/publish.py content/Keep-Running-Through-Winter
 ## 脚本做了什么
 
 1. **探测集合路由**：依次试 `GET /articles`、`/posts`、`/guides`，用第一个不是 404 的；
-2. **上传图片**：`POST /uploads`（multipart，字段 `file`），把返回的 `url` / `data.url` / `path` 记进 `content/<slug>/publish-state.json`，断点重跑不会重复上传；
+2. **上传图片**：上传路由和 multipart 字段仍待实测；成功后把返回 URL 与文件 SHA-256 记进 `content/<slug>/publish-state.json`。只有同名且内容哈希相同时才复用，替换插画后会重新上传；旧版仅存 URL 的缓存无法验证，将重新上传；
 3. **组装 payload**：同时给三种常见形态，兼容未知的接口约定
-   - 结构化：`parts[].steps[]`（含 `imageUrl` / `imageAlt` / `tip`）
-   - 扁平：`steps[]`
+   - 原始分部结构：`parts[].steps[]`（沿用文章 JSON 的 image base / alt）
+   - 扁平步骤：`steps[]`（含 `imageUrl` / `imageAlt` / `tip`）
    - 富文本：`html`（与站内版式一致的完整正文）
 4. **发布**：`POST /articles`（或探测到的集合路由），默认 `status: published`；
 5. **回读校验**：`GET /articles/<slug>`，比对 title 与步骤数。
@@ -80,7 +91,8 @@ python3 tools/api/publish.py content/Keep-Running-Through-Winter
   - Fix Knee Pain From Running：11 步 → 12 张
   - Repot a Houseplant：10 步 → 11 张
 - 上传用 1600×900 WebP（站上现有图片也是 1600 宽），960 宽版本留在仓库备用；
-- alt 全部在 `article.json` 里逐张填写，脚本随图上传。
+- alt 全部在 `article.json` 里逐张填写，须与实际图片一致，脚本随图上传；
+- 风格过渡时 `media.stylePending` 列出待替换图片，体检与真实上传/发布会拒绝未完成稿件；`--dry-run` 仍可用于检查。冬季跑步样板现有 3 张待替换，5K 草稿的 13 张新风格图片均未完成。
 
 ## 安全约定
 

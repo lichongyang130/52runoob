@@ -9,14 +9,15 @@
 content/
   _template/article.json            空白模板（复制它开新稿）
   content-plan.csv                  25 条选题池（priority / slug / 关键词 / 内链）
-  Keep-Running-Through-Winter/      已交付样板：12 步指南 + 13 张配图
-    article.json                    单一内容源
+  Keep-Running-Through-Winter/      样板：12 步；13 张图中 10 张已换为新手绘风
+    article.json                    单一内容源；media.stylePending 列出待替换图片
     article.md                      审稿用 Markdown（自动生成）
     import-payload.json             CMS 导入用（自动生成）
     images/                         960w + 1600w WebP
+  Run-Your-First-5K/                12 步草稿，13 张新风格图待生成
 docs/
   内容增长方案.md                    诊断 + 架构 + 选题 + SOP + 排期
-  image-prompt-template.md          配图 prompt 模板与风格锁
+  image-prompt-template.md          参考图风格、场景多样性与 prompt 模板
 tools/
   render_article.py                 JSON -> MD / payload / 预览页
   check_article.py                  发布前体检（12 项规则）
@@ -31,7 +32,7 @@ preview/                            渲染出的本地预览页
 # 1. 渲染
 python3 tools/render_article.py content/Keep-Running-Through-Winter/article.json
 
-# 2. 体检（0 error 才能发）
+# 2. 体检（0 error 才能发；新风格配图未完成时会报错）
 python3 tools/check_article.py content/Keep-Running-Through-Winter/article.json
 
 # 3. 新配图转码（原图放 images/raw/*.png）
@@ -47,6 +48,6 @@ python3 tools/api/publish.py content/Keep-Running-Through-Winter
 ## 写一篇新稿
 
 1. `cp -r content/_template content/Your-Article-Slug`，把 `article.json` 填满（12 步 / 3 Part）；
-2. 按 `docs/image-prompt-template.md` 生成 1 张 hero + 每步 1 张，放进 `images/raw/`；
-3. 跑 `make_images.sh` → `render_article.py` → `check_article.py`；
-4. 用 `article.md` 或 `import-payload.json` 发布，按 `docs/内容增长方案.md` 第 8 节 checklist 过一遍。
+2. 按 `docs/image-prompt-template.md` 生成 1 张 hero + 每步 1 张；参考画风但根据步骤变换背景，原图放进 `images/raw/`（该目录不提交 Git）；
+3. 跑 `make_images.sh` → `render_article.py` → `check_article.py`；若有旧风格占位图，在 `media.stylePending` 中列出，全部替换后清空；
+4. 由真人核查安全内容、图片与参考文献，再按 `docs/API发布说明.md` 进行 API 探测及发布；接口尚未实际验证。
