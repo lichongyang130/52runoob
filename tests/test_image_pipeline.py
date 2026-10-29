@@ -154,13 +154,16 @@ class UploadCacheTests(unittest.TestCase):
             with self.assertRaises(SystemExit):
                 publish.safe_image_url("/uploads?key=test-secret-123")
 
-    def test_probe_redacts_response_before_truncation(self):
+    def test_probe_does_not_print_response_values_or_secrets(self):
         lines = []
-        secret_response = "x" * 110 + "test-secret-123" + "x" * 10
-        with mock.patch.object(client, "request", return_value=(200, {}, secret_response)):
+        response = json.dumps({"articles": [{"title": "private article title",
+                                            "token": "test-secret-123"}]})
+        with mock.patch.object(client, "request", return_value=(200, {}, response)):
             client.probe(status_out=lines.append)
-        self.assertNotIn("test-secret-123", "\n".join(lines))
-        self.assertNotIn("test-secret-", "\n".join(lines))
+        output = "\n".join(lines)
+        self.assertNotIn("test-secret-123", output)
+        self.assertNotIn("private article title", output)
+        self.assertIn('"title": "str"', output)
 
 
 @unittest.skipUnless(shutil.which("convert") and shutil.which("identify"), "ImageMagick not installed")

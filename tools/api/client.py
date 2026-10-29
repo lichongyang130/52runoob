@@ -12,6 +12,7 @@ import json
 import mimetypes
 import os
 import urllib.error
+import urllib.parse
 import urllib.request
 import uuid
 
@@ -44,9 +45,38 @@ def base() -> str:
 
 def _redact(text: str) -> str:
     t = os.environ.get(TOKEN_ENV, "").strip()
-    if t and t in text:
-        text = text.replace(t, "<token>")
+    if t:
+        # Error bodies can JSON- or URL-escape a token before echoing it.
+        variants = {t, json.dumps(t, ensure_ascii=False)[1:-1],
+                    json.dumps(t, ensure_ascii=True)[1:-1],
+                    urllib.parse.quote(t, safe=""), urllib.parse.quote_plus(t, safe="")}
+        for value in sorted(variants, key=len, reverse=True):
+            text = text.replace(value, "<token>")
     return text
+
+
+def _origin(url: str):
+    """Normalize an HTTP(S) origin so redirects cannot send the token elsewhere."""
+    try:
+        parsed = urllib.parse.urlsplit(url)
+        scheme = parsed.scheme.lower()
+        if scheme not in ("http", "https") or not parsed.hostname:
+            return None
+        return scheme, parsed.hostname.lower(), parsed.port or (443 if scheme == "https" else 80)
+    except ValueError:
+        return None
+
+
+class SameOriginRedirect(urllib.request.HTTPRedirectHandler):
+    def redirect_request(self, req, fp, code, msg, headers, newurl):
+        source, destination = _origin(req.full_url), _origin(newurl)
+        if not source or source != destination:
+            raise ApiError(req.get_method(), req.full_url, code,
+                           "拒绝跨站点或跨协议重定向，以保护 Bearer 密钥。")
+        return super().redirect_request(req, fp, code, msg, headers, newurl)
+
+
+OPENER = urllib.request.build_opener(SameOriginRedirect())
 
 
 def request(method: str, path: str, *, json_body=None, raw_body=None,
@@ -71,7 +101,7 @@ def request(method: str, path: str, *, json_body=None, raw_body=None,
 
     req = urllib.request.Request(url, data=data, headers=headers, method=method)
     try:
-        with urllib.request.urlopen(req, timeout=timeout) as resp:
+        with OPENER.open(req, timeout=timeout) as resp:
             body = resp.read().decode("utf-8", "replace")
             return resp.status, dict(resp.headers), body
     except urllib.error.HTTPError as e:
@@ -111,7 +141,7 @@ def json_shape(value, depth=0):
     if depth >= 5:
         return type(value).__name__
     if isinstance(value, dict):
-        return {str(k): json_shape(v, depth + 1) for k, v in list(value.items())[:50]}
+        return {_redact(str(k)): json_shape(v, depth + 1) for k, v in list(value.items())[:50]}
     if isinstance(value, list):
         return [json_shape(value[0], depth + 1)] if value else []
     if value is None:
@@ -131,7 +161,8 @@ def probe(status_out=print):
             if e.status in (0, 401, 403):
                 raise
             st, body = e.status, e.body
-        status_out(f"  GET {p:12} -> {st}  {_redact(body)[:120]}")
+        # Do not print raw response values: lists can include private drafts.
+        status_out(f"  GET {p:12} -> {st}")
         if st < 300 and not found["collection"]:
             found["collection"] = p
             try:
@@ -146,7 +177,7 @@ def probe(status_out=print):
             st, _, body = request("GET", p)
         except ApiError as e:
             st, body = e.status, e.body
-        status_out(f"  GET {p:12} -> {st}  {_redact(body)[:120]}")
+        status_out(f"  GET {p:12} -> {st}")
         if st in (400, 405, 422, 200, 201) and not found["upload"]:
             found["upload"] = p
 

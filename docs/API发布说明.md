@@ -1,122 +1,65 @@
 # API 发布说明（56juqingba）
 
-## 为什么要经 GitHub Actions 发布
+## 当前状态（2026-10-29）
 
-内容沙盒的出网白名单只放行 github.com / npm / PyPI，**无法直连 `www.56juqingba.com`**（API 本身是通的，已确认 `/api/v1/articles` 在无 token 时返回 `{"error":"Token 无效。"}`）。
-因此计划在 GitHub Actions runner 里调用，密钥只从仓库 Secrets 读取，不写进代码、不写进本文件。**真实授权调用、上传路由、请求字段和创建文章的幂等性尚未验证**；先做只读 probe，遇到发布或回读错误时先查站点是否已创建文章，不要盲目重复 POST。
+- 用户从自己的 Mac 使用 Bearer 密钥完成了**只读授权探测**：`GET /api/v1/articles` 和 `GET /api/v1/media` 均返回 200；文章列表包含 `id`、`slug`、`title`、`status` 和分类等字段。
+- `/posts`、`/guides`、`/contents`、`/uploads`、`/images`、`/assets` 的 GET 返回 404；`/openapi.json`、`/docs`、`/schema` 也未发现文档。**`GET /media` 成功不代表 `POST /media` 就是上传接口。**
+- 图片上传请求、创建文章的字段与嵌套结构、状态枚举、查重和幂等性均尚未验证。之前的 `build_payload()` 只是实验性草案，不代表站点的实际格式。
+- 冬季样稿和 13 张新风格图片已备齐，但**尚未上传或发布**；健康内容仍需真人专业审校，`reviewer` 保持空值，不虚构审核者。
+- GitHub Actions 没有生成运行记录，包括一个无密钥的最小工作流；原因不明。沙盒只能访问白名单主机，不能直接连接站点 API，因此暂用可联网的电脑探测。
 
-## 2026-10-29 探测记录
+为防误写，`tools/api/publish.py` 当前明确锁定了真实上传、创建和更新：命令行和工作流里的 `images-only`、`publish`、`update` 都会在任何 API 写入之前停止。`--probe` 和 `--dry-run` 仍可使用；不得通过简单修改开关绕过，应先实现并测试真实接口契约和可靠查重。
 
-- 冬季跑步样板已完成 13 张插画并通过本地体检；请求发布后先推送了 `probe` 标记。
-- 用户确认检查过设置并在网页提交 `probe`（`f20b247`）；GitHub Actions 仍没有生成运行记录。另推送了不含密钥的最小诊断工作流（`5fa0c83`），同样没有生成运行记录；两个工作流均通过语法解析，原因仍无法从当前权限确定。
-- 当前 `arena-ai-coding-agent` 安装权限显示 `actions: read`，手动 dispatch 返回 403；仓库 Actions 设置和 Secret 内容无法读取。沙盒也无法直接访问站点 API。
-- **尚未发出授权 API 请求，也未发布文章。** 在 Actions 问题解决前，可以使用下面的本机只读探测脚本获取接口信息；不要把密钥贴到聊天里。
+## 已克隆仓库后的下一次只读检查
 
-## 一次性配置
-
-1. **添加密钥**（仓库 → Settings → Secrets and variables → Actions → New repository secret）
-
-   | Name | Value |
-   |---|---|
-   | `SITE_API_TOKEN` | 你的 Bearer 密钥 |
-
-   > ⚠️ 凭证曾出现在对话里。请先在站点后台**轮换该密钥**，再把新密钥放入 Secret；不要在聊天、仓库或日志中再次粘贴。
-
-2. （可选）**接口路径覆盖**，若自动探测不准，用 Variables 指定：
-
-   | Name | 示例 | 说明 |
-   |---|---|---|
-   | `SITE_API_BASE` | `https://www.56juqingba.com/api/v1` | 默认值，一般不用改 |
-   | `SITE_API_COLLECTION` | `/articles` | 文章集合路由 |
-   | `SITE_API_UPLOAD` | `/uploads` | 图片上传路由 |
-
-3. **允许本地分支跑工作流**（可选）：仓库规模小、分类页少时可选。需要的话在 Settings → Actions → General 里打开 *Allow all actions and reusable workflows*。
-
-## GitHub Actions 无法启动时：从可联网电脑探测
-
-如果仓库 Actions 不生成任务，可在能够访问 `www.56juqingba.com` 的电脑或站点服务器上执行只读探测：
+在刚才运行过基础探测的 Mac 终端中执行：
 
 ```bash
-git clone --single-branch --branch arena/f9a79f56-52runoob https://github.com/lichongyang130/52runoob.git 52runoob-publish
-cd 52runoob-publish
+cd ~/52runoob-publish
+git pull --ff-only
+bash tools/probe_site.sh --details
+```
+
+脚本会在本机终端隐藏输入网站 API 密钥，仅传入进程环境，不写入文件或 shell 命令历史。若已通过安全方式设置 `SITE_API_TOKEN`，则直接使用它。不要把密钥发到聊天中。
+
+详细检查仅发出 `GET` 和 `OPTIONS`：读取文章与媒体结构、测试样本详情和目标 slug、检查分类，输出 HTTP 状态、允许的方法名、JSON **字段名和类型**、白名单中的文章状态枚举及查重摘要；不输出文章正文、图片路径或密钥。`OPTIONS` 返回的方法列表可能包含 POST，但脚本不会发送 POST。列表可能分页或不包含草稿，目标 slug 未出现在本次结果中**不能证明不存在**。完成后可以把输出发给代理；若网站另有 API 文档，也可提供请求字段和响应格式，切勿包含密钥。
+
+保留基础探测：
+
+```bash
 bash tools/probe_site.sh
 ```
 
-脚本会在本机终端隐藏输入网站 API 密钥，仅传入进程环境，不写文件或命令历史；不会创建文章或上传图片。把脱敏后的输出发给代理，**不要发送密钥**。若此前已经通过安全方式设置 `SITE_API_TOKEN`，脚本会直接使用它。
+客户端拒绝跨站点或跨协议的 API 重定向，避免将 Bearer 密钥传给其他来源。此前密钥曾出现在对话里，应在网站后台轮换并更新 GitHub Secret，后续不要在聊天、命令行参数、代码或日志里粘贴密钥。
 
-## 用法
+## 本地演练
 
-工作流目前仅在 `arena/f9a79f56-52runoob` 分支上。先配置 Secret，然后一次只推送一个标记文件来触发（以无写入的探测为例）：
-
-```bash
-printf 'probe\n' > content/Keep-Running-Through-Winter/PUBLISH
-git add content/Keep-Running-Through-Winter/PUBLISH
-git commit -m "chore: probe site API"
-git push origin arena/f9a79f56-52runoob
-```
-
-成功后工作流会提交删除该标记；下次推送前同步远端。标记可写 `probe`、`dry-run`、`images-only`、`publish` 或 `update`；无效内容和同次提交多个标记均会报错，不会默认发布。`publish`/`images-only` 还会被未完成的 `media.stylePending` 拦截。
-
-只有当默认分支也包含此工作流时，GitHub 才会在 Actions 页面提供 **Run workflow**。手动触发时的输入如下：
-
-| 输入 | 作用 |
-|---|---|
-| `action = probe` | 只探测接口能力，打印每条路由的返回码，**先跑这个** |
-| `action = dry-run` | 本地演练：列出会传的图片和 payload 字段，不写任何数据 |
-| `action = images-only` | 只上传图片，不创建文章 |
-| `action = publish` | 上传图片 + 创建文章 + 回读校验 |
-| `action = update` | 文章已存在时 PATCH 更新 |
-| `article_dir` | `content/Keep-Running-Through-Winter` |
-| `branch` | `arena/f9a79f56-52runoob` |
-
-命令行等价：
+不需要密钥、不连接网站：
 
 ```bash
-# 隐藏输入，不会把密钥写进 shell 命令历史
-read -r -s -p '网站 API 密钥：' SITE_API_TOKEN; echo; export SITE_API_TOKEN
-python3 tools/api/publish.py --probe
+python3 tools/check_article.py content/Keep-Running-Through-Winter/article.json
 python3 tools/api/publish.py content/Keep-Running-Through-Winter --dry-run
-# 确认接口后再执行发布：python3 tools/api/publish.py content/Keep-Running-Through-Winter
-unset SITE_API_TOKEN
 ```
 
-## 脚本做了什么
+演练中的 payload 是待验证草案，并不是可直接导入的真实站点格式。
 
-1. **探测集合路由**：依次试 `GET /articles`、`/posts`、`/guides`，用第一个不是 404 的；
-2. **上传图片**：上传路由和 multipart 字段仍待实测；成功后把返回 URL 与文件 SHA-256 记进 `content/<slug>/publish-state.json`。只有同名且内容哈希相同时才复用，替换插画后会重新上传；旧版仅存 URL 的缓存无法验证，将重新上传；
-3. **组装 payload**：同时给三种常见形态，兼容未知的接口约定
-   - 分部结构：`parts[].steps[]`（含原始图片信息和已上传的 `imageUrl` / `imageAlt`）
-   - 扁平步骤：`steps[]`（含 `imageUrl` / `imageAlt` / `tip`）
-   - 富文本：`html`（与站内版式一致的完整正文）
-4. **发布**：`POST /articles`（或探测到的集合路由），默认 `status: published`；
-5. **回读校验**：`GET /articles/<slug>`，比对 title 与步骤数。
+## 工作流及密钥配置
 
-## 如果接口报字段错误
+如之后 GitHub Actions 能正常启动，仓库 Secret 名称为 `SITE_API_TOKEN`；它只应包含站点 Bearer 密钥。工作流在分支 `arena/f9a79f56-52runoob`，可通过单个 `content/<slug>/PUBLISH` 标记指定 `probe`、`dry-run`、`images-only`、`publish` 或 `update`；无效内容和同次多个标记会失败关闭。**当前写操作仍被脚本锁定**。只有默认分支含工作流时，GitHub 才会提供手动 `workflow_dispatch`。
 
-服务端会回原始错误文本，脚本会原样打印（自动隐藏 token）。常见处理：
+当前 GitHub App 的 Actions 权限为 `actions: read`，不能通过 API 手动 dispatch 或读取仓库 Secrets；不要反复推送相同探测标记来替代本机检查。
 
-| 报错 | 处理 |
-|---|---|
-| `未知字段 xxx` | 在 `tools/api/publish.py` 的 `build_payload()` 里删掉该字段 |
-| `缺少必填字段 xxx` | 同上，把该字段补上（值从 `article.json` 取） |
-| `上传缺少字段` | 改环境变量 `SITE_UPLOAD_FIELD`（默认 `file`） |
-| 路由 404 | 用 Variables 显式指定 `SITE_API_COLLECTION` / `SITE_API_UPLOAD` |
+## 发布前必须完成
 
-把报错原文发我，我直接改脚本或改 payload 字段名。
+1. 获取或验证图片上传、文章创建与回读的正式接口契约，包括请求字段、`alt`、响应 URL、分类和状态；不能仅依据 GET 列表推测 POST。
+2. 完善发布器和测试：按真实字段映射 3 个 Part、12 个步骤、每步图片、FAQ、参考资料、SEO 和分类；验证图片 URL 与 `alt` 不丢失。
+3. 可靠查询目标 slug，包括草稿和分页；发现已有文章时停止创建。上传断点状态如包含 URL 或其他服务端数据，应核查是否带有签名或凭证，不能未经检查提交。
+4. 真人核查健康内容、插图、来源和作者信息。不要把 `reviewer` 空值填成不存在的审核者。
+5. 在可连接网站的环境中执行一次受控发布。若写入超时或返回异常，**先通过读取确认站点状态，不要盲目重复 POST**。
+6. 回读接口并检查公开页：标题、分类、12 个步骤、hero 加 12 张步骤图、图片 alt、参考资料、FAQ 和页面状态。
 
-## 图片规格（已按“每步一张”生产）
+## 图片规格
 
-- 每篇 **hero 1 张 + 每步 1 张**：
-  - 冬季跑步：12 步 → 13 张
-  - Run Your First 5K：12 步 → 13 张
-  - Fix Knee Pain From Running：11 步 → 12 张
-  - Repot a Houseplant：10 步 → 11 张
-- 上传用 1600×900 WebP（站上现有图片也是 1600 宽），960 宽版本留在仓库备用；
-- alt 全部在 `article.json` 里逐张填写，须与实际图片一致，脚本随图上传；
-- 风格过渡时 `media.stylePending` 列出待替换图片，体检与真实上传/发布会拒绝未完成稿件；`--dry-run` 仍可用于检查。冬季跑步样板的 13 张新风格图已齐，5K 草稿的 13 张新风格图片尚未完成。
-
-## 安全约定
-
-- 密钥只存在于 GitHub Secrets 与本地 shell 环境变量；
-- 脚本对输出统一做 token 脱敏；
-- `content/*/publish-state.json` 只存图片 URL，不含任何凭证，可安全提交。
+- 每篇 **hero 1 张 + 每步 1 张**；冬季跑步为 13 张，`Run-Your-First-5K` 的 13 张新风格图片尚未制作。
+- 冬季样稿的 WebP 图片有 1600×900 和 960×540 两种尺寸，并在 `article.json` 为每张图片填写了 alt。实际上传的尺寸、alt 字段和图片 URL 需以真实接口为准。
+- `media.stylePending` 列出待替换的旧风格图片；未完成时体检及真实写入应被拦截。`--dry-run` 可继续用于检查。

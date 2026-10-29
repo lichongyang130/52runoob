@@ -22,6 +22,9 @@ publish.py — 把 content/<slug>/article.json 发布到 56juqingba 的 API
   SITE_API_UPLOAD        默认自动探测（/uploads /media /images）
   SITE_UPLOAD_FIELD      默认 "file"
   SITE_IMAGE_WIDTH       默认 "1600"
+
+安全状态：读取文章与媒体列表已实测，但上传和创建请求格式尚未验证。
+真实上传 / 创建 / 更新被下方明确锁定；仅允许只读 probe 和 dry-run。
 """
 from __future__ import annotations
 
@@ -34,6 +37,10 @@ import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import client  # noqa: E402
+
+# Do not enable until the real API contract, duplicate checking and read-back
+# verification have been implemented and tested against the site.
+API_WRITES_VERIFIED = False
 
 
 # --------------------------------------------------------------- helpers
@@ -207,7 +214,8 @@ def main() -> int:
         raise SystemExit("需要 article 目录，例如 content/Keep-Running-Through-Winter")
 
     art_dir = os.path.abspath(args.article_dir)
-    doc = json.load(open(os.path.join(art_dir, "article.json"), encoding="utf-8"))
+    with open(os.path.join(art_dir, "article.json"), encoding="utf-8") as article_file:
+        doc = json.load(article_file)
     images_dir = os.path.join(art_dir, "images")
     width = os.environ.get("SITE_IMAGE_WIDTH", "1600")
 
@@ -238,6 +246,15 @@ def main() -> int:
         print("\npayload 字段:", ", ".join(payload.keys()))
         print("payload 大小:", len(json.dumps(payload, ensure_ascii=False)) // 1024, "KB")
         return 0
+
+    # GET success does not verify POST/PATCH semantics, upload format, idempotency,
+    # or the content model. Keep all write paths locked until the actual API
+    # contract is implemented and a duplicate-safe preflight is in place.
+    if not API_WRITES_VERIFIED:
+        raise SystemExit(
+            "接口写入格式与查重规则尚未验证，已禁止上传、创建或更新；"
+            "请先执行 bash tools/probe_site.sh --details 进行只读检查。"
+        )
 
     upload_prefix = find_upload()
     print(client._redact(f"上传端点: POST {upload_prefix}"))

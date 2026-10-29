@@ -29,6 +29,27 @@ class InteractiveProbeTests(unittest.TestCase):
             self.assertEqual(result.returncode, 0, result.stderr)
             self.assertNotIn(fake_key, result.stdout + result.stderr)
 
+    def test_details_mode_passes_key_to_read_only_inspection(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            stub = Path(tmp) / "python3"
+            stub.write_text('#!/bin/sh\n[ "$1" = tools/api/inspect_site.py ] && [ -n "$SITE_API_TOKEN" ]\n')
+            stub.chmod(0o755)
+            fake_key = "test-credential-not-real"
+            env = dict(os.environ, SITE_API_TOKEN=fake_key, PATH=tmp + os.pathsep + os.environ["PATH"])
+            result = subprocess.run(["bash", str(SCRIPT), "--details"], stdin=subprocess.DEVNULL,
+                                    capture_output=True, text=True, env=env)
+            self.assertEqual(result.returncode, 0, result.stderr)
+            self.assertNotIn(fake_key, result.stdout + result.stderr)
+
+    def test_unknown_mode_fails_before_prompting(self):
+        env = dict(os.environ)
+        env.pop("SITE_API_TOKEN", None)
+        result = subprocess.run(["bash", str(SCRIPT), "--publish"], stdin=subprocess.DEVNULL,
+                                capture_output=True, text=True, env=env)
+        self.assertNotEqual(result.returncode, 0)
+        self.assertIn("用法", result.stderr)
+        self.assertNotIn("请输入网站 API 密钥", result.stderr)
+
 
 if __name__ == "__main__":
     unittest.main()
