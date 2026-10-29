@@ -26,8 +26,8 @@ on:
   push:
     branches:
       - arena/f9a79f56-52runoob
-    paths:
-      - "content/**/PUBLISH"
+    # The input resolver skips pushes that did not change a PUBLISH marker.
+    # No path filter: this also rules out a silently mismatched glob.
 
 permissions:
   contents: write
