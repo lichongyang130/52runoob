@@ -4,6 +4,9 @@ content/**/images/raw/
 # The user-provided reference is a local working asset, not for redistribution.
 docs/assets/illustration-style-reference.webp
 
+# Local publishing state and lock files may contain site media identifiers.
+content/*/.publish-state-local*
+
 # Python bytecode
 __pycache__/
 *.py[cod]

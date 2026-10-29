@@ -120,7 +120,10 @@ def multipart(fields: dict, files: dict):
     for k, v in fields.items():
         out.append(f"--{boundary}\r\nContent-Disposition: form-data; name=\"{k}\"\r\n\r\n{v}\r\n".encode())
     for field, (filename, blob) in files.items():
-        ctype = mimetypes.guess_type(filename)[0] or "application/octet-stream"
+        # WebP is the pipeline's required format; do not depend on the host's
+        # MIME database (which can differ between macOS installations).
+        ctype = "image/webp" if filename.lower().endswith(".webp") else (
+            mimetypes.guess_type(filename)[0] or "application/octet-stream")
         out.append(
             f"--{boundary}\r\nContent-Disposition: form-data; name=\"{field}\"; "
             f"filename=\"{filename}\"\r\nContent-Type: {ctype}\r\n\r\n".encode()

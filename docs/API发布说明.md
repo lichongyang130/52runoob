@@ -2,15 +2,30 @@
 
 ## 当前状态（2026-10-29）
 
-- 用户从自己的 Mac 使用 Bearer 密钥完成了**只读授权探测**：`GET /api/v1/articles` 和 `GET /api/v1/media` 均返回 200；文章列表包含 `id`、`slug`、`title`、`status` 和分类等字段。
-- `/posts`、`/guides`、`/contents`、`/uploads`、`/images`、`/assets` 的 GET 返回 404；`/openapi.json`、`/docs`、`/schema` 也未发现文档。**`GET /media` 成功不代表 `POST /media` 就是上传接口。**
-- 图片上传请求、创建文章的字段与嵌套结构、状态枚举、查重和幂等性均尚未验证。之前的 `build_payload()` 只是实验性草案，不代表站点的实际格式。
-- 冬季样稿和 13 张新风格图片已备齐，但**尚未上传或发布**；健康内容仍需真人专业审校，`reviewer` 保持空值，不虚构审核者。
+- 用户从自己的 Mac 使用 Bearer 密钥完成了只读授权探测：`GET /api/v1/articles`、`/media`、`/categories` 均返回 200。`OPTIONS /articles` 与 `/media` 的允许方法包含 POST；这说明服务器声明了对应方法，**并不证明请求字段**。
+- 已有文章通过 slug 回读，结构包括 `methods[].steps[]`、图片对象、`tips[].kind`、`faqs`、`references`；列表中观察到状态 `PUBLISHED`。冬季目标在本次 19 条列表中未发现、按 slug 读取为 404，但仍不能排除分页或草稿被隐藏。
+- `/posts`、`/guides`、`/contents`、`/uploads`、`/images`、`/assets` 的 GET 返回 404；`/openapi.json`、`/docs`、`/schema` 也未发现文档。`/media/upload` 和 `/upload` 的 OPTIONS 返回 404。
+- 图片上传和文章创建的请求字段、幂等性仍未验证。`build_payload()` 仍只是实验性草案，不能作为实际站点格式；目前既未创建文章，也未上传图片。
+- 冬季样稿和 13 张新风格图片已备齐；健康内容仍需真人专业审校，`reviewer` 保持空值，不虚构审核者。
 - GitHub Actions 没有生成运行记录，包括一个无密钥的最小工作流；原因不明。沙盒只能访问白名单主机，不能直接连接站点 API，因此暂用可联网的电脑探测。
 
-为防误写，`tools/api/publish.py` 当前明确锁定了真实上传、创建和更新：命令行和工作流里的 `images-only`、`publish`、`update` 都会在任何 API 写入之前停止。`--probe` 和 `--dry-run` 仍可使用；不得通过简单修改开关绕过，应先实现并测试真实接口契约和可靠查重。
+为防误写，通用发布器 `tools/api/publish.py` 当前锁定真实上传、创建和更新：命令行和工作流里的 `images-only`、`publish`、`update` 都会在任何 API 写入之前停止。`--probe` 和 `--dry-run` 仍可使用；不得通过简单修改开关绕过，应先实现并测试真实接口契约和可靠查重。下面的独立脚本是经用户确认后执行的**单张封面上传测试**，不会创建或修改文章。
 
-## 已克隆仓库后的下一次只读检查
+## 受控上传一张封面
+
+在刚才的 Mac 终端执行：
+
+```bash
+cd ~/52runoob-publish
+git pull --ff-only
+bash tools/upload_hero.sh --confirm
+```
+
+**此命令会真实向 `/api/v1/media` 上传冬季文章的 1600 宽封面，不是只读探测。**它先检查已知 slug 读取方式、目标文章、媒体列表中的同名同 alt 图片，以及服务器声明的方法；然后只发送一次 `POST /media`，使用 multipart 的 `file` 和 `alt` 字段，回读媒体列表检查 alt，不发送文章创建或更新请求。列表可能分页，不能保证完全查重。是否接受该上传格式仍待实测。输入密钥时不回显，不将密钥写入文件或命令历史。
+
+每次 POST 前，脚本会在本机、已被 Git 忽略的 `content/Keep-Running-Through-Winter/.publish-state-local.json` 写入待确认状态；成功后只保存媒体 ID 和图片 SHA-256，不保存密钥或完整响应。并发锁及本地状态用于阻止重复上传。若超时、失败或返回格式异常，图片**可能已上传**：不要删除状态文件或盲目重试，把脱敏输出发给代理，先通过媒体库核实。相同封面已有成功记录时，再次执行只会回读，不会再次 POST。
+
+## 已克隆仓库后的只读检查
 
 在刚才运行过基础探测的 Mac 终端中执行：
 
