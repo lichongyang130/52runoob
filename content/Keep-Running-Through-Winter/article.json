@@ -1,0 +1,234 @@
+{
+  "schema": "howly-guide/v1",
+  "slug": "Keep-Running-Through-Winter",
+  "url": "/Keep-Running-Through-Winter",
+  "category": "Sports and Fitness",
+  "categoryUrl": "/Category/Sports-and-Fitness",
+  "title": "How to Keep Running Through Winter",
+  "h1": "How to Keep Running Through Winter",
+  "deck": "Winter running fails on logistics, not motivation. Shorten the loop, dress for ten degrees warmer, start into the wind, and keep a ten-minute minimum for the days when the weather wins.",
+  "intro": "Most winter running plans fail in the first cold week, when the gap between a warm room and a dark pavement stops being an obstacle and becomes a reason. The runners still going in January are not tougher than the ones who quit; they have smaller sessions, better layers, and a route they can shorten. Here is how to build a winter that survives ordinary cold Tuesdays.",
+  "seo": {
+    "titleTag": "How to Keep Running Through Winter: 12 Steps | Howly",
+    "metaDescription": "Keep running through winter with 12 practical steps: how to layer, breathe in cold air, run safely in the dark, handle ice, and restart after a missed week.",
+    "keywords": [
+      "how to run in winter",
+      "winter running tips",
+      "running in cold weather",
+      "how cold is too cold to run",
+      "running in the dark",
+      "winter running clothes"
+    ],
+    "primaryKeyword": "how to keep running through winter",
+    "searchIntent": "informational, problem-solving, seasonal spike (Nov–Feb)"
+  },
+  "media": {
+    "hero": {
+      "base": "00-hero",
+      "alt": "A runner in a light insulated jacket, gloves and beanie jogging along a cold coastal path at sunrise, breath visible in the air"
+    },
+    "style": "documentary editorial photography, natural light, muted cool palette, no text or logos"
+  },
+  "parts": [
+    {
+      "title": "Getting Out of the Door",
+      "steps": [
+        {
+          "title": "Set a ten-minute minimum",
+          "body": "Decide now that ten minutes outside counts as a session, and that the only real failure is not going out at all. Ten minutes is long enough to keep the habit and short enough to survive a dark, wet evening — and most days you will stay out longer once you are moving. Write the minimum on the same calendar as the full session, so a bad week has something to fall back on.",
+          "tip": "The hardest part of a winter run is the first three minutes outdoors. Promise yourself only ten minutes; the rest is optional.",
+          "image": {
+            "base": "01-footing",
+            "alt": "A person in winter running clothes standing at the edge of a frosty footpath in early morning, looking down at icy patches"
+          }
+        },
+        {
+          "title": "Dress for ten degrees warmer",
+          "body": "Dress for conditions about 10°C warmer than the air temperature, because you will heat up within the first kilometre. Three thin layers work better than one thick one: a wicking base layer, a light mid layer, and a windproof shell or vest. Cotton holds sweat and turns cold; synthetic or merino does not. If you are warm and comfortable standing on the doorstep, you are already wearing too much.",
+          "tip": "If you are not slightly cold in the first two minutes, take a layer off before you start.",
+          "image": {
+            "base": "02-layers",
+            "alt": "A person zipping up a thin running jacket by the front door, with a second layer, gloves and a beanie laid out on a bench"
+          }
+        },
+        {
+          "title": "Warm up indoors, not at the doorstep",
+          "body": "Cold muscles and cold joints are more easily strained, and standing outside in a T-shirt stretching is the worst of both. Spend four or five minutes indoors on leg swings, hip circles, walking lunges and a flight of stairs, then walk briskly for the first few minutes outside. The first kilometre is a warm-up, whatever your watch says about pace.",
+          "tip": "Put your shoes on last. Getting dressed while moving around the house is already a warm-up.",
+          "image": {
+            "base": "03-warmup",
+            "alt": "A person doing leg swings in a spare room at home before going outside, cold daylight from a window"
+          }
+        },
+        {
+          "title": "Choose the surface before the pace",
+          "body": "In frost and snow, route choice matters more than speed. Prefer cleared, gritted paths and main streets, and avoid shaded north-facing pavements, wooden boardwalks, metal plates and wet leaves, which are slicker than they look. Shorten the loop on ice and keep the longer route for a dry day. Deeper tread helps on snow, but nothing grips black ice reliably.",
+          "tip": "Walk the first fifty metres. If your foot slips when you push off gently, turn around and use a different route.",
+          "image": {
+            "base": "04-effort",
+            "alt": "A person jogging slowly on a gravel path in winter with light snow at the edges and morning light behind trees"
+          }
+        }
+      ]
+    },
+    {
+      "title": "Cold Air, Wind and Darkness",
+      "steps": [
+        {
+          "title": "Slow down, and breathe through a layer",
+          "body": "Cold air is dry, and hard breathing through it irritates the airways, which is why winter runs sometimes end in a cough. Run at an easy effort, keep your mouth mostly closed, and let a neck gaiter cover your mouth so the air is warmed a little before it reaches your lungs. If you have asthma or exercise-induced breathing trouble, warm up longer and carry your inhaler.",
+          "tip": "If you can hear your own breathing over your footsteps, you are going too fast for the temperature.",
+          "image": {
+            "base": "05-breath",
+            "alt": "Close-up of a winter runner with a thin neck gaiter pulled over the mouth, knit hat and frosty path behind"
+          }
+        },
+        {
+          "title": "Start into the wind",
+          "body": "Wind removes heat far faster than still air, and a headwind on the way home after a sweaty run is how winter runs turn miserable. Do the exposed half of the loop while you are dry and warm, then let the wind push you back. Check wind speed as well as temperature: 2°C with a 30 km/h wind feels closer to -3°C.",
+          "tip": "Dress for the wind, not the thermometer. A thin windproof front panel is worth more than an extra fleece.",
+          "image": {
+            "base": "06-grip",
+            "alt": "Close-up of a running shoe with a textured sole gripping wet gravel and thin frost at the edge of a path"
+          }
+        },
+        {
+          "title": "Be visible before the sun goes down",
+          "body": "In winter, most after-work runs happen in the dark. Wear reflective material at ankle and chest height, carry a light if your route has unlit sections, and choose streets with pavements and streetlights over unlit shortcuts. Assume drivers cannot see you until proven otherwise, particularly at junctions and when a car turns across a crossing.",
+          "tip": "Reflective ankles move, and movement is what catches a driver's eye at night.",
+          "image": {
+            "base": "07-shortloop",
+            "alt": "A runner passing under a warm streetlamp on an empty city street at dusk in winter, closed shopfronts behind"
+          }
+        },
+        {
+          "title": "Protect hands, ears and feet first",
+          "body": "In the cold your body sends blood to the core, so extremities cool first. Gloves or mittens, a hat that covers the ears, and wool or synthetic socks matter more than a fourth torso layer. Mittens are warmer than gloves; a thin liner under a windproof outer layer handles most winter days. Change wet socks as soon as you are back.",
+          "tip": "If your fingers are numb, you are underdressed for the wind, however warm your torso feels.",
+          "image": {
+            "base": "08-dark",
+            "alt": "A runner in a reflective vest and headlamp jogging along a dark tree-lined path at night"
+          }
+        }
+      ]
+    },
+    {
+      "title": "Keeping the Habit",
+      "steps": [
+        {
+          "title": "Move sessions into daylight where you can",
+          "body": "A lunchtime run or a weekend morning run does more for consistency than any amount of discipline applied to a nine o'clock session in the rain. Where daylight is impossible, fix the sessions to the same days and times so the decision is made once, in advance, instead of every evening at six.",
+          "tip": "Put the run in your calendar like a meeting with someone who outranks you.",
+          "image": {
+            "base": "09-dry",
+            "alt": "A person just back from a winter run pulling off a damp outer layer beside an open car door, thermos on the seat"
+          }
+        },
+        {
+          "title": "Change out of wet layers immediately",
+          "body": "The risk in winter running is rarely the run itself; it is standing around afterwards in damp clothes while your body temperature drops. Keep a dry top and dry socks in your bag or car, change within fifteen minutes of finishing, and get warm before you drive or sit down. This one habit prevents most of the 'I caught a cold from running' stories.",
+          "tip": "Dry socks and a dry hat do more for how you feel an hour later than a hot drink does.",
+          "image": null
+        },
+        {
+          "title": "Train for a spring event",
+          "body": "Winter training is easier with a date attached. Pick a spring 10K or half marathon eight to sixteen weeks out, register, and let it decide which sessions matter on the weeks when the weather argues otherwise. The goal is not to run faster in January; it is to arrive in March with the habit and the base still intact.",
+          "tip": "Choose an event you can reach without a flight. Logistics are where winter enthusiasm dies.",
+          "image": null
+        },
+        {
+          "title": "Use the three-week restart rule",
+          "body": "You will miss a week, sometimes two, for weather, illness or work. When you come back, restart at about half your previous weekly time and rebuild over two to three weeks instead of resuming where you stopped. A planned restart is part of a winter season; an unplanned one attempted at full volume is how a two-week gap becomes a season off.",
+          "tip": "If you have not run for three weeks, treat the next run as a first run, not a comeback.",
+          "image": null
+        }
+      ]
+    }
+  ],
+  "tips": [
+    "Keep a ten-minute version of every session. A short run protects the habit; a skipped run erodes it.",
+    "Dress for about 10°C warmer than the forecast, and check windchill rather than temperature alone.",
+    "Prefer several thin layers to one thick one, and nothing made of cotton next to your skin.",
+    "Reflective material at ankle height and a light on unlit routes. Assume you are invisible to drivers."
+  ],
+  "warnings": [
+    "Ask a clinician before running in the cold if you have a heart condition, uncontrolled asthma, Raynaud's, or a recent injury. Cold adds cardiovascular strain.",
+    "Do not run on black ice or untreated snow. A fall on ice is a fracture risk, especially for wrists and hips.",
+    "Stop and seek help for chest tightness, unusual breathlessness, dizziness, or fingers that stay white and numb after you are warm.",
+    "Do not increase weekly volume by more than about ten percent when coming back from a break. Most winter injuries come from ramping back too fast."
+  ],
+  "faq": [
+    {
+      "q": "How cold is too cold to run?",
+      "a": "There is no single number. Wind, wetness and your own health matter more than the thermometer, and most healthy runners manage well to about -10°C in layers. Below that, or in serious windchill, shorten the session or move it indoors. Asthma, heart conditions and pregnancy are reasons to ask a clinician rather than follow a general rule."
+    },
+    {
+      "q": "What should I wear for a winter run?",
+      "a": "A wicking base layer, a light mid layer, and a windproof outer layer or vest, plus gloves, a hat that covers the ears and synthetic socks. Dress for roughly 10°C warmer than the air temperature, because you will heat up within the first kilometre."
+    },
+    {
+      "q": "Is it bad to breathe cold air when running?",
+      "a": "Cold air is dry and can irritate the airways, which is why winter running sometimes causes a cough. Your body warms the air before it reaches your lungs, and slowing down with a buff over your mouth reduces the irritation. People with asthma should warm up longer and carry an inhaler."
+    },
+    {
+      "q": "How do I run safely in the dark?",
+      "a": "Choose lit streets with pavements, wear reflective material at ankle and chest height, and use a light on unlit sections. Tell someone your route and expected return time, and run the section with traffic risk first, while you are fresh."
+    },
+    {
+      "q": "What if I miss two or three weeks?",
+      "a": "Restart at about half your previous weekly time and rebuild over two to three weeks. Do not try to make up the missed sessions in one go; that is how people get injured on the return."
+    }
+  ],
+  "references": [
+    "American College of Sports Medicine. “ACSM's Guidelines for Exercise Testing and Prescription.” 11th edition, 2018.",
+    "Castellani, J. W. and Young, A. J. “Human physiological responses to cold exposure: acute responses and acclimatization to prolonged exposure.” Autonomic Neuroscience, 2016.",
+    "UK Chief Medical Officers. “Physical Activity Guidelines.” 2019.",
+    "Nielsen, R. O. et al. “Training errors and running related injuries: a systematic review.” International Journal of Sports Physical Therapy, 2012."
+  ],
+  "related": [
+    {
+      "label": "How to Start Running When You Hate Running",
+      "url": "/Start-Running-When-You-Hate-Running",
+      "note": "prerequisite guide, link from Step 1"
+    },
+    {
+      "label": "How to Build a Home First-Aid Kit",
+      "url": "/Build-a-Home-First-Aid-Kit",
+      "note": "seasonal, from Warnings"
+    }
+  ],
+  "internalLinks": [
+    {
+      "label": "Start with How to Start Running When You Hate Running",
+      "url": "/Start-Running-When-You-Hate-Running"
+    },
+    {
+      "label": "More Sports and Fitness guides",
+      "url": "/Category/Sports-and-Fitness"
+    },
+    {
+      "label": "Build a home first-aid kit for the season",
+      "url": "/Build-a-Home-First-Aid-Kit"
+    },
+    {
+      "label": "Search guides like “How to Keep Running Through Winter”",
+      "url": "/search?q=How%20to%20Keep%20Running%20Through%20Winter"
+    }
+  ],
+  "quizIdea": {
+    "title": "Winter Runner Check: Are You Actually Dressed for This?",
+    "questions": 5,
+    "note": "Pairs with this guide on /quizzes and drives a second page view."
+  },
+  "publishing": {
+    "author": "Site Admin",
+    "reviewer": "subject-matter reviewer",
+    "datePublished": "2026-10-29",
+    "dateModified": "2026-10-29",
+    "readingTimeMinutes": 7,
+    "wordCount": null,
+    "internalLinkCount": 4,
+    "imageCount": 13,
+    "imagePending": 3
+  }
+}
