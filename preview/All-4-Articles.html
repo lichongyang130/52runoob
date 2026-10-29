@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="zh">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>英文文章素材包目录</title>
+<style>
+:root{--ink:#101418;--muted:#5b6470;--line:#e3e6ea;--bg:#fff;--soft:#f7f8f7;--accent:#2f6f5e;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--soft);color:var(--ink);
+ font:17px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Georgia,"Times New Roman",serif}
+a{color:var(--accent)}
+.topbar{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5}
+.topbar-in{max-width:1080px;margin:0 auto;padding:12px 20px;display:flex;align-items:center;gap:18px}
+.logo{font:700 26px/1 Georgia,serif;letter-spacing:-.5px;color:#1d4d43;text-decoration:none}
+.logo span{color:#e0873a}
+.search{margin-left:auto;display:flex;gap:8px;align-items:center;color:var(--muted);font-size:14px}
+.search input{width:230px;padding:9px 12px;border:1px solid var(--line);border-radius:999px;font:inherit;font-size:14px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+.crumbs{font-size:13px;color:var(--muted);padding:18px 0 0}
+.crumbs a{color:var(--muted);text-decoration:none}
+article.page{background:#fff;border:1px solid var(--line);border-radius:6px;margin:14px 0 40px;overflow:hidden}
+.page-head{padding:30px 44px 0}
+h1{font:700 40px/1.15 Georgia,"Times New Roman",serif;margin:0 0 14px;letter-spacing:-.6px}
+.dek{font-size:19px;color:#39414b;margin:0 0 22px}
+.meta{display:flex;flex-wrap:wrap;gap:14px;font-size:13px;color:var(--muted);border-top:1px solid var(--line);padding:14px 0}
+.hero{display:block;width:100%;height:auto}
+.hero-cap{font-size:12.5px;color:var(--muted);padding:8px 44px 0;font-style:italic}
+.article-body{padding:8px 44px 40px;max-width:800px}
+.lede{font-size:19.5px;line-height:1.6;color:#232a32}
+.method{margin:46px 0 0;padding-top:8px;border-top:2px solid var(--ink)}
+.method-kicker{font:600 12px/1 -apple-system,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin:16px 0 6px}
+.method-title{font:700 27px/1.25 Georgia,serif;margin:0 0 8px}
+.step{margin:34px 0 0}
+.step-img,.img-pending{width:100%;height:auto;border-radius:4px;display:block;background:#eceeed}
+.img-pending{aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;
+ border:1.5px dashed #c3c9ce;color:#8b949c;text-align:center;font:14px/1.5 -apple-system,sans-serif}
+.style-draft{margin:0 0 18px;padding:12px 16px;border:1px solid #e9ce93;border-radius:5px;
+ background:#fff8e8;color:#70551e;font:14px/1.5 -apple-system,sans-serif}
+.style-pending-note{margin:0 0 8px;color:#8b6725;font:600 13px/1.4 -apple-system,sans-serif}
+.step-count{font:600 11.5px/1 -apple-system,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:16px 0 4px}
+.step h3{font:700 22px/1.3 Georgia,serif;margin:0 0 8px}
+.tip{background:#f2f7f4;border-left:3px solid var(--accent);padding:12px 16px;border-radius:0 4px 4px 0;font-size:16px}
+.box{margin:40px 0 0;padding:20px 24px;border-radius:6px;background:#fafafa;border:1px solid var(--line)}
+.box h2{font:700 18px/1.3 -apple-system,sans-serif;margin:0 0 10px;letter-spacing:-.2px}
+.box ul{margin:0;padding-left:20px}.box li{margin:7px 0}
+.box.warnings{background:#fdf6f3;border-color:#f0dcd2}
+.faq{margin:44px 0 0}
+.faq h2,.refs h2,.related h2{font:700 22px/1.3 Georgia,serif;margin:0 0 10px}
+details{border-bottom:1px solid var(--line);padding:12px 0}
+summary{cursor:pointer;font-weight:600;font-family:-apple-system,sans-serif;font-size:16px;
+ display:flex;justify-content:space-between;gap:12px;list-style:none}
+summary::-webkit-details-marker{display:none}
+summary span{color:var(--muted)}
+details p{margin:10px 0 2px;color:#3b434c}
+.refs ol{font-size:15px;color:#3b434c;padding-left:20px}
+.refs li{margin:7px 0}
+.related ul{font-family:-apple-system,sans-serif;font-size:16px}
+.authorbox{display:flex;gap:14px;align-items:center;border-top:1px solid var(--line);padding:22px 44px;background:#fcfcfb}
+.avatar{width:44px;height:44px;border-radius:50%;background:#dbe6e1;color:#2f6f5e;display:grid;place-items:center;font-weight:700}
+.authorbox p{margin:0;font-size:14px;color:var(--muted);font-family:-apple-system,sans-serif}
+.authorbox strong{color:var(--ink)}
+.note{font-size:12.5px;color:var(--muted);padding:0 44px 18px;font-family:-apple-system,sans-serif}
+@media(max-width:720px){.page-head,.article-body,.authorbox,.note,.hero-cap{padding-left:20px;padding-right:20px}
+ h1{font-size:29px}.search input{width:120px}}
+
+.bundle{list-style:none;padding:0;margin:0;display:grid;gap:22px;
+  grid-template-columns:repeat(auto-fill,minmax(300px,1fr))}
+.card{display:block;text-decoration:none;color:inherit;border:1px solid #e3e3e3;
+  border-radius:10px;overflow:hidden;background:#fff;height:100%}
+.card img{display:block;width:100%;height:auto}
+.card .t{padding:14px 16px 18px}
+.card h2{font-size:1.05rem;margin:0 0 6px;line-height:1.35}
+.card .c{margin:0 0 4px;font-size:.85rem;color:#666}
+.card .m{margin:0;font-size:.82rem;color:#888}
+</style></head>
+<body>
+<header class="topbar"><div class="topbar-in"><a class="logo" href="https://www.56juqingba.com/">Howly<span>.</span></a></div></header>
+<main class="wrap"><article class="page"><div class="page-head">
+<p class="style-draft"><strong>Editorial drafts:</strong> fact and subject-matter review are still
+required before any of these are published.</p>
+<h1>英文文章素材包</h1>
+<p class="dek">共 4 篇。点开任意一篇可在本地直接预览；本页仅为方便查看，不需要上传到服务器。（这里是仓库内预览版，图片指向 content/ 下的原文件。）</p>
+</div>
+<ul class="bundle">
+<li><a class="card" href="Run-Your-First-5K.html"><img src="../content/Run-Your-First-5K/images/00-hero-1600.webp" alt="A diverse group of beginners jogging together on a leafy park path with a plain finish banner behind them" width="1600" height="900" loading="lazy"><div class="t"><h2>How to Run Your First 5K</h2><p class="c">Sports and Fitness</p><p class="m">15 steps · 16 illustrations</p></div></a></li>
+<li><a class="card" href="Repot-a-Houseplant.html"><img src="../content/Repot-a-Houseplant/images/00-hero-1600.webp" alt="A gardener placing a leafy houseplant into a clean pot at a bright potting table." width="1600" height="900" loading="lazy"><div class="t"><h2>How to Repot a Houseplant</h2><p class="c">Home and Garden</p><p class="m">15 steps · 16 illustrations</p></div></a></li>
+<li><a class="card" href="Plan-a-Run-Walk-Workout.html"><img src="../content/Plan-a-Run-Walk-Workout/images/00-hero-1600.webp" alt="Three adults on a riverside path in autumn, one walking and two jogging at an easy pace" width="1600" height="900" loading="lazy"><div class="t"><h2>How to Plan a Run-Walk Workout</h2><p class="c">Sports and Fitness</p><p class="m">15 steps · 16 illustrations</p></div></a></li>
+<li><a class="card" href="Back-Up-Your-Photos.html"><img src="../content/Back-Up-Your-Photos/images/00-hero-1600.webp" alt="A person at a sunlit desk holding a printed photograph, with more prints on the wood, a laptop showing a grid of photo thumbnails, a phone and a small external drive." width="1600" height="900" loading="lazy"><div class="t"><h2>How to Back Up Your Photos</h2><p class="c">Computers and Electronics</p><p class="m">15 steps · 16 illustrations</p></div></a></li>
+</ul>
+</article></main></body></html>

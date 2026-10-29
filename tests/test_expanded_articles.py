@@ -17,7 +17,8 @@ from zipfile import ZipFile
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "tools"))
 import check_article  # noqa: E402
-import package_article  # noqa: E402
+import package_article
+import package_bundle  # noqa: E402
 import render_article  # noqa: E402
 
 
@@ -336,3 +337,76 @@ class RendererRobustnessTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class BundleTests(unittest.TestCase):
+    """The multi-article download must not become a way to ship unchecked work."""
+
+    FINISHED = (
+        "Run-Your-First-5K",
+        "Repot-a-Houseplant",
+        "Plan-a-Run-Walk-Workout",
+        "Back-Up-Your-Photos",
+    )
+
+    def test_bundle_matches_the_single_article_packages_exactly(self):
+        sources = [ROOT / "content" / slug / "article.json" for slug in self.FINISHED]
+        with tempfile.TemporaryDirectory() as tmp, contextlib.redirect_stdout(io.StringIO()):
+            tmpdir = Path(tmp)
+            bundle = tmpdir / "bundle.zip"
+            package_bundle.build_bundle(sources, bundle)
+
+            with ZipFile(bundle) as archive:
+                self.assertIsNone(archive.testzip())
+                names = set(archive.namelist())
+                # 4 articles x 19 entries, plus the landing page and the bundle readme.
+                self.assertEqual(len(names), 4 * 19 + 2)
+
+                for slug, source in zip(self.FINISHED, sources):
+                    single = tmpdir / f"{slug}-single.zip"
+                    package_article.build_package(source, single)
+                    with ZipFile(single) as reference:
+                        for name in reference.namelist():
+                            self.assertIn(name, names)
+                            self.assertEqual(archive.read(name), reference.read(name))
+
+                landing = archive.read("index.html").decode("utf-8")
+                inventory = HTMLInventory()
+                inventory.feed(landing)
+                self.assertEqual(len(inventory.images), 4)
+                for image in inventory.images:
+                    self.assertIn(image["src"], names)
+                    self.assertTrue(image.get("alt", "").strip())
+                for slug in self.FINISHED:
+                    self.assertIn(f"{slug}/index.html", landing)
+
+                readme = archive.read("README-中文.txt").decode("utf-8")
+                self.assertIn("不是已验证的文章系统导入包", readme)
+                self.assertIn("尚未发布", readme)
+                self.assertIn("真人进行事实与安全审校", readme)
+
+    def test_bundle_refuses_an_unfinished_article(self):
+        """One bad article must fail the whole bundle, not be quietly dropped."""
+        source = ROOT / "content/Repot-a-Houseplant"
+        doc = json.loads((source / "article.json").read_text(encoding="utf-8"))
+        with tempfile.TemporaryDirectory() as tmp:
+            directory = Path(tmp) / source.name
+            shutil.copytree(source, directory)
+            doc["parts"][0]["steps"][0]["imageTodo"] = doc["parts"][0]["steps"][0].pop("image")
+            doc["publishing"]["imagePending"] = 1
+            broken = directory / "article.json"
+            broken.write_text(json.dumps(doc, ensure_ascii=False, indent=2), encoding="utf-8")
+
+            output = Path(tmp) / "bundle.zip"
+            with contextlib.redirect_stdout(io.StringIO()):
+                with self.assertRaises(ValueError):
+                    package_bundle.build_bundle(
+                        [ROOT / "content/Run-Your-First-5K/article.json", broken], output
+                    )
+            self.assertFalse(output.exists(), "失败的合集不能留下半成品文件")
+
+    def test_bundle_rejects_a_duplicated_article(self):
+        source = ROOT / "content/Run-Your-First-5K/article.json"
+        with tempfile.TemporaryDirectory() as tmp, contextlib.redirect_stdout(io.StringIO()):
+            with self.assertRaisesRegex(ValueError, "重复"):
+                package_bundle.build_bundle([source, source], Path(tmp) / "bundle.zip")
