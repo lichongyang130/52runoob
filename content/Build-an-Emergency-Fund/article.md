@@ -1,5 +1,3 @@
-> DRAFT — do not publish or package: 8 of 16 illustrations are still missing, and the article has not been reviewed by a person.
-
 # How to Build an Emergency Fund
 
 *Not the version that assumes you have spare money. The version that starts from a target small enough to reach and a transfer small enough to survive a bad month.*
@@ -74,7 +72,7 @@ Set up a recurring transfer that leaves your current account the day after you a
 
 ### Step 7 — Start small enough that you never cancel it
 
-![A small stack of coins and a few folded notes on a table beside a glass jar, lit by a window.](images/07-start-small-960.webp)
+![A small stack of coins and a few folded paper slips on a wooden table beside a glass jar, lit by a window.](images/07-start-small-960.webp)
 
 The most common failure is setting an ambitious figure, feeling the squeeze for two months, then switching the whole thing off. Pick an amount you would barely notice leaving, run it for three months, then raise it. An automatic transfer that has run uninterrupted for a year is worth more than one twice the size that keeps getting paused and restarted.
 
@@ -82,7 +80,7 @@ The most common failure is setting an ambitious figure, feeling the squeeze for 
 
 ### Step 8 — Use one-off money to jump ahead
 
-> IMAGE PENDING for step 8: An opened envelope and a folded slip of paper on a kitchen worktop next to a phone and a set of keys.
+![An opened envelope and a folded slip of paper on a kitchen worktop next to a phone and a set of keys.](images/08-windfall-960.webp)
 
 Tax refunds, bonuses, rebates, the proceeds of selling something: these move a fund from embarrassing to useful fastest, because the money was never part of your monthly rhythm. Decide the split before it arrives. Half into the fund and half into whatever you like is a rule most people manage to keep; all of it into the fund is a rule most people break.
 
@@ -90,7 +88,7 @@ Tax refunds, bonuses, rebates, the proceeds of selling something: these move a f
 
 ### Step 9 — Fix the timing of your bills, not your income
 
-> IMAGE PENDING for step 9: A hand marking one square of a blank wall calendar grid with a pencil, a telephone on the shelf below.
+![A hand marking one square of a blank wall calendar grid with a pencil, a telephone on the shelf below.](images/09-bill-timing-960.webp)
 
 If you run short at the same point every month, the problem is often sequencing rather than totals. Utilities, lenders and landlords will frequently move a due date on request. Shifting two bills a week later can open a stretch of days in which a transfer actually clears. The CFPB lists this as a cash-flow strategy in its own right, and it costs nothing beyond a phone call.
 
@@ -98,7 +96,7 @@ If you run short at the same point every month, the problem is often sequencing 
 
 ### Step 10 — Put the balance where you will see it
 
-> IMAGE PENDING for step 10: A hand-drawn progress chart pinned to a kitchen noticeboard, partly filled in with pencil shading.
+![A hand-drawn progress chart pinned to a kitchen noticeboard, partly filled in with pencil shading.](images/10-track-progress-960.webp)
 
 Turn on a monthly balance notification, or write the running total on the same sheet of paper each payday. Watching the number climb is what keeps the habit alive once the novelty wears off, and it is the single point nearly every savings guide agrees on. Checking daily achieves the opposite, because the balance moves far too slowly to reward that much attention.
 
@@ -108,7 +106,7 @@ Turn on a monthly balance notification, or write the running total on the same s
 
 ### Step 11 — Keep it reachable within a day or two
 
-> IMAGE PENDING for step 11: A person at a bank counter speaking with a teller, a card and a phone resting on the counter in front of them.
+![A person at a bank counter speaking with a teller, a card and a phone resting on the counter in front of them.](images/11-accessible-960.webp)
 
 An emergency fund has one job: to be available on the day something breaks. A savings account you can transfer out of the same day is right for it. A fixed-term deposit with an exit penalty, or anything whose value moves with a market, is not, however attractive the return looks. The cost of locking the money away appears at exactly the moment you can least absorb it.
 
@@ -116,7 +114,7 @@ An emergency fund has one job: to be available on the day something breaks. A sa
 
 ### Step 12 — Check what the account costs and earns
 
-> IMAGE PENDING for step 12: A folded printed statement on a desk with a highlighter resting across it and a laptop open behind.
+![A folded printed statement on a desk with a highlighter resting across it and a laptop open behind.](images/12-account-terms-960.webp)
 
 Compare the interest rate against accounts you could switch to, and read the conditions attached: minimum balances, caps on withdrawals per month, fees that appear when the balance dips. An account that penalises you for taking money out is working directly against the purpose of the fund. Of the three, the rate matters least and the access conditions matter most.
 
@@ -124,7 +122,7 @@ Compare the interest rate against accounts you could switch to, and read the con
 
 ### Step 13 — Raise the target once the first one lands
 
-> IMAGE PENDING for step 13: A person at a kitchen table adding a new line to a notebook list, a calculator and a mug beside them.
+![A person at a kitchen table adding a new line to a notebook list, a calculator and a mug beside them.](images/13-raise-target-960.webp)
 
 When you hit the first milestone, set the next one instead of stopping. A common progression is one month of essential costs, then three, then whatever your circumstances call for. Households with variable income, a single earner or dependants usually need more. The CFPB declines to name one figure on purpose, because the right size depends on how exposed you actually are.
 
@@ -132,7 +130,7 @@ When you hit the first milestone, set the next one instead of stopping. A common
 
 ### Step 14 — Spend it when the emergency actually happens
 
-> IMAGE PENDING for step 14: A person handing a card across a workshop counter while a mechanic writes on a pad, a car visible through the open doorway.
+![A person handing a card across a workshop counter while a mechanic writes on a pad, a car visible through the open doorway.](images/14-use-fund-960.webp)
 
 A fund you refuse to touch is not a safety net; it is an uncomfortable savings account. When something on your written list occurs, use the money and feel fine about it. The alternative is usually a credit card balance at a rate that outlives the emergency by years, which is precisely the outcome the fund was built to prevent.
 
@@ -140,7 +138,7 @@ A fund you refuse to touch is not a safety net; it is an uncomfortable savings a
 
 ### Step 15 — Refill it on a schedule, not on a feeling
 
-> IMAGE PENDING for step 15: A hand dropping folded notes into a glass jar on a shelf that already holds a small amount, soft daylight behind.
+![A hand dropping a folded paper slip into a glass jar on a painted shelf that already holds a shallow layer of them, with a trailing plant beside it and soft daylight behind.](images/15-refill-960.webp)
 
 After a withdrawal, set a date by which the fund will be whole again and raise the automatic transfer until it is. Treat the repayment the way you would a loan instalment, because that is effectively what it is: you borrowed from yourself. Funds that are never rebuilt quietly become funds that are not there the second time something goes wrong.
 

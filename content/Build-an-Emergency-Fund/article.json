@@ -108,14 +108,14 @@
           "tip": "Raise the amount on the day a pay rise lands, before the new figure turns into normal spending.",
           "image": {
             "base": "07-start-small",
-            "alt": "A small stack of coins and a few folded notes on a table beside a glass jar, lit by a window."
+            "alt": "A small stack of coins and a few folded paper slips on a wooden table beside a glass jar, lit by a window."
           }
         },
         {
           "title": "Use one-off money to jump ahead",
           "body": "Tax refunds, bonuses, rebates, the proceeds of selling something: these move a fund from embarrassing to useful fastest, because the money was never part of your monthly rhythm. Decide the split before it arrives. Half into the fund and half into whatever you like is a rule most people manage to keep; all of it into the fund is a rule most people break.",
           "tip": "Move windfall money within a day of it landing. Anything that sits in a current account for a week gets absorbed.",
-          "imageTodo": {
+          "image": {
             "base": "08-windfall",
             "alt": "An opened envelope and a folded slip of paper on a kitchen worktop next to a phone and a set of keys."
           }
@@ -124,7 +124,7 @@
           "title": "Fix the timing of your bills, not your income",
           "body": "If you run short at the same point every month, the problem is often sequencing rather than totals. Utilities, lenders and landlords will frequently move a due date on request. Shifting two bills a week later can open a stretch of days in which a transfer actually clears. The CFPB lists this as a cash-flow strategy in its own right, and it costs nothing beyond a phone call.",
           "tip": "Ask for the change in writing or by email. A verbal agreement with a call centre is hard to point at later.",
-          "imageTodo": {
+          "image": {
             "base": "09-bill-timing",
             "alt": "A hand marking one square of a blank wall calendar grid with a pencil, a telephone on the shelf below."
           }
@@ -133,7 +133,7 @@
           "title": "Put the balance where you will see it",
           "body": "Turn on a monthly balance notification, or write the running total on the same sheet of paper each payday. Watching the number climb is what keeps the habit alive once the novelty wears off, and it is the single point nearly every savings guide agrees on. Checking daily achieves the opposite, because the balance moves far too slowly to reward that much attention.",
           "tip": "Mark the milestone when you reach it. A small, cheap celebration is a legitimate part of the system, not a leak in it.",
-          "imageTodo": {
+          "image": {
             "base": "10-track-progress",
             "alt": "A hand-drawn progress chart pinned to a kitchen noticeboard, partly filled in with pencil shading."
           }
@@ -148,7 +148,7 @@
           "title": "Keep it reachable within a day or two",
           "body": "An emergency fund has one job: to be available on the day something breaks. A savings account you can transfer out of the same day is right for it. A fixed-term deposit with an exit penalty, or anything whose value moves with a market, is not, however attractive the return looks. The cost of locking the money away appears at exactly the moment you can least absorb it.",
           "tip": "Test the route once. Move a small amount out and see how long it genuinely takes to arrive.",
-          "imageTodo": {
+          "image": {
             "base": "11-accessible",
             "alt": "A person at a bank counter speaking with a teller, a card and a phone resting on the counter in front of them."
           }
@@ -157,7 +157,7 @@
           "title": "Check what the account costs and earns",
           "body": "Compare the interest rate against accounts you could switch to, and read the conditions attached: minimum balances, caps on withdrawals per month, fees that appear when the balance dips. An account that penalises you for taking money out is working directly against the purpose of the fund. Of the three, the rate matters least and the access conditions matter most.",
           "tip": "Re-check the rate once a year. Introductory rates on savings accounts have a habit of quietly expiring.",
-          "imageTodo": {
+          "image": {
             "base": "12-account-terms",
             "alt": "A folded printed statement on a desk with a highlighter resting across it and a laptop open behind."
           }
@@ -166,7 +166,7 @@
           "title": "Raise the target once the first one lands",
           "body": "When you hit the first milestone, set the next one instead of stopping. A common progression is one month of essential costs, then three, then whatever your circumstances call for. Households with variable income, a single earner or dependants usually need more. The CFPB declines to name one figure on purpose, because the right size depends on how exposed you actually are.",
           "tip": "Recalculate after any large change: a new job, a move, a child, a car. The old target was built for an old life.",
-          "imageTodo": {
+          "image": {
             "base": "13-raise-target",
             "alt": "A person at a kitchen table adding a new line to a notebook list, a calculator and a mug beside them."
           }
@@ -175,7 +175,7 @@
           "title": "Spend it when the emergency actually happens",
           "body": "A fund you refuse to touch is not a safety net; it is an uncomfortable savings account. When something on your written list occurs, use the money and feel fine about it. The alternative is usually a credit card balance at a rate that outlives the emergency by years, which is precisely the outcome the fund was built to prevent.",
           "tip": "Pay from the fund directly rather than putting it on a card and intending to clear it later. Intentions have a poor record.",
-          "imageTodo": {
+          "image": {
             "base": "14-use-fund",
             "alt": "A person handing a card across a workshop counter while a mechanic writes on a pad, a car visible through the open doorway."
           }
@@ -184,9 +184,9 @@
           "title": "Refill it on a schedule, not on a feeling",
           "body": "After a withdrawal, set a date by which the fund will be whole again and raise the automatic transfer until it is. Treat the repayment the way you would a loan instalment, because that is effectively what it is: you borrowed from yourself. Funds that are never rebuilt quietly become funds that are not there the second time something goes wrong.",
           "tip": "Rebuild before you restart any other savings goal. The emergency fund is the thing that protects all of them.",
-          "imageTodo": {
+          "image": {
             "base": "15-refill",
-            "alt": "A hand dropping folded notes into a glass jar on a shelf that already holds a small amount, soft daylight behind."
+            "alt": "A hand dropping a folded paper slip into a glass jar on a painted shelf that already holds a shallow layer of them, with a trailing plant beside it and soft daylight behind."
           }
         }
       ]
@@ -276,24 +276,15 @@
     "wordCount": null,
     "internalLinkCount": 3,
     "imageCount": 16,
-    "imagePending": 8,
+    "imagePending": 0,
     "expertReviewed": false,
     "reviewNote": "Personal-finance guidance (YMYL). A suitably qualified human reviewer must check the savings, debt-priority and deposit-protection statements, and confirm the jurisdiction they apply to, before publication; no human review has happened in this repository."
   },
   "imageStatus": {
     "heroReady": true,
-    "stepImagesReady": 7,
-    "stepImagesPending": [
-      "08-windfall",
-      "09-bill-timing",
-      "10-track-progress",
-      "11-accessible",
-      "12-account-terms",
-      "13-raise-target",
-      "14-use-fund",
-      "15-refill"
-    ],
-    "note": "8 of 16 illustrations drawn. 8 still outstanding; the guide cannot be packaged or published until every one is present."
+    "stepImagesReady": 15,
+    "stepImagesPending": [],
+    "note": "All illustrations were drawn for this guide; none are reused from another article."
   },
   "dateModified": "2026-10-30"
 }

@@ -239,6 +239,7 @@ class InventoryTests(unittest.TestCase):
             ("Back-Up-Your-Photos", "Computers and Electronics"),
             ("Check-Your-Tire-Pressure", "Cars and Other Vehicles"),
             ("Meal-Prep-Safely-for-the-Week", "Food and Entertaining"),
+            ("Build-an-Emergency-Fund", "Finance and Business"),
         ):
             with self.subTest(slug=slug):
                 directory = ROOT / "content" / slug
@@ -353,6 +354,7 @@ class BundleTests(unittest.TestCase):
         "Back-Up-Your-Photos",
         "Check-Your-Tire-Pressure",
         "Meal-Prep-Safely-for-the-Week",
+        "Build-an-Emergency-Fund",
     )
 
     def test_bundle_matches_the_single_article_packages_exactly(self):
@@ -414,11 +416,18 @@ class BundleTests(unittest.TestCase):
             self.assertNotIn("/index.html\"", page)
             self.assertNotIn("/Images/", page)
 
-            # A guide that is still missing art cannot be listed as finished.
-            draft = ROOT / "content/Build-an-Emergency-Fund/article.json"
-            self.assertGreater(
-                json.loads(draft.read_text(encoding="utf-8"))["publishing"]["imagePending"], 0
-            )
+            # A guide that is still missing art cannot be listed as finished. Built from a
+            # real finished guide with one image taken away, so the guard keeps working
+            # once every article on disk is complete.
+            source = ROOT / "content/Back-Up-Your-Photos"
+            doc = json.loads((source / "article.json").read_text(encoding="utf-8"))
+            directory = Path(tmp) / source.name
+            shutil.copytree(source, directory)
+            doc["parts"][0]["steps"][0]["imageTodo"] = doc["parts"][0]["steps"][0].pop("image")
+            doc["publishing"]["imagePending"] = 1
+            draft = directory / "article.json"
+            draft.write_text(json.dumps(doc, ensure_ascii=False, indent=2), encoding="utf-8")
+
             with self.assertRaisesRegex(ValueError, "配图"):
                 make_preview_index.build_index([draft], Path(tmp) / "nope.html")
             self.assertFalse((Path(tmp) / "nope.html").exists())
