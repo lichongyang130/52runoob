@@ -23,8 +23,8 @@ publish.py — 把 content/<slug>/article.json 发布到 56juqingba 的 API
   SITE_UPLOAD_FIELD      默认 "file"
   SITE_IMAGE_WIDTH       默认 "1600"
 
-安全状态：读取文章与媒体列表已实测，但上传和创建请求格式尚未验证。
-真实上传 / 创建 / 更新被下方明确锁定；仅允许只读 probe 和 dry-run。
+安全状态：文章与媒体读取及独立的单张媒体上传已实测；本发布器的创建
+格式及幂等性尚未验证。真实上传 / 创建 / 更新锁定；仅允许 probe 和 dry-run。
 """
 from __future__ import annotations
 

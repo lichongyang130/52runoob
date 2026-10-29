@@ -117,9 +117,9 @@ def request_read(method, path):
     try:
         return client.request(method, path)
     except client.ApiError as error:
-        raise StopUpload(f"只读预检 {method} {path} 失败（HTTP {error.status}），未上传。") from None
+        raise StopUpload(f"只读请求 {method} {path} 失败（HTTP {error.status}），已停止。") from None
     except (OSError, TimeoutError):
-        raise StopUpload("只读预检遇到网络错误，未上传。") from None
+        raise StopUpload("只读请求遇到网络错误，已停止。") from None
 
 
 def parse_json(text, description):
@@ -178,6 +178,7 @@ def preflight(doc, filename, alt, out):
            for item in media):
         raise StopUpload("当前媒体列表已有同名且 alt 相同的图片；未重复上传，请先人工核实。")
     out("媒体列表未发现同名同 alt 图片；列表可能分页，不能保证完全查重。")
+    return media
 
 
 def safe_error_details(body, out):

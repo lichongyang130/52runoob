@@ -24,8 +24,8 @@ tools/
   make_images.sh                    PNG -> 双尺寸 WebP
   probe_site.sh                     本机隐藏输入密钥并执行只读探测
   upload_hero.sh                    经确认后只上传一张封面，不创建文章
-  api/client.py, api/inspect_site.py, api/upload_hero.py, api/publish.py
-                                    API 客户端、检查和受控上传工具
+  upload_steps.sh                   复用封面状态并安全上传 12 张步骤图
+  api/                              API 客户端、检查、受控上传及待验证发布器
 preview/                            渲染出的本地预览页
 ```
 
@@ -43,8 +43,9 @@ bash tools/make_images.sh content/Keep-Running-Through-Winter/images
 
 # 4. 在可访问站点的电脑上只读探测（隐藏输入密钥，不写 shell 历史）
 bash tools/probe_site.sh --details
-# 通用发布器的创建 / 更新仍被锁定。用户确认后可单独测试一张真实封面：
-# bash tools/upload_hero.sh --confirm
+# 通用发布器的创建 / 更新仍被锁定；封面上传已验证。
+# 确认后可上传余下步骤图（真实写入媒体库，不创建文章）：
+# bash tools/upload_steps.sh --confirm
 # 详见 docs/API发布说明.md
 ```
 
@@ -53,4 +54,4 @@ bash tools/probe_site.sh --details
 1. `cp -r content/_template content/Your-Article-Slug`，把 `article.json` 填满（12 步 / 3 Part）；
 2. 按 `docs/image-prompt-template.md` 生成 1 张 hero + 每步 1 张；参考画风但根据步骤变换背景，原图放进 `images/raw/`（该目录不提交 Git）；
 3. 跑 `make_images.sh` → `render_article.py` → `check_article.py`；若有旧风格占位图，在 `media.stylePending` 中列出，全部替换后清空；
-4. 由真人核查安全内容、图片与参考文献；已验证文章和媒体列表的读取，上传格式及文章创建接口仍待确认。通用发布器的写入被锁定，单张封面可经确认测试。详见 `docs/API发布说明.md`。
+4. 由真人核查安全内容、图片与参考文献；已验证文章与媒体读取及单张封面上传，文章创建接口仍待确认。通用发布器的写入被锁定，图片可经确认分步上传。详见 `docs/API发布说明.md`。
