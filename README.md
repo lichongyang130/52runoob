@@ -14,6 +14,7 @@
 - `content/Repot-a-Houseplant/`：15 步英文稿，16 张插画全部为本文新制，体检 0 error；素材包 `downloads/Repot-a-Houseplant-Upload.zip`。待真人审校，未发布。
 - `content/Plan-a-Run-Walk-Workout/`：15 步英文稿，16 张插画全部为本文新制，体检 0 error；素材包 `downloads/Run-Walk-Workout-Upload.zip`。待真人审校，未发布。
 - `downloads/All-7-Articles-Upload.zip`：7 篇成稿的合集包，内含各篇独立文件夹与一个本地总目录页；每篇内容与对应单篇包逐字节一致。
+- 包内结构：单篇 35 个条目 = `index.html` + `Article-English.txt` + `README-中文.txt` + `Images/` 下 16 张插画 × 两档（`-1600.webp` 1600×900 与 `-960.webp` 960×540）；合集为 篇数×35 + 2。网页用 `srcset` 按屏幕宽度自动选档，手机只下载小图，封面不走懒加载。
 - `content/Back-Up-Your-Photos/`：15 步英文稿，16 张插画全部为本文新制，体检 0 error；素材包 `downloads/Back-Up-Your-Photos-Upload.zip`。待真人审校，未发布。
 - `content/Check-Your-Tire-Pressure/`（Cars and Other Vehicles）：15 步英文稿，16 张插画全部为本文新制，体检 0 error；资料取自 NHTSA；素材包 `downloads/Check-Your-Tire-Pressure-Upload.zip`。待真人审校，未发布。
 - `content/Meal-Prep-Safely-for-the-Week/`（Food and Entertaining）：15 步英文稿，16 张插画全部为本文新制，体检 0 error；资料取自 USDA FSIS 与 FoodSafety.gov；素材包 `downloads/Meal-Prep-Safely-for-the-Week-Upload.zip`。待食品安全专业人士审校，未发布。

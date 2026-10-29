@@ -13,6 +13,8 @@ import check_article
 import render_article
 
 SITE = "https://www.56juqingba.com"
+# Shipped per illustration: the master and a phone-sized variant.
+WIDTHS = ("1600", "960")
 
 
 def build_package(article_json, output):
@@ -38,13 +40,19 @@ def build_package(article_json, output):
         raise ValueError("publishing.imagePending 必须为 0")
 
     images = [doc["media"]["hero"]] + [step["image"] for step in steps]
-    paths = [article_json.parent / "images" / (image["base"] + "-1600.webp") for image in images]
-    hashes = [hashlib.sha256(path.read_bytes()).digest() for path in paths]
-    if len(set(hashes)) != len(hashes):
-        raise ValueError("封面和步骤图必须在文章内互不相同")
+    # Both widths ship so the page can serve a small file to phones; the 1600px
+    # variant stays the master that the uniqueness guarantee is measured on.
+    paths = []
+    for width in WIDTHS:
+        group = [article_json.parent / "images" / f"{image['base']}-{width}.webp"
+                 for image in images]
+        hashes = [hashlib.sha256(path.read_bytes()).digest() for path in group]
+        if len(set(hashes)) != len(hashes):
+            raise ValueError(f"封面和步骤图必须在文章内互不相同（{width}px 档出现重复）")
+        paths.extend(group)
 
     esc = render_article.esc
-    body = render_article.render_html_body(doc, "Images/", responsive=False, site_base=SITE)
+    body = render_article.render_html_body(doc, "Images/", responsive=True, site_base=SITE)
     hero = doc["media"]["hero"]
     # An explicit review notice avoids presenting a health draft as an endorsed publication.
     notice = ('<p class="style-draft"><strong>Editorial draft:</strong> '
@@ -61,7 +69,7 @@ def build_package(article_json, output):
 {notice}<h1>{esc(doc['h1'])}</h1><p class="dek">{esc(doc['deck'])}</p>
 <div class="meta"><span>{len(doc['parts'])} parts · {len(steps)} steps</span><span>Updated {esc(doc['publishing']['dateModified'])}</span></div>
 </div>
-<img class="hero" src="Images/{esc(hero['base'])}-1600.webp" alt="{esc(hero['alt'])}" width="1600" height="900">
+{render_article.picture("Images/", hero["base"], hero["alt"], "hero", loading="eager")}
 {body}
 </article></main></body></html>'''
     # Plain text remains useful for manual CMS editing, while the image names
@@ -84,7 +92,7 @@ def build_package(article_json, output):
 
 包内包含：
 • index.html：英文图文网页（{len(steps)} 个步骤，每步一图，另有一张封面）。
-• Images：{len(images)} 张 1600×900 WebP 图片。
+• Images：{len(images)} 张插画，每张两档 WebP（1600×900 与 960×540），共 {len(paths)} 个图片文件；网页按屏幕宽度自动选用，手机只下载小图。
 • Article-English.txt：英文正文、图片文件名、站内外链接和参考资料，适合人工复制。
 
 配图说明：{reuse_note}
@@ -111,7 +119,7 @@ def build_package(article_json, output):
         temp_path.replace(output)
     finally:
         temp_path.unlink(missing_ok=True)
-    print(f"独立网页素材包 -> {output} ({len(steps)} 步，{len(images)} 张图)")
+    print(f"独立网页素材包 -> {output} ({len(steps)} 步，{len(images)} 张图 × {len(WIDTHS)} 档 = {len(paths)} 个图片文件)")
 
 
 def main():

@@ -34,20 +34,24 @@ def img_path(article_dir, base, width):
     return os.path.join(article_dir, "images", f"{base}-{width}.webp")
 
 
-def picture(rel_prefix, base, alt, cls="", responsive=True):
-    """Render either the two site variants or one self-contained 1600px asset."""
+def picture(rel_prefix, base, alt, cls="", responsive=True, loading="lazy"):
+    """Render either the two site variants or one self-contained 1600px asset.
+
+    `loading` exists so a hero image, which is always above the fold, is not
+    deferred the way the step illustrations further down the page should be.
+    """
     src960 = f"{rel_prefix}{base}-960.webp"
     src1600 = f"{rel_prefix}{base}-1600.webp"
     if not responsive:
         return (
             f'<img class="{cls}" src="{esc(src1600)}" '
-            f'alt="{esc(alt)}" width="1600" height="900" loading="lazy" decoding="async">'
+            f'alt="{esc(alt)}" width="1600" height="900" loading="{esc(loading)}" decoding="async">'
         )
     return (
         f'<img class="{cls}" src="{esc(src960)}" '
         f'srcset="{esc(src960)} 960w, {esc(src1600)} 1600w" '
         f'sizes="(min-width: 900px) 760px, 100vw" '
-        f'alt="{esc(alt)}" width="960" height="540" loading="lazy" decoding="async">'
+        f'alt="{esc(alt)}" width="960" height="540" loading="{esc(loading)}" decoding="async">'
     )
 
 

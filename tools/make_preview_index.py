@@ -43,12 +43,16 @@ def build_index(article_jsons, output):
     for slug in slugs:
         html = html.replace(f'href="{slug}/index.html"', f'href="{slug}.html"')
         html = html.replace(f'src="{slug}/Images/', f'src="../content/{slug}/images/')
+        # srcset carries the same bundle-relative paths and must be rewritten with it.
+        html = html.replace(f'{slug}/Images/', f'../content/{slug}/images/')
     html = html.replace(
         "本页仅为方便查看，不需要上传到服务器。",
         "本页只在仓库内查看用，图片直接引用 content/ 下的原图，不随下载包分发。",
     )
 
-    leftovers = re.findall(r'(?:src|href)="([^"]*/(?:index\.html|Images/)[^"]*)"', html)
+    leftovers = re.findall(
+        r'(?:src|srcset|href)="([^"]*/(?:index\.html|Images/)[^"]*)"', html
+    )
     if leftovers:
         raise ValueError(f"目录页仍有未改写的合集包路径: {leftovers[:3]}")
 

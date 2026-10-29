@@ -33,8 +33,11 @@ def _landing_page(entries):
         hero = doc["media"]["hero"]
         cards.append(
             f'<li><a class="card" href="{html.escape(slug)}/index.html">'
-            f'<img src="{html.escape(slug)}/Images/{html.escape(hero["base"])}-1600.webp" '
-            f'alt="{html.escape(hero["alt"])}" width="1600" height="900" loading="lazy">'
+            f'<img src="{html.escape(slug)}/Images/{html.escape(hero["base"])}-960.webp" '
+            f'srcset="{html.escape(slug)}/Images/{html.escape(hero["base"])}-960.webp 960w, '
+            f'{html.escape(slug)}/Images/{html.escape(hero["base"])}-1600.webp 1600w" '
+            f'sizes="(min-width: 980px) 320px, 100vw" '
+            f'alt="{html.escape(hero["alt"])}" width="960" height="540" loading="lazy">'
             f'<div class="t"><h2>{html.escape(doc["title"])}</h2>'
             f'<p class="c">{html.escape(doc["category"])}</p>'
             f'<p class="m">{steps} steps · {steps + 1} illustrations</p></div></a></li>'
@@ -72,7 +75,7 @@ def _readme(entries):
     lines = [f"英文文章素材包合集（共 {len(entries)} 篇）", ""]
     lines.append("包内每个文件夹是一篇独立文章，内容与单篇素材包完全一致：")
     lines.append("• index.html：英文图文网页（每步一图，另有封面）")
-    lines.append("• Images：1600×900 WebP 图片")
+    lines.append("• Images：每张插画两档 WebP（1600×900 与 960×540），网页按屏幕宽度自动选用")
     lines.append("• Article-English.txt：英文正文与链接，适合人工复制")
     lines.append("• README-中文.txt：该篇的单独说明，含所属类目与审校提示")
     lines.append("")

@@ -124,7 +124,8 @@ class ExpandedArticleTests(unittest.TestCase):
             self.assertIsNone(archive.testzip())
             root = "Run-Your-First-5K/"
             paths = set(archive.namelist())
-            self.assertEqual(len(paths), 19)
+            # 3 documents + 16 illustrations at two widths.
+            self.assertEqual(len(paths), 35)
             document = archive.read(root + "index.html").decode("utf-8")
             inventory = HTMLInventory()
             inventory.feed(document)
@@ -134,7 +135,18 @@ class ExpandedArticleTests(unittest.TestCase):
             for image in inventory.images:
                 self.assertTrue(image.get("alt", "").strip())
                 self.assertIn(root + image["src"], paths)
-                self.assertNotIn("srcset", image)
+                # Both variants must be offered and both must actually be shipped,
+                # otherwise a phone follows srcset straight into a 404.
+                referenced = {
+                    candidate.split()[0]
+                    for candidate in image["srcset"].split(",")
+                    if candidate.strip()
+                }
+                self.assertEqual(len(referenced), 2)
+                self.assertTrue(any(ref.endswith("-960.webp") for ref in referenced))
+                self.assertTrue(any(ref.endswith("-1600.webp") for ref in referenced))
+                for ref in referenced:
+                    self.assertIn(root + ref, paths)
             for link in self.doc["internalLinks"]:
                 self.assertIn("https://www.56juqingba.com" + link["url"], inventory.links)
             for link in self.doc["externalLinks"]:
@@ -273,7 +285,14 @@ class InventoryTests(unittest.TestCase):
                     with ZipFile(output) as archive:
                         self.assertIsNone(archive.testzip())
                         names = set(archive.namelist())
-                        self.assertEqual(len(names), 19)
+                        self.assertEqual(len(names), 35)
+                        shipped = {n for n in names if n.endswith(".webp")}
+                        self.assertEqual(
+                            len({n for n in shipped if n.endswith("-960.webp")}), 16
+                        )
+                        self.assertEqual(
+                            len({n for n in shipped if n.endswith("-1600.webp")}), 16
+                        )
                         page = archive.read(f"{slug}/index.html").decode("utf-8")
                         inventory = HTMLInventory()
                         inventory.feed(page)
@@ -367,8 +386,8 @@ class BundleTests(unittest.TestCase):
             with ZipFile(bundle) as archive:
                 self.assertIsNone(archive.testzip())
                 names = set(archive.namelist())
-                # One 19-entry folder per article, plus the landing page and bundle readme.
-                self.assertEqual(len(names), len(self.FINISHED) * 19 + 2)
+                # One 35-entry folder per article, plus the landing page and bundle readme.
+                self.assertEqual(len(names), len(self.FINISHED) * 35 + 2)
 
                 for slug, source in zip(self.FINISHED, sources):
                     single = tmpdir / f"{slug}-single.zip"
