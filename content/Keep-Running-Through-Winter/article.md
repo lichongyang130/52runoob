@@ -19,7 +19,7 @@ Most winter running plans fail in the first cold week, when the gap between a wa
 
 ### Step 1 — Set a ten-minute minimum
 
-![A person in winter running clothes standing at the edge of a frosty footpath in early morning, looking down at icy patches](images/01-footing-960.webp)
+![A person in winter running clothes standing at the edge of a frosty footpath in early morning, deciding whether to start](images/01-footing-960.webp)
 
 Decide now that ten minutes outside counts as a session, and that the only real failure is not going out at all. Ten minutes is long enough to keep the habit and short enough to survive a dark, wet evening — and most days you will stay out longer once you are moving. Write the minimum on the same calendar as the full session, so a bad week has something to fall back on.
 
@@ -29,9 +29,9 @@ Decide now that ten minutes outside counts as a session, and that the only real 
 
 ![A person zipping up a thin running jacket by the front door, with a second layer, gloves and a beanie laid out on a bench](images/02-layers-960.webp)
 
-Dress for conditions about 10°C warmer than the air temperature, because you will heat up within the first kilometre. Three thin layers work better than one thick one: a wicking base layer, a light mid layer, and a windproof shell or vest. Cotton holds sweat and turns cold; synthetic or merino does not. If you are warm and comfortable standing on the doorstep, you are already wearing too much.
+Dress for conditions about 10°C warmer than the air temperature, because you will heat up within the first kilometre. Three thin layers beat one thick one: a wicking base layer, a light mid layer, and a windproof shell or vest. Cotton holds sweat and turns cold; synthetic or merino does not. Hands, ears and feet cool first, so gloves, a hat over the ears and wool socks matter more than a fourth torso layer.
 
-**Tip:** If you are not slightly cold in the first two minutes, take a layer off before you start.
+**Tip:** If you are warm and comfortable standing on the doorstep, you are already wearing too much.
 
 ### Step 3 — Warm up indoors, not at the doorstep
 
@@ -43,11 +43,11 @@ Cold muscles and cold joints are more easily strained, and standing outside in a
 
 ### Step 4 — Choose the surface before the pace
 
-![A person jogging slowly on a gravel path in winter with light snow at the edges and morning light behind trees](images/04-effort-960.webp)
+![Close-up of a running shoe with a textured sole gripping wet gravel and thin frost at the edge of a path](images/06-grip-960.webp)
 
-In frost and snow, route choice matters more than speed. Prefer cleared, gritted paths and main streets, and avoid shaded north-facing pavements, wooden boardwalks, metal plates and wet leaves, which are slicker than they look. Shorten the loop on ice and keep the longer route for a dry day. Deeper tread helps on snow, but nothing grips black ice reliably.
+In frost and snow, route choice matters more than speed. Prefer cleared, gritted paths and main streets, and avoid shaded north-facing pavements, wooden boardwalks, metal plates and wet leaves, which are slicker than they look. Deeper tread helps on snow, but nothing grips black ice reliably. If a foot slips when you push off gently, walk that section or take another route entirely.
 
-**Tip:** Walk the first fifty metres. If your foot slips when you push off gently, turn around and use a different route.
+**Tip:** Test the first fifty metres with a gentle push-off. Ice that fails that test will fail you at speed.
 
 ## Part 2 of 3 — Cold Air, Wind and Darkness
 
@@ -59,59 +59,59 @@ Cold air is dry, and hard breathing through it irritates the airways, which is w
 
 **Tip:** If you can hear your own breathing over your footsteps, you are going too fast for the temperature.
 
-### Step 6 — Start into the wind
+### Step 6 — Hold an easy effort, even into the wind
 
-![Close-up of a running shoe with a textured sole gripping wet gravel and thin frost at the edge of a path](images/06-grip-960.webp)
+![A person jogging slowly on a gravel path in winter with light snow at the edges, relaxed shoulders and morning light behind trees](images/04-effort-960.webp)
 
-Wind removes heat far faster than still air, and a headwind on the way home after a sweaty run is how winter runs turn miserable. Do the exposed half of the loop while you are dry and warm, then let the wind push you back. Check wind speed as well as temperature: 2°C with a 30 km/h wind feels closer to -3°C.
+Wind removes heat far faster than still air, and pushing into a headwind turns an easy run into a hard one within minutes. Run the exposed half of your loop while you are dry and warm, and let the wind push you home. Check wind speed as well as temperature: 2°C with a 30 km/h wind feels closer to -3°C, and that is the number your body responds to.
 
-**Tip:** Dress for the wind, not the thermometer. A thin windproof front panel is worth more than an extra fleece.
+**Tip:** Dress for the wind, not the thermometer. A thin windproof front panel beats an extra fleece.
 
 ### Step 7 — Be visible before the sun goes down
 
 ![A runner passing under a warm streetlamp on an empty city street at dusk in winter, closed shopfronts behind](images/07-shortloop-960.webp)
 
-In winter, most after-work runs happen in the dark. Wear reflective material at ankle and chest height, carry a light if your route has unlit sections, and choose streets with pavements and streetlights over unlit shortcuts. Assume drivers cannot see you until proven otherwise, particularly at junctions and when a car turns across a crossing.
+In winter, most after-work runs happen in the dark. Wear reflective material at ankle and chest height, choose streets with pavements and streetlights over unlit shortcuts, and assume drivers cannot see you until proven otherwise. Junctions are where it goes wrong: a car turning across a crossing looks straight through a runner in dark clothing.
 
 **Tip:** Reflective ankles move, and movement is what catches a driver's eye at night.
 
-### Step 8 — Protect hands, ears and feet first
+### Step 8 — Carry a light on unlit routes
 
-![A runner in a reflective vest and headlamp jogging along a dark tree-lined path at night](images/08-dark-960.webp)
+![A runner in a reflective vest and headlamp jogging along a dark tree-lined path at night, the beam lighting a few metres ahead](images/08-dark-960.webp)
 
-In the cold your body sends blood to the core, so extremities cool first. Gloves or mittens, a hat that covers the ears, and wool or synthetic socks matter more than a fourth torso layer. Mittens are warmer than gloves; a thin liner under a windproof outer layer handles most winter days. Change wet socks as soon as you are back.
+A small headlamp or a chest light lets you see broken pavement, roots and ice, and lets others see you from much further away than reflective fabric alone. Keep the beam low so you do not blind oncoming traffic or other runners. If your route has no lighting at all, choose a shorter loop you know well rather than exploring in the dark.
 
-**Tip:** If your fingers are numb, you are underdressed for the wind, however warm your torso feels.
+**Tip:** Tell someone your route and expected return time when you run after dark. It costs one message.
 
 ## Part 3 of 3 — Keeping the Habit
 
-### Step 9 — Move sessions into daylight where you can
+### Step 9 — Set your cold and ice limits in advance
 
-![A person just back from a winter run pulling off a damp outer layer beside an open car door, thermos on the seat](images/09-dry-960.webp)
+![A person in gloves checking the weather forecast on a phone at a snowy residential street corner while light snow falls](images/11-limits-960.webp)
 
-A lunchtime run or a weekend morning run does more for consistency than any amount of discipline applied to a nine o'clock session in the rain. Where daylight is impossible, fix the sessions to the same days and times so the decision is made once, in advance, instead of every evening at six.
+Decide before winter what makes you move indoors or skip: ice on the pavements, windchill below about -15°C, or the tail end of a fever. Deciding in advance removes the negotiation at 6am, when the answer is always the sofa. Keep a backup session ready — stairs, a treadmill, or a brisk twenty-minute walk — so a cancelled run is still a session.
 
-**Tip:** Put the run in your calendar like a meeting with someone who outranks you.
+**Tip:** Most healthy runners handle about -10°C in layers. Wind, wet and your own health matter more than the number.
 
 ### Step 10 — Change out of wet layers immediately
 
-> IMAGE PENDING for step 10
+![A person just back from a winter run pulling off a damp outer layer beside an open car door, steam rising from a thermos on the seat](images/09-dry-960.webp)
 
 The risk in winter running is rarely the run itself; it is standing around afterwards in damp clothes while your body temperature drops. Keep a dry top and dry socks in your bag or car, change within fifteen minutes of finishing, and get warm before you drive or sit down. This one habit prevents most of the 'I caught a cold from running' stories.
 
 **Tip:** Dry socks and a dry hat do more for how you feel an hour later than a hot drink does.
 
-### Step 11 — Train for a spring event
+### Step 11 — Fuel before you leave, not after
 
-> IMAGE PENDING for step 11
+![A water bottle, a small snack bar and a pair of knit gloves resting on a frost-covered wooden park bench in morning light](images/10-fuel-960.webp)
 
-Winter training is easier with a date attached. Pick a spring 10K or half marathon eight to sixteen weeks out, register, and let it decide which sessions matter on the weeks when the weather argues otherwise. The goal is not to run faster in January; it is to arrive in March with the habit and the base still intact.
+Cold weather makes you burn more energy to stay warm, and hunger arrives later than it does in summer, so it is easy to under-eat before a winter run. Eat something small and easy an hour or two before you go, carry water even when you do not feel thirsty, and take a snack on runs longer than about seventy-five minutes. Do not rely on thirst in the cold.
 
-**Tip:** Choose an event you can reach without a flight. Logistics are where winter enthusiasm dies.
+**Tip:** If you finish a winter run shaky or unusually cold, you probably started it under-fuelled.
 
 ### Step 12 — Use the three-week restart rule
 
-> IMAGE PENDING for step 12
+![A person jogging very slowly on a freshly cleared path with snow banked on both sides in bright cold midday light](images/12-restart-960.webp)
 
 You will miss a week, sometimes two, for weather, illness or work. When you come back, restart at about half your previous weekly time and rebuild over two to three weeks instead of resuming where you stopped. A planned restart is part of a winter season; an unplanned one attempted at full volume is how a two-week gap becomes a season off.
 

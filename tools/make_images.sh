@@ -7,6 +7,8 @@
 # 约定: 原图放在 <dir>/raw/*.png，文件名即输出前缀，例如 02-layers.png
 #       输出: <dir>/02-layers-1600.webp (1600x900) 和 <dir>/02-layers-960.webp (960x540)
 set -euo pipefail
+# 防止被 source 时中断调用方 shell
+cd "$(dirname "${BASH_SOURCE[0]}")/.."
 
 DIR="${1:?用法: bash tools/make_images.sh <images 目录>}"
 RAW="$DIR/raw"

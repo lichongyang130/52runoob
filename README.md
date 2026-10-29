@@ -9,7 +9,7 @@
 content/
   _template/article.json            空白模板（复制它开新稿）
   content-plan.csv                  25 条选题池（priority / slug / 关键词 / 内链）
-  Keep-Running-Through-Winter/      已交付样板：12 步指南 + 10 张配图
+  Keep-Running-Through-Winter/      已交付样板：12 步指南 + 13 张配图
     article.json                    单一内容源
     article.md                      审稿用 Markdown（自动生成）
     import-payload.json             CMS 导入用（自动生成）
@@ -21,6 +21,7 @@ tools/
   render_article.py                 JSON -> MD / payload / 预览页
   check_article.py                  发布前体检（12 项规则）
   make_images.sh                    PNG -> 双尺寸 WebP
+  api/client.py, api/publish.py     直连站点 API 的发布脚本
 preview/                            渲染出的本地预览页
 ```
 
@@ -35,6 +36,12 @@ python3 tools/check_article.py content/Keep-Running-Through-Winter/article.json
 
 # 3. 新配图转码（原图放 images/raw/*.png）
 bash tools/make_images.sh content/Keep-Running-Through-Winter/images
+
+# 4. 发布到站点（密钥走环境变量/Secrets，见 docs/API发布说明.md）
+export SITE_API_TOKEN=...
+python3 tools/api/publish.py --probe
+python3 tools/api/publish.py content/Keep-Running-Through-Winter --dry-run
+python3 tools/api/publish.py content/Keep-Running-Through-Winter
 ```
 
 ## 写一篇新稿

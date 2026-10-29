@@ -1,0 +1,88 @@
+name: Publish to 56juqingba
+
+# 为什么走 Actions：内容沙盒的出网白名单不含你的域名，
+# 这里作为受信任的执行环境，密钥只从仓库 Secrets 读取，不落盘、不进日志。
+
+on:
+  workflow_dispatch:
+    inputs:
+      article_dir:
+        description: "文章目录，例如 content/Keep-Running-Through-Winter"
+        required: true
+        type: string
+      action:
+        description: "操作"
+        required: true
+        default: probe
+        type: choice
+        options: [probe, dry-run, images-only, publish, update]
+      branch:
+        description: "分支"
+        required: true
+        default: arena/f9a79f56-52runoob
+        type: string
+
+concurrency:
+  group: publish-${{ github.event.inputs.article_dir }}
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  publish:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.inputs.branch }}
+          fetch-depth: 1
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Guard — token present
+        env:
+          TOKEN: ${{ secrets.SITE_API_TOKEN }}
+        run: |
+          if [ -z "$TOKEN" ]; then
+            echo "::error::Secrets 里没有 SITE_API_TOKEN，请先添加。"
+            exit 1
+          fi
+
+      - name: Probe API
+        if: ${{ github.event.inputs.action == 'probe' }}
+        env:
+          SITE_API_TOKEN: ${{ secrets.SITE_API_TOKEN }}
+        run: python3 tools/api/publish.py --probe
+
+      - name: Publish
+        if: ${{ github.event.inputs.action != 'probe' }}
+        env:
+          SITE_API_TOKEN: ${{ secrets.SITE_API_TOKEN }}
+          SITE_API_BASE: ${{ vars.SITE_API_BASE || 'https://www.56juqingba.com/api/v1' }}
+          SITE_API_COLLECTION: ${{ vars.SITE_API_COLLECTION }}
+          SITE_API_UPLOAD: ${{ vars.SITE_API_UPLOAD }}
+        run: |
+          set -euo pipefail
+          DIR='${{ github.event.inputs.article_dir }}'
+          ACT='${{ github.event.inputs.action }}'
+          case "$ACT" in
+            dry-run)      python3 tools/api/publish.py "$DIR" --dry-run ;;
+            images-only)  python3 tools/api/publish.py "$DIR" --only-images ;;
+            update)       python3 tools/api/publish.py "$DIR" --update ;;
+            *)            python3 tools/api/publish.py "$DIR" ;;
+          esac
+
+      - name: Upload run artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: publish-state
+          path: |
+            content/*/publish-state.json
+          if-no-files-found: ignore
+          retention-days: 7
