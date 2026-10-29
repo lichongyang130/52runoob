@@ -284,7 +284,9 @@
     "wordCount": null,
     "internalLinkCount": 4,
     "imageCount": 16,
-    "imagePending": 0
+    "imagePending": 0,
+    "expertReviewed": false,
+    "reviewNote": "Exercise guidance. A suitably qualified human reviewer must check the safety and training content; the article is already reachable on the live site but no human review has happened in this repository."
   },
   "imageStatus": {
     "heroReady": true,

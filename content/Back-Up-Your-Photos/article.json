@@ -108,7 +108,7 @@
           "title": "Check that the copy is complete",
           "body": "Compare the source and destination folder sizes or file counts where your software makes that possible. Open a selection of photos and play several videos directly from the backup, including older and recent items. If your software provides an integrity check, use it as well. Investigate errors or unusually small files before moving on.",
           "tip": "Check representative files from different dates and devices, not just the first photo in a folder.",
-          "imageTodo": {
+          "image": {
             "base": "08-verify",
             "alt": "A person at a laptop comparing a folder of photo thumbnails against a connected portable drive."
           }
@@ -117,7 +117,7 @@
           "title": "Protect private photos and the key",
           "body": "Consider encrypting a removable backup, especially if it might be lost or kept away from home. Use a strong password and store the recovery key separately in a safe, accessible place. Follow the encryption tool's instructions and make sure a trusted person can locate recovery information if needed. Losing the only key can make the backup unusable.",
           "tip": "Do not store the only recovery key on the same drive it unlocks.",
-          "imageTodo": {
+          "image": {
             "base": "09-encrypt",
             "alt": "An external drive beside a small closed lockbox and a folded card on a desk."
           }
@@ -126,7 +126,7 @@
           "title": "Keep another copy away from home",
           "body": "Create an independent off-site copy, such as a versioned online backup or an encrypted drive stored in a secure second location. Check that the service or device actually contains your intended files and retains them under its terms. An off-site copy helps if a fire, theft, or other event affects your home and local drive.",
           "tip": "Review privacy controls before putting sensitive family pictures into a shared account.",
-          "imageTodo": {
+          "image": {
             "base": "10-offsite",
             "alt": "A person tucking a portable drive into a small padded case beside a bag at a front door."
           }
@@ -140,7 +140,7 @@
           "title": "Preserve a disconnected or versioned copy",
           "body": "Keep a backup disconnected when it is not being updated, or use a service that retains previous versions and deleted files for a period you understand. An always-connected copy can be affected by accidental changes or malicious software. Check retention limits and reconnect the offline drive regularly enough to keep the copy useful.",
           "tip": "Isolation and version history serve different purposes; use both if practical.",
-          "imageTodo": {
+          "image": {
             "base": "11-offline",
             "alt": "An unplugged portable drive resting in a protective pouch inside an open desk drawer."
           }
@@ -149,7 +149,7 @@
           "title": "Practice restoring a few files",
           "body": "Restore a small selection to a different folder or device rather than overwriting your working library. Open the recovered images and videos, and check that their quality and important dates are as expected. A successful transfer is not proof that recovery will work; a test makes the process familiar before an emergency.",
           "tip": "Try restoring an older file and a recent video as well as a favorite photo.",
-          "imageTodo": {
+          "image": {
             "base": "12-restore",
             "alt": "A person looking at a single recovered photograph on a laptop, with an external drive and an open notebook beside it."
           }
@@ -158,7 +158,7 @@
           "title": "Schedule regular updates",
           "body": "Choose how often to back up based on how many new photos you would be willing to lose. Set an automatic schedule where supported and a reminder to update any disconnected drive. After travel or a major event, make an extra copy rather than waiting for the next routine backup. Check that each run actually completes.",
           "tip": "A simple recurring reminder is better than a complicated plan you stop using.",
-          "imageTodo": {
+          "image": {
             "base": "13-schedule",
             "alt": "A hand marking a square on a plain wall calendar, with a camera and an external drive on the shelf below."
           }
@@ -167,7 +167,7 @@
           "title": "Secure account access",
           "body": "Use a unique password and multi-factor authentication where your backup service supports it. Save recovery methods separately and review who can access shared albums or backup folders. Keep devices and backup software updated. If a backup contains someone else's private photos, agree on appropriate access and storage before copying them.",
           "tip": "Test that account recovery works before you depend on a single phone for access.",
-          "imageTodo": {
+          "image": {
             "base": "14-security",
             "alt": "A person reviewing account settings on a laptop with a phone held in the other hand."
           }
@@ -176,7 +176,7 @@
           "title": "Review the plan and replace failing media",
           "body": "Periodically check backup dates, storage space, alerts, and whether you can still open older formats. Test restoration again after changing computers or backup services. Replace a drive that reports errors or behaves unreliably, but keep existing copies until the replacement is complete and tested. Update your notes so you know where each copy lives.",
           "tip": "Recheck your backups after a major system change or an unexpected transfer failure.",
-          "imageTodo": {
+          "image": {
             "base": "15-maintain",
             "alt": "A person at a bright home desk inspecting an older external drive beside a handwritten checklist."
           }
@@ -261,7 +261,7 @@
     "note": ""
   },
   "publishing": {
-    "status": "draft_missing_images",
+    "status": "draft",
     "author": "Editorial draft",
     "reviewer": "",
     "datePublished": null,
@@ -270,21 +270,14 @@
     "wordCount": null,
     "internalLinkCount": 3,
     "imageCount": 16,
-    "imagePending": 8
+    "imagePending": 0,
+    "expertReviewed": false,
+    "reviewNote": "Data-security and privacy guidance. A suitably qualified human reviewer must check the encryption, account-security and data-loss advice before publication; no human review has happened in this repository."
   },
   "imageStatus": {
     "heroReady": true,
-    "stepImagesReady": 7,
-    "stepImagesPending": [
-      "08-verify",
-      "09-encrypt",
-      "10-offsite",
-      "11-offline",
-      "12-restore",
-      "13-schedule",
-      "14-security",
-      "15-maintain"
-    ],
+    "stepImagesReady": 15,
+    "stepImagesPending": [],
     "note": "All illustrations were drawn for this guide; none are reused from another article."
   },
   "dateModified": "2026-10-29"

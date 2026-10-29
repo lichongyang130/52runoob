@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Regression coverage for the 15–20-step production profile and static ZIP."""
 import contextlib
+import copy
 import csv
 import io
 import json
@@ -170,50 +171,69 @@ class InventoryTests(unittest.TestCase):
         self.assertTrue(all(row["title"].startswith("How to ") for row in rows))
         self.assertTrue(all(row["category_url"].startswith("/Category/") for row in rows))
 
-    def test_partially_illustrated_drafts_cannot_be_packaged(self):
-        """A draft stays unpackageable until every step image exists, not just some."""
-        for slug in ("Back-Up-Your-Photos",):
+    def test_recorded_image_progress_matches_the_files_on_disk(self):
+        """Progress notes can never run ahead of the illustrations that actually exist."""
+        for path in sorted((ROOT / "content").glob("*/article.json")):
+            slug = path.parent.name
+            if slug.startswith("_"):
+                continue
             with self.subTest(slug=slug):
-                article_dir = ROOT / "content" / slug
-                path = article_dir / "article.json"
+                article_dir = path.parent
                 doc = json.loads(path.read_text(encoding="utf-8"))
                 steps = [step for part in doc["parts"] for step in part["steps"]]
-                self.assertEqual(len(steps), 15)
-
                 missing = [step for step in steps if not step.get("image")]
-                self.assertTrue(missing, f"{slug} has every image; move it out of the draft list")
 
-                # The recorded counts must match the files actually on disk, so the
-                # progress notes can never drift ahead of the real illustrations.
                 hero_base = doc["media"]["hero"]["base"]
                 hero_ready = all(
                     (article_dir / "images" / f"{hero_base}-{width}.webp").is_file()
                     for width in ("960", "1600")
                 )
-                self.assertEqual(doc["imageStatus"]["heroReady"], hero_ready)
-                self.assertEqual(
-                    doc["publishing"]["imagePending"], len(missing) + (0 if hero_ready else 1)
-                )
-                self.assertEqual(
-                    doc["imageStatus"]["stepImagesPending"],
-                    [step["imageTodo"]["base"] for step in missing],
-                )
-                self.assertEqual(doc["imageStatus"]["stepImagesReady"], len(steps) - len(missing))
+                pending = len(missing) + (0 if hero_ready else 1)
+                self.assertEqual(doc["publishing"]["imagePending"], pending)
+                if "imageStatus" in doc:
+                    self.assertEqual(doc["imageStatus"]["heroReady"], hero_ready)
+                    self.assertEqual(
+                        doc["imageStatus"]["stepImagesPending"],
+                        [step["imageTodo"]["base"] for step in missing],
+                    )
+                    self.assertEqual(
+                        doc["imageStatus"]["stepImagesReady"], len(steps) - len(missing)
+                    )
+
+                # Anything the document claims to have must be on disk at both widths.
                 for step in steps:
                     if step.get("image"):
                         for width in ("960", "1600"):
                             asset = article_dir / "images" / f"{step['image']['base']}-{width}.webp"
                             self.assertTrue(asset.is_file(), f"missing {asset}")
 
-                with tempfile.TemporaryDirectory() as tmp, contextlib.redirect_stdout(io.StringIO()):
-                    with self.assertRaisesRegex(ValueError, "体检未通过"):
-                        package_article.build_package(path, Path(tmp) / "draft.zip")
+    def test_an_incomplete_draft_cannot_be_packaged(self):
+        """Packaging must refuse a guide that is still missing a step illustration.
+
+        Built from a real finished guide with one image taken away, so the guard keeps
+        working once every article on disk is complete.
+        """
+        source = ROOT / "content/Back-Up-Your-Photos"
+        doc = json.loads((source / "article.json").read_text(encoding="utf-8"))
+        with tempfile.TemporaryDirectory() as tmp:
+            directory = Path(tmp) / source.name
+            shutil.copytree(source, directory)
+            dropped = doc["parts"][0]["steps"][0].pop("image")
+            doc["parts"][0]["steps"][0]["imageTodo"] = dropped
+            doc["publishing"]["imagePending"] = 1
+            path = directory / "article.json"
+            path.write_text(json.dumps(doc, ensure_ascii=False, indent=2), encoding="utf-8")
+
+            with contextlib.redirect_stdout(io.StringIO()):
+                with self.assertRaisesRegex(ValueError, "体检未通过"):
+                    package_article.build_package(path, Path(tmp) / "draft.zip")
 
     def test_finished_guides_are_fully_illustrated_with_original_art(self):
         """Every guide drawn from scratch must be complete and must not recycle other art."""
         for slug, category in (
             ("Repot-a-Houseplant", "Home and Garden"),
             ("Plan-a-Run-Walk-Workout", "Sports and Fitness"),
+            ("Back-Up-Your-Photos", "Computers and Electronics"),
         ):
             with self.subTest(slug=slug):
                 directory = ROOT / "content" / slug
@@ -275,16 +295,23 @@ class InventoryTests(unittest.TestCase):
 
 class RendererRobustnessTests(unittest.TestCase):
     def test_markdown_warns_while_illustrations_are_missing(self):
-        """The readable copy must announce an unfinished draft, and stop once it is complete."""
-        doc = json.loads((ROOT / "content/Back-Up-Your-Photos/article.json").read_text(encoding="utf-8"))
-        missing, total = render_article.pending_image_count(doc)
-        self.assertEqual(total, 16)
-        markdown = render_article.render_markdown(doc)
-        self.assertIn(f"{missing} of {total} illustrations are still missing", markdown.splitlines()[0])
+        """The readable copy must announce an unfinished draft, and stop once it is complete.
 
+        The incomplete side is built by removing images from a finished guide, so the
+        warning stays under test even when nothing on disk is unfinished.
+        """
         finished = json.loads((ROOT / "content/Run-Your-First-5K/article.json").read_text(encoding="utf-8"))
         self.assertEqual(render_article.pending_image_count(finished)[0], 0)
         self.assertNotIn("DRAFT — do not publish", render_article.render_markdown(finished))
+
+        doc = copy.deepcopy(finished)
+        for step in [s for part in doc["parts"] for s in part["steps"]][:3]:
+            step["imageTodo"] = step.pop("image")
+        missing, total = render_article.pending_image_count(doc)
+        self.assertEqual((missing, total), (3, 16))
+        banner = render_article.render_markdown(doc).splitlines()[0]
+        self.assertIn("3 of 16 illustrations are still missing", banner)
+        self.assertIn("DRAFT — do not publish", banner)
 
     def test_payload_survives_a_draft_without_publishing_metadata(self):
         """Hand-written drafts omit publishing fields; rendering must not crash."""

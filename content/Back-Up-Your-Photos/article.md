@@ -1,5 +1,3 @@
-> DRAFT — do not publish or package: 8 of 16 illustrations are still missing, and the article has not been reviewed by a person.
-
 # How to Back Up Your Photos
 
 *Protect a photo library with independent copies, an off-site option, secure access, and a restore test before deleting anything.*
@@ -82,7 +80,7 @@ Connect a reliable external drive and use your chosen backup tool or copy method
 
 ### Step 8 — Check that the copy is complete
 
-> IMAGE PENDING for step 8: A person at a laptop comparing a folder of photo thumbnails against a connected portable drive.
+![A person at a laptop comparing a folder of photo thumbnails against a connected portable drive.](images/08-verify-960.webp)
 
 Compare the source and destination folder sizes or file counts where your software makes that possible. Open a selection of photos and play several videos directly from the backup, including older and recent items. If your software provides an integrity check, use it as well. Investigate errors or unusually small files before moving on.
 
@@ -90,7 +88,7 @@ Compare the source and destination folder sizes or file counts where your softwa
 
 ### Step 9 — Protect private photos and the key
 
-> IMAGE PENDING for step 9: An external drive beside a small closed lockbox and a folded card on a desk.
+![An external drive beside a small closed lockbox and a folded card on a desk.](images/09-encrypt-960.webp)
 
 Consider encrypting a removable backup, especially if it might be lost or kept away from home. Use a strong password and store the recovery key separately in a safe, accessible place. Follow the encryption tool's instructions and make sure a trusted person can locate recovery information if needed. Losing the only key can make the backup unusable.
 
@@ -98,7 +96,7 @@ Consider encrypting a removable backup, especially if it might be lost or kept a
 
 ### Step 10 — Keep another copy away from home
 
-> IMAGE PENDING for step 10: A person tucking a portable drive into a small padded case beside a bag at a front door.
+![A person tucking a portable drive into a small padded case beside a bag at a front door.](images/10-offsite-960.webp)
 
 Create an independent off-site copy, such as a versioned online backup or an encrypted drive stored in a secure second location. Check that the service or device actually contains your intended files and retains them under its terms. An off-site copy helps if a fire, theft, or other event affects your home and local drive.
 
@@ -108,7 +106,7 @@ Create an independent off-site copy, such as a versioned online backup or an enc
 
 ### Step 11 — Preserve a disconnected or versioned copy
 
-> IMAGE PENDING for step 11: An unplugged portable drive resting in a protective pouch inside an open desk drawer.
+![An unplugged portable drive resting in a protective pouch inside an open desk drawer.](images/11-offline-960.webp)
 
 Keep a backup disconnected when it is not being updated, or use a service that retains previous versions and deleted files for a period you understand. An always-connected copy can be affected by accidental changes or malicious software. Check retention limits and reconnect the offline drive regularly enough to keep the copy useful.
 
@@ -116,7 +114,7 @@ Keep a backup disconnected when it is not being updated, or use a service that r
 
 ### Step 12 — Practice restoring a few files
 
-> IMAGE PENDING for step 12: A person looking at a single recovered photograph on a laptop, with an external drive and an open notebook beside it.
+![A person looking at a single recovered photograph on a laptop, with an external drive and an open notebook beside it.](images/12-restore-960.webp)
 
 Restore a small selection to a different folder or device rather than overwriting your working library. Open the recovered images and videos, and check that their quality and important dates are as expected. A successful transfer is not proof that recovery will work; a test makes the process familiar before an emergency.
 
@@ -124,7 +122,7 @@ Restore a small selection to a different folder or device rather than overwritin
 
 ### Step 13 — Schedule regular updates
 
-> IMAGE PENDING for step 13: A hand marking a square on a plain wall calendar, with a camera and an external drive on the shelf below.
+![A hand marking a square on a plain wall calendar, with a camera and an external drive on the shelf below.](images/13-schedule-960.webp)
 
 Choose how often to back up based on how many new photos you would be willing to lose. Set an automatic schedule where supported and a reminder to update any disconnected drive. After travel or a major event, make an extra copy rather than waiting for the next routine backup. Check that each run actually completes.
 
@@ -132,7 +130,7 @@ Choose how often to back up based on how many new photos you would be willing to
 
 ### Step 14 — Secure account access
 
-> IMAGE PENDING for step 14: A person reviewing account settings on a laptop with a phone held in the other hand.
+![A person reviewing account settings on a laptop with a phone held in the other hand.](images/14-security-960.webp)
 
 Use a unique password and multi-factor authentication where your backup service supports it. Save recovery methods separately and review who can access shared albums or backup folders. Keep devices and backup software updated. If a backup contains someone else's private photos, agree on appropriate access and storage before copying them.
 
@@ -140,7 +138,7 @@ Use a unique password and multi-factor authentication where your backup service 
 
 ### Step 15 — Review the plan and replace failing media
 
-> IMAGE PENDING for step 15: A person at a bright home desk inspecting an older external drive beside a handwritten checklist.
+![A person at a bright home desk inspecting an older external drive beside a handwritten checklist.](images/15-maintain-960.webp)
 
 Periodically check backup dates, storage space, alerts, and whether you can still open older formats. Test restoration again after changing computers or backup services. Replace a drive that reports errors or behaves unreliably, but keep existing copies until the replacement is complete and tested. Update your notes so you know where each copy lives.
 
