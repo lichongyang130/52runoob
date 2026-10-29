@@ -5,6 +5,12 @@
 内容沙盒的出网白名单只放行 github.com / npm / PyPI，**无法直连 `www.56juqingba.com`**（API 本身是通的，已确认 `/api/v1/articles` 在无 token 时返回 `{"error":"Token 无效。"}`）。
 因此计划在 GitHub Actions runner 里调用，密钥只从仓库 Secrets 读取，不写进代码、不写进本文件。**真实授权调用、上传路由、请求字段和创建文章的幂等性尚未验证**；先做只读 probe，遇到发布或回读错误时先查站点是否已创建文章，不要盲目重复 POST。
 
+## 2026-10-29 探测记录
+
+- 冬季跑步样板已完成 13 张插画并通过本地体检；请求发布后先推送了 `probe` 标记。
+- 截至本次检查，GitHub Actions 没有生成运行记录；仓库 Actions 权限设置接口对当前 Arena GitHub 集成返回 403，无法确认设置或 Secret 内容。沙盒也无法直接访问站点 API。
+- **尚未发出授权 API 请求，也未发布文章。** 请在仓库 Settings → Actions → General 核对 Actions 是否开启，并在 Arena 重新连接 GitHub、确认授予该仓库 Actions 权限；然后重新触发同一分支的只读 probe。不要把密钥贴到聊天里。
+
 ## 一次性配置
 
 1. **添加密钥**（仓库 → Settings → Secrets and variables → Actions → New repository secret）
