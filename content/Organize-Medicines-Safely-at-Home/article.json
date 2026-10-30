@@ -127,22 +127,15 @@
     "wordCount": null,
     "internalLinkCount": 3,
     "imageCount": 16,
-    "imagePending": 6,
+    "imagePending": 0,
     "expertReviewed": false,
     "reviewNote": "Household medicine handling (YMYL). A pharmacist or other suitably qualified reviewer must check the disposal order, the storage advice and the poison-centre wording before publication, and confirm the regional guidance matches the audience. Do not add a named medical reviewer who has not actually read it."
   },
   "imageStatus": {
     "heroReady": true,
-    "stepImagesReady": 9,
-    "stepImagesPending": [
-      "10-up-and-away",
-      "11-safety-cap",
-      "12-written-list",
-      "13-take-back",
-      "14-mail-back",
-      "15-mix-and-seal"
-    ],
-    "note": "10 of 16 illustrations drawn. 6 still outstanding; the guide cannot be packaged or published until every one is present."
+    "stepImagesReady": 15,
+    "stepImagesPending": [],
+    "note": "All illustrations were drawn for this guide; none are reused from another article."
   },
   "dateModified": "2026-10-30",
   "parts": [
@@ -241,16 +234,16 @@
           "title": "Put the whole lot up high and out of sight",
           "body": "Up and away is the standard advice for a reason: a curious child works on what they can see as much as what they can reach. Choose a shelf above adult eye level, close the lid, and shut the cupboard. If anyone in the household is at risk, whether a toddler, a visiting grandchild or an adult who should not have access to a particular prescription, use a cupboard that locks or fit a childproof latch. A locked box on a low shelf beats an open box up high.",
           "tip": "Handbags and overnight bags belonging to visitors are a common blind spot. Offer guests the high shelf too.",
-          "imageTodo": {
+          "image": {
             "base": "10-up-and-away",
-            "alt": "A hand sliding a lidded box onto a high kitchen shelf well above a worktop, a child's drawing pinned to the wall below."
+            "alt": "An arm reaching high to slide a plain lidded box onto the top shelf of a kitchen cupboard, with a child's crayon drawing taped to a cupboard door low on the right."
           }
         },
         {
           "title": "Lock the safety cap every single time",
           "body": "A child-resistant cap only works when it is engaged. The CDC's advice is to check that the cap is locked after every dose and to put the medicine straight back in its storage place rather than leaving it on the counter until later. Most paediatric poisonings happen in the gap between taking a dose and putting the bottle away, not because a child defeated a cap. Build the two actions into one movement: dose, click, return.",
           "tip": "Child-resistant is not childproof. Treat the cap as a delay, not a barrier, and keep the height as well.",
-          "imageTodo": {
+          "image": {
             "base": "11-safety-cap",
             "alt": "Close view of two hands pressing down and twisting the cap back onto a pill bottle over a kitchen worktop."
           }
@@ -259,9 +252,9 @@
           "title": "Keep a written list of everything anyone takes",
           "body": "The CDC asks people to keep a list of their medicines, vitamins and supplements and to make sure their doctor sees all of it. Write one page per person: the medicine, the strength, the dose, what it is for, and who prescribed it. Include supplements, because they interact too. Keep a copy with the storage box and a photograph on your phone, and it is ready for an appointment, a pharmacy review or an emergency when nobody can remember the name of the small white tablet.",
           "tip": "Update the list the same day a prescription changes. A list that is six months out of date is worse than none, because it will be believed.",
-          "imageTodo": {
+          "image": {
             "base": "12-written-list",
-            "alt": "A single sheet of paper on a table with handwritten lines in neat rows, a pen across one corner and a phone face up beside it."
+            "alt": "A single sheet of paper on a dark table with handwritten lines in neat rows, a hand resting at its edge, a pen across one corner and a phone face up beside it."
           }
         }
       ]
@@ -274,7 +267,7 @@
           "title": "Take the finished pile to a drug take-back point",
           "body": "This is the FDA's first choice and it is the easiest option to get right. Many pharmacies have a permanent drop-off kiosk, and the DEA runs National Prescription Drug Take Back Day along with a year-round search for authorised collectors. Take-back accepts tablets, capsules, patches and most other prescription and over-the-counter medicines. It does not accept needles or other sharps, which have their own route.",
           "tip": "Phone the pharmacy first and ask whether their kiosk is in service that day. A wasted trip is the main reason people give up and use the bin.",
-          "imageTodo": {
+          "image": {
             "base": "13-take-back",
             "alt": "A person posting a small paper bag of medicine packets into a tall drop-off bin inside a pharmacy, shelving visible behind."
           }
@@ -283,7 +276,7 @@
           "title": "Use a prepaid mail-back envelope if you cannot travel",
           "body": "A prepaid drug mail-back envelope is the FDA's second route and it needs no collection point at all. The envelopes are sold at many pharmacies and online, and some pharmacies hand them out free. Fill the envelope with the unused or expired medicines, seal it, and post it. For anyone without a car, without a nearby kiosk, or without the mobility to queue, this is the realistic option rather than a compromise.",
           "tip": "Ask at the counter rather than searching the shelves. Mail-back envelopes are usually kept behind the dispensary.",
-          "imageTodo": {
+          "image": {
             "base": "14-mail-back",
             "alt": "Hands sealing the flap of a large padded envelope on a hall table, loose medicine strips and a house key beside it."
           }
@@ -292,7 +285,7 @@
           "title": "Mix the remainder into something unappealing before binning it",
           "body": "If neither route is available, almost everything except items on the FDA flush list can go into household trash, but not as it comes. Tip the medicine out of its container, mix it with something undesirable such as used coffee grounds, dirt or cat litter, and seal the mixture in a closable bag or tub so it cannot leak. The mixing makes it unrecognisable and unappealing to a child, a pet or anyone going through the bin. Then scratch out your name and prescription details on the empty packaging before throwing that away.",
           "tip": "Inhalers and aerosols are the exception. They can be dangerous if punctured or burned, so ask your waste or recycling service how to hand them in.",
-          "imageTodo": {
+          "image": {
             "base": "15-mix-and-seal",
             "alt": "A sealed plastic tub on a worktop holding a dark mixture of used coffee grounds, with an emptied pill bottle and a marker pen beside it."
           }

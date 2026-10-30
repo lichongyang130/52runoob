@@ -1,5 +1,3 @@
-> DRAFT — do not publish or package: 6 of 16 illustrations are still missing, and the article has not been reviewed by a person.
-
 # How to Organize Medicines Safely at Home
 
 *The bathroom cabinet is the worst place in the house for them. Here is how to sort what you have, store it where it will keep, and get rid of the rest without poisoning anyone.*
@@ -98,7 +96,7 @@ Some medicines have to be refrigerated and will say so on the label. Give them a
 
 ### Step 10 — Put the whole lot up high and out of sight
 
-> IMAGE PENDING for step 10: A hand sliding a lidded box onto a high kitchen shelf well above a worktop, a child's drawing pinned to the wall below.
+![An arm reaching high to slide a plain lidded box onto the top shelf of a kitchen cupboard, with a child's crayon drawing taped to a cupboard door low on the right.](images/10-up-and-away-960.webp)
 
 Up and away is the standard advice for a reason: a curious child works on what they can see as much as what they can reach. Choose a shelf above adult eye level, close the lid, and shut the cupboard. If anyone in the household is at risk, whether a toddler, a visiting grandchild or an adult who should not have access to a particular prescription, use a cupboard that locks or fit a childproof latch. A locked box on a low shelf beats an open box up high.
 
@@ -106,7 +104,7 @@ Up and away is the standard advice for a reason: a curious child works on what t
 
 ### Step 11 — Lock the safety cap every single time
 
-> IMAGE PENDING for step 11: Close view of two hands pressing down and twisting the cap back onto a pill bottle over a kitchen worktop.
+![Close view of two hands pressing down and twisting the cap back onto a pill bottle over a kitchen worktop.](images/11-safety-cap-960.webp)
 
 A child-resistant cap only works when it is engaged. The CDC's advice is to check that the cap is locked after every dose and to put the medicine straight back in its storage place rather than leaving it on the counter until later. Most paediatric poisonings happen in the gap between taking a dose and putting the bottle away, not because a child defeated a cap. Build the two actions into one movement: dose, click, return.
 
@@ -114,7 +112,7 @@ A child-resistant cap only works when it is engaged. The CDC's advice is to chec
 
 ### Step 12 — Keep a written list of everything anyone takes
 
-> IMAGE PENDING for step 12: A single sheet of paper on a table with handwritten lines in neat rows, a pen across one corner and a phone face up beside it.
+![A single sheet of paper on a dark table with handwritten lines in neat rows, a hand resting at its edge, a pen across one corner and a phone face up beside it.](images/12-written-list-960.webp)
 
 The CDC asks people to keep a list of their medicines, vitamins and supplements and to make sure their doctor sees all of it. Write one page per person: the medicine, the strength, the dose, what it is for, and who prescribed it. Include supplements, because they interact too. Keep a copy with the storage box and a photograph on your phone, and it is ready for an appointment, a pharmacy review or an emergency when nobody can remember the name of the small white tablet.
 
@@ -124,7 +122,7 @@ The CDC asks people to keep a list of their medicines, vitamins and supplements 
 
 ### Step 13 — Take the finished pile to a drug take-back point
 
-> IMAGE PENDING for step 13: A person posting a small paper bag of medicine packets into a tall drop-off bin inside a pharmacy, shelving visible behind.
+![A person posting a small paper bag of medicine packets into a tall drop-off bin inside a pharmacy, shelving visible behind.](images/13-take-back-960.webp)
 
 This is the FDA's first choice and it is the easiest option to get right. Many pharmacies have a permanent drop-off kiosk, and the DEA runs National Prescription Drug Take Back Day along with a year-round search for authorised collectors. Take-back accepts tablets, capsules, patches and most other prescription and over-the-counter medicines. It does not accept needles or other sharps, which have their own route.
 
@@ -132,7 +130,7 @@ This is the FDA's first choice and it is the easiest option to get right. Many p
 
 ### Step 14 — Use a prepaid mail-back envelope if you cannot travel
 
-> IMAGE PENDING for step 14: Hands sealing the flap of a large padded envelope on a hall table, loose medicine strips and a house key beside it.
+![Hands sealing the flap of a large padded envelope on a hall table, loose medicine strips and a house key beside it.](images/14-mail-back-960.webp)
 
 A prepaid drug mail-back envelope is the FDA's second route and it needs no collection point at all. The envelopes are sold at many pharmacies and online, and some pharmacies hand them out free. Fill the envelope with the unused or expired medicines, seal it, and post it. For anyone without a car, without a nearby kiosk, or without the mobility to queue, this is the realistic option rather than a compromise.
 
@@ -140,7 +138,7 @@ A prepaid drug mail-back envelope is the FDA's second route and it needs no coll
 
 ### Step 15 — Mix the remainder into something unappealing before binning it
 
-> IMAGE PENDING for step 15: A sealed plastic tub on a worktop holding a dark mixture of used coffee grounds, with an emptied pill bottle and a marker pen beside it.
+![A sealed plastic tub on a worktop holding a dark mixture of used coffee grounds, with an emptied pill bottle and a marker pen beside it.](images/15-mix-and-seal-960.webp)
 
 If neither route is available, almost everything except items on the FDA flush list can go into household trash, but not as it comes. Tip the medicine out of its container, mix it with something undesirable such as used coffee grounds, dirt or cat litter, and seal the mixture in a closable bag or tub so it cannot leak. The mixing makes it unrecognisable and unappealing to a child, a pet or anyone going through the bin. Then scratch out your name and prescription details on the empty packaging before throwing that away.
 

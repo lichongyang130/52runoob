@@ -1,4 +1,4 @@
-> DRAFT — do not publish or package: 16 of 16 illustrations are still missing, and the article has not been reviewed by a person.
+> DRAFT — do not publish or package: 12 of 16 illustrations are still missing, and the article has not been reviewed by a person.
 
 # How to Pack a Personal Item for a Trip
 
@@ -24,7 +24,7 @@ A personal item is the small bag that fits under the seat in front of you, and i
 
 ### Step 1 — Find your airline's actual personal item dimensions
 
-> IMAGE PENDING for step 1: A soft backpack standing on a table with a retractable tape measure stretched across its depth, a notebook beside it.
+![A soft backpack standing on a table while a hand stretches a retractable tape measure across its depth, an open notebook lying beside it.](images/01-measure-bag-960.webp)
 
 No regulator sets this size. Each airline publishes its own, and the allowance can also change with the fare you bought, so the basic economy ticket and the flexible one on the same aircraft may not carry the same bag. Look up the numbers for your specific airline and fare class, write them down, and measure the bag you intend to use rather than trusting the label sewn inside it.
 
@@ -32,7 +32,7 @@ No regulator sets this size. Each airline publishes its own, and the allowance c
 
 ### Step 2 — Pick a soft bag over a rigid one
 
-> IMAGE PENDING for step 2: Two bags side by side on a wooden floor, one a slumped soft backpack and one a rigid boxy case, a hand pressing the soft one down.
+![Two bags side by side on a wooden floor, one a slumped soft backpack and one a rigid boxy case, a hand pressing the soft one down.](images/02-soft-bag-960.webp)
 
 Under-seat spaces are not rectangles. They are interrupted by seat legs, entertainment boxes and whatever the person in front has pushed back towards you. A soft-sided backpack or holdall squashes into that awkward shape; a hard shell has to fit exactly or not at all. A soft bag is also the one that survives a gate agent's sizer, because a stubborn inch can be pressed in.
 
@@ -40,7 +40,7 @@ Under-seat spaces are not rectangles. They are interrupted by seat legs, enterta
 
 ### Step 3 — Decide what this bag has to survive without the other one
 
-> IMAGE PENDING for step 3: A phone propped against a mug showing a short handwritten-style note, with a passport wallet, keys and a charger laid out nearby.
+![A phone propped against a mug showing a short list of plain grey lines, with a travel wallet, a bunch of keys and a coiled charging cable laid out on the table nearby.](images/03-essentials-list-960.webp)
 
 Pack for the version of the day where your cabin bag disappears into the hold at the gate and the hold is slow. That means the under-seat bag holds documents, medication, money, keys, chargers, glasses and anything irreplaceable. Everything else is negotiable. Making this decision before you start packing stops you filling the good space with a second pair of shoes and then discovering the passport is in the wrong bag.
 

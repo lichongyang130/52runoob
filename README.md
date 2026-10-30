@@ -13,7 +13,7 @@
 - `downloads/First-5K-Upload.zip`：上述稿件的独立网页和人工上传素材包；页面上有待审校提示。
 - `content/Repot-a-Houseplant/`：15 步英文稿，16 张插画全部为本文新制，体检 0 error；素材包 `downloads/Repot-a-Houseplant-Upload.zip`。待真人审校，未发布。
 - `content/Plan-a-Run-Walk-Workout/`：15 步英文稿，16 张插画全部为本文新制，体检 0 error；素材包 `downloads/Run-Walk-Workout-Upload.zip`。待真人审校，未发布。
-- `downloads/All-7-Articles-Upload.zip`：7 篇成稿的合集包，内含各篇独立文件夹与一个本地总目录页；每篇内容与对应单篇包逐字节一致。
+- `downloads/All-8-Articles-Upload.zip`：8 篇成稿的合集包，内含各篇独立文件夹与一个本地总目录页；每篇内容与对应单篇包逐字节一致。
 - 包内结构：单篇 35 个条目 = `index.html` + `Article-English.txt` + `README-中文.txt` + `Images/` 下 16 张插画 × 两档（`-1600.webp` 1600×900 与 `-960.webp` 960×540）；合集为 篇数×35 + 2。网页用 `srcset` 按屏幕宽度自动选档，手机只下载小图，封面不走懒加载。
 - `content/Back-Up-Your-Photos/`：15 步英文稿，16 张插画全部为本文新制，体检 0 error；素材包 `downloads/Back-Up-Your-Photos-Upload.zip`。待真人审校，未发布。
 - `content/Check-Your-Tire-Pressure/`（Cars and Other Vehicles）：15 步英文稿，16 张插画全部为本文新制，体检 0 error；资料取自 NHTSA；素材包 `downloads/Check-Your-Tire-Pressure-Upload.zip`。待真人审校，未发布。
@@ -21,8 +21,8 @@
 - `content/Build-an-Emergency-Fund/`（Finance and Business）：15 步英文稿，16 张插画全部为本文新制，体检 0 error；资料取自 CFPB；素材包 `downloads/Build-an-Emergency-Fund-Upload.zip`。属 YMYL 理财内容，须持证理财人士审校，未发布。
 - 缺图稿件无法通过质量检查，因此不打包、不算完成；缺图清单见 `article.json` 的 `imageStatus.stepImagesPending`。未绘制的步骤在 JSON 里用 `imageTodo` 而非 `image`，这是测试强制的约定。
 - `preview/All-Finished-Articles.html`：仓库内成稿目录页，由 `tools/make_preview_index.py` 生成，缺图稿会被拒绝列入。
-- `content/Organize-Medicines-Safely-at-Home/`（Health）：15 步英文文字稿已完成，资料取自 FDA、DEA 与 CDC；**配图 10/16**（封面 + 步骤 1–9），还缺 6 张。
-- `content/Pack-a-Personal-Item-for-a-Trip/`（Travel）：15 步英文文字稿已完成，资料取自 TSA 与 FAA；**配图 0/16**。
+- `content/Organize-Medicines-Safely-at-Home/`（Health）：15 步英文稿，16 张插画全部为本文新制，体检 0 error；资料取自 FDA、DEA 与 CDC；素材包 `downloads/Organize-Medicines-Safely-at-Home-Upload.zip`。属 YMYL 居家用药内容，须药师审校，未发布。
+- `content/Pack-a-Personal-Item-for-a-Trip/`（Travel）：15 步英文文字稿已完成，资料取自 TSA 与 FAA；**配图 4/16**（封面 + 步骤 1–3），还缺 12 张。
 - 其余 86 篇为选题，尚未完成正文与配图。`expanded-plan.csv` 是进度记录，不要将选题当成成品。
 - `content/Keep-Running-Through-Winter/`：此前制作的旧版 12 步样稿及 13 张插画；其原素材包为 `downloads/Winter-Running-Upload.zip`。公开网站的分类和详情页现已显示该稿，但旧稿不计入本批 15–20 步的新稿目标。
 

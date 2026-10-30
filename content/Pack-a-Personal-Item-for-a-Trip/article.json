@@ -121,17 +121,14 @@
     "wordCount": null,
     "internalLinkCount": 3,
     "imageCount": 16,
-    "imagePending": 16,
+    "imagePending": 12,
     "expertReviewed": false,
     "reviewNote": "Aviation security and dangerous-goods rules change and differ by country and airline. A reviewer must re-check the TSA liquids allowance, the FAA battery limits and the gate-check wording against the current published guidance before publication, and confirm the article does not read as advice for non-US departures."
   },
   "imageStatus": {
-    "heroReady": false,
-    "stepImagesReady": 0,
+    "heroReady": true,
+    "stepImagesReady": 3,
     "stepImagesPending": [
-      "01-measure-bag",
-      "02-soft-bag",
-      "03-essentials-list",
       "04-liquids-bag",
       "05-accessible-pocket",
       "06-medication-pouch",
@@ -145,7 +142,7 @@
       "14-documents-pocket",
       "15-under-seat-test"
     ],
-    "note": "0 of 16 illustrations drawn. 16 still outstanding; the guide cannot be packaged or published until every one is present."
+    "note": "4 of 16 illustrations drawn. 12 still outstanding; the guide cannot be packaged or published until every one is present."
   },
   "dateModified": "2026-10-30",
   "parts": [
@@ -157,16 +154,16 @@
           "title": "Find your airline's actual personal item dimensions",
           "body": "No regulator sets this size. Each airline publishes its own, and the allowance can also change with the fare you bought, so the basic economy ticket and the flexible one on the same aircraft may not carry the same bag. Look up the numbers for your specific airline and fare class, write them down, and measure the bag you intend to use rather than trusting the label sewn inside it.",
           "tip": "Measure with the bag packed. An empty bag that fits the sizer can bulge two inches once it has a jumper and a laptop in it.",
-          "imageTodo": {
+          "image": {
             "base": "01-measure-bag",
-            "alt": "A soft backpack standing on a table with a retractable tape measure stretched across its depth, a notebook beside it."
+            "alt": "A soft backpack standing on a table while a hand stretches a retractable tape measure across its depth, an open notebook lying beside it."
           }
         },
         {
           "title": "Pick a soft bag over a rigid one",
           "body": "Under-seat spaces are not rectangles. They are interrupted by seat legs, entertainment boxes and whatever the person in front has pushed back towards you. A soft-sided backpack or holdall squashes into that awkward shape; a hard shell has to fit exactly or not at all. A soft bag is also the one that survives a gate agent's sizer, because a stubborn inch can be pressed in.",
           "tip": "Avoid bags with rigid external frames or fixed wheels if you can. Both eat the depth you need and neither compresses.",
-          "imageTodo": {
+          "image": {
             "base": "02-soft-bag",
             "alt": "Two bags side by side on a wooden floor, one a slumped soft backpack and one a rigid boxy case, a hand pressing the soft one down."
           }
@@ -175,9 +172,9 @@
           "title": "Decide what this bag has to survive without the other one",
           "body": "Pack for the version of the day where your cabin bag disappears into the hold at the gate and the hold is slow. That means the under-seat bag holds documents, medication, money, keys, chargers, glasses and anything irreplaceable. Everything else is negotiable. Making this decision before you start packing stops you filling the good space with a second pair of shoes and then discovering the passport is in the wrong bag.",
           "tip": "Write the must-keep list on your phone once. It will be the same list on every trip you take.",
-          "imageTodo": {
+          "image": {
             "base": "03-essentials-list",
-            "alt": "A phone propped against a mug showing a short handwritten-style note, with a passport wallet, keys and a charger laid out nearby."
+            "alt": "A phone propped against a mug showing a short list of plain grey lines, with a travel wallet, a bunch of keys and a coiled charging cable laid out on the table nearby."
           }
         }
       ]
