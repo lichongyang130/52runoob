@@ -25,6 +25,7 @@
 - `content/Pack-a-Personal-Item-for-a-Trip/`（Travel）：15 步英文稿，16 张插画全部为本文新制，体检 0 error；资料取自 TSA 与 FAA；素材包 `downloads/Pack-a-Personal-Item-for-a-Trip-Upload.zip`。安检与锂电池规则会变且各国不同，须真人按最新官方页面核校，未发布。
 - `content/Hold-a-Family-Meeting/`（Family Life）：15 步英文稿，16 张插画全部为本文新制，体检 0 error；资料取自 NC State Extension、University of Wisconsin-Extension 与 CDC；素材包 `downloads/Hold-a-Family-Meeting-Upload.zip`。涉及未成年人沟通与家庭冲突，须真人审校，未发布。
 - `content/Build-a-Dog-Walking-Routine/`（Pets and Animals）：15 步英文稿，16 张插画全部为本文新制，体检 0 error；资料取自 AVMA 三份指南与 CDC Healthy Pets；素材包 `downloads/Build-a-Dog-Walking-Routine-Upload.zip`。属 YMYL 动物健康内容，须执业兽医审校，未发布。
+- `content/Begin-a-Watercolor-Sketchbook/`（Hobbies and Crafts）：15 步英文文字稿已完成，资料取自 Tate、美国国会图书馆与加拿大文保研究所；**配图 10/16**（封面 + 步骤 1–9），还缺 6 张。
 - 其余 86 篇为选题，尚未完成正文与配图。`expanded-plan.csv` 是进度记录，不要将选题当成成品。
 - `content/Keep-Running-Through-Winter/`：此前制作的旧版 12 步样稿及 13 张插画；其原素材包为 `downloads/Winter-Running-Upload.zip`。公开网站的分类和详情页现已显示该稿，但旧稿不计入本批 15–20 步的新稿目标。
 
