@@ -79,7 +79,7 @@
           "title": "Make the cards yourself, the same day",
           "body": "Writing the cards is itself a study session: you are deciding what matters and rephrasing it, which is most of the work. University learning centres routinely tell students to write their own practice questions for exactly this reason. Make them within a day of the lecture while the material is still fresh enough to compress, and leave the reviewing until at least the next day.",
           "tip": "Downloaded decks are somebody else's thinking. If you must use one, rewrite the cards you get wrong in your own wording.",
-          "imageTodo": {
+          "image": {
             "base": "05-make-cards-same-day",
             "alt": "A student at a café table by a window writing in an open notebook just after class, with blank index cards and a mug beside it and a rucksack hooked on the chair."
           }
@@ -121,7 +121,7 @@
           "title": "Sort into three piles as you go",
           "body": "Deal each card after answering: got it cleanly, got it with effort, did not get it. Three piles turn a vague feeling about the deck into something you can see. The pile sizes tell you where the next twenty minutes should go, and the act of judging each answer honestly is a skill in itself, because confidence and accuracy come apart badly under exam conditions.",
           "tip": "Be strict about the middle pile. Anything you got by half-remembering a keyword belongs there, not in the easy stack.",
-          "imageTodo": {
+          "image": {
             "base": "09-three-piles",
             "alt": "Three stacks of index cards dealt out on a grey-green table runner, a hand setting one more card onto the nearest pile beside a kitchen timer and a glass of water."
           }
@@ -130,9 +130,9 @@
           "title": "Spend the session on the cards you missed",
           "body": "Most people review the cards they know, because it feels good. Push the easy pile aside and work the difficult one until those cards move. Come back to the easy pile occasionally, a week or two later, so it does not quietly rot. The goal of a session is not to touch every card; it is to move cards from one pile to a better one.",
           "tip": "Put a small mark in the corner each time a card defeats you. Three marks means the card needs rewriting, not more attempts.",
-          "imageTodo": {
+          "image": {
             "base": "10-work-the-hard-pile",
-            "alt": "A small stack of index cards held together with a rubber band sitting in front of a reader, with a larger stack pushed to the far side of the desk."
+            "alt": "A small rubber-banded stack of index cards with one card propped against it on a kitchen table at night, a larger stack pushed aside near a lamp and a mug."
           }
         }
       ]
@@ -145,7 +145,7 @@
           "title": "Book two short blocks a week per subject",
           "body": "Distributed practice was the other top-rated strategy in Dunlosky's review, and his practical advice is modest: for any given class, two short study blocks per week may be enough to begin new material and to restudy what came before. Put them in the calendar like lectures. Twenty-five minutes twice a week, kept for ten weeks, outperforms the heroic weekend that happens once.",
           "tip": "Pair each block with something already fixed in your week, such as straight after a seminar. Habits attach to other habits more easily than to good intentions.",
-          "imageTodo": {
+          "image": {
             "base": "11-two-blocks-a-week",
             "alt": "A hand marking two small ticks in a week column on a wall planner of empty ruled squares."
           }
@@ -154,16 +154,16 @@
           "title": "Let yourself forget a little between sessions",
           "body": "Rochester's guidance is counter-intuitive and worth taking seriously: let yourself forget a little before trying to retrieve, because forgetting and then remembering is what builds a lasting memory. Reviewing a card an hour after writing it mostly tests your short-term memory. Leave at least a day, then longer gaps as cards get easier, and accept that some will have slipped. That slip is the practice working, not failing.",
           "tip": "Twelve hours of study spread over two weeks beats the same twelve hours in one day. Same effort, different result.",
-          "imageTodo": {
+          "image": {
             "base": "12-let-time-pass",
-            "alt": "A closed wooden card box with paper dividers sitting on a shelf in evening light, next to a small clock and a plant."
+            "alt": "A wooden box of index cards with paper dividers standing on a shelf in evening light, beside a small round clock and a trailing plant."
           }
         },
         {
           "title": "Carry a small stack for dead time",
           "body": "The bus, the queue, the ten minutes before a seminar starts: short gaps suit flashcards better than any other study method, because a single card takes fifteen seconds and nothing is lost if you stop. Band twenty cards together and keep them in a coat pocket. Three of those small sessions in a week add up to a proper review block you did not have to schedule.",
           "tip": "Keep the pocket stack small and current. A brick of two hundred cards never leaves the bag.",
-          "imageTodo": {
+          "image": {
             "base": "13-pocket-stack",
             "alt": "A passenger on a bus holding a banded stack of index cards, the window beside them showing a blurred street."
           }
@@ -270,22 +270,16 @@
     "readingTimeMinutes": 9,
     "wordCount": null,
     "internalLinkCount": 3,
-    "imageCount": 8,
-    "imagePending": 8,
+    "imageCount": 14,
+    "imagePending": 2,
     "expertReviewed": false,
     "reviewNote": "Study-skills guidance based on cognitive psychology research. A teacher or learning-centre specialist should confirm that the summaries of practice testing, interleaving and spacing match the cited sources before publication.",
     "imageNote": "Illustrations are drawn for this guide only."
   },
   "imageStatus": {
     "heroReady": true,
-    "stepImagesReady": 7,
+    "stepImagesReady": 13,
     "stepImagesPending": [
-      "05-make-cards-same-day",
-      "09-three-piles",
-      "10-work-the-hard-pile",
-      "11-two-blocks-a-week",
-      "12-let-time-pass",
-      "13-pocket-stack",
       "14-practise-the-format",
       "15-prune-the-deck"
     ],
