@@ -280,7 +280,6 @@
     "heroReady": false,
     "stepImagesReady": 0,
     "stepImagesPending": [
-      "00-hero",
       "01-choose-what-matters",
       "02-question-on-the-front",
       "03-one-idea-per-card",
