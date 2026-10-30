@@ -22,7 +22,7 @@
 - 缺图稿件无法通过质量检查，因此不打包、不算完成；缺图清单见 `article.json` 的 `imageStatus.stepImagesPending`。未绘制的步骤在 JSON 里用 `imageTodo` 而非 `image`，这是测试强制的约定。
 - `preview/All-Finished-Articles.html`：仓库内成稿目录页，由 `tools/make_preview_index.py` 生成，缺图稿会被拒绝列入。
 - `content/Organize-Medicines-Safely-at-Home/`（Health）：15 步英文稿，16 张插画全部为本文新制，体检 0 error；资料取自 FDA、DEA 与 CDC；素材包 `downloads/Organize-Medicines-Safely-at-Home-Upload.zip`。属 YMYL 居家用药内容，须药师审校，未发布。
-- `content/Pack-a-Personal-Item-for-a-Trip/`（Travel）：15 步英文文字稿已完成，资料取自 TSA 与 FAA；**配图 4/16**（封面 + 步骤 1–3），还缺 12 张。
+- `content/Pack-a-Personal-Item-for-a-Trip/`（Travel）：15 步英文文字稿已完成，资料取自 TSA 与 FAA；**配图 14/16**（封面 + 步骤 1–13），还缺 2 张。
 - 其余 86 篇为选题，尚未完成正文与配图。`expanded-plan.csv` 是进度记录，不要将选题当成成品。
 - `content/Keep-Running-Through-Winter/`：此前制作的旧版 12 步样稿及 13 张插画；其原素材包为 `downloads/Winter-Running-Upload.zip`。公开网站的分类和详情页现已显示该稿，但旧稿不计入本批 15–20 步的新稿目标。
 

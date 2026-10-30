@@ -1,4 +1,4 @@
-> DRAFT — do not publish or package: 12 of 16 illustrations are still missing, and the article has not been reviewed by a person.
+> DRAFT — do not publish or package: 2 of 16 illustrations are still missing, and the article has not been reviewed by a person.
 
 # How to Pack a Personal Item for a Trip
 
@@ -50,7 +50,7 @@ Pack for the version of the day where your cabin bag disappears into the hold at
 
 ### Step 4 — Build the quart-sized liquids bag first
 
-> IMAGE PENDING for step 4: A clear zip-top bag on a bathroom shelf holding several small bottles and a tube, filled roughly two-thirds and lying flat.
+![A hand closing the seal of a clear zip-top bag holding small plain bottles and a tube, standing on a bathroom shelf beside a folded towel.](images/04-liquids-bag-960.webp)
 
 TSA allows one quart-sized bag of liquids, aerosols, gels, creams and pastes per passenger, and every container inside it must hold 3.4 ounces or 100 millilitres or less. The limit is on the container, not on how full it is, so a half-empty 200 millilitre tube is still not allowed. Anything bigger travels in checked baggage. Build this bag before anything else, because it sets how much toiletry you are actually bringing.
 
@@ -58,7 +58,7 @@ TSA allows one quart-sized bag of liquids, aerosols, gels, creams and pastes per
 
 ### Step 5 — Put the liquids bag where you can pull it out in one move
 
-> IMAGE PENDING for step 5: A hand drawing a clear zip bag out of the front pocket of a backpack that is standing upright on an airport bench.
+![Hands drawing a clear zip bag of small bottles out of the front pocket of a backpack standing upright on an airport bench.](images/05-accessible-pocket-960.webp)
 
 TSA asks you to separate the small bag from your other belongings at the checkpoint, and doing so speeds up screening. That only works if the bag is reachable. Put it in the outermost compartment or the top of the main section, never underneath a laptop and a jacket. The thirty seconds you save is less important than not having to unpack the whole bag on a crowded belt.
 
@@ -66,7 +66,7 @@ TSA asks you to separate the small bag from your other belongings at the checkpo
 
 ### Step 6 — Keep medication separate and tell the officer about it
 
-> IMAGE PENDING for step 6: A small fabric pouch unzipped on a table showing boxed tablets and a labelled bottle standing upright, a printed card tucked behind them.
+![Two hands holding open a small fabric pouch containing two medicine cartons and an amber bottle standing upright, with a plain white card tucked behind them.](images/06-medication-pouch-960.webp)
 
 Medications are an exemption from the quart-bag rule, as are infant and child nourishments, so a liquid medicine larger than 100 millilitres can travel with you. Declare it at the checkpoint and expect it to be screened separately. Keep medicines in the under-seat bag in their labelled packaging, and if you take something on a schedule, carry enough for a long delay rather than exactly the number of doses the journey needs.
 
@@ -74,7 +74,7 @@ Medications are an exemption from the quart-bag rule, as are infant and child no
 
 ### Step 7 — Move every spare battery and power bank into this bag
 
-> IMAGE PENDING for step 7: Two power banks and a coiled cable lying on a desk next to an open backpack, a laptop closed in the background.
+![Two power banks and a coiled cable lying on a desk next to an open backpack, a laptop closed in the background.](images/07-power-banks-960.webp)
 
 The FAA is unambiguous: spare lithium batteries, power banks and phone charging cases must travel in carry-on baggage only, never in the hold. The reason is thermal runaway, which can start without warning and which cabin crew are trained to deal with but hold fires are not. This is not an airline preference you can negotiate at the desk. Everything loose and lithium goes in the bag that stays with you.
 
@@ -82,7 +82,7 @@ The FAA is unambiguous: spare lithium batteries, power banks and phone charging 
 
 ### Step 8 — Protect the battery terminals so nothing can short
 
-> IMAGE PENDING for step 8: Fingers pressing a small piece of tape over the end of a cylindrical battery, two more batteries in a clear pouch beside them.
+![Fingers pressing a small piece of tape over the end of a cylindrical battery, two more batteries in a clear pouch beside them.](images/08-tape-terminals-960.webp)
 
 Loose batteries become a hazard when their terminals touch metal, which in a bag means keys, coins and the other battery. The FAA accepts several fixes: leave batteries in their retail packaging, tape over the terminals, use a battery case or sleeve, or put each one snugly in its own plastic bag. Pick one and apply it to every spare you carry, including the small camera cells that are easy to forget.
 
@@ -90,7 +90,7 @@ Loose batteries become a hazard when their terminals touch metal, which in a bag
 
 ### Step 9 — Plan for the gate check before it happens
 
-> IMAGE PENDING for step 9: A traveller crouched at the end of a jet bridge lifting a charger and a pouch out of a wheeled cabin bag into a shoulder bag.
+![A traveller crouched at the end of a jet bridge lifting a charger and a pouch out of a wheeled cabin bag into a shoulder bag.](images/09-gate-check-960.webp)
 
 If the bins fill and your cabin bag is taken at the door, the FAA requires you to remove spare batteries and power banks and keep them with you. That is far easier if they already live in the under-seat bag. Do the same mental run for the laptop, the charger, the documents and the medication: if a bag is pulled away from you at the jet bridge with thirty seconds' notice, nothing you need should be in it.
 
@@ -100,7 +100,7 @@ If the bins fill and your cabin bag is taken at the door, the FAA requires you t
 
 ### Step 10 — Load the heavy flat things against your back
 
-> IMAGE PENDING for step 10: A backpack lying open on its face showing a laptop slid upright into the rear padded panel, a folded jumper waiting alongside.
+![A backpack lying open on its face showing a laptop slid upright into the rear padded panel, a folded jumper waiting alongside.](images/10-heavy-against-back-960.webp)
 
 A laptop, a tablet and a book should sit in the panel closest to your spine, standing upright rather than lying flat. That keeps the weight over your hips instead of hanging off your shoulders, and it stops the bag folding into a wedge that will not slide under a seat. Everything soft goes in front of that panel, where it can compress into whatever space is left.
 
@@ -108,7 +108,7 @@ A laptop, a tablet and a book should sit in the panel closest to your spine, sta
 
 ### Step 11 — Put one change of clothes in, even on a short trip
 
-> IMAGE PENDING for step 11: Rolled t-shirt, socks and underwear tucked into the gaps around a laptop sleeve inside an open backpack on a bed.
+![Rolled t-shirt, socks and underwear tucked into the gaps around a laptop sleeve inside an open backpack on a bed.](images/11-change-of-clothes-960.webp)
 
 A t-shirt, underwear and socks take up about the volume of a loaf of bread and they turn a lost-luggage night from a crisis into an inconvenience. Roll them tightly and push them into the gaps around the harder items rather than giving them their own flat layer. If the trip involves a connection, make it the set you would be happiest to be seen in the next morning.
 
@@ -116,7 +116,7 @@ A t-shirt, underwear and socks take up about the volume of a loaf of bread and t
 
 ### Step 12 — Keep a layer where you can reach it in the seat
 
-> IMAGE PENDING for step 12: A soft knitted jumper folded loosely across the top of a packed backpack, the zip half closed around it.
+![A soft knitted jumper folded loosely across the top of a packed backpack, the zip half closed around it.](images/12-top-layer-960.webp)
 
 Cabins run cold and the bag will be under the seat for most of the flight, so a jumper or a packable jacket should be at the very top or clipped to the outside, not buried. The same goes for a scarf, which works as a blanket, a pillow and a layer depending on the hour. Put it in last so it comes out first.
 
@@ -124,7 +124,7 @@ Cabins run cold and the bag will be under the seat for most of the flight, so a 
 
 ### Step 13 — Carry an empty bottle and fill it after security
 
-> IMAGE PENDING for step 13: A person holding a reusable bottle under a water fountain spout in a bright terminal corridor, a backpack on their shoulder.
+![A person holding a reusable bottle under a water fountain spout in a bright terminal corridor, a backpack on their shoulder.](images/13-water-bottle-960.webp)
 
 An empty bottle passes screening; a full one does not. Fill it at a fountain past the checkpoint and you have avoided both the airside price and the risk of being thirsty through a delay. Choose something that stands up on its own and seals properly, because the under-seat bag will spend the flight pressed against somebody's heel.
 
