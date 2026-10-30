@@ -130,9 +130,9 @@
           "title": "Bring one problem, two at the most",
           "body": "Bring one problem to the table, two at the very most. A meeting that tries to fix everything leaves everyone flattened, and the family quietly learns that these meetings hurt. State the problem as something the household has rather than something a person is: the bathroom runs out of hot water, instead of somebody takes too long in the shower. The rest keeps until next week, and usually looks smaller by then.",
           "tip": "If a problem is really about one child, talk to that child separately. A meeting is a poor place to be singled out.",
-          "imageTodo": {
+          "image": {
             "base": "10-one-problem",
-            "alt": "A parent sitting on a sofa between two children of different ages, all three turned towards each other in a calm conversation."
+            "alt": "A father sitting on a sofa between a teenage boy who is explaining something with an open hand and a younger girl who listens, full bookshelves behind them."
           }
         }
       ]
@@ -145,7 +145,7 @@
           "title": "Ask for solutions before you give yours",
           "body": "Invite the whole family to suggest answers before you offer your own. Parents who brainstorm get better cooperation than parents who announce a rule, because children keep to decisions they helped to make. Hold a clear idea of the outcome you need, then mostly listen and guide. Give young children something to do with their hands, such as paper and crayons on the floor, since many of them talk more freely while they are drawing.",
           "tip": "Write down the silly suggestions too. Taking them seriously for ten seconds is what keeps the sensible ones coming.",
-          "imageTodo": {
+          "image": {
             "base": "11-ask-for-solutions",
             "alt": "A young child kneeling at a low table drawing with crayons while two adults talk behind her on the sofa."
           }
@@ -154,16 +154,16 @@
           "title": "Write the decision down where it can be seen",
           "body": "Record the decision and put it somewhere everybody passes. Memory is not neutral: a week later each person remembers the version that suited them, and the argument starts again. A line in the family notebook, or a sheet on the fridge door, settles it. Write what was decided, who is doing it and when it starts. Three short things are enough, and minutes of the whole meeting are not.",
           "tip": "Keep the notebook in the same drawer every week. A record nobody can find is the same as no record.",
-          "imageTodo": {
+          "image": {
             "base": "12-write-it-down",
-            "alt": "A hand pressing a plain sheet of paper onto a fridge door under a round magnet, with a second magnet held ready."
+            "alt": "A hand pressing a small sheet of handwritten notes onto a pale fridge door with a round red magnet, while the other hand holds a second magnet ready."
           }
         },
         {
           "title": "End on something everyone likes",
           "body": "Finish with a treat. A short game, a pudding nobody had to earn, a few songs, or a plan for Saturday: the point is that the meeting ends in good feeling rather than on the hardest item. Children who associate the table with dessert and a game come back willingly. This is also why the treat belongs at the end, after the business, instead of being offered as a bribe at the start.",
           "tip": "Let a different person choose the treat each week. It is the easiest job to hand over and children take it seriously.",
-          "imageTodo": {
+          "image": {
             "base": "13-end-with-a-treat",
             "alt": "A family of four playing a simple board game at the same table, laughing as a child moves a wooden counter, with a plate of sliced cake nearby."
           }
@@ -172,18 +172,18 @@
           "title": "Check last week's decisions at the start of the next one",
           "body": "Open the following meeting by reading out what was decided last time and asking how it went. Did the new washing-up rota survive? Did anybody get stranded? Checking back is what turns a pleasant conversation into a working system, and it shows children that what they said in the meeting changed the real week. Keep the decisions that worked and take the rest back to the table.",
           "tip": "Mark the ones that worked with a tick rather than re-reading them aloud. The list should get shorter as things settle.",
-          "imageTodo": {
+          "image": {
             "base": "14-check-back",
-            "alt": "A parent and a teenager leaning over an open notebook on the table, the parent's pencil resting beside a line of ticks."
+            "alt": "A mother and her teenage son leaning over an open notebook on a kitchen table, a column of ticks down the page and a pencil lying beside it."
           }
         },
         {
           "title": "Redesign the meeting as the family changes",
           "body": "Expect to rebuild the format over time. Shorten the meeting when attention runs out, move to a monthly slot if the household is mostly adults, and hold it on a walk or a car journey if the table feels too formal for teenagers. The structure is a tool, not a ritual to be defended. Only three things are worth protecting: that it happens, that everyone can speak, and that decisions are written down.",
           "tip": "If the meeting has been skipped three times, the format is wrong rather than the family. Change the time before you give it up.",
-          "imageTodo": {
+          "image": {
             "base": "15-walk-and-talk",
-            "alt": "A family of four walking together along a park path in autumn, two of them turned towards each other in conversation."
+            "alt": "A family of four walking along a leaf-covered path through an autumn park, two adults talking as they walk, the youngest running ahead and a dog on a lead."
           }
         }
       ]
@@ -270,23 +270,16 @@
     "wordCount": null,
     "internalLinkCount": 3,
     "imageCount": 16,
-    "imagePending": 6,
+    "imagePending": 0,
     "expertReviewed": false,
     "reviewNote": "Family-communication guidance. A suitably qualified human reviewer should check the advice on involving children, handling conflict and the wording on household safety before publication. Families dealing with abuse, violence or a safeguarding concern need professional support rather than a household meeting, and the article must point them there clearly.",
     "imageNote": "Illustrations are drawn for this guide only."
   },
   "imageStatus": {
     "heroReady": true,
-    "stepImagesReady": 9,
-    "stepImagesPending": [
-      "10-one-problem",
-      "11-ask-for-solutions",
-      "12-write-it-down",
-      "13-end-with-a-treat",
-      "14-check-back",
-      "15-walk-and-talk"
-    ],
-    "note": "10 of 16 illustrations drawn. 6 still outstanding; the guide cannot be packaged or published until every one is present."
+    "stepImagesReady": 15,
+    "stepImagesPending": [],
+    "note": "All illustrations were drawn for this guide; none are reused from another article."
   },
   "dateModified": "2026-10-30"
 }

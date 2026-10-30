@@ -1,5 +1,3 @@
-> DRAFT — do not publish or package: 6 of 16 illustrations are still missing, and the article has not been reviewed by a person.
-
 # How to Hold a Family Meeting
 
 *A short, repeatable meeting that plans the week, settles one argument at a time and gives every person in the house a turn to speak.*
@@ -98,7 +96,7 @@ Spend a few minutes on the coming week. Go round the table and let each person s
 
 ### Step 10 — Bring one problem, two at the most
 
-> IMAGE PENDING for step 10: A parent sitting on a sofa between two children of different ages, all three turned towards each other in a calm conversation.
+![A father sitting on a sofa between a teenage boy who is explaining something with an open hand and a younger girl who listens, full bookshelves behind them.](images/10-one-problem-960.webp)
 
 Bring one problem to the table, two at the very most. A meeting that tries to fix everything leaves everyone flattened, and the family quietly learns that these meetings hurt. State the problem as something the household has rather than something a person is: the bathroom runs out of hot water, instead of somebody takes too long in the shower. The rest keeps until next week, and usually looks smaller by then.
 
@@ -108,7 +106,7 @@ Bring one problem to the table, two at the very most. A meeting that tries to fi
 
 ### Step 11 — Ask for solutions before you give yours
 
-> IMAGE PENDING for step 11: A young child kneeling at a low table drawing with crayons while two adults talk behind her on the sofa.
+![A young child kneeling at a low table drawing with crayons while two adults talk behind her on the sofa.](images/11-ask-for-solutions-960.webp)
 
 Invite the whole family to suggest answers before you offer your own. Parents who brainstorm get better cooperation than parents who announce a rule, because children keep to decisions they helped to make. Hold a clear idea of the outcome you need, then mostly listen and guide. Give young children something to do with their hands, such as paper and crayons on the floor, since many of them talk more freely while they are drawing.
 
@@ -116,7 +114,7 @@ Invite the whole family to suggest answers before you offer your own. Parents wh
 
 ### Step 12 — Write the decision down where it can be seen
 
-> IMAGE PENDING for step 12: A hand pressing a plain sheet of paper onto a fridge door under a round magnet, with a second magnet held ready.
+![A hand pressing a small sheet of handwritten notes onto a pale fridge door with a round red magnet, while the other hand holds a second magnet ready.](images/12-write-it-down-960.webp)
 
 Record the decision and put it somewhere everybody passes. Memory is not neutral: a week later each person remembers the version that suited them, and the argument starts again. A line in the family notebook, or a sheet on the fridge door, settles it. Write what was decided, who is doing it and when it starts. Three short things are enough, and minutes of the whole meeting are not.
 
@@ -124,7 +122,7 @@ Record the decision and put it somewhere everybody passes. Memory is not neutral
 
 ### Step 13 — End on something everyone likes
 
-> IMAGE PENDING for step 13: A family of four playing a simple board game at the same table, laughing as a child moves a wooden counter, with a plate of sliced cake nearby.
+![A family of four playing a simple board game at the same table, laughing as a child moves a wooden counter, with a plate of sliced cake nearby.](images/13-end-with-a-treat-960.webp)
 
 Finish with a treat. A short game, a pudding nobody had to earn, a few songs, or a plan for Saturday: the point is that the meeting ends in good feeling rather than on the hardest item. Children who associate the table with dessert and a game come back willingly. This is also why the treat belongs at the end, after the business, instead of being offered as a bribe at the start.
 
@@ -132,7 +130,7 @@ Finish with a treat. A short game, a pudding nobody had to earn, a few songs, or
 
 ### Step 14 — Check last week's decisions at the start of the next one
 
-> IMAGE PENDING for step 14: A parent and a teenager leaning over an open notebook on the table, the parent's pencil resting beside a line of ticks.
+![A mother and her teenage son leaning over an open notebook on a kitchen table, a column of ticks down the page and a pencil lying beside it.](images/14-check-back-960.webp)
 
 Open the following meeting by reading out what was decided last time and asking how it went. Did the new washing-up rota survive? Did anybody get stranded? Checking back is what turns a pleasant conversation into a working system, and it shows children that what they said in the meeting changed the real week. Keep the decisions that worked and take the rest back to the table.
 
@@ -140,7 +138,7 @@ Open the following meeting by reading out what was decided last time and asking 
 
 ### Step 15 — Redesign the meeting as the family changes
 
-> IMAGE PENDING for step 15: A family of four walking together along a park path in autumn, two of them turned towards each other in conversation.
+![A family of four walking along a leaf-covered path through an autumn park, two adults talking as they walk, the youngest running ahead and a dog on a lead.](images/15-walk-and-talk-960.webp)
 
 Expect to rebuild the format over time. Shorten the meeting when attention runs out, move to a monthly slot if the household is mostly adults, and hold it on a walk or a car journey if the table feels too formal for teenagers. The structure is a tool, not a ritual to be defended. Only three things are worth protecting: that it happens, that everyone can speak, and that decisions are written down.
 
