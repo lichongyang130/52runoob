@@ -20,6 +20,7 @@ sys.path.insert(0, str(ROOT / "tools"))
 import check_article  # noqa: E402
 import package_article
 import package_bundle  # noqa: E402
+import package_increment  # noqa: E402
 import make_preview_index  # noqa: E402
 import render_article  # noqa: E402
 
@@ -323,6 +324,55 @@ class InventoryTests(unittest.TestCase):
             else:
                 self.assertTrue(article.exists(), f"{slug} is marked {row['status']} without a draft")
                 self.assertTrue(row["notes"].strip(), f"{slug} needs a progress note")
+
+
+class IncrementPackageTests(unittest.TestCase):
+    """增量包只装新增篇目，目录页却要列出服务器上最终会有的全部篇目。"""
+
+    NEW = ["Care-for-Dry-Hands", "Prepare-for-a-One-on-One-Meeting"]
+    OLD = ["Run-Your-First-5K", "Hold-a-Family-Meeting"]
+
+    def _build(self):
+        tmp = tempfile.TemporaryDirectory()
+        self.addCleanup(tmp.cleanup)
+        out = Path(tmp.name) / "add-on.zip"
+        new = [str(ROOT / "content" / s / "article.json") for s in self.NEW]
+        every = [str(ROOT / "content" / s / "article.json") for s in self.OLD + self.NEW]
+        package_increment.build_increment(new, every, out)
+        return out
+
+    def test_only_new_articles_are_carried_but_index_lists_all(self):
+        with contextlib.redirect_stdout(io.StringIO()):
+            out = self._build()
+        with ZipFile(out) as archive:
+            names = archive.namelist()
+            index = archive.read("index.html").decode("utf-8")
+        folders = {name.split("/")[0] for name in names if "/" in name}
+        self.assertEqual(folders, set(self.NEW), "增量包只应携带新增篇目的文件夹")
+        self.assertEqual(len(names), len(self.NEW) * 35 + 2, "每篇 35 个条目，外加目录页与中文说明")
+        for slug in self.OLD + self.NEW:
+            self.assertIn(f'href="{slug}/index.html"', index, f"目录页漏了 {slug}")
+        self.assertEqual(index.count('class="card"'), len(self.OLD + self.NEW))
+
+    def test_carried_folders_match_the_standalone_packages(self):
+        with contextlib.redirect_stdout(io.StringIO()):
+            out = self._build()
+            single = Path(out).with_name("single.zip")
+            package_article.build_package(ROOT / "content" / self.NEW[0] / "article.json", single)
+        with ZipFile(out) as bundle, ZipFile(single) as one:
+            for name in one.namelist():
+                self.assertEqual(bundle.read(name), one.read(name), f"{name} 与单篇包不一致")
+
+    def test_new_article_missing_from_the_index_list_is_rejected(self):
+        new = [str(ROOT / "content" / self.NEW[0] / "article.json")]
+        every = [str(ROOT / "content" / s / "article.json") for s in self.OLD]
+        tmp = tempfile.TemporaryDirectory()
+        self.addCleanup(tmp.cleanup)
+        out = Path(tmp.name) / "broken.zip"
+        with self.assertRaises(SystemExit):
+            with contextlib.redirect_stdout(io.StringIO()):
+                package_increment.build_increment(new, every, out)
+        self.assertFalse(out.exists(), "校验失败时不应留下半成品压缩包")
 
 
 class RendererRobustnessTests(unittest.TestCase):
