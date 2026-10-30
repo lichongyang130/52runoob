@@ -1,5 +1,3 @@
-> DRAFT — do not publish or package: 6 of 16 illustrations are still missing, and the article has not been reviewed by a person.
-
 # How to Begin a Watercolor Sketchbook
 
 *A small kit, four basic marks and a fifteen-minute habit: how to start a watercolor sketchbook you will actually keep filling.*
@@ -98,7 +96,7 @@ Watercolor is semi-transparent, so the white of the paper is what gives a painti
 
 ### Step 10 — Wait for each layer to dry
 
-> IMAGE PENDING for step 10: An open sketchbook standing on a windowsill to dry in the sun, a hand hovering with the back of one finger close to the painted page.
+![An open sketchbook standing on a windowsill to dry in the sun, a hand hovering with the back of one finger close to the painted page.](images/10-let-it-dry-960.webp)
 
 Most spoiled pages are spoiled by impatience. A second wash laid onto a half-dry first one lifts the colour underneath and leaves a cauliflower-shaped bloom. Touch the back of a finger to the page: if it feels cool, water is still evaporating and the page is not ready. Use the waiting time to mix the next colour, sharpen the pencil or start a second small study on the facing page.
 
@@ -108,7 +106,7 @@ Most spoiled pages are spoiled by impatience. A second wash laid onto a half-dry
 
 ### Step 11 — Paint for fifteen minutes, not for a masterpiece
 
-> IMAGE PENDING for step 11: A person at a cafe table painting a quick study of the cup in front of them in a small sketchbook, coat still on.
+![A person at a cafe table painting a quick study of the cup in front of them in a small sketchbook, coat still on.](images/11-fifteen-minutes-960.webp)
 
 Set a small target: one subject, fifteen minutes, one page. Short sessions beat occasional long ones because they are easy to start and they leave you wanting to continue. Paint what is in front of you rather than planning something worthy: a mug, a window ledge, the corner of a room. A book filled with fifty quick studies teaches far more than three careful paintings and a hundred blank pages.
 
@@ -116,7 +114,7 @@ Set a small target: one subject, fifteen minutes, one page. Short sessions beat 
 
 ### Step 12 — Take the book outside
 
-> IMAGE PENDING for step 12: A woman painting on a folding stool in the shade of a tree, her sketchbook pages held down with a clip and a water cup beside her foot.
+![A woman painting on a folding stool in the shade of a tree, her sketchbook pages held down with a clip and a water cup beside her foot.](images/12-paint-outside-960.webp)
 
 Outdoors is where sketchbooks earn their keep, and it needs only a little planning. Sit in shade so the page is not dazzling and the wash does not dry before you can move it, clip the pages against wind, and keep the water where you cannot kick it over. Work small outside; a half page finished beats a full page abandoned when the light changes or it starts to rain.
 
@@ -124,7 +122,7 @@ Outdoors is where sketchbooks earn their keep, and it needs only a little planni
 
 ### Step 13 — Write the notes in pencil, not ink
 
-> IMAGE PENDING for step 13: A hand writing short pencil notes in the bottom corner of a painted sketchbook page resting on a hard wooden board.
+![A hand writing short pencil notes in the bottom corner of a painted sketchbook page resting on a hard wooden board.](images/13-pencil-notes-960.webp)
 
 Add the date, the place and the weather in a corner of each page. The notes turn a pile of studies into a record you can learn from, because you can see what you painted in flat light and what you painted in sun. Conservation guidance for works on paper is to use pencil rather than ink for any inscription, and to write only when the paper is on a hard surface so the writing is not embossed through.
 
@@ -132,7 +130,7 @@ Add the date, the place and the weather in a corner of each page. The notes turn
 
 ### Step 14 — Keep hands and page clean
 
-> IMAGE PENDING for step 14: Hands being dried on a folded cloth beside an open sketchbook, a mug of tea standing well back on the far side of the table.
+![Hands being dried on a folded cloth beside an open sketchbook, a mug of tea standing well back on the far side of the table.](images/14-clean-hands-960.webp)
 
 Handle the book with clean, dry hands and keep food and drink away from it, which is standard practice for anything on paper. Grease from fingers and splashes of coffee are permanent in a way that a bad painting is not. Let a page dry completely before closing the book, dry your hands on a cloth kept for the purpose, and avoid tape, rubber bands and paper clips, all of which mark and tear paper over time.
 
@@ -140,7 +138,7 @@ Handle the book with clean, dry hands and keep food and drink away from it, whic
 
 ### Step 15 — Store the finished book cool, dry and out of the light
 
-> IMAGE PENDING for step 15: A hand sliding a closed sketchbook into a plain archive box on a shelf in a cool hallway, well away from a bright window.
+![A hand sliding a closed sketchbook into a plain archive box on a shelf in a cool hallway, well away from a bright window.](images/15-store-the-book-960.webp)
 
 Watercolor pigments fade, and paper yellows and becomes brittle. Store finished books somewhere cool and relatively dry, around thirty-five percent relative humidity, away from radiators and vents, and out of direct or intense light. Avoid attics and basements, where leaks and swings in temperature do the damage. If you want to keep a page for decades, an acid-free folder or box is a cheap insurance policy.
 
