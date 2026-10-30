@@ -1,5 +1,3 @@
-> DRAFT — do not publish or package: 6 of 16 illustrations are still missing, and the article has not been reviewed by a person.
-
 # How to Build a Dog Walking Routine
 
 *Turn ad-hoc dog walks into a routine that fits your week, builds your dog's fitness gradually and stays safe in heat, ice and traffic.*
@@ -98,7 +96,7 @@ Put the walks where they will survive a bad day: after the alarm, before dinner,
 
 ### Step 10 — Change the route when enthusiasm drops
 
-> IMAGE PENDING for step 10: A dog jumping down from the open boot of an estate car at the edge of a park while a person holds the lead ready.
+![A black-and-tan dog jumping down from the open tailgate of a plain estate car parked on grass at the edge of a park, while a woman stands beside it holding the lead ready.](images/10-new-route-960.webp)
 
 If your dog keeps steering for home, the route has gone stale. Drive to a nearby park or a less familiar area and walk there instead, or simply run the usual loop in reverse. Choose safe footing: avoid very uneven ground, sand, holes, broken glass and places where loose dogs or wildlife are common. A new smell map restores interest faster than any amount of encouragement on the old one.
 
@@ -108,7 +106,7 @@ If your dog keeps steering for home, the route has gone stale. Drive to a nearby
 
 ### Step 11 — Test the ground before summer walks
 
-> IMAGE PENDING for step 11: A person crouching to press the back of one hand flat against a sunlit pavement while a dog waits in the shade of a hedge behind.
+![A hand resting upside down on sunlit paving slabs, palm facing the sky and fingers curled upward so only the back of the hand touches the hot stone, with a dog waiting in the shade behind.](images/11-pavement-test-960.webp)
 
 Hot pavements, roads and other surfaces burn paw pads. Press the back of your hand flat on the surface before you set off; if you cannot hold it there comfortably, the dog should not be standing on it. Walk on grass or shaded paths instead, and move the whole routine to the cooler hours of the day in warm weather. If it feels hot to you, it is considerably hotter down at the dog's level.
 
@@ -116,7 +114,7 @@ Hot pavements, roads and other surfaces burn paw pads. Press the back of your ha
 
 ### Step 12 — Carry water and take breaks in the heat
 
-> IMAGE PENDING for step 12: A person pouring water from a bottle into a collapsible bowl in the shade of a large tree while a dog waits with its tongue out.
+![A person pouring water from a bottle into a collapsible bowl in the shade of a large tree while a dog waits with its tongue out.](images/12-water-break-960.webp)
 
 Bring enough water for both of you and stop often. Short-nosed and overweight dogs struggle most in warm weather and need shorter walks and more rests. Learn the signs of heat stress: unusual anxiety or weakness, heavy panting, excessive drooling, discoloured or sticky gums, unsteadiness. Heat stress can progress to heat stroke and death without immediate veterinary care, so stop, cool the dog and call the vet rather than finishing the loop.
 
@@ -124,7 +122,7 @@ Bring enough water for both of you and stop often. Short-nosed and overweight do
 
 ### Step 13 — Shorten and kit up in cold weather
 
-> IMAGE PENDING for step 13: A person crouching on a snowy path to lift and check the paw of a dog wearing a quilted coat, breath visible in the cold air.
+![A person crouching on a snowy path to lift and check the paw of a dog wearing a quilted coat, breath visible in the cold air.](images/13-winter-paws-960.webp)
 
 Cold tolerance varies with coat, size, body condition, age and health, and very cold days usually mean shorter walks for both of you. Small, thin-coated, very young and very old dogs feel it first. A coat helps a short-haired dog, and a dry one should go on each time, because a damp coat makes the dog colder. Boots protect against sharp ice and frozen ground. Stay well away from frozen ponds and lakes.
 
@@ -132,7 +130,7 @@ Cold tolerance varies with coat, size, body condition, age and health, and very 
 
 ### Step 14 — Wipe the dog down when you get home
 
-> IMAGE PENDING for step 14: A person kneeling on a doormat just inside a front door, wiping a dog's front paw with a worn towel.
+![A woman kneeling on a doormat inside an open front door, holding a wet dog's front paw and wiping it with a white cloth, wet pawprints across the tiles behind.](images/14-wipe-down-960.webp)
 
 Feet, legs and bellies pick things up: grit, de-icing salt, antifreeze and lawn chemicals. Dogs then lick it off, which is how a walk becomes a poisoning. Wipe or wash the paws, legs and underside at the door, and keep the towel with the walking kit so it is always there. Check the pads at the same time for cracks, cuts, bleeding or anything wedged between the toes.
 
@@ -140,7 +138,7 @@ Feet, legs and bellies pick things up: grit, de-icing salt, antifreeze and lawn 
 
 ### Step 15 — Pick up, bin it, and wash your hands
 
-> IMAGE PENDING for step 15: A pair of hands being washed with soap under a running kitchen tap while a dog lies watching in the doorway behind.
+![A pair of hands lathered with soap under a running kitchen tap beside a plain unlabelled pump bottle, with a dog lying on the floor behind in the soft-focus background.](images/15-wash-hands-960.webp)
 
 Clean up every time, with a bag or scooper, and put it in a bin rather than a hedge. Dog waste can carry parasites and germs, including roundworms and hookworms, which is also why children should be kept away from ground that may be contaminated. Wash your hands with soap and running water after handling waste, the dog, bowls or toys, and use sanitiser when a tap is not available.
 
