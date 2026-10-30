@@ -130,9 +130,9 @@
           "title": "Treat your hands overnight",
           "body": "Sleep is eight uninterrupted hours with no washing, no keyboard and no housework, which makes it the best repair window you have. Spread a thick layer of plain petrolatum over clean hands, paying attention to cracks and nail folds, then pull on clean cotton gloves. The CDC page recommends exactly this combination of a thick moisturiser under cotton gloves for people whose hands are suffering.",
           "tip": "A pair of thin cotton gloves costs very little and can be washed. Old socks work for one night but trap heat.",
-          "imageTodo": {
+          "image": {
             "base": "10-overnight-gloves",
-            "alt": "A person sitting on the edge of a bed in lamplight, pulling a white cotton glove onto a freshly creamed hand, a jar standing on the bedside table."
+            "alt": "A woman in pyjamas sitting on the edge of a bed in lamplight, pulling a thin white cotton glove onto a freshly creamed hand, the second glove on the duvet beside her and an open jar on the bedside table."
           }
         }
       ]
@@ -145,34 +145,34 @@
           "title": "Wear gloves for the washing-up",
           "body": "Water itself is an irritant when the exposure is long enough, and detergents strip oils faster than hand soap does. Both the AAD and the CDC name dishwashing as the household task most worth gloving for. Buy a pair a size larger than you think you need so your hands slide in and out easily, and dry the insides between uses so they do not become damp all over again.",
           "tip": "If gloves make your hands sweat, wear a thin cotton liner inside them and swap the liner when it feels wet.",
-          "imageTodo": {
+          "image": {
             "base": "11-dish-gloves",
-            "alt": "Yellow rubber gloves being worn to wash a pan in a kitchen sink full of suds, with a drying rack of clean dishes alongside."
+            "alt": "Yellow rubber gloves washing a pan with a wooden brush in a kitchen sink full of suds, a drying rack of clean plates alongside and plain bottles with blank labels on the worktop behind."
           }
         },
         {
           "title": "Glove up for cleaning products and the garden",
           "body": "Cleaning agents, solvents and soil all belong on the irritant list, and NIOSH notes that contact dermatitis accounts for an estimated ninety to ninety-five per cent of occupational skin disease in the United States. Keep a separate sturdy pair for the garden and for anything dusty or abrasive. Wash your hands after you take the gloves off, then moisturise, because the inside of a glove is a warm, damp place.",
           "tip": "If you react to rubber gloves themselves, that may be an allergy to glove materials rather than to the task. Ask a dermatologist about patch testing.",
-          "imageTodo": {
+          "image": {
             "base": "12-garden-gloves",
-            "alt": "A pair of hands pulling on sturdy canvas gardening gloves beside a tray of seedlings and a small trowel on a potting bench."
+            "alt": "A pair of hands pulling on sturdy canvas gardening gloves at a potting bench beside a tray of green seedlings, a trowel and a clay pot of soil."
           }
         },
         {
           "title": "Cover your hands in cold, dry air",
           "body": "Winter air holds little moisture, and the heating indoors holds even less, which is why hands that cope all summer split in January. Treat gloves as outdoor clothing rather than as an accessory for very cold days only. Put cream on before you go out and let it absorb for a minute, then wear gloves that cover the wrists as well, because the skin there chaps quietly.",
           "tip": "Keep a spare pair in your coat pocket from autumn onwards. Hands get cold on the days you did not plan for.",
-          "imageTodo": {
+          "image": {
             "base": "13-cold-weather-gloves",
-            "alt": "A person on a cold street in a scarf and coat pulling on a woollen glove, breath visible in the air and bare trees behind."
+            "alt": "A man in a coat and scarf on a frosty pavement pulling a woollen glove onto one hand, his breath visible in the cold air with bare trees behind him."
           }
         },
         {
           "title": "Add moisture to the air you sleep in",
           "body": "A humidifier in the bedroom raises the humidity of the air against your skin for a third of the day, and the AAD lists it among its standard recommendations for dry skin. A small portable unit beside the bed is enough. Clean it on the schedule in its manual, every few days for most models, because a neglected humidifier grows mould and blows it around the room.",
           "tip": "If the windows stream with condensation in the morning, the room is too humid. Turn the unit down a setting.",
-          "imageTodo": {
+          "image": {
             "base": "14-humidifier",
             "alt": "A small humidifier releasing a soft plume of mist on a bedside table beside a lamp and a folded blanket in a quiet bedroom."
           }
@@ -181,7 +181,7 @@
           "title": "Know when this stops being dry skin",
           "body": "Cracks that bleed, itching, burning, blisters, crusting or a rash that keeps returning point to hand dermatitis rather than ordinary dryness, and the symptoms often need prescription treatment. Patch testing is how a specialist separates an irritant reaction from a true allergy. See a board-certified dermatologist if home care has not helped after a few weeks, or sooner if your hands hurt enough to interfere with work or sleep.",
           "tip": "Take photographs of your hands at their worst. Skin often looks calmer in a waiting room than it did at six in the morning.",
-          "imageTodo": {
+          "image": {
             "base": "15-see-a-dermatologist",
             "alt": "A clinician in a bright consulting room examining a patient's open palms under a small examination lamp, both seated at a table."
           }
@@ -281,24 +281,17 @@
     "readingTimeMinutes": 9,
     "wordCount": null,
     "internalLinkCount": 4,
-    "imageCount": 10,
-    "imagePending": 6,
+    "imageCount": 16,
+    "imagePending": 0,
     "expertReviewed": false,
     "reviewNote": "YMYL skin-health content. A board-certified dermatologist should verify the product guidance, the sanitiser-versus-soap comparison and the escalation advice before publication.",
     "imageNote": "Illustrations are drawn for this guide only."
   },
   "imageStatus": {
     "heroReady": true,
-    "stepImagesReady": 9,
-    "stepImagesPending": [
-      "10-overnight-gloves",
-      "11-dish-gloves",
-      "12-garden-gloves",
-      "13-cold-weather-gloves",
-      "14-humidifier",
-      "15-see-a-dermatologist"
-    ],
-    "note": "Illustrations in progress for this guide."
+    "stepImagesReady": 15,
+    "stepImagesPending": [],
+    "note": "All illustrations were drawn for this guide; none are reused from another article."
   },
   "dateModified": "2026-10-30"
 }

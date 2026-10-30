@@ -1,5 +1,3 @@
-> DRAFT — do not publish or package: 6 of 16 illustrations are still missing, and the article has not been reviewed by a person.
-
 # How to Care for Dry Hands
 
 *Cooler water, damp skin and a tube within reach: fifteen small changes that let you keep washing your hands without the cracking.*
@@ -98,7 +96,7 @@ This surprises people. According to the dermatologists writing for the CDC, alco
 
 ### Step 10 — Treat your hands overnight
 
-> IMAGE PENDING for step 10: A person sitting on the edge of a bed in lamplight, pulling a white cotton glove onto a freshly creamed hand, a jar standing on the bedside table.
+![A woman in pyjamas sitting on the edge of a bed in lamplight, pulling a thin white cotton glove onto a freshly creamed hand, the second glove on the duvet beside her and an open jar on the bedside table.](images/10-overnight-gloves-960.webp)
 
 Sleep is eight uninterrupted hours with no washing, no keyboard and no housework, which makes it the best repair window you have. Spread a thick layer of plain petrolatum over clean hands, paying attention to cracks and nail folds, then pull on clean cotton gloves. The CDC page recommends exactly this combination of a thick moisturiser under cotton gloves for people whose hands are suffering.
 
@@ -108,7 +106,7 @@ Sleep is eight uninterrupted hours with no washing, no keyboard and no housework
 
 ### Step 11 — Wear gloves for the washing-up
 
-> IMAGE PENDING for step 11: Yellow rubber gloves being worn to wash a pan in a kitchen sink full of suds, with a drying rack of clean dishes alongside.
+![Yellow rubber gloves washing a pan with a wooden brush in a kitchen sink full of suds, a drying rack of clean plates alongside and plain bottles with blank labels on the worktop behind.](images/11-dish-gloves-960.webp)
 
 Water itself is an irritant when the exposure is long enough, and detergents strip oils faster than hand soap does. Both the AAD and the CDC name dishwashing as the household task most worth gloving for. Buy a pair a size larger than you think you need so your hands slide in and out easily, and dry the insides between uses so they do not become damp all over again.
 
@@ -116,7 +114,7 @@ Water itself is an irritant when the exposure is long enough, and detergents str
 
 ### Step 12 — Glove up for cleaning products and the garden
 
-> IMAGE PENDING for step 12: A pair of hands pulling on sturdy canvas gardening gloves beside a tray of seedlings and a small trowel on a potting bench.
+![A pair of hands pulling on sturdy canvas gardening gloves at a potting bench beside a tray of green seedlings, a trowel and a clay pot of soil.](images/12-garden-gloves-960.webp)
 
 Cleaning agents, solvents and soil all belong on the irritant list, and NIOSH notes that contact dermatitis accounts for an estimated ninety to ninety-five per cent of occupational skin disease in the United States. Keep a separate sturdy pair for the garden and for anything dusty or abrasive. Wash your hands after you take the gloves off, then moisturise, because the inside of a glove is a warm, damp place.
 
@@ -124,7 +122,7 @@ Cleaning agents, solvents and soil all belong on the irritant list, and NIOSH no
 
 ### Step 13 — Cover your hands in cold, dry air
 
-> IMAGE PENDING for step 13: A person on a cold street in a scarf and coat pulling on a woollen glove, breath visible in the air and bare trees behind.
+![A man in a coat and scarf on a frosty pavement pulling a woollen glove onto one hand, his breath visible in the cold air with bare trees behind him.](images/13-cold-weather-gloves-960.webp)
 
 Winter air holds little moisture, and the heating indoors holds even less, which is why hands that cope all summer split in January. Treat gloves as outdoor clothing rather than as an accessory for very cold days only. Put cream on before you go out and let it absorb for a minute, then wear gloves that cover the wrists as well, because the skin there chaps quietly.
 
@@ -132,7 +130,7 @@ Winter air holds little moisture, and the heating indoors holds even less, which
 
 ### Step 14 — Add moisture to the air you sleep in
 
-> IMAGE PENDING for step 14: A small humidifier releasing a soft plume of mist on a bedside table beside a lamp and a folded blanket in a quiet bedroom.
+![A small humidifier releasing a soft plume of mist on a bedside table beside a lamp and a folded blanket in a quiet bedroom.](images/14-humidifier-960.webp)
 
 A humidifier in the bedroom raises the humidity of the air against your skin for a third of the day, and the AAD lists it among its standard recommendations for dry skin. A small portable unit beside the bed is enough. Clean it on the schedule in its manual, every few days for most models, because a neglected humidifier grows mould and blows it around the room.
 
@@ -140,7 +138,7 @@ A humidifier in the bedroom raises the humidity of the air against your skin for
 
 ### Step 15 — Know when this stops being dry skin
 
-> IMAGE PENDING for step 15: A clinician in a bright consulting room examining a patient's open palms under a small examination lamp, both seated at a table.
+![A clinician in a bright consulting room examining a patient's open palms under a small examination lamp, both seated at a table.](images/15-see-a-dermatologist-960.webp)
 
 Cracks that bleed, itching, burning, blisters, crusting or a rash that keeps returning point to hand dermatitis rather than ordinary dryness, and the symptoms often need prescription treatment. Patch testing is how a specialist separates an irritant reaction from a true allergy. See a board-certified dermatologist if home care has not helped after a few weeks, or sooner if your hands hurt enough to interfere with work or sleep.
 
