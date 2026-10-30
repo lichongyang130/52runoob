@@ -130,9 +130,9 @@
           "title": "Send the agenda a day ahead",
           "body": "Working Knowledge recommends sending the list roughly twenty-four hours before the meeting, and saying plainly if the other person needs to read or bring something. Keep it to a handful of bullet points in the body of a message, not an attachment. Close by asking what they would like to add. That single question turns your list into a shared agenda and gives your manager room for the topics they were saving.",
           "tip": "Send it at the end of the working day before. A morning agenda often arrives after your manager has already planned the conversation.",
-          "imageTodo": {
+          "image": {
             "base": "10-send-the-agenda",
-            "alt": "A person at a home desk in lamplight with one hand on a laptop trackpad, the screen showing four short grey bars, and a phone face down beside the keyboard."
+            "alt": "A woman at a home desk in lamplight, hands at a laptop keyboard with the screen showing four short grey bars, a phone face down and a mug beside her, and a dark window behind."
           }
         }
       ]
@@ -145,7 +145,7 @@
           "title": "Arrive five minutes early and clear the decks",
           "body": "Walk in with the notebook, the agenda and nothing else running. Close the other tabs, silence the notifications on both your phone and your laptop, and leave the unrelated work where it is. If the meeting is remote, open the call early enough to check that the camera, the microphone and the light are all behaving, and sit where the window is to the side of you rather than behind.",
           "tip": "A laptop raised on a couple of books puts the camera at eye level. It costs nothing and removes the upward angle that makes remote conversations feel oddly adversarial.",
-          "imageTodo": {
+          "image": {
             "base": "11-arrive-early",
             "alt": "A woman setting a notebook and a mug down on the table of a small glass-walled meeting room, pulling out a chair, with soft daylight from the window."
           }
@@ -154,36 +154,36 @@
           "title": "Open with a check-in and one good thing",
           "body": "The first two minutes are not filler. Working Knowledge treats personal connection as a legitimate part of the agenda and suggests bookending hard topics with easier ones, so nobody leaves the room deflated. Start with a short human check-in, then one thing that went well since you last spoke, then move into the list. A single concrete win also quietly answers the question managers rarely ask directly.",
           "tip": "Make the win specific and small. \"The new checklist cut the handover to ten minutes\" lands better than \"things are going well\".",
-          "imageTodo": {
+          "image": {
             "base": "12-open-with-a-win",
-            "alt": "Two colleagues sitting at a small round table with mugs, both relaxed and smiling at the start of a conversation, a closed notebook between them."
+            "alt": "Two colleagues sitting at a small round table and smiling at the start of a conversation, one holding a mug, with a closed green notebook between them and a tall plant by the window."
           }
         },
         {
           "title": "Work the list, then stop talking",
           "body": "Take each item in turn, give the context in a couple of sentences, ask your question and then leave the silence alone. Both HR guidance and management writing describe the same failure mode: one person filling the whole half hour. If there is feedback you want, ask for it by name. \"How did the client call come across to you?\" gets a real answer far more often than \"any feedback for me?\"",
           "tip": "Write while they talk rather than after. Visible note-taking signals that the answer is going somewhere, and it keeps you from interrupting.",
-          "imageTodo": {
+          "image": {
             "base": "13-listen-more",
-            "alt": "Side view of two people at a meeting table, one talking with an open-handed gesture while the other listens, pen resting on an open notebook."
+            "alt": "A man talking with an open-handed gesture across a meeting table while a younger colleague listens and writes a short line in a spiral notebook, daylight and green trees through the window behind."
           }
         },
         {
           "title": "Say the actions out loud before you leave",
           "body": "Spend the last three minutes repeating what you both agreed: who does what, and by when. Saying it aloud catches the mismatch while you can still fix it, which is the whole point. Include your manager's actions as well as yours. Then ask the one question that is easy to forget in your own meeting: is there anything they need from you before the next one?",
           "tip": "Dates beat adjectives. \"Before Thursday's release\" is a commitment; \"soon\" is a feeling.",
-          "imageTodo": {
+          "image": {
             "base": "14-confirm-actions",
-            "alt": "Two people leaning over a notebook at the end of a meeting, one writing while the other holds up two fingers to count off agreed actions."
+            "alt": "Close view of two people leaning over an open notebook at the end of a meeting, one writing a short line while the other holds up two fingers to count off the actions they agreed, two mugs pushed to one side."
           }
         },
         {
           "title": "Send a short recap and file it",
           "body": "Working Knowledge recommends following every one-on-one with brief notes covering what was discussed, what was decided and any feedback given. Keep it to a few lines and send it the same day. A recap keeps you both on one version of the conversation, and it builds a record you will be grateful for later. Paste the same lines into your running notebook so the next preparation session starts with a finished page.",
           "tip": "Done steadily for a year, these recaps become the first draft of your self-assessment, which makes review season a copy-and-edit job rather than an archaeology project.",
-          "imageTodo": {
+          "image": {
             "base": "15-send-the-recap",
-            "alt": "A man back at his desk typing a short message, the screen showing three soft grey bars, with his notebook open to a freshly written page beside the keyboard."
+            "alt": "A man back at his desk in an open-plan office typing a short message, the screen showing three soft grey bars, with his notebook open to a freshly written page beside the keyboard."
           }
         }
       ]
@@ -270,24 +270,17 @@
     "readingTimeMinutes": 8,
     "wordCount": null,
     "internalLinkCount": 3,
-    "imageCount": 10,
-    "imagePending": 6,
+    "imageCount": 16,
+    "imagePending": 0,
     "expertReviewed": false,
     "reviewNote": "Workplace communication guidance. An HR professional should confirm that the escalation advice and the note-keeping warnings match local employment practice before publication.",
     "imageNote": "Illustrations are drawn for this guide only."
   },
   "imageStatus": {
     "heroReady": true,
-    "stepImagesReady": 9,
-    "stepImagesPending": [
-      "10-send-the-agenda",
-      "11-arrive-early",
-      "12-open-with-a-win",
-      "13-listen-more",
-      "14-confirm-actions",
-      "15-send-the-recap"
-    ],
-    "note": "Illustrations in progress for this guide."
+    "stepImagesReady": 15,
+    "stepImagesPending": [],
+    "note": "All illustrations were drawn for this guide; none are reused from another article."
   },
   "dateModified": "2026-10-30"
 }

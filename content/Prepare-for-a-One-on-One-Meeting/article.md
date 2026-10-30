@@ -1,5 +1,3 @@
-> DRAFT — do not publish or package: 6 of 16 illustrations are still missing, and the article has not been reviewed by a person.
-
 # How to Prepare for a One-on-One Meeting
 
 *Thirty minutes, three topics and a short recap: how to turn a recurring check-in into the most useful half hour of your week.*
@@ -98,7 +96,7 @@ The OPM roadmap asks supervisors to run development conversations regularly rath
 
 ### Step 10 — Send the agenda a day ahead
 
-> IMAGE PENDING for step 10: A person at a home desk in lamplight with one hand on a laptop trackpad, the screen showing four short grey bars, and a phone face down beside the keyboard.
+![A woman at a home desk in lamplight, hands at a laptop keyboard with the screen showing four short grey bars, a phone face down and a mug beside her, and a dark window behind.](images/10-send-the-agenda-960.webp)
 
 Working Knowledge recommends sending the list roughly twenty-four hours before the meeting, and saying plainly if the other person needs to read or bring something. Keep it to a handful of bullet points in the body of a message, not an attachment. Close by asking what they would like to add. That single question turns your list into a shared agenda and gives your manager room for the topics they were saving.
 
@@ -108,7 +106,7 @@ Working Knowledge recommends sending the list roughly twenty-four hours before t
 
 ### Step 11 — Arrive five minutes early and clear the decks
 
-> IMAGE PENDING for step 11: A woman setting a notebook and a mug down on the table of a small glass-walled meeting room, pulling out a chair, with soft daylight from the window.
+![A woman setting a notebook and a mug down on the table of a small glass-walled meeting room, pulling out a chair, with soft daylight from the window.](images/11-arrive-early-960.webp)
 
 Walk in with the notebook, the agenda and nothing else running. Close the other tabs, silence the notifications on both your phone and your laptop, and leave the unrelated work where it is. If the meeting is remote, open the call early enough to check that the camera, the microphone and the light are all behaving, and sit where the window is to the side of you rather than behind.
 
@@ -116,7 +114,7 @@ Walk in with the notebook, the agenda and nothing else running. Close the other 
 
 ### Step 12 — Open with a check-in and one good thing
 
-> IMAGE PENDING for step 12: Two colleagues sitting at a small round table with mugs, both relaxed and smiling at the start of a conversation, a closed notebook between them.
+![Two colleagues sitting at a small round table and smiling at the start of a conversation, one holding a mug, with a closed green notebook between them and a tall plant by the window.](images/12-open-with-a-win-960.webp)
 
 The first two minutes are not filler. Working Knowledge treats personal connection as a legitimate part of the agenda and suggests bookending hard topics with easier ones, so nobody leaves the room deflated. Start with a short human check-in, then one thing that went well since you last spoke, then move into the list. A single concrete win also quietly answers the question managers rarely ask directly.
 
@@ -124,7 +122,7 @@ The first two minutes are not filler. Working Knowledge treats personal connecti
 
 ### Step 13 — Work the list, then stop talking
 
-> IMAGE PENDING for step 13: Side view of two people at a meeting table, one talking with an open-handed gesture while the other listens, pen resting on an open notebook.
+![A man talking with an open-handed gesture across a meeting table while a younger colleague listens and writes a short line in a spiral notebook, daylight and green trees through the window behind.](images/13-listen-more-960.webp)
 
 Take each item in turn, give the context in a couple of sentences, ask your question and then leave the silence alone. Both HR guidance and management writing describe the same failure mode: one person filling the whole half hour. If there is feedback you want, ask for it by name. "How did the client call come across to you?" gets a real answer far more often than "any feedback for me?"
 
@@ -132,7 +130,7 @@ Take each item in turn, give the context in a couple of sentences, ask your ques
 
 ### Step 14 — Say the actions out loud before you leave
 
-> IMAGE PENDING for step 14: Two people leaning over a notebook at the end of a meeting, one writing while the other holds up two fingers to count off agreed actions.
+![Close view of two people leaning over an open notebook at the end of a meeting, one writing a short line while the other holds up two fingers to count off the actions they agreed, two mugs pushed to one side.](images/14-confirm-actions-960.webp)
 
 Spend the last three minutes repeating what you both agreed: who does what, and by when. Saying it aloud catches the mismatch while you can still fix it, which is the whole point. Include your manager's actions as well as yours. Then ask the one question that is easy to forget in your own meeting: is there anything they need from you before the next one?
 
@@ -140,7 +138,7 @@ Spend the last three minutes repeating what you both agreed: who does what, and 
 
 ### Step 15 — Send a short recap and file it
 
-> IMAGE PENDING for step 15: A man back at his desk typing a short message, the screen showing three soft grey bars, with his notebook open to a freshly written page beside the keyboard.
+![A man back at his desk in an open-plan office typing a short message, the screen showing three soft grey bars, with his notebook open to a freshly written page beside the keyboard.](images/15-send-the-recap-960.webp)
 
 Working Knowledge recommends following every one-on-one with brief notes covering what was discussed, what was decided and any feedback given. Keep it to a few lines and send it the same day. A recap keeps you both on one version of the conversation, and it builds a record you will be grateful for later. Paste the same lines into your running notebook so the next preparation session starts with a finished page.
 
