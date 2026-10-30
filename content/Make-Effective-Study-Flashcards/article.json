@@ -70,9 +70,9 @@
           "title": "Write the back short and in your own words",
           "body": "The Learning Center at the University of Rochester puts it simply: it is best to try to remember information in your own words. Copying a textbook sentence onto the back gives you something to compare against that you will never say out loud in an exam. Write the answer the way you would explain it to a classmate, and keep it to the minimum that counts as correct.",
           "tip": "If the back needs more than about twenty-five words, the question on the front is too big.",
-          "imageTodo": {
+          "image": {
             "base": "04-short-answer-on-the-back",
-            "alt": "Two hands turning an index card over to show a back carrying only two short pencil lines, with a stack of cards beside it."
+            "alt": "Two hands turning an index card over above a library table to show a back carrying only two short pencil lines, with a stack of blank cards beside them."
           }
         },
         {
@@ -112,9 +112,9 @@
           "title": "Shuffle, and mix topics on purpose",
           "body": "Reviewing a deck in the order you wrote it teaches you the order. Shuffle every session, and pull cards from several weeks rather than finishing one chapter at a time. Dunlosky describes interleaved practice as mixing different kinds of problems within a session, and notes that massed practice produces a misleading fluency: performance climbs during the session and fades afterwards.",
           "tip": "Mixing feels worse than blocking. That extra effort of working out what kind of question this is happens in the exam too.",
-          "imageTodo": {
+          "image": {
             "base": "08-shuffle-and-mix",
-            "alt": "Two hands shuffling a deck of index cards above a table where three smaller stacks are already spread out."
+            "alt": "Two hands riffling a deck of index cards above a dining table, a few cards caught in mid-air and several small stacks waiting beside a bowl of apples."
           }
         },
         {
@@ -270,24 +270,22 @@
     "readingTimeMinutes": 9,
     "wordCount": null,
     "internalLinkCount": 3,
-    "imageCount": 0,
-    "imagePending": 16,
+    "imageCount": 2,
+    "imagePending": 14,
     "expertReviewed": false,
     "reviewNote": "Study-skills guidance based on cognitive psychology research. A teacher or learning-centre specialist should confirm that the summaries of practice testing, interleaving and spacing match the cited sources before publication.",
     "imageNote": "Illustrations are drawn for this guide only."
   },
   "imageStatus": {
     "heroReady": false,
-    "stepImagesReady": 0,
+    "stepImagesReady": 2,
     "stepImagesPending": [
       "01-choose-what-matters",
       "02-question-on-the-front",
       "03-one-idea-per-card",
-      "04-short-answer-on-the-back",
       "05-make-cards-same-day",
       "06-pause-before-flipping",
       "07-say-it-out-loud",
-      "08-shuffle-and-mix",
       "09-three-piles",
       "10-work-the-hard-pile",
       "11-two-blocks-a-week",
