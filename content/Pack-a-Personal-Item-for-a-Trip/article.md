@@ -1,5 +1,3 @@
-> DRAFT — do not publish or package: 2 of 16 illustrations are still missing, and the article has not been reviewed by a person.
-
 # How to Pack a Personal Item for a Trip
 
 *The bag under the seat is the only one you are guaranteed to keep. Pack it so that if everything else is gate-checked or delayed, your day still works.*
@@ -132,7 +130,7 @@ An empty bottle passes screening; a full one does not. Fill it at a fountain pas
 
 ### Step 14 — Give documents and valuables one fixed pocket
 
-> IMAGE PENDING for step 14: A zipped inner pocket of a bag held open to show a passport wallet, a folded paper and a set of keys sitting together.
+![Two hands holding open the zipped top pocket of a grey-blue backpack on a pale wooden table by a window, with a plain navy document wallet and a folded white sheet standing inside.](images/14-documents-pocket-960.webp)
 
 Passport, boarding pass, cards, keys and glasses should live in a single pocket that you never use for anything else, ideally one that closes with a zip and sits against your body when the bag is on. The point is not security alone, it is that you stop searching. A pocket with one job lets you confirm everything is there with one hand, which is what you want at a gate change.
 
@@ -140,7 +138,7 @@ Passport, boarding pass, cards, keys and glasses should live in a single pocket 
 
 ### Step 15 — Do the under-seat rehearsal before you leave home
 
-> IMAGE PENDING for step 15: A packed backpack being pushed into the floor space in front of a dining chair, a person crouching to watch it slide in.
+![A woman kneeling on terracotta floor tiles, pushing a packed green backpack into the floor space beside a dining chair under the edge of a table.](images/15-under-seat-test-960.webp)
 
 Pack the bag completely, then put it on the floor and slide it into the space in front of a dining chair. If it does not go in easily there, it will not go in on the aircraft, where the gap is smaller and you are doing it in a queue. Lift it one-handed as well, since that is how you will get it into the space. Anything that fails either test comes out now rather than at the door.
 

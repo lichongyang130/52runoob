@@ -121,18 +121,15 @@
     "wordCount": null,
     "internalLinkCount": 3,
     "imageCount": 16,
-    "imagePending": 2,
+    "imagePending": 0,
     "expertReviewed": false,
     "reviewNote": "Aviation security and dangerous-goods rules change and differ by country and airline. A reviewer must re-check the TSA liquids allowance, the FAA battery limits and the gate-check wording against the current published guidance before publication, and confirm the article does not read as advice for non-US departures."
   },
   "imageStatus": {
     "heroReady": true,
-    "stepImagesReady": 13,
-    "stepImagesPending": [
-      "14-documents-pocket",
-      "15-under-seat-test"
-    ],
-    "note": "14 of 16 illustrations drawn. 2 still outstanding; the guide cannot be packaged or published until every one is present."
+    "stepImagesReady": 15,
+    "stepImagesPending": [],
+    "note": "All illustrations were drawn for this guide; none are reused from another article."
   },
   "dateModified": "2026-10-30",
   "parts": [
@@ -273,18 +270,18 @@
           "title": "Give documents and valuables one fixed pocket",
           "body": "Passport, boarding pass, cards, keys and glasses should live in a single pocket that you never use for anything else, ideally one that closes with a zip and sits against your body when the bag is on. The point is not security alone, it is that you stop searching. A pocket with one job lets you confirm everything is there with one hand, which is what you want at a gate change.",
           "tip": "Photograph your passport and travel documents and keep the images somewhere you can reach offline as well as in the cloud.",
-          "imageTodo": {
+          "image": {
             "base": "14-documents-pocket",
-            "alt": "A zipped inner pocket of a bag held open to show a passport wallet, a folded paper and a set of keys sitting together."
+            "alt": "Two hands holding open the zipped top pocket of a grey-blue backpack on a pale wooden table by a window, with a plain navy document wallet and a folded white sheet standing inside."
           }
         },
         {
           "title": "Do the under-seat rehearsal before you leave home",
           "body": "Pack the bag completely, then put it on the floor and slide it into the space in front of a dining chair. If it does not go in easily there, it will not go in on the aircraft, where the gap is smaller and you are doing it in a queue. Lift it one-handed as well, since that is how you will get it into the space. Anything that fails either test comes out now rather than at the door.",
           "tip": "Weigh it on bathroom scales while you are at it. Some airlines weigh cabin bags at the gate and the number is easier to fix at home.",
-          "imageTodo": {
+          "image": {
             "base": "15-under-seat-test",
-            "alt": "A packed backpack being pushed into the floor space in front of a dining chair, a person crouching to watch it slide in."
+            "alt": "A woman kneeling on terracotta floor tiles, pushing a packed green backpack into the floor space beside a dining chair under the edge of a table."
           }
         }
       ]
