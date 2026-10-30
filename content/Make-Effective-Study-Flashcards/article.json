@@ -43,7 +43,7 @@
           "title": "Decide what actually deserves a card",
           "body": "Not every sentence in a chapter is testable, and a deck that contains everything gets abandoned by week two. Go through your notes and mark only the things you could be asked to produce from memory: definitions, mechanisms, dates that carry meaning, formulas, the four causes of something. Everything else is context you will absorb by reading. A tight deck of eighty useful cards beats three hundred you never finish.",
           "tip": "If you cannot imagine an exam question that the card would help you answer, the card does not need to exist.",
-          "imageTodo": {
+          "image": {
             "base": "01-choose-what-matters",
             "alt": "A hand laying a blank index card onto an open textbook page on a desk, beside a notebook and a pencil."
           }
@@ -52,7 +52,7 @@
           "title": "Put a question on the front, not a topic",
           "body": "A front that reads like a heading lets you nod along without retrieving anything. A front phrased as a question forces an answer. Dunlosky's review makes the same point about practice tests in general: students benefit most from tests that require recall from memory rather than tests that only ask them to recognise the right answer. Write the front so that there is exactly one thing you are being asked to produce.",
           "tip": "Starting the front with a verb helps. Explain, compare, list, calculate and define all demand something; a noun on its own does not.",
-          "imageTodo": {
+          "image": {
             "base": "02-question-on-the-front",
             "alt": "Close view of a pencil writing a single short line across the front of a blank index card on a wooden desk."
           }
@@ -61,7 +61,7 @@
           "title": "Keep one idea on each card",
           "body": "Cards carrying three facts fail in a confusing way: you half-remember one part, count it as a win, and never find out which piece is missing. Split them. Three small cards with one idea each give you three honest signals instead of one muddy one, and they are quicker to review, which matters when you are doing this most days rather than once a term.",
           "tip": "A card you cannot answer in about fifteen seconds is usually two or three cards wearing a trench coat.",
-          "imageTodo": {
+          "image": {
             "base": "03-one-idea-per-card",
             "alt": "A crowded index card covered in many pencil lines lying crossed out beside three new cards that each carry a single short line."
           }
@@ -94,7 +94,7 @@
           "title": "Pause and commit before you flip",
           "body": "The whole value of the card is in the few seconds before you turn it over. Read the front, look away, and produce an answer, even a wrong one. Flipping immediately turns the session into reading, and reading feels productive while doing very little. Retrieval practice means attempting to recall something without looking, and the attempt is the part that strengthens the memory.",
           "tip": "Count to three before flipping. If nothing arrives by then, say what you do know, then check.",
-          "imageTodo": {
+          "image": {
             "base": "06-pause-before-flipping",
             "alt": "A person holding a single index card face up while looking away from it towards a window, thinking before turning it over."
           }
@@ -103,7 +103,7 @@
           "title": "Say the answer out loud",
           "body": "Saying it aloud exposes the gaps that silent nodding hides: the mumble, the missing step, the phrase you cannot finish. Learning-centre guidance recommends answering out loud with a study partner, or asking yourself the question and answering it aloud when you are alone. It also rehearses the thing an exam asks for, which is production rather than a feeling of familiarity.",
           "tip": "Grade yourself on what you actually said, not on what you meant. \"I knew that\" is not a score.",
-          "imageTodo": {
+          "image": {
             "base": "07-say-it-out-loud",
             "alt": "A student standing in a bedroom speaking aloud with a card held at their side, their reflection visible in a wardrobe mirror."
           }
@@ -270,22 +270,17 @@
     "readingTimeMinutes": 9,
     "wordCount": null,
     "internalLinkCount": 3,
-    "imageCount": 2,
-    "imagePending": 14,
+    "imageCount": 8,
+    "imagePending": 8,
     "expertReviewed": false,
     "reviewNote": "Study-skills guidance based on cognitive psychology research. A teacher or learning-centre specialist should confirm that the summaries of practice testing, interleaving and spacing match the cited sources before publication.",
     "imageNote": "Illustrations are drawn for this guide only."
   },
   "imageStatus": {
-    "heroReady": false,
-    "stepImagesReady": 2,
+    "heroReady": true,
+    "stepImagesReady": 7,
     "stepImagesPending": [
-      "01-choose-what-matters",
-      "02-question-on-the-front",
-      "03-one-idea-per-card",
       "05-make-cards-same-day",
-      "06-pause-before-flipping",
-      "07-say-it-out-loud",
       "09-three-piles",
       "10-work-the-hard-pile",
       "11-two-blocks-a-week",
