@@ -15,7 +15,7 @@
 - `content/Plan-a-Run-Walk-Workout/`：15 步英文稿，16 张插画全部为本文新制，体检 0 error；素材包 `downloads/Run-Walk-Workout-Upload.zip`。待真人审校，未发布。
 - `downloads/All-16-Articles-Upload.zip`：前 16 篇成稿的合集包，内含各篇独立文件夹与一个本地总目录页；每篇内容与对应单篇包逐字节一致。该文件已接近 GitHub 50 MB 建议上限，第 17 篇起不再更新合集，改以增量包续传。
 - `downloads/Add-On-4-New-Articles-Upload.zip`：增量包，只装第 11–14 篇（遛狗、水彩、一对一会议、干手护理），但根目录的总目录页按 14 篇生成；适合已经上传过前 10 篇、只想补传新增的情况。由 `tools/package_increment.py` 生成。
-- `downloads/Add-On-Since-All-16-Upload.zip`：**最新增量包**，装 All-16 之后的全部新篇目（目前为第 17 篇《How to Organize a Holiday Potluck》、第 18 篇《How to Plan a School Club Meeting》与第 19 篇《How to Map a Philosophical Argument》），根目录总目录页按 19 篇生成；适合已上传过前 16 篇者续传。后续新篇会继续并入这个同名包，链接不变。
+- `downloads/Add-On-Since-All-16-Upload.zip`：**最新增量包**，装 All-16 之后的全部新篇目（目前为第 17 篇《How to Organize a Holiday Potluck》、第 18 篇《How to Plan a School Club Meeting》、第 19 篇《How to Map a Philosophical Argument》与第 20 篇《How to Make a Sincere Apology》），根目录总目录页按 20 篇生成；适合已上传过前 16 篇者续传。后续新篇会继续并入这个同名包，链接不变。
 - `downloads/Add-On-Hang-a-Picture-Upload.zip`：上一版增量包，只装第 16 篇，目录页按 16 篇生成。
 - 包内结构：单篇 35 个条目 = `index.html` + `Article-English.txt` + `README-中文.txt` + `Images/` 下 16 张插画 × 两档（`-1600.webp` 1600×900 与 `-960.webp` 960×540）；合集为 篇数×35 + 2。网页用 `srcset` 按屏幕宽度自动选档，手机只下载小图，封面不走懒加载。
 - `content/Back-Up-Your-Photos/`：15 步英文稿，16 张插画全部为本文新制，体检 0 error；素材包 `downloads/Back-Up-Your-Photos-Upload.zip`。待真人审校，未发布。
@@ -36,7 +36,8 @@
 - `content/Organize-a-Holiday-Potluck/`（Holidays and Traditions）：15 步英文稿，16 张插画全部为本文新制，体检 0 error；资料取自 FoodSafety.gov 最低安全内部温度表、USDA FSIS《Kitchen Companion》、FDA 九大食物过敏原说明与明尼苏达州卫生部自助餐食品安全页；素材包 `downloads/Organize-a-Holiday-Potluck-Upload.zip`。属食品安全内容，须合格食品安全专业人士对照现行 USDA/FDA 及当地法规复核，未发布。
 - `content/Plan-a-School-Club-Meeting/`（Youth）：15 步英文稿，16 张插画全部为本文新制，体检 0 error；资料取自麻省大学 Mass 4-H 议事规则指南、密苏里大学推广站 LG903、爱荷华州立推广站会议脚本与俄亥俄州立 4-H 副主席手册；素材包 `downloads/Plan-a-School-Club-Meeting-Upload.zip`。面向青少年读者，须学校活动指导老师按本校社团手册复核，未发布。
 - `content/Map-a-Philosophical-Argument/`（Philosophy and Religion）：15 步英文稿，16 张插画全部为本文新制，体检 0 error；资料取自萨斯喀彻温大学图书馆论证图教程、俄克拉荷马州立大学开放教材《Logic and the Study of Arguments》与苏格兰资格监管局（SQA）哲学《Arguments in Action》辅导材料；素材包 `downloads/Map-a-Philosophical-Argument-Upload.zip`。术语口径各教材不一，须哲学或逻辑课教师复核，未发布。
-- 其余 79 篇为选题，尚未完成正文与配图。`expanded-plan.csv` 是进度记录，不要将选题当成成品。
+- `content/Make-a-Sincere-Apology/`（Relationships）：15 步英文稿，16 张插画全部为本文新制，体检 0 error；资料取自俄亥俄州立大学 Lewicki、Polin 与 Lount 的有效道歉六要素研究（含 NCMR 期刊原文）、加州大学伯克利分校 Greater Good 科学中心的三步道歉法与美国心理学会《Monitor on Psychology》宽恕专题；素材包 `downloads/Make-a-Sincere-Apology-Upload.zip`。涉及人际与心理健康，须咨询师、心理师或调解人复核，其中关于控制型与暴力关系的提示须按出版国的家暴服务指引核对，未发布。
+- 其余 75 篇为选题，尚未完成正文与配图。`expanded-plan.csv` 是进度记录，不要将选题当成成品。
 - `content/Keep-Running-Through-Winter/`：此前制作的旧版 12 步样稿及 13 张插画；其原素材包为 `downloads/Winter-Running-Upload.zip`。公开网站的分类和详情页现已显示该稿，但旧稿不计入本批 15–20 步的新稿目标。
 
 ## 生产规范

@@ -265,6 +265,7 @@ class InventoryTests(unittest.TestCase):
             ("Organize-a-Holiday-Potluck", "Holidays and Traditions"),
             ("Plan-a-School-Club-Meeting", "Youth"),
             ("Map-a-Philosophical-Argument", "Philosophy and Religion"),
+            ("Make-a-Sincere-Apology", "Relationships"),
         ):
             with self.subTest(slug=slug):
                 directory = ROOT / "content" / slug
@@ -448,6 +449,7 @@ class BundleTests(unittest.TestCase):
         "Organize-a-Holiday-Potluck",
         "Plan-a-School-Club-Meeting",
         "Map-a-Philosophical-Argument",
+        "Make-a-Sincere-Apology",
     )
 
     def test_bundle_matches_the_single_article_packages_exactly(self):
