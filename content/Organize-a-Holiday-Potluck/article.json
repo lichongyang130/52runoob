@@ -130,9 +130,9 @@
           "title": "Set the table so hot stays hot and cold stays cold",
           "body": "On the table, hot dishes need to stay at or above 60 degrees Celsius in chafing dishes, warming trays or slow cookers, and cold dishes need to sit at or below 4 degrees. The usual trick for cold food is to nest the serving bowl inside a larger bowl of ice and drain the meltwater as it goes. Check that your warming equipment really reaches holding temperature, because some trays only manage 43 to 49 degrees.",
           "tip": "Put the drinks and the bread at the far end of the table. They do not need temperature control and they slow the queue down in a useful way.",
-          "imageTodo": {
+          "image": {
             "base": "10-buffet-setup",
-            "alt": "A buffet table where a slow cooker and a warming tray hold hot dishes at one end while a salad bowl sits nested in a larger bowl of ice."
+            "alt": "A long buffet table laid out in order, with a stack of plates first, hot dishes on a heated tray, a salad bowl nested in a tray of ice and cutlery at the far end."
           }
         }
       ]
@@ -145,45 +145,45 @@
           "title": "Label every dish with what is in it",
           "body": "Write a card for each dish naming the food and the allergens it contains, and put it where a guest can read it without lifting a lid or asking the room. Milk, egg, wheat, soy, sesame, nuts and shellfish hide in dressings, stuffings, sauces and bought pastry, so ask cooks to check their own ingredient lists rather than guessing. A card also stops the polite guest who eats nothing all evening rather than making a fuss.",
           "tip": "Keep each dish's recipe card or packaging in the kitchen. If somebody asks a detailed question, you have the actual answer.",
-          "imageTodo": {
+          "image": {
             "base": "11-label-the-dishes",
-            "alt": "A hand propping a small folded card in front of a dish on a buffet table, with blank cards and a pen waiting beside it."
+            "alt": "A hand standing a small blank folded card beside a bowl of food on a buffet table, with two more cards already placed by other dishes."
           }
         },
         {
           "title": "Serve in small platters and replace them",
           "body": "Put out half of each dish and keep the rest cold in the fridge or hot in the oven, then swap the platter when it empties. Never top up a dish that has been sitting out: adding fresh food to a part-used platter mixes food that has been in the warm room for an hour with food that has not. Replacing platters also keeps the table looking generous all evening instead of picked over.",
           "tip": "Wash or swap the serving spoon when you change the platter. The spoon has been on the table the whole time.",
-          "imageTodo": {
+          "image": {
             "base": "12-replace-platters",
-            "alt": "A host lifting a nearly empty platter from a buffet table while holding a freshly filled one ready to take its place."
+            "alt": "A host lifting a half-empty platter away from the table in one hand while setting down a freshly filled platter with the other, guests talking behind."
           }
         },
         {
           "title": "Watch the clock on every perishable dish",
           "body": "Two hours is the limit for perishable food left out of temperature control, and one hour if the room is above 32 degrees Celsius. Note the time each dish arrives on the table, either on its card or on a list in the kitchen. When the time is up, the food goes away: into the fridge if it is still cold, into the bin if it has sat out. Food in this state looks and smells completely normal.",
           "tip": "Set a quiet timer on your phone when the first dish lands. Nobody remembers the time once the room is full.",
-          "imageTodo": {
+          "image": {
             "base": "13-watch-the-clock",
-            "alt": "A kitchen clock on the wall above a worktop where covered dishes wait, seen past the shoulder of someone checking the time."
+            "alt": "A plain wall clock with blank face and two hands in the foreground, while through the doorway a host glances up from a buffet table that has been out a while."
           }
         },
         {
           "title": "Pack the leftovers down fast",
           "body": "Divide leftovers into clean, shallow, covered containers and get them into a fridge at 4 degrees or below, or into the freezer, within the two-hour window. Do not send guests home with a warm casserole dish to be refrigerated later. Eat refrigerated leftovers within three to four days, and reheat them to 74 degrees Celsius, bringing any sauce or gravy to a boil before serving.",
           "tip": "Keep a stack of takeaway tubs by the sink. Packing down is far quicker when nobody has to hunt for containers.",
-          "imageTodo": {
+          "image": {
             "base": "14-pack-leftovers",
-            "alt": "Hands spooning leftovers into shallow plastic tubs lined up on a kitchen worktop beside a stack of lids."
+            "alt": "Two people at a worktop spooning leftovers into a row of small shallow containers, with lids waiting and the fridge open beside them."
           }
         },
         {
           "title": "Write down what worked while you remember",
           "body": "Before you go to bed, note three things: which dishes ran out first, what nobody touched, and anything that went wrong in the last half hour. Keep the sign-up list with those notes. Next year you will know that the table needed two more serving spoons, that one oven cannot reheat four trays, and who brought the dish everyone asked about.",
           "tip": "Send the thank-you messages the next morning and ask each cook for their recipe. People are far more likely to come back.",
-          "imageTodo": {
+          "image": {
             "base": "15-notes-for-next-year",
-            "alt": "A host sitting at a cleared table at the end of the evening, writing in a notebook beside a cup of tea and a stack of clean plates."
+            "alt": "Someone sitting at a kitchen table late at night with a mug and an open notebook, jotting a few quick lines while a cat sleeps on the next chair."
           }
         }
       ]
@@ -268,7 +268,7 @@
     "note": "Four questions: do you know the two-hour limit, are hot dishes above 60 degrees, are cold dishes sitting on ice, and does every dish have an allergen card."
   },
   "publishing": {
-    "status": "draft",
+    "status": "ready-for-review",
     "author": "Editorial draft",
     "reviewer": "",
     "datePublished": null,
@@ -276,23 +276,16 @@
     "readingTimeMinutes": 9,
     "wordCount": null,
     "internalLinkCount": 3,
-    "imageCount": 10,
-    "imagePending": 6,
+    "imageCount": 16,
+    "imagePending": 0,
     "expertReviewed": false,
     "reviewNote": "YMYL food safety content. Temperatures, holding times and allergen statements must be checked by a qualified food safety professional against current USDA, FDA and local guidance before publication, and local rules differ outside the United States.",
     "imageNote": "Illustrations are drawn for this guide only."
   },
   "imageStatus": {
     "heroReady": true,
-    "stepImagesReady": 9,
-    "stepImagesPending": [
-      "10-buffet-setup",
-      "11-label-the-dishes",
-      "12-replace-platters",
-      "13-watch-the-clock",
-      "14-pack-leftovers",
-      "15-notes-for-next-year"
-    ],
+    "stepImagesReady": 15,
+    "stepImagesPending": [],
     "note": "Illustrations in progress for this guide."
   },
   "dateModified": "2026-11-01"
