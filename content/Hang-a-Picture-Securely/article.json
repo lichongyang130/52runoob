@@ -43,7 +43,7 @@
           "title": "Weigh the picture on bathroom scales",
           "body": "Every other decision follows from the weight, and almost everyone guesses low. Stand on the scales, note the number, then step off, pick up the framed picture and weigh yourself again; the difference is the weight of the picture. A modest print behind glass can reach five kilograms, and a large mirror or an oil in a heavy gilt frame can pass twenty. Write the figure down, because hooks and anchors are sold by exactly this number.",
           "tip": "Weigh the picture with its glass and backing in place. That is the load the wall will actually carry.",
-          "imageTodo": {
+          "image": {
             "base": "01-weigh-the-picture",
             "alt": "A framed picture being held while a person stands on bathroom scales to work out its weight."
           }
@@ -52,7 +52,7 @@
           "title": "Choose a wall that will not damage the art",
           "body": "A secure fixing on a bad wall is still a bad home for a picture. The Canadian Conservation Institute advises against the space above a fireplace, where heat, dryness and soot all fluctuate, and warns about spots near open doors, windows, radiators and heating ducts, where humidity swings fastest. Keep works out of direct sunlight, and think about traffic: a narrow hallway where people brush past, or a wall people lean on, is a slow accident.",
           "tip": "Interior walls are usually kinder than exterior ones. If you must use an outside wall, it should be insulated and have a proper vapour barrier.",
-          "imageTodo": {
+          "image": {
             "base": "02-choose-the-wall",
             "alt": "A person standing back in a living room to compare a sunlit wall by the window with a quieter wall away from the radiator."
           }
@@ -61,16 +61,16 @@
           "title": "Inspect the back of the frame",
           "body": "Turn the picture over on a padded surface and look at what is actually holding it together. Check the screw eyes or D-rings for rust and movement, press the backing board, and tug the wire gently. Hardware that twists in its hole, or wire that has gone thin and bright where it sits on the hook, is the part that fails. Museum guidance is to check this hardware before hanging and to replace anything rusty or loose.",
           "tip": "Lay the picture face down on a towel or a piece of carpet, never on a bare floor where grit can scratch the frame.",
-          "imageTodo": {
+          "image": {
             "base": "03-inspect-the-back",
-            "alt": "The back of a wooden picture frame lying face down on a folded towel, with a hand testing the wire between two D-rings."
+            "alt": "The back of a wooden picture frame propped on a cloth on a table, a hand hooking a finger under the wire strung between two D-rings, with a screwdriver lying in front."
           }
         },
         {
           "title": "Fit D-rings and wire rated for the weight",
           "body": "Conservators recommend D-rings with two points of attachment for most paintings of moderate weight, fixed about one third of the way down the frame so the picture sits flat against the wall. If you use wire, it should be plastic-coated, graded above the weight you measured, and secured properly at both ends. Replace any wire that looks thin or worn. For anything heavy, skip wire and hang from the D-rings themselves.",
           "tip": "Drive the screws into the frame only, never into the stretcher or the panel behind it.",
-          "imageTodo": {
+          "image": {
             "base": "04-d-rings-and-wire",
             "alt": "Close view of a hand tightening a screw on a D-ring fitted to the side rail of a picture frame, with coiled picture wire beside it."
           }
@@ -79,7 +79,7 @@
           "title": "Work out what the wall is made of",
           "body": "Knock along the wall with a knuckle: a hollow, drummy sound means plasterboard with a cavity, a dull solid sound means masonry or plaster on brick. Older houses may have lath and plaster, which crumbles easily. Museum practice is to fix into studs or solid masonry rather than relying on plaster or plasterboard alone. Find the studs with a detector or by tapping, and mark their edges lightly in pencil.",
           "tip": "Check for wiring and pipes before you drill anywhere near a socket, a switch or a bathroom wall.",
-          "imageTodo": {
+          "image": {
             "base": "05-test-the-wall",
             "alt": "A hand tapping a knuckle against a painted wall while a small stud detector rests on the skirting board below."
           }
@@ -94,7 +94,7 @@
           "title": "Set the height before you mark anything",
           "body": "Galleries hang most work with its centre around eye level, roughly 145 to 150 centimetres from the floor, which keeps a wall of pictures visually consistent. Over furniture, leave a hand's width or two between the top of a sofa or sideboard and the bottom of the frame. Hold the picture up, have someone stand back, and agree the position before a pencil touches the wall.",
           "tip": "Cut a sheet of newspaper to the size of the frame and tape it up first. It costs nothing and settles arguments quickly.",
-          "imageTodo": {
+          "image": {
             "base": "06-set-the-height",
             "alt": "A paper rectangle cut to the size of a frame taped to a wall while someone stands back in the doorway to judge the height."
           }
@@ -103,7 +103,7 @@
           "title": "Mark two fixing points, not one",
           "body": "This is the single biggest improvement you can make. Conservation guidance is to place two points of contact in the wall so that if one fails, the second stops the picture falling. Two points also stop the frame swinging crooked every time a door closes. Measure the distance between the D-rings, transfer it to the wall with a ruler and a spirit level, and mark both points lightly in pencil.",
           "tip": "Measure down from the top of the frame to the taut wire or ring, then subtract that from your line. It is the measurement people most often get wrong.",
-          "imageTodo": {
+          "image": {
             "base": "07-mark-two-points",
             "alt": "Two small pencil crosses marked level on a wall with a spirit level held between them and a ruler resting underneath."
           }
@@ -112,7 +112,7 @@
           "title": "Use picture hooks rather than bare nails",
           "body": "A nail driven straight into plasterboard relies on friction in a crumbly material and tends to lever its way out. Conservation advice is explicit: secure pictures with picture hanging hooks sized for the weight, because hooks are more reliable than nails and do less damage to the wall. Hooks spread the load through the pin at an angle into the wall, and two of them make it far easier to hang the picture straight.",
           "tip": "Hook packets state a maximum weight. Choose one rated well above your measured figure rather than exactly at it.",
-          "imageTodo": {
+          "image": {
             "base": "08-hooks-not-nails",
             "alt": "An open palm holding two brass picture hooks beside a loose nail on a workbench."
           }
@@ -121,7 +121,7 @@
           "title": "Match the anchor to the wall you have",
           "body": "Hollow walls need an anchor that expands or toggles behind the board; masonry and concrete need a plastic or lead plug sized to the screw. The National Park Service lists the common types used for mounting hangers: hollow wall screw anchors that expand against the back of the board, plastic lipped anchors, lead expansion anchors for cement and masonry, and jack nuts for very thin cavities. The screw must match the anchor, not just the hole.",
           "tip": "Take the picture hook and the screw with you when buying anchors. Guessing in the aisle is how people end up with three failed holes.",
-          "imageTodo": {
+          "image": {
             "base": "09-choose-anchors",
             "alt": "A small tray on a workbench holding several shapes of wall anchor and plug beside a screwdriver and a box of screws."
           }
@@ -277,25 +277,16 @@
     "readingTimeMinutes": 9,
     "wordCount": null,
     "internalLinkCount": 3,
-    "imageCount": 0,
-    "imagePending": 16,
+    "imageCount": 10,
+    "imagePending": 6,
     "expertReviewed": false,
     "reviewNote": "Combines conservation guidance with practical DIY fixing. A qualified tradesperson should confirm the drilling, anchor and cleat advice for local building practice, and a conservator should confirm the handling and display points before publication.",
     "imageNote": "Illustrations are drawn for this guide only."
   },
   "imageStatus": {
-    "heroReady": false,
-    "stepImagesReady": 0,
+    "heroReady": true,
+    "stepImagesReady": 9,
     "stepImagesPending": [
-      "01-weigh-the-picture",
-      "02-choose-the-wall",
-      "03-inspect-the-back",
-      "04-d-rings-and-wire",
-      "05-test-the-wall",
-      "06-set-the-height",
-      "07-mark-two-points",
-      "08-hooks-not-nails",
-      "09-choose-anchors",
       "10-drill-and-anchor",
       "11-french-cleat",
       "12-lift-with-two-people",
