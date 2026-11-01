@@ -1,0 +1,301 @@
+{
+  "schema": "howly-guide/v1",
+  "requirements": {
+    "stepMin": 15,
+    "stepMax": 20,
+    "externalLinksMin": 2,
+    "uniqueImagesWithinArticle": true
+  },
+  "slug": "Map-a-Philosophical-Argument",
+  "url": "/Map-a-Philosophical-Argument",
+  "category": "Philosophy and Religion",
+  "categoryUrl": "/Category/Philosophy-and-Religion",
+  "title": "How to Map a Philosophical Argument",
+  "h1": "How to Map a Philosophical Argument",
+  "deck": "Find the conclusion, list the reasons, draw the connections, and discover the unstated assumption the whole argument was resting on.",
+  "intro": "An argument map is a picture of reasoning: boxes for claims, lines for support. It sounds like a classroom exercise, and it is the fastest way to find out whether a passage you have read three times actually proves anything. Mapping forces three questions into the open. What is this author trying to get me to believe? What reasons are offered? And does each reason do the work on its own, or only alongside something the author never bothered to say? The method below is the one taught in critical thinking courses and philosophy syllabuses: identify the conclusion, extract the premises, set them out in standard form, then draw the structure and test it. You need paper and a pen. Software helps with long arguments, but nothing about the method requires it, and the discipline of writing one claim per box is where most of the value lives.",
+  "seo": {
+    "titleTag": "How to Map a Philosophical Argument: 15 Steps",
+    "metaDescription": "Map a philosophical argument: find the conclusion, extract premises, set them in standard form, draw linked and convergent support, then test validity.",
+    "keywords": [
+      "how to map a philosophical argument",
+      "argument mapping",
+      "premises and conclusion"
+    ],
+    "primaryKeyword": "map a philosophical argument",
+    "searchIntent": "informational"
+  },
+  "media": {
+    "hero": {
+      "base": "00-hero",
+      "alt": "A large sheet of paper on a desk covered with boxes joined by pencilled arrows, a hand drawing another connecting line beside an open book."
+    },
+    "style": "Naturalistic hand-painted editorial illustration, soft watercolour washes over light pencil-and-ink linework, warm desaturated palette, visible paper texture, no text anywhere in the image.",
+    "stylePending": [],
+    "reusedFrom": {}
+  },
+  "parts": [
+    {
+      "title": "Find the Argument Before You Draw Anything",
+      "heading": "Find the Argument Before You Draw Anything",
+      "steps": [
+        {
+          "title": "Check that the passage is an argument at all",
+          "body": "Descriptions, explanations and summaries all look like arguments and are not. The test is whether the author is trying to persuade you of something. The bus was late, so I was late for school explains an event; the bus is late, so I will probably be late explains nothing and argues for a claim. Mapping a passage that contains no argument produces a tidy diagram of nothing, so settle this question first.",
+          "tip": "If you cannot say what the author wants you to believe by the end of the passage, you are probably reading an explanation.",
+          "imageTodo": {
+            "base": "01-is-it-an-argument",
+            "alt": "A reader at a desk pausing over an open book with a finger on the page, head tilted, deciding what the passage is doing."
+          }
+        },
+        {
+          "title": "Find the conclusion first",
+          "body": "The conclusion is the claim the author wants you to accept. Indicator words help — therefore, so, hence, it follows that, consequently, this shows that — but conclusions often arrive first and often carry no signal at all. The reliable test is to ask which single claim all the other sentences are working for. Write it at the bottom of your page and leave room above it.",
+          "tip": "Rewrite the conclusion as one plain sentence in your own words before you go hunting for premises.",
+          "imageTodo": {
+            "base": "02-find-the-conclusion",
+            "alt": "A hand underlining a single sentence partway down a printed page while the rest of the page stays unmarked."
+          }
+        },
+        {
+          "title": "Collect the premises by asking why",
+          "body": "With the conclusion fixed, ask the only question that matters: why am I meant to believe this? Every answer the text offers is a premise. Premise indicators include because, since, for, as, firstly, in view of the fact that, and may be inferred from. List them roughly at this stage; tidying comes next. Expect some sentences to be neither premise nor conclusion but illustration, which you will discard.",
+          "tip": "Number each candidate premise in the margin of the text itself. You will need to find them again when the map disagrees with the page.",
+          "imageTodo": {
+            "base": "03-collect-the-premises",
+            "alt": "A reader numbering short marks in the margin of a printed page with a pencil, several marks already made down one side."
+          }
+        },
+        {
+          "title": "Write it out in standard form",
+          "body": "Standard form is one premise per line, numbered, with the conclusion last and marked. Reword each line so it stands alone as a statement that could be true or false — no pronouns pointing back at earlier sentences, no half clauses. This is the step people skip and the step that does the work: an argument that cannot be written in standard form usually contains two arguments tangled together.",
+          "tip": "Keep every line short enough to read aloud in one breath. Long premises hide extra claims.",
+          "imageTodo": {
+            "base": "04-standard-form",
+            "alt": "A notebook page with a short numbered list of lines and a single line set apart beneath them, written out neatly by hand."
+          }
+        },
+        {
+          "title": "Strip out everything that is not a claim",
+          "body": "Cross off rhetorical questions, restatements, examples, jokes and background. Keep statements — sentences that can be true or false. Questions, commands and exclamations cannot be premises because they cannot be believed or disbelieved. A long paragraph often reduces to three claims, and seeing that reduction is itself informative: much philosophical prose is one argument plus a great deal of persuasion around it.",
+          "tip": "Keep the discarded material in a second column rather than deleting it. Sometimes an example is doing argumentative work after all.",
+          "imageTodo": {
+            "base": "05-strip-the-decoration",
+            "alt": "A marked-up printout with several passages lightly crossed through and three short lines left circled."
+          }
+        }
+      ]
+    },
+    {
+      "title": "Draw the Map",
+      "heading": "Draw the Map",
+      "steps": [
+        {
+          "title": "Give every claim its own box",
+          "body": "Draw the conclusion in a box at the top or bottom of a large sheet, and each premise in its own box. One claim per box, always. The word and is the usual smuggler: a premise reading voting is a duty and turnout is falling is two claims that may need different support and may fail independently. Splitting them is often the moment a hidden weakness appears.",
+          "tip": "Work on paper that is bigger than you think you need. Maps grow sideways, and cramped maps get simplified to fit.",
+          "imageTodo": {
+            "base": "06-one-claim-per-box",
+            "alt": "Several empty rectangles pencilled across a large sheet of paper, with a hand drawing another box at one side."
+          }
+        },
+        {
+          "title": "Decide whether premises are linked or independent",
+          "body": "Apply the removal test to each premise: if you delete it, does the remaining reason still support the conclusion at all? If support collapses, the premises are linked co-premises and belong joined together with a single arrow to the conclusion. If each would still give some support alone, they are independent and converge on the conclusion by separate arrows. This distinction is the whole reason to draw a map rather than write a list.",
+          "tip": "Linked premises fail together: refute one and the pair is gone. Independent ones must be refuted one at a time.",
+          "imageTodo": {
+            "base": "07-linked-vs-convergent",
+            "alt": "Two small diagrams side by side on a sheet, one with two boxes joined before a single arrow, the other with two separate arrows meeting a box below."
+          }
+        },
+        {
+          "title": "Follow the chains to intermediate conclusions",
+          "body": "Longer arguments are serial: a claim is supported by earlier premises and then itself supports the final conclusion. That middle claim is an intermediate conclusion, and on the map it has arrows coming in and an arrow going out. Marking these correctly shows you where the argument is load-bearing — attack an intermediate conclusion successfully and everything above it in the chain loses its support.",
+          "tip": "If your map is a single flat row of boxes pointing at a conclusion, look again. Most real arguments have at least one step in the middle.",
+          "imageTodo": {
+            "base": "08-serial-chains",
+            "alt": "A vertical chain of three boxes on paper joined by arrows, each arrow drawn with a ruler, the lowest box slightly larger."
+          }
+        },
+        {
+          "title": "Dig out the unstated premise",
+          "body": "Most arguments lean on something the author never says. The standard way to find it: ask whether the conclusion really follows, and if not, what claim would have to be added to make it follow. You should not give whole grapes to babies because grapes are a choking hazard needs the unstated premise that you should not give choking hazards to babies. Write hidden premises in a different colour — they are usually the most contestable part.",
+          "tip": "A hidden premise is not a flaw by itself. The question is whether it is one everyone would accept.",
+          "imageTodo": {
+            "base": "09-hidden-premises",
+            "alt": "A hand adding one extra box in a different coloured pencil into a gap between two existing boxes on an argument map."
+          }
+        },
+        {
+          "title": "Put objections and replies on the same sheet",
+          "body": "A map is not only for the author's reasoning. Add the strongest objection you can think of as a branch pointing at the premise it attacks, and any reply the author gives as a branch pointing back at the objection. Keeping attack and defence on one sheet shows you something a list cannot: whether an objection would bring the whole argument down or merely remove one of several independent supports.",
+          "tip": "Mark objections with a different arrowhead or a dashed line so support and attack never look alike at a glance.",
+          "imageTodo": {
+            "base": "10-objections-and-rebuttals",
+            "alt": "An argument map with two dashed lines drawn in from the side towards one of the boxes, and a short solid line drawn back out."
+          }
+        }
+      ]
+    },
+    {
+      "title": "Test What You Have Drawn",
+      "heading": "Test What You Have Drawn",
+      "steps": [
+        {
+          "title": "Ask what kind of support is being offered",
+          "body": "Deductive arguments claim the conclusion must be true if the premises are; inductive arguments claim only that it is probably true. The difference decides which tests apply, and applying the wrong one is a common and unfair criticism. Demanding certainty from an argument from evidence misses its point; accepting mere plausibility from an argument that claimed to prove its conclusion lets it off too lightly.",
+          "tip": "Words like must, necessarily and it follows signal deduction. Words like likely, tends to and suggests signal induction.",
+          "imageTodo": {
+            "base": "11-deductive-or-inductive",
+            "alt": "Two piles of index cards sorted on a desk, one stacked square and the other fanned out, a hand placing a card onto the second pile."
+          }
+        },
+        {
+          "title": "Test the structure for validity",
+          "body": "An argument is valid when there is no possible situation in which all the premises are true and the conclusion is false. Validity is about structure alone, not truth: an argument can be valid with false premises, and a true conclusion does not make an argument valid. Test by imagining the premises true and then trying to make the conclusion false. If you cannot, the structure holds.",
+          "tip": "Keep the vocabulary straight. Statements are true or false; arguments are valid or invalid. Mixing the two causes most confusion in essays.",
+          "imageTodo": {
+            "base": "12-test-validity",
+            "alt": "A hand holding a map of boxes up to a window so the light shows through the paper, the pencilled lines visible from behind."
+          }
+        },
+        {
+          "title": "Then ask whether the premises are actually true",
+          "body": "A valid argument with true premises is sound, and only a sound argument gives you a conclusion you must accept. So work down the map and judge each premise separately: is it true, is it the kind of claim that could be checked, and would a reasonable opponent accept it? Mark every premise you doubt. A single false premise undoes the whole argument, however elegant the structure.",
+          "tip": "Separate the premises you think are false from the ones you simply cannot assess. They lead to very different responses.",
+          "imageTodo": {
+            "base": "13-check-soundness",
+            "alt": "A pencilled argument map with small question marks added beside two of the boxes and a tick beside a third."
+          }
+        },
+        {
+          "title": "Try to break it with a counterexample",
+          "body": "A counterexample is a described case in which the premises hold and the conclusion fails. If you can build one, the argument is invalid and you have shown exactly where. Aim at the premise you find least obvious rather than the one you dislike most. If the argument survives several honest attempts, you have learned something more useful than a refutation: you have learned the argument is strong.",
+          "tip": "Write the counterexample out in full sentences. Half-formed ones usually smuggle in an extra assumption of their own.",
+          "imageTodo": {
+            "base": "14-counterexample",
+            "alt": "A notebook beside a finished map where someone is sketching a small separate scene as a test case, pencil shavings on the desk."
+          }
+        },
+        {
+          "title": "Turn the map back into prose",
+          "body": "Finish by writing one short paragraph: the conclusion, the main reasons, the unstated assumption, and the single point where you think the argument is weakest. The map was scaffolding; this paragraph is what you keep. It is also the thing you can bring to a seminar, use in an essay, or reread next year — and if you cannot write it without looking at the map, the analysis is not finished yet.",
+          "tip": "Date the sheet and keep it with your notes on the text. Rebuilding a map from scratch costs an hour you will not have.",
+          "imageTodo": {
+            "base": "15-use-the-map",
+            "alt": "A short handwritten paragraph in a notebook beside a folded argument map and a closed book in lamplight."
+          }
+        }
+      ]
+    }
+  ],
+  "tips": [
+    "Map someone whose conclusion you agree with. Mapping only your opponents teaches you to find weaknesses rather than structure.",
+    "Colour has to mean something: one colour for the author's claims, one for hidden premises, one for objections. Decorative colour makes maps harder to read.",
+    "Rebuild the strongest version of the argument before criticising it. An objection that only defeats a careless version proves nothing.",
+    "Keep maps to one sheet. If the argument genuinely needs more, map the sections separately and link them by their intermediate conclusions."
+  ],
+  "warnings": [
+    "A neat map is not a correct interpretation. Check your reconstruction against the text itself, because it is easy to map the argument you expected rather than the one that was written.",
+    "Mapping shows structure, not truth. A beautifully structured argument built on false premises proves nothing, and a messy passage can still be sound.",
+    "Be careful applying this to religious or sacred texts, which are frequently not making deductive arguments at all; treating liturgy, parable or poetry as a set of premises misreads what the text is doing."
+  ],
+  "faq": [
+    {
+      "q": "What is the difference between an argument map and standard form?",
+      "a": "Standard form is a numbered list: premises on separate lines, conclusion at the bottom. An argument map is a diagram of the same material that also shows how the premises relate to each other and to the conclusion — which ones work together, which stand alone, and where intermediate conclusions sit. Standard form is quicker and enough for short arguments; mapping earns its keep as soon as an argument has more than about four claims or includes objections."
+    },
+    {
+      "q": "How do I tell linked premises from independent ones?",
+      "a": "Remove one premise and ask whether what remains still supports the conclusion at all. If deleting it leaves the other premise unable to support the conclusion on its own, the two are linked co-premises and should be joined before the arrow. If the remaining premise still offers some support, even weaker support, they are independent and each gets its own arrow. The test is about support, not about how persuasive the argument feels."
+    },
+    {
+      "q": "Is it cheating to add premises the author never wrote?",
+      "a": "No, provided you mark them as your own additions. Supplying an unstated premise is a standard part of reconstruction and is how you make an argument valid enough to evaluate fairly. The error to avoid is quietly improving the argument and then praising it, or quietly worsening it and then refuting it. Write hidden premises in a different colour so the distinction between what was said and what was assumed stays visible."
+    },
+    {
+      "q": "Do I need argument mapping software?",
+      "a": "No. Paper and coloured pencils handle almost every argument you will meet in a course, and the physical act of writing one claim per box is where most of the learning happens. Software is genuinely useful for very large arguments, collaborative work and maps you intend to revise many times, because moving boxes by hand means redrawing. Start on paper; move to software only when redrawing becomes the main cost."
+    }
+  ],
+  "externalLinks": [
+    {
+      "label": "University of Saskatchewan Library: Argument Mapping",
+      "url": "https://libguides.usask.ca/CriticalThinkingTutorial/ArgumentAnalysis/ArgumentMapping",
+      "note": "What an argument map is for, and how independent and co-dependent premises appear differently on a map."
+    },
+    {
+      "label": "Oklahoma State University: Logic and the Study of Arguments (open textbook)",
+      "url": "https://open.library.okstate.edu/criticalthinking/chapter/__unknown__/",
+      "note": "Premises, conclusions and statements, indicator words, and the definitions of validity and soundness."
+    },
+    {
+      "label": "SQA: Philosophy — Arguments in Action support notes",
+      "url": "https://www.sqa.org.uk/sqa/files_ccc/n5-h-philosophy-arguments-action-additional-support.pdf",
+      "note": "Linked, convergent and serial argument diagrams, hidden premises, and how to tell arguments from explanations."
+    }
+  ],
+  "references": [
+    "University of Saskatchewan Library. Argument Mapping. Critical Thinking Tutorial. https://libguides.usask.ca/CriticalThinkingTutorial/ArgumentAnalysis/ArgumentMapping",
+    "Oklahoma State University Libraries. Logic and the Study of Arguments. In: Critical Thinking (open textbook). https://open.library.okstate.edu/criticalthinking/chapter/__unknown__/",
+    "Scottish Qualifications Authority. National 5 and Higher Philosophy: Arguments in Action — Additional Support Notes. https://www.sqa.org.uk/sqa/files_ccc/n5-h-philosophy-arguments-action-additional-support.pdf",
+    "Davies M, Barnett A, van Gelder T. Studies in Critical Thinking. eCampusOntario Pressbooks, on co-premises, linked reasoning and the history of argument mapping. https://ecampusontario.pressbooks.pub/criticalthinking1234/chapter/introduction/"
+  ],
+  "internalLinks": [
+    {
+      "label": "How to Read a Philosophical Text",
+      "url": "/Read-a-Philosophical-Text"
+    },
+    {
+      "label": "How to Study for an Exam Without Cramming",
+      "url": "/Study-for-an-Exam-Without-Cramming"
+    },
+    {
+      "label": "How to Start a Club at School",
+      "url": "/Start-a-Club-at-School"
+    }
+  ],
+  "quizIdea": {
+    "title": "Can you read the structure?",
+    "questions": 4,
+    "note": "Four short passages: name the conclusion, say whether the premises are linked or independent, supply the hidden premise, and decide whether the argument is valid."
+  },
+  "publishing": {
+    "status": "draft",
+    "author": "Editorial draft",
+    "reviewer": "",
+    "datePublished": null,
+    "dateModified": "2026-11-01",
+    "readingTimeMinutes": 9,
+    "wordCount": null,
+    "internalLinkCount": 3,
+    "imageCount": 0,
+    "imagePending": 16,
+    "expertReviewed": false,
+    "reviewNote": "Logic and critical thinking content. Before publication, a philosophy teacher or logic tutor should check the definitions of validity, soundness, linked and convergent support against the terminology used in the reader's own syllabus, since textbooks differ in how they label co-premises and conductive arguments.",
+    "imageNote": "Illustrations are drawn for this guide only."
+  },
+  "imageStatus": {
+    "heroReady": false,
+    "stepImagesReady": 0,
+    "stepImagesPending": [
+      "01-is-it-an-argument",
+      "02-find-the-conclusion",
+      "03-collect-the-premises",
+      "04-standard-form",
+      "05-strip-the-decoration",
+      "06-one-claim-per-box",
+      "07-linked-vs-convergent",
+      "08-serial-chains",
+      "09-hidden-premises",
+      "10-objections-and-rebuttals",
+      "11-deductive-or-inductive",
+      "12-test-validity",
+      "13-check-soundness",
+      "14-counterexample",
+      "15-use-the-map"
+    ],
+    "note": "Illustrations in progress for this guide."
+  },
+  "dateModified": "2026-11-01"
+}
