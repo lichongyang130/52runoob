@@ -28,7 +28,7 @@
   "media": {
     "hero": {
       "base": "00-hero",
-      "alt": "Two people talking across a kitchen worktop, one standing calmly with a hand resting flat on the surface between them as they speak."
+      "alt": "Two people talking across a kitchen worktop in morning light, one standing square with a hand resting flat on the surface as they speak plainly."
     },
     "style": "Naturalistic hand-painted editorial illustration, soft watercolour washes over light pencil-and-ink linework, warm desaturated palette, visible paper texture, no text anywhere in the image.",
     "stylePending": [],
@@ -43,45 +43,45 @@
           "title": "Follow the resentment to the missing line",
           "body": "Resentment is the reliable signal. Notice which invitations you dread, which messages you leave unopened, and whose name on the screen makes your shoulders rise. Those reactions mark a place where you have been saying yes while meaning no. Write down the three situations that produce the most of it. The strongest one is the boundary to work on first.",
           "tip": "Keep the first boundary small and low risk. Practising on a minor situation builds the skill for a harder one later.",
-          "imageTodo": {
+          "image": {
             "base": "01-follow-the-resentment",
-            "alt": "A person sitting at a desk looking at a phone lighting up with a call, shoulders tightening, one hand pausing over the screen."
+            "alt": "A person at a home desk turning away from a phone lighting up beside them, shoulders tight and one hand hovering without picking it up."
           }
         },
         {
           "title": "Pin down the exact behaviour",
           "body": "Boundaries fail when they are vague. Not she is inconsiderate, but she arrives forty minutes late and I start the meeting twice. Describe the behaviour, when it happens and how often, as though you were reporting facts rather than passing judgement. This is also the version you can say out loud without the conversation becoming an argument about character.",
           "tip": "If your sentence contains always, never or typical, rewrite it with a date and a number instead.",
-          "imageTodo": {
+          "image": {
             "base": "02-pin-down-the-behaviour",
-            "alt": "A notebook open on a table showing a short handwritten list, a hand underlining one of the lines with a pencil."
+            "alt": "An open notebook on a pale table with five short handwritten lines, a hand drawing a firm pencil underline beneath one of them."
           }
         },
         {
           "title": "Sort it into yes, no and maybe",
           "body": "Before you decide what to say, decide what you actually want. Yes is what you can do without resentment and will deliver. No covers the things that cost too much or cut across something you care about. Maybe depends on detail, which means asking for the detail: which day, how long, who else is going. Specific beats vague in all three.",
           "tip": "I can help for an hour on Saturday morning is a better answer than a reluctant yes that you will quietly resent all week.",
-          "imageTodo": {
+          "image": {
             "base": "03-sort-yes-no-maybe",
-            "alt": "A kitchen table with three small cards laid out in a row and a hand placing one of them into position."
+            "alt": "An overhead view of three blank index cards laid out on a kitchen table, a hand placing a fourth card onto the middle pile."
           }
         },
         {
           "title": "Write the sentence before you need it",
           "body": "Counselling services teach a simple structure: when you do this, I feel that, and the effect is this, so I would prefer that. For example: when you drop in without calling, I feel caught out, because I am usually working, so I would prefer a message first. Write it, read it aloud, and cut it until it fits in two breaths.",
           "tip": "Use I statements throughout. I disagree lands very differently from you are wrong, even when the content is identical.",
-          "imageTodo": {
+          "image": {
             "base": "04-write-the-sentence",
-            "alt": "A person at a window seat writing one short line on a card, lips moving as they test how it sounds."
+            "alt": "A person sitting in a window seat writing one short line on a card balanced on a book, rain running down the glass behind them."
           }
         },
         {
           "title": "Decide what you will do, not what they must do",
           "body": "This is the step that turns a request into a boundary. A request asks for different behaviour; a boundary states the action you will take if it continues. If the shouting carries on, I am going to end the call. If the invoice is late again, I will stop holding the slot. Choose something proportionate that you are genuinely willing to do, because you will have to do it.",
           "tip": "Never name a consequence you would not carry out. One empty threat teaches everyone that the boundary is decorative.",
-          "imageTodo": {
+          "image": {
             "base": "05-decide-your-own-action",
-            "alt": "A hand resting on a door handle, the door half closed on a bright room, the person pausing mid-decision."
+            "alt": "A hand resting on the brass handle of a half-closed door, a warmly lit room with people visible through the gap."
           }
         }
       ]
@@ -94,45 +94,45 @@
           "title": "Choose a time that is not the middle of the problem",
           "body": "Raising a boundary during the incident guarantees defensiveness. Pick a time and place that suits both of you, when neither is rushing, drinking or already annoyed, and say at the start that you want to sort something out rather than have a row. Flat moments are the best moments: a walk, a drive, the washing up after everyone has gone.",
           "tip": "Avoid doing it by message if you can. Short written boundaries read as colder than they sound out loud.",
-          "imageTodo": {
+          "image": {
             "base": "06-choose-a-calm-time",
-            "alt": "Two people washing and drying dishes side by side in a quiet kitchen after a meal, talking easily."
+            "alt": "Two people washing and drying dishes side by side at a kitchen sink in the evening, talking easily without facing each other."
           }
         },
         {
           "title": "Lead with the request, not the history",
           "body": "Start with the sentence you wrote, then stop. The temptation is to justify it with a catalogue of previous incidents, which invites a debate about whether each one really happened. One example is enough, and only if you need it. The point of the conversation is the arrangement going forward, not a verdict on the past.",
           "tip": "If the other person disputes the history, say that you may remember it differently and return to the request.",
-          "imageTodo": {
+          "image": {
             "base": "07-lead-with-the-request",
-            "alt": "Two people sitting on a garden step, one speaking a short sentence with a steady open hand while the other listens."
+            "alt": "Two people sitting on a garden step in the afternoon, one speaking a short sentence with a steady open hand while the other listens."
           }
         },
         {
           "title": "Say no without the paragraph",
           "body": "No is a complete sentence. If a reason helps, keep it to one, because every extra reason is another door for negotiation: I cannot take that on this month is finished, while I am just so busy with everything at the moment invites a discussion of your schedule. Decline the request, not the person, and do not apologise three times for it.",
           "tip": "Buy time rather than blurting a yes. Let me check and come back to you today is a complete, honest answer.",
-          "imageTodo": {
+          "image": {
             "base": "08-say-no-without-a-paragraph",
-            "alt": "Two colleagues in an office doorway, one shaking their head slightly with a calm, friendly expression while holding a folder."
+            "alt": "A person in an office doorway holding a folder and giving a small shake of the head with a friendly expression as a colleague makes a request."
           }
         },
         {
           "title": "Let your body say the same thing as your mouth",
           "body": "Delivery carries the message. Stand or sit upright, face the person, keep steady eye contact without staring, and let your voice stay level and a little slower than usual. Uncross your arms. A firm sentence delivered with an apologetic laugh and a backwards step reads as an opening offer rather than a limit.",
           "tip": "Rehearse it once aloud, or with a friend. Hearing your own voice say the words removes most of the wobble.",
-          "imageTodo": {
+          "image": {
             "base": "09-match-body-to-words",
-            "alt": "A person standing with squared shoulders and relaxed arms in a hallway, speaking to someone just out of frame."
+            "alt": "A person standing in a sunlit hallway with squared shoulders and relaxed arms, speaking towards someone outside the frame."
           }
         },
         {
           "title": "Say the consequence plainly, once",
           "body": "Add the part you decided in advance, without drama: if it happens again, I will leave early. Say it in the same level tone as the rest, then let it sit. Delivered calmly, it is information rather than a threat, and most people hear it as seriousness rather than hostility. Repeating or embellishing it is what makes it sound like a threat.",
           "tip": "Do not bargain with yourself out loud. Stating the consequence and then immediately softening it undoes the whole sentence.",
-          "imageTodo": {
+          "image": {
             "base": "10-state-the-consequence",
-            "alt": "Two people at a cafe table, one finishing a sentence with a quiet, level expression while the other sits back, taking it in."
+            "alt": "Two people at a cafe table, one sitting still with a level expression after finishing a sentence while the other leans back holding a cup."
           }
         }
       ]
@@ -145,45 +145,45 @@
           "title": "Use the broken record",
           "body": "When the pushback starts, choose one concise sentence and repeat it calmly, acknowledging what they said and returning to your line: I hear that it is awkward, and I am still not able to do it. Each repetition should get shorter, not longer. The aim is not to win the argument but to outlast the pressure without introducing new material to attack.",
           "tip": "Adding a fresh justification on the third repetition is how most boundaries collapse. Keep the words the same.",
-          "imageTodo": {
+          "image": {
             "base": "11-broken-record",
-            "alt": "Two people on a stair landing, one gesturing insistently while the other stands calm and unmoved, repeating a short reply."
+            "alt": "Two people on a staircase, one partway up gesturing insistently while the other stands at the foot, calm and unmoved, repeating a short reply."
           }
         },
         {
           "title": "Fog the criticism and defuse the heat",
           "body": "Two counselling techniques handle the usual counter-moves. Fogging agrees with the grain of truth and ignores the rest: that may be true, and I still need the evenings free. Defusing postpones a conversation that has become heated: I can see you are angry, let us talk this afternoon. Both let you concede nothing while lowering the temperature.",
           "tip": "Jokes that trivialise the request are a form of pushback too. Smile, then repeat the sentence anyway.",
-          "imageTodo": {
+          "image": {
             "base": "12-fogging-and-defusing",
-            "alt": "Two people in a kitchen, one leaning forward heatedly while the other lifts a hand gently and steps back half a pace."
+            "alt": "Two people in a kitchen at night, one leaning across the table with a raised finger while the other lifts a palm gently and steps back half a pace."
           }
         },
         {
           "title": "Follow through the first time",
           "body": "The first test decides whether the boundary exists. If you said you would leave at ten, pick up your coat at ten, pleasantly and without a speech. If you said you would end the call, end it. Doing the thing once, calmly, is worth more than a dozen repetitions of the sentence, and it is almost always less dramatic than you fear.",
           "tip": "Follow through without punishing. Leave warmly, and get in touch the next day as normal.",
-          "imageTodo": {
+          "image": {
             "base": "13-follow-through",
-            "alt": "A person putting on a coat by a front door while the gathering behind them carries on, giving a small wave goodbye."
+            "alt": "A person pulling on a coat by the front door and giving a small wave goodbye while a gathering carries on in the lit room behind."
           }
         },
         {
           "title": "Expect the wobble, in them and in you",
           "body": "There is usually a bad fortnight. People who benefited from the old arrangement may sulk, test, or tell you that you have changed. Guilt tends to arrive in the quiet afterwards rather than during the conversation. Both pass. Most relationships absorb a clearly stated boundary and settle, and the ones that cannot were already running on your silence.",
           "tip": "Tell one person what you have decided. Saying it out loud to a friend makes it much harder to quietly abandon.",
-          "imageTodo": {
+          "image": {
             "base": "14-expect-the-wobble",
-            "alt": "A person sitting alone on a sofa in the evening after a conversation, holding a mug, looking thoughtful but settled."
+            "alt": "A person sitting alone at one end of a sofa late in the evening with a mug in both hands, thoughtful but settled."
           }
         },
         {
           "title": "Review it a month later",
           "body": "Boundaries are arrangements, not rulings, and they can be loosened as easily as they were set. After a few weeks, check what changed: is the resentment gone, did the behaviour shift, is the limit still the right one. Adjust it deliberately rather than letting it erode. Then, if it is holding, choose the next situation on your list and do it again.",
           "tip": "Changing your mind on purpose is not caving. Caving is changing it in the middle of being pressed.",
-          "imageTodo": {
+          "image": {
             "base": "15-review-it-later",
-            "alt": "A person at a kitchen table with a diary open, drawing a small tick beside one line while morning light crosses the page."
+            "alt": "An open diary on a kitchen table in morning sunlight showing a column of short handwritten lines, a hand drawing one small tick beside a line."
           }
         }
       ]
@@ -265,7 +265,7 @@
     "note": "Four statements to sort into boundary or wish, including one that names the speaker's own action and one that only demands a change from the other person."
   },
   "publishing": {
-    "status": "draft",
+    "status": "ready-for-review",
     "author": "Editorial draft",
     "reviewer": "",
     "datePublished": null,
@@ -273,33 +273,17 @@
     "readingTimeMinutes": 9,
     "wordCount": null,
     "internalLinkCount": 4,
-    "imageCount": 0,
-    "imagePending": 16,
+    "imageCount": 16,
+    "imagePending": 0,
     "expertReviewed": false,
     "reviewNote": "Interpersonal and mental health adjacent content. Before publication a qualified counsellor or psychologist should review the framing, the coercive control warning must be checked against the guidance of a domestic abuse organisation in the publishing country, and the workplace paragraph should be checked against local employment practice.",
-    "imageNote": "Illustrations are drawn for this guide only."
+    "imageNote": "All 16 illustrations drawn for this guide; none reused from other articles."
   },
   "imageStatus": {
-    "heroReady": false,
-    "stepImagesReady": 0,
-    "stepImagesPending": [
-      "01-follow-the-resentment",
-      "02-pin-down-the-behaviour",
-      "03-sort-yes-no-maybe",
-      "04-write-the-sentence",
-      "05-decide-your-own-action",
-      "06-choose-a-calm-time",
-      "07-lead-with-the-request",
-      "08-say-no-without-a-paragraph",
-      "09-match-body-to-words",
-      "10-state-the-consequence",
-      "11-broken-record",
-      "12-fogging-and-defusing",
-      "13-follow-through",
-      "14-expect-the-wobble",
-      "15-review-it-later"
-    ],
-    "note": "Illustrations in progress for this guide."
+    "heroReady": true,
+    "stepImagesReady": 15,
+    "stepImagesPending": [],
+    "note": "All illustrations drawn for this guide."
   },
   "dateModified": "2026-11-01"
 }
