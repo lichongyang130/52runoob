@@ -43,7 +43,7 @@
           "title": "Fix the shape of the meal first",
           "body": "Decide four things before you invite anyone: how many people, what time they eat, whether it is a sit-down meal or a buffet, and what you are supplying yourself. A host who provides the main dish and the drinks is running a different event from one who provides only the room. Write the four answers at the top of your list, because every later decision, from how many serving spoons you need to how much oven space you can offer, follows from them.",
           "tip": "Count guests by households rather than by name. People bring partners, and a potluck built for twelve feeds sixteen badly.",
-          "imageTodo": {
+          "image": {
             "base": "01-shape-of-the-meal",
             "alt": "A host sitting at a kitchen table with a notebook and a mug, planning the numbers for a gathering."
           }
@@ -52,7 +52,7 @@
           "title": "Sign people up by category, not by whim",
           "body": "Left to themselves, guests bring what they like making, which is usually pudding. Divide the list into mains, hot sides, cold sides and salads, bread, desserts, and drinks, then cap each category. A rough target for a buffet is one substantial main for every four or five people, with sides and salads making up the rest. Let people choose within a category rather than assigning dishes outright; you get better cooking and less resentment.",
           "tip": "Keep the list somewhere everyone can see, such as a shared note or a sheet on the fridge, so two people do not both bring the same thing.",
-          "imageTodo": {
+          "image": {
             "base": "02-sign-up-list",
             "alt": "A ruled sign-up sheet held to a fridge door with magnets, its columns filled in by several different hands."
           }
@@ -61,7 +61,7 @@
           "title": "Ask about allergies and mean it",
           "body": "Ask every guest, in writing, what they cannot eat. In the United States the law recognises nine major food allergens: milk, eggs, fish, crustacean shellfish, tree nuts, peanuts, wheat, soybeans and sesame, which joined the list in 2023. Reactions range from hives to anaphylaxis, so this is not a preference survey. Pass the answers on to whoever is cooking, and ask them to bring the recipe card with the dish.",
           "tip": "Collect the answers in one message thread rather than in scattered conversations. Allergy information that lives in someone's memory is information you do not have.",
-          "imageTodo": {
+          "image": {
             "base": "03-collect-allergies",
             "alt": "A host sorting small blank cards into two piles at a table set with a jar of peanuts, a dish of sesame seeds, a milk jug and a wedge of soft cheese."
           }
@@ -70,7 +70,7 @@
           "title": "Tell people what your kitchen can actually do",
           "body": "Most potluck chaos happens in the last thirty minutes, when six dishes need an oven that fits two. Count your oven shelves, your hob rings, your fridge space and your power sockets, then publish those limits with the invitation. Ask for dishes that arrive ready to eat, or that need no more than a short reheat. If you only have two sockets free, you can only take two slow cookers.",
           "tip": "Reserve the oven for one or two dishes you nominate in advance, and ask everyone else to bring food hot or cold rather than halfway.",
-          "imageTodo": {
+          "image": {
             "base": "04-kitchen-limits",
             "alt": "A host crouching to look into a small open oven with one rack pulled out, while a kettle and a slow cooker crowd the worktop behind."
           }
@@ -79,7 +79,7 @@
           "title": "Assign the unglamorous items",
           "body": "Somebody has to bring ice, serving spoons, a bin bag, foil, cups and a couple of trivets. Nobody volunteers for this list, so add it to the sign-up sheet as a category of its own and claim the items you cannot borrow. Ice matters more than people expect: keeping cold dishes genuinely cold needs a bag of it, and a party that runs out is a party with warm potato salad.",
           "tip": "Ask two people to bring ice. It is cheap, it is always needed, and the spare bag keeps drinks cold.",
-          "imageTodo": {
+          "image": {
             "base": "05-unglamorous-items",
             "alt": "A worktop holding a tall stack of plates, cutlery in a jug, folded napkins, two bags of ice and empty containers, with a hand adding another serving spoon."
           }
@@ -94,7 +94,7 @@
           "title": "Cook each dish to its safe internal temperature",
           "body": "Colour is not a test. Use a food thermometer in the thickest part of the dish and cook poultry of every kind, casseroles and anything reheated to 74 degrees Celsius. Ground meat and egg dishes need 71 degrees, while steaks, roasts, chops and most fish reach 63 degrees followed by a three-minute rest. These are the United States Department of Health and Human Services figures, and they are the same whether the dish is for four people or forty.",
           "tip": "Check the temperature in two or three places in a large tray. A casserole can be fully cooked at the edge and cold in the middle.",
-          "imageTodo": {
+          "image": {
             "base": "06-check-temperature",
             "alt": "Two hands sliding a slim probe thermometer into the thickest part of a roast bird resting in a tray on the hob, steam rising around it."
           }
@@ -103,7 +103,7 @@
           "title": "Chill cold dishes properly before they travel",
           "body": "A salad containing cooked potato, pasta, chicken, ham or egg is a perishable dish, not a safe one. Cool the cooked ingredients in shallow containers in the fridge before you mix and dress them, and keep the finished dish at or below 4 degrees Celsius right up to the moment it goes into the cool box. Shallow containers matter: a deep tub of warm potato cools from the outside in and stays warm in the middle for hours.",
           "tip": "Make the mayonnaise-based salads the night before, not an hour before you leave. They need the time in the fridge.",
-          "imageTodo": {
+          "image": {
             "base": "07-chill-shallow-containers",
             "alt": "An open fridge in a dim kitchen with wide shallow containers of food spread in a single layer across two shelves as a hand slides in the last one."
           }
@@ -112,7 +112,7 @@
           "title": "Pack hot and cold food for the journey",
           "body": "Hot dishes should leave home at 60 degrees Celsius or above, wrapped well and packed in an insulated container or a slow cooker still holding heat. Cold dishes travel in a cool box with plenty of ice or frozen gel packs, held at 4 degrees or below, with a thermometer inside if you have one. Put the food in the passenger compartment rather than a cold or baking boot, and drive straight there without side trips.",
           "tip": "Fill a vacuum container with boiling water for a few minutes and tip it out before adding hot soup or chilli. The preheated container holds temperature far longer.",
-          "imageTodo": {
+          "image": {
             "base": "08-pack-for-transport",
             "alt": "An open car boot at dusk holding a cool bag with a salad bowl and a towel-wrapped dish braced upright in a box, with hands tucking a blanket into the gap."
           }
@@ -121,7 +121,7 @@
           "title": "Reheat on the stove or in the oven, not in the slow cooker",
           "body": "Food that was cooked earlier and cooled must be reheated all the way to 74 degrees Celsius before it goes onto the table, and sauces, soups and gravies should be brought to a boil. Do not use a slow cooker, chafing dish or warming tray to do the reheating: those appliances are designed to hold food hot, and they take it up through the bacterial danger zone far too slowly. Heat it properly first, then transfer it.",
           "tip": "Stir halfway through reheating and check the temperature in the middle, not at the edge of the pan.",
-          "imageTodo": {
+          "image": {
             "base": "09-reheat-properly",
             "alt": "A pan of stew steaming on the hob as a hand stirs it, with an unplugged slow cooker pushed to the back of the worktop, lid off."
           }
@@ -276,25 +276,16 @@
     "readingTimeMinutes": 9,
     "wordCount": null,
     "internalLinkCount": 3,
-    "imageCount": 0,
-    "imagePending": 16,
+    "imageCount": 10,
+    "imagePending": 6,
     "expertReviewed": false,
     "reviewNote": "YMYL food safety content. Temperatures, holding times and allergen statements must be checked by a qualified food safety professional against current USDA, FDA and local guidance before publication, and local rules differ outside the United States.",
     "imageNote": "Illustrations are drawn for this guide only."
   },
   "imageStatus": {
-    "heroReady": false,
-    "stepImagesReady": 0,
+    "heroReady": true,
+    "stepImagesReady": 9,
     "stepImagesPending": [
-      "01-shape-of-the-meal",
-      "02-sign-up-list",
-      "03-collect-allergies",
-      "04-kitchen-limits",
-      "05-unglamorous-items",
-      "06-check-temperature",
-      "07-chill-shallow-containers",
-      "08-pack-for-transport",
-      "09-reheat-properly",
       "10-buffet-setup",
       "11-label-the-dishes",
       "12-replace-platters",
