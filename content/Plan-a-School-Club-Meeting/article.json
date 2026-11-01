@@ -1,0 +1,309 @@
+{
+  "schema": "howly-guide/v1",
+  "requirements": {
+    "stepMin": 15,
+    "stepMax": 20,
+    "externalLinksMin": 2,
+    "uniqueImagesWithinArticle": true
+  },
+  "slug": "Plan-a-School-Club-Meeting",
+  "url": "/Plan-a-School-Club-Meeting",
+  "category": "Youth",
+  "categoryUrl": "/Category/Youth",
+  "title": "How to Plan a School Club Meeting",
+  "h1": "How to Plan a School Club Meeting",
+  "deck": "An agenda written in advance, a room that starts on time, one motion on the floor at a time, and minutes that survive until the next meeting.",
+  "intro": "Most school clubs do not fall apart because the idea was weak. They fall apart in the forty minutes of a meeting that had no agenda, drifted into a conversation about what the club should be, and ended with nobody sure who agreed to do what. A planned meeting fixes that cheaply: one page written before anyone arrives, a fixed order of business, a decision taken by an actual vote, and five lines of minutes that make the next meeting possible. This guide walks through planning, running and closing a club meeting the way student organisations and youth clubs have done it for decades, using the order of business that school and 4-H clubs across the United States still teach. None of it requires a formal parliamentarian or a gavel. It requires an agenda, a clock, and the discipline to write down what was decided.",
+  "seo": {
+    "titleTag": "How to Plan a School Club Meeting: 15 Steps",
+    "metaDescription": "Plan a school club meeting: build an agenda in the standard order of business, time-box each block, run motions fairly, record decisions and close on time.",
+    "keywords": [
+      "how to plan a school club meeting",
+      "club meeting agenda",
+      "student club order of business"
+    ],
+    "primaryKeyword": "plan a school club meeting",
+    "searchIntent": "informational"
+  },
+  "media": {
+    "hero": {
+      "base": "00-hero",
+      "alt": "Students seated around a rectangle of tables in a classroom, one standing at the end with a printed agenda while another writes notes."
+    },
+    "style": "Naturalistic hand-painted editorial illustration, soft watercolour washes over light pencil-and-ink linework, warm desaturated palette, visible paper texture, no text anywhere in the image.",
+    "stylePending": []
+  },
+  "parts": [
+    {
+      "title": "Build the Agenda Before Anyone Arrives",
+      "heading": "Build the Agenda Before Anyone Arrives",
+      "steps": [
+        {
+          "title": "Decide the one thing the meeting must produce",
+          "body": "Before writing anything, finish this sentence: by the end of this meeting the club will have decided ___. One decision, stated plainly — the date of the fundraiser, who runs the stall, whether the format changes. Everything else on the agenda is reporting or discussion that can be cut if time runs short. A meeting with no required outcome becomes a conversation, and a conversation that repeats for three weeks is how members quietly stop coming.",
+          "tip": "If you cannot name the decision, consider cancelling and sending a two-line update instead. Members notice when their time is respected.",
+          "imageTodo": {
+            "base": "01-set-one-purpose",
+            "alt": "A student at a desk writing a single line at the top of an otherwise empty page, pen resting against the paper."
+          }
+        },
+        {
+          "title": "Write the agenda in the standard order of business",
+          "body": "Club meetings across school and 4-H programmes use the same backbone: call to order, roll call, reading and approval of the minutes, treasurer's report, committee reports, unfinished business, new business, announcements, adjournment. Use it. The order is not ceremony — it puts money and old commitments in front of the group before anyone proposes something new, so decisions are made with the facts already on the table.",
+          "tip": "Keep a reusable template file. You should be filling in items, not reinventing the structure each month.",
+          "imageTodo": {
+            "base": "02-draft-the-agenda",
+            "alt": "A one-page agenda being drafted on a laptop beside a notebook, a numbered list of short entries visible on the screen."
+          }
+        },
+        {
+          "title": "Give every block a number of minutes",
+          "body": "Write the minutes beside each item and total them. A common split used by club programmes is roughly fifteen to twenty minutes of business, forty to sixty minutes of the actual activity or learning, and fifteen to twenty minutes of social time; other handbooks run business a little longer, at twenty to thirty minutes. The exact numbers matter less than the habit of assigning them, because an unbudgeted agenda always overruns on the first item.",
+          "tip": "Put the hardest decision second, not last. The last item on an unbudgeted agenda is the one that gets postponed.",
+          "imageTodo": {
+            "base": "03-time-box-the-parts",
+            "alt": "A printed agenda on a table with small handwritten time allocations pencilled in the right-hand margin beside each line."
+          }
+        },
+        {
+          "title": "Check the agenda with your sponsor and officers",
+          "body": "Meet the staff sponsor and the other officers briefly before the meeting — ten minutes in person or a short message thread. Confirm the room is booked, the treasurer has figures, committee chairs are ready to report, and nothing on the list needs permission you do not have. Officer handbooks make this pre-meeting check a standing duty of the president and vice-president, because surprises in the room cost far more time than a check beforehand.",
+          "tip": "Ask each officer directly whether their item is ready. Silence in a group chat is not confirmation.",
+          "imageTodo": {
+            "base": "04-check-with-officers",
+            "alt": "Three students and a teacher standing at a classroom doorway with a single sheet of paper between them, talking briefly."
+          }
+        },
+        {
+          "title": "Send the agenda out before the meeting",
+          "body": "Send the agenda, the room, the start and finish times, and anything members should read, at least a day ahead. Invite additions with a deadline — items received after that go to the next meeting. Circulating the agenda converts the meeting from something that happens to members into something they arrive prepared for, and it gives quieter people time to think about a decision before being asked to vote on it.",
+          "tip": "Post it where the club already talks rather than a new channel nobody checks. Reach beats tidiness.",
+          "imageTodo": {
+            "base": "05-send-the-agenda-early",
+            "alt": "A student in a corridor sending the agenda from a phone, a paper copy folded under one arm."
+          }
+        }
+      ]
+    },
+    {
+      "title": "Run the Room",
+      "heading": "Run the Room",
+      "steps": [
+        {
+          "title": "Arrive early and set the room so people face each other",
+          "body": "Get there fifteen to twenty minutes before the start, as club officer guides recommend, and arrange tables and chairs into a circle or rectangle with no back row. Seating decides participation more than any facilitation trick: people in a back row behind other people contribute roughly nothing. Put the agenda where everyone can see it, either a copy each or one large sheet at the front.",
+          "tip": "Count the chairs to the number you expect plus two. A half-empty room reads as a failing club even when attendance is normal.",
+          "imageTodo": {
+            "base": "06-set-up-the-room",
+            "alt": "Two students pushing classroom tables into a rectangle and setting chairs around all four sides of it."
+          }
+        },
+        {
+          "title": "Call the meeting to order on time",
+          "body": "Start at the stated time whether or not everyone has arrived, and say the words — the meeting will come to order. Officer handbooks are blunt about this: the vice-president starts if the president is late, and waiting for stragglers teaches everyone that the stated time is fiction. Starting on time is also the only honest basis for promising members that the meeting will end on time.",
+          "tip": "Greet latecomers without rewinding. Catch them up after the meeting, not in front of everyone.",
+          "imageTodo": {
+            "base": "07-start-on-time",
+            "alt": "A student standing at the head of the table opening the meeting while two others slip into seats behind."
+          }
+        },
+        {
+          "title": "Take attendance with a question everyone answers",
+          "body": "Have the secretary take the roll, but attach a one-sentence question to it — what you are working on, one thing you want from this term, a favourite anything. It takes two minutes and it means every person in the room has used their voice once before any discussion starts. People who have already spoken once are far more likely to speak again, and the attendance record is what you use later to defend your room booking.",
+          "tip": "Vary the question each meeting and keep answers to one sentence, or roll call eats the business block.",
+          "imageTodo": {
+            "base": "08-roll-call-question",
+            "alt": "A seated student ticking names on a register while another member speaks, the rest of the circle listening."
+          }
+        },
+        {
+          "title": "Approve the minutes and hear the money",
+          "body": "The secretary reads or circulates the minutes of the last meeting; the chair asks for corrections, then declares them approved. The treasurer then gives the balance and what has been spent since the last meeting. Doing both early keeps the club honest in public and prevents the familiar argument where two people remember a past decision differently. If the club holds money, this is also the moment anyone may ask a question about it.",
+          "tip": "Circulate the minutes in writing beforehand and read only the decisions aloud. Reading everything wastes the room.",
+          "imageTodo": {
+            "base": "09-minutes-and-money",
+            "alt": "A student reading from an open notebook of minutes while another holds up a simple written account of club funds."
+          }
+        },
+        {
+          "title": "Handle one motion at a time",
+          "body": "When a decision is needed, use the sequence that youth clubs teach: a member moves, another seconds, the chair states the motion and opens discussion, the chair restates it, and the group votes by voice, hands or ballot. Only one motion sits before the group at once. A majority — more than half of those voting — carries it. This is lighter than it sounds and it replaces the vague group nod that nobody can later be held to.",
+          "tip": "Write the motion down word for word before the vote. People vote differently once they see the exact wording.",
+          "imageTodo": {
+            "base": "10-one-motion-at-a-time",
+            "alt": "A ring of seated students with several hands raised in a vote while one stands with an arm half lifted to be recognised."
+          }
+        }
+      ]
+    },
+    {
+      "title": "Decide, Record and Set Up the Next Meeting",
+      "heading": "Decide, Record and Set Up the Next Meeting",
+      "steps": [
+        {
+          "title": "Keep the discussion fair and finite",
+          "body": "Recognise speakers one at a time, keep contributions to the item on the floor, and make sure the quiet half of the room is asked directly before any vote. The principles behind this are simple: one person speaks at a time, every motion gets time for debate, every member has equal rights, and the majority decides while the minority keeps the right to be heard. When the discussion starts repeating itself, say so and call the vote.",
+          "tip": "Cap each speaker at about a minute on contested items. The cap protects the people who never interrupt.",
+          "imageTodo": {
+            "base": "11-keep-discussion-fair",
+            "alt": "A student chairing from the end of the table, one hand open towards a quieter member who is starting to speak."
+          }
+        },
+        {
+          "title": "Write minutes that record decisions, not atmosphere",
+          "body": "Minutes are not a transcript. Record the date, who attended, each decision taken, the result of each vote, who agreed to do what, and the deadline. Five or six lines is usually enough. Those lines are the club's memory, the evidence your sponsor needs at budget time, and the document that opens the next meeting. Clubs lose months to the gap between two people remembering a decision differently.",
+          "tip": "Keep minutes in one shared document the whole committee can open, not scattered across chat threads.",
+          "imageTodo": {
+            "base": "12-write-the-minutes",
+            "alt": "A secretary writing a short list of decisions in a ruled notebook as the meeting continues around the table."
+          }
+        },
+        {
+          "title": "Give every job an owner and a date",
+          "body": "A decision without a named person is a wish. Before moving on, say out loud who is doing it and by when, and have the secretary write both down. Spread the jobs: officer guides ask the president and vice-president to delegate so that every member holds a role at some point, which is also the most reliable way to keep people coming back. Small jobs with clear deadlines beat large jobs with none.",
+          "tip": "Avoid assigning anything to a person who is absent without asking them first. Volunteering someone who is not in the room is how clubs lose members.",
+          "imageTodo": {
+            "base": "13-assign-jobs",
+            "alt": "Students around a table each taking a small card from a short stack, one writing a date on the card in hand."
+          }
+        },
+        {
+          "title": "Announce, adjourn and finish on time",
+          "body": "Take announcements last, then close properly — a motion to adjourn, or simply the chair stating that the meeting is adjourned. Finish at the time you promised even if an item is unfinished; carry it to unfinished business next time. A club that reliably ends on time can ask for ninety minutes of attention next month. A club that always overruns is quietly teaching members to arrive late or not at all.",
+          "tip": "Keep the social half after the formal close, so people who must leave can go without feeling rude.",
+          "imageTodo": {
+            "base": "14-close-on-time",
+            "alt": "Students standing and gathering bags as the chair closes the meeting, a wall clock visible above the door."
+          }
+        },
+        {
+          "title": "Spend ten minutes planning the next one",
+          "body": "Before the room empties, the officers should agree three things: the date of the next meeting, the first item on its agenda, and anything that must be confirmed beforehand. Write them at the bottom of the minutes. Doing this while the meeting is fresh takes ten minutes; doing it a fortnight later takes an hour of reconstruction and usually produces a weaker agenda. This habit, more than enthusiasm, is what keeps a club alive in February.",
+          "tip": "Book the room for the whole term rather than meeting by meeting. A fixed slot is the strongest predictor that a club survives the year.",
+          "imageTodo": {
+            "base": "15-review-and-plan-next",
+            "alt": "Three officers standing by a stacked pile of chairs after the meeting, one pointing at a date circled on a wall planner."
+          }
+        }
+      ]
+    }
+  ],
+  "tips": [
+    "One page is the right length for an agenda. If it needs two, you are planning two meetings.",
+    "Give the newest member a small, visible job at their second meeting. Ownership is what turns an attender into a member.",
+    "Keep a single folder of agendas and minutes that passes to next year's officers. Most clubs die at handover, not at launch.",
+    "If attendance falls below five for three meetings running, ask the remaining members whether to change the format or stop. Both are legitimate answers."
+  ],
+  "warnings": [
+    "Check your school's rules before the meeting makes commitments: many require a staff sponsor present, approval for posters and fundraising, and a signed form before any money is collected or spent.",
+    "Do not photograph members or post their names online without permission; school policies on images of students are strict and usually require consent from a parent or guardian.",
+    "Club funds should be handled through the school's approved process rather than a student's personal account, and two people should see every figure."
+  ],
+  "faq": [
+    {
+      "q": "How long should a club meeting be?",
+      "a": "Most school clubs work best in a single lunch break or a sixty to ninety minute after-school slot. Within that, club programmes suggest keeping the business portion to roughly fifteen to thirty minutes and leaving the majority of the time for the activity itself plus a short social stretch. The exact split matters less than writing the numbers on the agenda and holding to them, because the business block expands to fill whatever space it is given."
+    },
+    {
+      "q": "Do we need formal parliamentary procedure and a gavel?",
+      "a": "No. What you need is the useful core of it: an agenda in a fixed order, one person speaking at a time, one motion considered at a time, and a recorded vote on anything the club will be held to. Youth club guides are explicit that involving members in decisions matters more than strict adherence to formal language. Use plain words — I propose, is anyone against, let us vote — and keep the structure."
+    },
+    {
+      "q": "What if two or three people dominate every discussion?",
+      "a": "Make speaking an explicit process rather than a competition for gaps in the conversation. Recognise speakers by name, cap contributions on contested items, go round the table once before opening free discussion, and ask quiet members directly what they think. If it persists, put the decision to a written vote, which removes the advantage held by whoever is loudest and most confident in the room."
+    },
+    {
+      "q": "Nobody reads the minutes. Why bother writing them?",
+      "a": "Minutes are not written to be read for pleasure; they are written to settle disputes and prove activity. They tell you what was decided when memories disagree, they show a sponsor or student council that the club is functioning, and they let a member who missed a meeting catch up in a minute. Keep them to five or six lines of decisions and owners and they cost two minutes to write."
+    }
+  ],
+  "externalLinks": [
+    {
+      "label": "UMass Amherst Mass 4-H: Parliamentary Procedure Guide",
+      "url": "https://www.umass.edu/agriculture-food-environment/mass4h/volunteers/parliamentary-procedure-guide",
+      "note": "Plain-language order of business, definitions of motion, second, majority and floor, and the steps for taking a vote."
+    },
+    {
+      "label": "University of Missouri Extension: Planning and Conducting 4-H Club Meetings",
+      "url": "https://extension.missouri.edu/media/wysiwyg/Extensiondata/Pro/4h/Docs/GetInvolved/ClubManagement/ClubLeader/LG903.pdf",
+      "note": "Suggested time split between business, learning and social time, plus a recommended order of business."
+    },
+    {
+      "label": "Iowa State University Extension: Conducting a 4-H Business Meeting",
+      "url": "https://www.extension.iastate.edu/4h/files/documents/4-H%20Club%20Meeting%20(Parli%20Pro).pdf",
+      "note": "A full sample meeting script from call to order through adjournment, including how a motion is made and voted on."
+    },
+    {
+      "label": "Ohio State University Extension: Ohio 4-H Vice President's Handbook",
+      "url": "https://ohio4h.org/sites/ohio4h/files/imce/Families/officer_resources/Vice%20President%20Handbook.pdf",
+      "note": "Officer duties, planning the agenda with an adviser in advance, and delegating so every member holds a role."
+    }
+  ],
+  "references": [
+    "University of Massachusetts Amherst, Center for Agriculture, Food and the Environment. Parliamentary Procedure Guide. Mass 4-H. https://www.umass.edu/agriculture-food-environment/mass4h/volunteers/parliamentary-procedure-guide",
+    "University of Missouri Extension. Letters to New Leaders, Letter 3: Planning and Conducting 4-H Club Meetings (LG903), updated 2022. https://extension.missouri.edu/media/wysiwyg/Extensiondata/Pro/4h/Docs/GetInvolved/ClubManagement/ClubLeader/LG903.pdf",
+    "Iowa State University Extension and Outreach. Conducting a 4-H Business Meeting (Parliamentary Procedure). https://www.extension.iastate.edu/4h/files/documents/4-H%20Club%20Meeting%20(Parli%20Pro).pdf",
+    "Ohio State University Extension. Ohio 4-H Vice President's Handbook, 2015. https://ohio4h.org/sites/ohio4h/files/imce/Families/officer_resources/Vice%20President%20Handbook.pdf"
+  ],
+  "internalLinks": [
+    {
+      "label": "How to Start a Club at School",
+      "url": "/Start-a-Club-at-School"
+    },
+    {
+      "label": "How to Split Household Chores Fairly",
+      "url": "/Split-Household-Chores-Fairly"
+    },
+    {
+      "label": "How to Build a Monthly Budget",
+      "url": "/Build-a-Monthly-Budget"
+    },
+    {
+      "label": "How to Study for an Exam Without Cramming",
+      "url": "/Study-for-an-Exam-Without-Cramming"
+    }
+  ],
+  "quizIdea": {
+    "title": "Is your club meeting actually planned?",
+    "questions": 4,
+    "note": "Four questions: does the agenda exist in writing before the meeting, does every block have minutes beside it, was each decision taken by a vote, and does someone's name sit next to every job."
+  },
+  "publishing": {
+    "status": "draft",
+    "author": "Editorial draft",
+    "reviewer": "",
+    "datePublished": null,
+    "dateModified": "2026-11-01",
+    "readingTimeMinutes": 9,
+    "wordCount": null,
+    "internalLinkCount": 4,
+    "imageCount": 0,
+    "imagePending": 16,
+    "expertReviewed": false,
+    "reviewNote": "Content for a youth audience. Before publication, a teacher, student activities adviser or youth programme coordinator should check the procedural advice against the school's own club handbook, and confirm the statements on consent for photographs and on handling club money against local school policy and law.",
+    "imageNote": "Illustrations are drawn for this guide only."
+  },
+  "imageStatus": {
+    "heroReady": false,
+    "stepImagesReady": 0,
+    "stepImagesPending": [
+      "01-set-one-purpose",
+      "02-draft-the-agenda",
+      "03-time-box-the-parts",
+      "04-check-with-officers",
+      "05-send-the-agenda-early",
+      "06-set-up-the-room",
+      "07-start-on-time",
+      "08-roll-call-question",
+      "09-minutes-and-money",
+      "10-one-motion-at-a-time",
+      "11-keep-discussion-fair",
+      "12-write-the-minutes",
+      "13-assign-jobs",
+      "14-close-on-time",
+      "15-review-and-plan-next"
+    ],
+    "note": "Illustrations in progress for this guide."
+  },
+  "dateModified": "2026-11-01"
+}
