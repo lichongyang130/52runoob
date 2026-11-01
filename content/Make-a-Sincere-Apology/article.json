@@ -1,0 +1,301 @@
+{
+  "schema": "howly-guide/v1",
+  "requirements": {
+    "stepMin": 15,
+    "stepMax": 20,
+    "externalLinksMin": 2,
+    "uniqueImagesWithinArticle": true
+  },
+  "slug": "Make-a-Sincere-Apology",
+  "url": "/Make-a-Sincere-Apology",
+  "category": "Relationships",
+  "categoryUrl": "/Category/Relationships",
+  "title": "How to Make a Sincere Apology",
+  "h1": "How to Make a Sincere Apology",
+  "deck": "Own the thing you actually did, say what it cost the other person, offer a repair you will really carry out, and then let them decide what happens next.",
+  "intro": "Most failed apologies fail in the same two places: they explain before they admit, and they ask to be forgiven before anything has been repaired. Research on what makes apologies land is unusually clear on the order of importance. In two studies with 755 participants, Ohio State researchers found that the single most important component is an acknowledgement of responsibility — saying plainly that it was your fault — followed by an offer of repair, because it commits you to action rather than words. Expressions of regret, explanations and promises to change came next, and the request for forgiveness mattered least of all. The steps below put those findings in the order you will actually need them: work out what you did, say it without hedging, offer something concrete, and then accept that the response belongs to the other person.",
+  "seo": {
+    "titleTag": "How to Make a Sincere Apology: 15 Steps",
+    "metaDescription": "Make a sincere apology: take responsibility first, name the impact, skip the excuses, offer a concrete repair, and let the other person decide what comes next.",
+    "keywords": [
+      "how to make a sincere apology",
+      "elements of a good apology",
+      "apologise without excuses"
+    ],
+    "primaryKeyword": "make a sincere apology",
+    "searchIntent": "informational"
+  },
+  "media": {
+    "hero": {
+      "base": "00-hero",
+      "alt": "Two people sitting at a kitchen table, one speaking quietly with open hands while the other listens with a mug held in both hands."
+    },
+    "style": "Naturalistic hand-painted editorial illustration, soft watercolour washes over light pencil-and-ink linework, warm desaturated palette, visible paper texture, no text anywhere in the image.",
+    "stylePending": [],
+    "reusedFrom": {}
+  },
+  "parts": [
+    {
+      "title": "Work Out What You Are Apologising For",
+      "heading": "Work Out What You Are Apologising For",
+      "steps": [
+        {
+          "title": "Let your own defensiveness drop first",
+          "body": "An apology delivered while you are still arguing in your head comes out as a negotiation. Give yourself the hour or the night you need to stop rehearsing your side of it. The signal that you are ready is simple: you can describe what happened without adding the part where it was understandable. If every version in your head still ends with a justification, you are not ready to speak yet.",
+          "tip": "Waiting is not the same as avoiding. Tell them you want to talk properly and give a time, rather than going quiet for a week.",
+          "imageTodo": {
+            "base": "01-let-the-heat-drop",
+            "alt": "A person sitting alone on the edge of a bed in low evening light, elbows on knees, looking at the floor and thinking."
+          }
+        },
+        {
+          "title": "Work out the impact, not your intention",
+          "body": "Ask what the other person actually experienced: embarrassed in front of colleagues, left waiting, not believed, made to do your share. Impact is what you are apologising for, and it is often quite different from what you meant to do. Writing the impact down in one sentence is the single most useful preparation, because that sentence is the thing they need to hear you say out loud.",
+          "tip": "If you genuinely do not know what the impact was, that is a question to ask them rather than a blank to fill in yourself.",
+          "imageTodo": {
+            "base": "02-name-the-impact",
+            "alt": "A person at a desk writing one short line in a notebook, a cold cup of tea beside them and a phone face down."
+          }
+        },
+        {
+          "title": "Stop measuring the harm against what you meant",
+          "body": "Good intentions are not a defence and saying so out loud makes things worse. I did not mean it that way asks the other person to manage your discomfort at the exact moment they are dealing with their own. Hold both things privately — you did not intend harm, and harm happened — and say only the second one. Intention can be discussed later, once the person you hurt is no longer the one doing the reassuring.",
+          "tip": "A useful test: if the sentence would make you feel better and them feel worse, keep it out of the apology.",
+          "imageTodo": {
+            "base": "03-intent-vs-impact",
+            "alt": "Two hands on a table, one resting flat and the other half raised as if about to explain, then stopping."
+          }
+        },
+        {
+          "title": "Decide exactly what is yours to own",
+          "body": "Separate what you did from what the situation did and from what they did. Then apologise for your part completely and without qualification, even if it is only a share. Over-apologising for everything is its own problem: it reads as performance, it can bury the real admission, and it quietly pressures the other person to say that it was fine. One clear admission beats a flood of general remorse.",
+          "tip": "Write the sentence as I did X and it caused Y. If you cannot fill in X with a specific action, keep thinking.",
+          "imageTodo": {
+            "base": "04-decide-what-you-owe",
+            "alt": "A notebook page on a table with a short list of lines, one of them ringed with a pen that rests across the page."
+          }
+        },
+        {
+          "title": "Pick a time and a channel that suit them",
+          "body": "Apologise in person where you can, by voice where you cannot, and by message only when distance or safety requires it — tone and eye contact carry a great deal of what makes an apology credible. Ask first rather than ambushing them: is now a good time, or would later today be better. Giving the other person control over when the conversation happens is itself part of the repair.",
+          "tip": "Never deliver an apology when either of you is about to leave. An apology with four minutes attached to it is a tick on your list, not a repair.",
+          "imageTodo": {
+            "base": "05-choose-time-and-place",
+            "alt": "Someone pausing in a doorway with a hand on the frame, looking towards another person reading on a sofa in the next room."
+          }
+        }
+      ]
+    },
+    {
+      "title": "Say It Properly",
+      "heading": "Say It Properly",
+      "steps": [
+        {
+          "title": "Lead with responsibility",
+          "body": "Open with the admission, not the preamble: I was wrong to do that, it was my fault. Acknowledgement of responsibility is the component researchers found mattered most, and putting it first changes the whole conversation, because the other person stops waiting to find out whether you are going to defend yourself. Everything else in the apology is easier to hear once that sentence is out.",
+          "tip": "Say it in your own words but keep it short. Long sentences of responsibility usually have an excuse hidden in the middle.",
+          "imageTodo": {
+            "base": "06-lead-with-responsibility",
+            "alt": "Two people facing each other across a small table, one speaking with both hands open and resting on the table top."
+          }
+        },
+        {
+          "title": "Say you are sorry, and say what for",
+          "body": "Express regret plainly and attach it to the specific thing: I am sorry I spoke over you in the meeting, and I am sorry about how that left you looking. Naming the event and the effect shows you understood what happened rather than that you noticed someone was upset. Regret on its own is weak; regret attached to a concrete act and its consequence is not.",
+          "tip": "Avoid apologising for how they feel. I am sorry you were upset shifts the subject from your action to their reaction.",
+          "imageTodo": {
+            "base": "07-express-regret",
+            "alt": "A close view of two people seated at an angle, one speaking with a lowered gaze and the other listening without interrupting."
+          }
+        },
+        {
+          "title": "Keep any explanation to one sentence",
+          "body": "An explanation helps a person make sense of what happened, but it turns into a defence the moment it runs long or arrives first. Give it after the admission, in a single sentence, and tie it back: it is no excuse, but I had agreed to two things at once and I handled it badly. If you cannot say it in one sentence without sounding like a case for the defence, leave it out entirely.",
+          "tip": "Watch for the word but. Almost everything after it in an apology undoes what came before.",
+          "imageTodo": {
+            "base": "08-short-explanation",
+            "alt": "One person speaking briefly with a small gesture while the other keeps steady eye contact across a kitchen worktop."
+          }
+        },
+        {
+          "title": "Strip out every conditional word",
+          "body": "If I upset you, sorry you took it that way, and I apologise if anyone was offended are not apologies. They put the harm in doubt and leave the other person arguing for their own hurt. Say what happened as a fact: I upset you. The difference is one word and the whole meaning of the sentence turns on it.",
+          "tip": "Read your apology back and delete every if, maybe, somewhat and apparently. What remains is usually the real apology.",
+          "imageTodo": {
+            "base": "09-no-conditional-language",
+            "alt": "A hand drawing a single firm line through a few words on a notepad before a conversation, pen pressed into the paper."
+          }
+        },
+        {
+          "title": "Offer a repair you can actually deliver",
+          "body": "An offer of repair was the second most important component in the research, because it converts words into a commitment. Make it concrete and proportionate: I will tell the team tomorrow that the error was mine, I will take the next three school runs, I will pay for the replacement. If you do not know what would help, ask — is there anything I can do to put this right — and then accept the answer rather than negotiating it down.",
+          "tip": "Do not promise a repair you are unsure about to end the conversation faster. A broken repair costs more than the original mistake.",
+          "imageTodo": {
+            "base": "10-offer-repair",
+            "alt": "Two people at a table, one sliding a set of keys across towards the other with an open hand."
+          }
+        }
+      ]
+    },
+    {
+      "title": "After the Words",
+      "heading": "After the Words",
+      "steps": [
+        {
+          "title": "Stop talking and let them answer",
+          "body": "The hardest part of an apology is the silence after it. They may be short with you, list other things, or say nothing at all. Let the response happen without correcting it, and resist the urge to fill the gap by explaining again. An apology you are still managing is not an apology; it is a performance with an audience you are directing.",
+          "tip": "If they start listing other grievances, hear them out and offer to take each one properly another time rather than defending in the moment.",
+          "imageTodo": {
+            "base": "11-let-them-respond",
+            "alt": "Two people sitting in a quiet room, one leaning back and speaking while the other listens with hands still in their lap."
+          }
+        },
+        {
+          "title": "Do not ask to be forgiven",
+          "body": "Requesting forgiveness was the least effective component in the research — the one to leave out if you leave anything out. It also quietly transfers the work to the person you hurt, who now has to look after your guilt. Forgiveness is theirs to give in their own time, if at all, and it is not the same thing as reconciliation. Your job ends with the admission, the repair and the change.",
+          "tip": "If they say they need time, say that is fair and mean it. Asking again next week is pressure, not sincerity.",
+          "imageTodo": {
+            "base": "12-dont-demand-forgiveness",
+            "alt": "A person standing to leave a room quietly after a conversation, one hand on the back of a chair, the other person still seated."
+          }
+        },
+        {
+          "title": "Change the thing that caused it",
+          "body": "A declaration of repentance only counts once it is visible. Decide what you will do differently, tell them in a sentence, and then make the change where they can see it — the calendar reminder, the earlier departure, the habit of checking before you commit to something. Repeated apologies for the same behaviour read as a negotiation to be allowed to keep doing it.",
+          "tip": "Name one change, not five. Five promises after one mistake is a sign that nothing specific is going to change.",
+          "imageTodo": {
+            "base": "13-change-the-behaviour",
+            "alt": "A person setting a reminder on a phone propped against a kitchen jar, a wall planner with one square marked behind."
+          }
+        },
+        {
+          "title": "Repair in front of the people who saw it",
+          "body": "If the harm was public, part of the repair has to be public too, at the same scale: a correction in the same meeting, a word to the friends who heard it, an email to the same list. A private apology for a public humiliation leaves the other person to carry the consequence alone. Keep it brief and factual — say that you were wrong, not the whole story.",
+          "tip": "Agree with them first what you will say publicly. Being apologised about in front of others is not always welcome.",
+          "imageTodo": {
+            "base": "14-public-repair",
+            "alt": "A person speaking briefly to a small group of colleagues around a meeting table, the person they wronged seated among them."
+          }
+        },
+        {
+          "title": "Then let it rest",
+          "body": "Resist going back to the subject to check that things are all right now. Repeated returns are usually about relieving your own discomfort, and they ask the other person to reassure you again and again. Check in once, days later, with something small and practical. After that, the evidence has to be the change itself: the repair carried out, the behaviour different, the subject no longer needing to be raised.",
+          "tip": "Keep your own note of what you promised and the date. Remembering the repair weeks later does more than any further conversation.",
+          "imageTodo": {
+            "base": "15-let-it-rest",
+            "alt": "Two people in a kitchen some days later, one passing a plate to the other, both at ease with the conversation behind them."
+          }
+        }
+      ]
+    }
+  ],
+  "tips": [
+    "Write the apology out before you say it, then cut every sentence that defends you. What survives is usually about four lines long.",
+    "Apologise for one thing at a time. Bundling three admissions into one conversation makes all of them sound rehearsed.",
+    "Text is better than nothing when you cannot meet, but keep it short and follow it with a conversation when you can.",
+    "If you are the one receiving an apology, you can accept it, decline it, or ask for time. None of those answers requires you to say that it was fine."
+  ],
+  "warnings": [
+    "An apology does not entitle you to reconciliation. Forgiveness and reconciliation are different things, and someone can forgive and still decide the relationship will not continue.",
+    "Where there is a pattern of controlling, frightening or violent behaviour, apologies are frequently part of the cycle rather than a repair of it. Support from a domestic abuse service or a qualified counsellor matters more than better wording.",
+    "In workplace, medical or legal disputes, an admission of fault can carry formal consequences in some jurisdictions. If the matter may become a complaint or a claim, take advice before putting responsibility in writing."
+  ],
+  "faq": [
+    {
+      "q": "What are the components of an effective apology?",
+      "a": "Research by Lewicki, Polin and Lount identified six: expression of regret, explanation of what went wrong, acknowledgement of responsibility, declaration of repentance, offer of repair, and request for forgiveness. Across two studies, apologies containing more of these were rated more effective. Acknowledgement of responsibility mattered most and an offer of repair came second; regret, explanation and repentance were roughly equal in third place; and the request for forgiveness mattered least."
+    },
+    {
+      "q": "Should I apologise if I do not think I did anything wrong?",
+      "a": "You can still apologise for the impact without pretending to agree about the cause, and it is usually worth doing when the relationship matters. Say what you can say honestly: that you can see they were hurt, that you did not want that, and that you want to understand it. What you should avoid is a hollow apology designed to end the conversation, because insincere apologies are easy to detect and usually cost more trust than silence would have."
+    },
+    {
+      "q": "How do I apologise for something that happened years ago?",
+      "a": "Ask before you deliver it. An old apology can reopen something the other person has settled, so send a short message saying there is something you would like to apologise for and asking whether they would welcome hearing it. If they say yes, keep it to the admission, the impact and any repair still possible. If they say no, accept that: honouring the refusal is itself part of the apology."
+    },
+    {
+      "q": "What should I do if my apology is rejected?",
+      "a": "Accept the answer without arguing with it. Rejection may mean the harm is still fresh, that the repair has not happened yet, or that trust has run out. Say you understand, state the one change you are making, and then demonstrate it over time rather than asking again. Repeating an apology that has been declined puts pressure on the other person and usually confirms the impression you were hoping to correct."
+    }
+  ],
+  "externalLinks": [
+    {
+      "label": "Ohio State University: The 6 elements of an effective apology, according to science",
+      "url": "https://news.osu.edu/the-6-elements-of-an-effective-apology-according-to-science/",
+      "note": "Summary of the two studies, the six components, and why responsibility and repair rank highest."
+    },
+    {
+      "label": "Greater Good Science Center, UC Berkeley: The Three Parts of an Effective Apology",
+      "url": "https://greatergood.berkeley.edu/article/item/the_three_parts_of_an_effective_apology",
+      "note": "Why impact matters more than intention, how explanations turn into excuses, and what reparation looks like."
+    },
+    {
+      "label": "American Psychological Association: Forgiveness can improve mental and physical health",
+      "url": "https://www.apa.org/monitor/2017/01/ce-corner",
+      "note": "What forgiveness is and is not, including why it does not require reconciliation with someone who remains harmful."
+    }
+  ],
+  "references": [
+    "Ohio State University News. The 6 elements of an effective apology, according to science, 12 April 2016. https://news.osu.edu/the-6-elements-of-an-effective-apology-according-to-science/",
+    "Lewicki RJ, Polin B, Lount RB. An Exploration of the Structure of Effective Apologies. Negotiation and Conflict Management Research, 2016;9(2):177-196. https://doi.org/10.1111/ncmr.12073",
+    "Carter C. The Three Parts of an Effective Apology. Greater Good Magazine, Greater Good Science Center at UC Berkeley, drawing on the work of Aaron Lazare. https://greatergood.berkeley.edu/article/item/the_three_parts_of_an_effective_apology",
+    "Weir K. CE corner: Forgiveness can improve mental and physical health. Monitor on Psychology, American Psychological Association, January 2017;48(1):30. https://www.apa.org/monitor/2017/01/ce-corner"
+  ],
+  "internalLinks": [
+    {
+      "label": "How to Have a Difficult Conversation",
+      "url": "/Have-a-Difficult-Conversation"
+    },
+    {
+      "label": "How to Split Household Chores Fairly",
+      "url": "/Split-Household-Chores-Fairly"
+    },
+    {
+      "label": "How to Prepare for a Performance Review",
+      "url": "/Prepare-for-a-Performance-Review"
+    }
+  ],
+  "quizIdea": {
+    "title": "Is that an apology?",
+    "questions": 4,
+    "note": "Four statements to sort into apology or not: sorry you feel that way, I was wrong and here is what I will do, I apologise if anyone was offended, and I am sorry I missed it and I will take the next two."
+  },
+  "publishing": {
+    "status": "draft",
+    "author": "Editorial draft",
+    "reviewer": "",
+    "datePublished": null,
+    "dateModified": "2026-11-01",
+    "readingTimeMinutes": 9,
+    "wordCount": null,
+    "internalLinkCount": 3,
+    "imageCount": 0,
+    "imagePending": 16,
+    "expertReviewed": false,
+    "reviewNote": "Interpersonal and mental health adjacent content. Before publication, a qualified counsellor, psychologist or mediator should review the framing, and the warning about apologies within controlling or abusive relationships should be checked against the guidance of a domestic abuse organisation in the publishing country, including locally correct support routes.",
+    "imageNote": "Illustrations are drawn for this guide only."
+  },
+  "imageStatus": {
+    "heroReady": false,
+    "stepImagesReady": 0,
+    "stepImagesPending": [
+      "01-let-the-heat-drop",
+      "02-name-the-impact",
+      "03-intent-vs-impact",
+      "04-decide-what-you-owe",
+      "05-choose-time-and-place",
+      "06-lead-with-responsibility",
+      "07-express-regret",
+      "08-short-explanation",
+      "09-no-conditional-language",
+      "10-offer-repair",
+      "11-let-them-respond",
+      "12-dont-demand-forgiveness",
+      "13-change-the-behaviour",
+      "14-public-repair",
+      "15-let-it-rest"
+    ],
+    "note": "Illustrations in progress for this guide."
+  },
+  "dateModified": "2026-11-01"
+}
