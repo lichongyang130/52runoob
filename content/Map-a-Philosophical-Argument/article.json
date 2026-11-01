@@ -130,9 +130,9 @@
           "title": "Put objections and replies on the same sheet",
           "body": "A map is not only for the author's reasoning. Add the strongest objection you can think of as a branch pointing at the premise it attacks, and any reply the author gives as a branch pointing back at the objection. Keeping attack and defence on one sheet shows you something a list cannot: whether an objection would bring the whole argument down or merely remove one of several independent supports.",
           "tip": "Mark objections with a different arrowhead or a dashed line so support and attack never look alike at a glance.",
-          "imageTodo": {
+          "image": {
             "base": "10-objections-and-rebuttals",
-            "alt": "An argument map with two dashed lines drawn in from the side towards one of the boxes, and a short solid line drawn back out."
+            "alt": "A hand adding dashed blue lines pointing at one box of a pencilled argument diagram, with a short solid line drawn back out from it."
           }
         }
       ]
@@ -145,45 +145,45 @@
           "title": "Ask what kind of support is being offered",
           "body": "Deductive arguments claim the conclusion must be true if the premises are; inductive arguments claim only that it is probably true. The difference decides which tests apply, and applying the wrong one is a common and unfair criticism. Demanding certainty from an argument from evidence misses its point; accepting mere plausibility from an argument that claimed to prove its conclusion lets it off too lightly.",
           "tip": "Words like must, necessarily and it follows signal deduction. Words like likely, tends to and suggests signal induction.",
-          "imageTodo": {
+          "image": {
             "base": "11-deductive-or-inductive",
-            "alt": "Two piles of index cards sorted on a desk, one stacked square and the other fanned out, a hand placing a card onto the second pile."
+            "alt": "Two groups of blank index cards on a desk, one squared into a neat block and the other fanned loosely, a hand laying a card onto the fanned group."
           }
         },
         {
           "title": "Test the structure for validity",
           "body": "An argument is valid when there is no possible situation in which all the premises are true and the conclusion is false. Validity is about structure alone, not truth: an argument can be valid with false premises, and a true conclusion does not make an argument valid. Test by imagining the premises true and then trying to make the conclusion false. If you cannot, the structure holds.",
           "tip": "Keep the vocabulary straight. Statements are true or false; arguments are valid or invalid. Mixing the two causes most confusion in essays.",
-          "imageTodo": {
+          "image": {
             "base": "12-test-validity",
-            "alt": "A hand holding a map of boxes up to a window so the light shows through the paper, the pencilled lines visible from behind."
+            "alt": "A person holding a diagram sheet up to a bright window, the pencilled boxes showing faintly through the paper as they study it."
           }
         },
         {
           "title": "Then ask whether the premises are actually true",
           "body": "A valid argument with true premises is sound, and only a sound argument gives you a conclusion you must accept. So work down the map and judge each premise separately: is it true, is it the kind of claim that could be checked, and would a reasonable opponent accept it? Mark every premise you doubt. A single false premise undoes the whole argument, however elegant the structure.",
           "tip": "Separate the premises you think are false from the ones you simply cannot assess. They lead to very different responses.",
-          "imageTodo": {
+          "image": {
             "base": "13-check-soundness",
-            "alt": "A pencilled argument map with small question marks added beside two of the boxes and a tick beside a third."
+            "alt": "A pencilled argument diagram with small question marks added beside two boxes and a tick beside a third."
           }
         },
         {
           "title": "Try to break it with a counterexample",
           "body": "A counterexample is a described case in which the premises hold and the conclusion fails. If you can build one, the argument is invalid and you have shown exactly where. Aim at the premise you find least obvious rather than the one you dislike most. If the argument survives several honest attempts, you have learned something more useful than a refutation: you have learned the argument is strong.",
           "tip": "Write the counterexample out in full sentences. Half-formed ones usually smuggle in an extra assumption of their own.",
-          "imageTodo": {
+          "image": {
             "base": "14-counterexample",
-            "alt": "A notebook beside a finished map where someone is sketching a small separate scene as a test case, pencil shavings on the desk."
+            "alt": "A finished diagram pushed aside while a hand sketches a small test scene of a house and a tree on a fresh notebook page."
           }
         },
         {
           "title": "Turn the map back into prose",
           "body": "Finish by writing one short paragraph: the conclusion, the main reasons, the unstated assumption, and the single point where you think the argument is weakest. The map was scaffolding; this paragraph is what you keep. It is also the thing you can bring to a seminar, use in an essay, or reread next year — and if you cannot write it without looking at the map, the analysis is not finished yet.",
           "tip": "Date the sheet and keep it with your notes on the text. Rebuilding a map from scratch costs an hour you will not have.",
-          "imageTodo": {
+          "image": {
             "base": "15-use-the-map",
-            "alt": "A short handwritten paragraph in a notebook beside a folded argument map and a closed book in lamplight."
+            "alt": "An open notebook under a desk lamp with a short handwritten paragraph on the page, a folded diagram sheet and a closed book beside it."
           }
         }
       ]
@@ -261,7 +261,7 @@
     "note": "Four short passages: name the conclusion, say whether the premises are linked or independent, supply the hidden premise, and decide whether the argument is valid."
   },
   "publishing": {
-    "status": "draft",
+    "status": "ready-for-review",
     "author": "Editorial draft",
     "reviewer": "",
     "datePublished": null,
@@ -269,23 +269,16 @@
     "readingTimeMinutes": 9,
     "wordCount": null,
     "internalLinkCount": 3,
-    "imageCount": 10,
-    "imagePending": 6,
+    "imageCount": 16,
+    "imagePending": 0,
     "expertReviewed": false,
     "reviewNote": "Logic and critical thinking content. Before publication, a philosophy teacher or logic tutor should check the definitions of validity, soundness, linked and convergent support against the terminology used in the reader's own syllabus, since textbooks differ in how they label co-premises and conductive arguments.",
     "imageNote": "Illustrations are drawn for this guide only."
   },
   "imageStatus": {
     "heroReady": true,
-    "stepImagesReady": 9,
-    "stepImagesPending": [
-      "10-objections-and-rebuttals",
-      "11-deductive-or-inductive",
-      "12-test-validity",
-      "13-check-soundness",
-      "14-counterexample",
-      "15-use-the-map"
-    ],
+    "stepImagesReady": 15,
+    "stepImagesPending": [],
     "note": "Illustrations in progress for this guide."
   },
   "dateModified": "2026-11-01"
