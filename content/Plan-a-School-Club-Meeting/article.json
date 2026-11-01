@@ -31,7 +31,8 @@
       "alt": "Students seated at classroom tables after school while one stands at the front holding a single sheet of paper and speaking to the group."
     },
     "style": "Naturalistic hand-painted editorial illustration, soft watercolour washes over light pencil-and-ink linework, warm desaturated palette, visible paper texture, no text anywhere in the image.",
-    "stylePending": []
+    "stylePending": [],
+    "reusedFrom": {}
   },
   "parts": [
     {
@@ -129,9 +130,9 @@
           "title": "Handle one motion at a time",
           "body": "When a decision is needed, use the sequence that youth clubs teach: a member moves, another seconds, the chair states the motion and opens discussion, the chair restates it, and the group votes by voice, hands or ballot. Only one motion sits before the group at once. A majority — more than half of those voting — carries it. This is lighter than it sounds and it replaces the vague group nod that nobody can later be held to.",
           "tip": "Write the motion down word for word before the vote. People vote differently once they see the exact wording.",
-          "imageTodo": {
+          "image": {
             "base": "10-one-motion-at-a-time",
-            "alt": "A ring of seated students with several hands raised in a vote while one stands with an arm half lifted to be recognised."
+            "alt": "Students around joined classroom tables voting with hands raised, while one member half lifts an arm waiting to be called on by the chair."
           }
         }
       ]
@@ -144,45 +145,45 @@
           "title": "Keep the discussion fair and finite",
           "body": "Recognise speakers one at a time, keep contributions to the item on the floor, and make sure the quiet half of the room is asked directly before any vote. The principles behind this are simple: one person speaks at a time, every motion gets time for debate, every member has equal rights, and the majority decides while the minority keeps the right to be heard. When the discussion starts repeating itself, say so and call the vote.",
           "tip": "Cap each speaker at about a minute on contested items. The cap protects the people who never interrupt.",
-          "imageTodo": {
+          "image": {
             "base": "11-keep-discussion-fair",
-            "alt": "A student chairing from the end of the table, one hand open towards a quieter member who is starting to speak."
+            "alt": "A student chairing from the end of the table with one hand turned towards a quieter member who is starting to speak, the others listening."
           }
         },
         {
           "title": "Write minutes that record decisions, not atmosphere",
           "body": "Minutes are not a transcript. Record the date, who attended, each decision taken, the result of each vote, who agreed to do what, and the deadline. Five or six lines is usually enough. Those lines are the club's memory, the evidence your sponsor needs at budget time, and the document that opens the next meeting. Clubs lose months to the gap between two people remembering a decision differently.",
           "tip": "Keep minutes in one shared document the whole committee can open, not scattered across chat threads.",
-          "imageTodo": {
+          "image": {
             "base": "12-write-the-minutes",
-            "alt": "A secretary writing a short list of decisions in a ruled notebook as the meeting continues around the table."
+            "alt": "A student writing a short list of entries with ticks beside them in a ruled notebook while the meeting continues behind."
           }
         },
         {
           "title": "Give every job an owner and a date",
           "body": "A decision without a named person is a wish. Before moving on, say out loud who is doing it and by when, and have the secretary write both down. Spread the jobs: officer guides ask the president and vice-president to delegate so that every member holds a role at some point, which is also the most reliable way to keep people coming back. Small jobs with clear deadlines beat large jobs with none.",
           "tip": "Avoid assigning anything to a person who is absent without asking them first. Volunteering someone who is not in the room is how clubs lose members.",
-          "imageTodo": {
+          "image": {
             "base": "13-assign-jobs",
-            "alt": "Students around a table each taking a small card from a short stack, one writing a date on the card in hand."
+            "alt": "Four students around a table each taking a small blank card from a stack in the middle, one writing on the card in hand."
           }
         },
         {
           "title": "Announce, adjourn and finish on time",
           "body": "Take announcements last, then close properly — a motion to adjourn, or simply the chair stating that the meeting is adjourned. Finish at the time you promised even if an item is unfinished; carry it to unfinished business next time. A club that reliably ends on time can ask for ninety minutes of attention next month. A club that always overruns is quietly teaching members to arrive late or not at all.",
           "tip": "Keep the social half after the formal close, so people who must leave can go without feeling rude.",
-          "imageTodo": {
+          "image": {
             "base": "14-close-on-time",
-            "alt": "Students standing and gathering bags as the chair closes the meeting, a wall clock visible above the door."
+            "alt": "Students standing and collecting bags as the meeting closes, the chair still at the head of the table and a plain wall clock above the door."
           }
         },
         {
           "title": "Spend ten minutes planning the next one",
           "body": "Before the room empties, the officers should agree three things: the date of the next meeting, the first item on its agenda, and anything that must be confirmed beforehand. Write them at the bottom of the minutes. Doing this while the meeting is fresh takes ten minutes; doing it a fortnight later takes an hour of reconstruction and usually produces a weaker agenda. This habit, more than enthusiasm, is what keeps a club alive in February.",
           "tip": "Book the room for the whole term rather than meeting by meeting. A fixed slot is the strongest predictor that a club survives the year.",
-          "imageTodo": {
+          "image": {
             "base": "15-review-and-plan-next",
-            "alt": "Three officers standing by a stacked pile of chairs after the meeting, one pointing at a date circled on a wall planner."
+            "alt": "Three students by a stack of chairs in an empty classroom after the meeting, one pointing at a circled square on a blank wall planner."
           }
         }
       ]
@@ -269,7 +270,7 @@
     "note": "Four questions: does the agenda exist in writing before the meeting, does every block have minutes beside it, was each decision taken by a vote, and does someone's name sit next to every job."
   },
   "publishing": {
-    "status": "draft",
+    "status": "ready-for-review",
     "author": "Editorial draft",
     "reviewer": "",
     "datePublished": null,
@@ -277,23 +278,16 @@
     "readingTimeMinutes": 9,
     "wordCount": null,
     "internalLinkCount": 4,
-    "imageCount": 10,
-    "imagePending": 6,
+    "imageCount": 16,
+    "imagePending": 0,
     "expertReviewed": false,
     "reviewNote": "Content for a youth audience. Before publication, a teacher, student activities adviser or youth programme coordinator should check the procedural advice against the school's own club handbook, and confirm the statements on consent for photographs and on handling club money against local school policy and law.",
     "imageNote": "Illustrations are drawn for this guide only."
   },
   "imageStatus": {
     "heroReady": true,
-    "stepImagesReady": 9,
-    "stepImagesPending": [
-      "10-one-motion-at-a-time",
-      "11-keep-discussion-fair",
-      "12-write-the-minutes",
-      "13-assign-jobs",
-      "14-close-on-time",
-      "15-review-and-plan-next"
-    ],
+    "stepImagesReady": 15,
+    "stepImagesPending": [],
     "note": "Illustrations in progress for this guide."
   },
   "dateModified": "2026-11-01"
