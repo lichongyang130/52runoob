@@ -172,16 +172,16 @@
           "title": "Practise in the format the exam uses",
           "body": "Cards are excellent for facts, definitions and steps, and poor preparation for a three-hour essay. The rule of thumb from Rochester's learning centre is to practise in the way you will be tested: write essays if you will write essays, solve problems if you will solve problems. Use the deck to secure the raw material, then spend separate sessions producing the thing the exam asks for.",
           "tip": "Turn a cluster of related cards into one essay plan. If you cannot, the cards are facts without a structure around them.",
-          "imageTodo": {
+          "image": {
             "base": "14-practise-the-format",
-            "alt": "A student writing a timed practice answer on lined paper at a desk, a deck of index cards set aside at the edge of the page."
+            "alt": "A student writing a timed practice answer on a lined pad at a desk, with a deck of index cards set aside at the far edge and a plain-faced clock beside the pad."
           }
         },
         {
           "title": "Retire, rewrite and prune the deck",
           "body": "A card you have answered cleanly several sessions in a row has done its job; move it to a retired box and check it once before the exam. A card that keeps defeating you is usually badly written rather than hard: too broad, two ideas in one, or an answer you copied and never understood. Rewrite those, and delete anything the syllabus turned out not to need.",
           "tip": "Prune the deck once a fortnight. Ten minutes of tidying buys back far more than ten minutes of reviewing dead cards.",
-          "imageTodo": {
+          "image": {
             "base": "15-prune-the-deck",
             "alt": "A hand dropping an index card into an open box of retired cards while a freshly rewritten card lies on the desk under a lamp."
           }
@@ -266,24 +266,21 @@
     "author": "Editorial draft",
     "reviewer": "",
     "datePublished": null,
-    "dateModified": "2026-10-30",
+    "dateModified": "2026-11-01",
     "readingTimeMinutes": 9,
-    "wordCount": null,
+    "wordCount": 2030,
     "internalLinkCount": 3,
-    "imageCount": 14,
-    "imagePending": 2,
+    "imageCount": 16,
+    "imagePending": 0,
     "expertReviewed": false,
     "reviewNote": "Study-skills guidance based on cognitive psychology research. A teacher or learning-centre specialist should confirm that the summaries of practice testing, interleaving and spacing match the cited sources before publication.",
     "imageNote": "Illustrations are drawn for this guide only."
   },
   "imageStatus": {
     "heroReady": true,
-    "stepImagesReady": 13,
-    "stepImagesPending": [
-      "14-practise-the-format",
-      "15-prune-the-deck"
-    ],
-    "note": "Illustrations in progress for this guide."
+    "stepImagesReady": 15,
+    "stepImagesPending": [],
+    "note": "16 张插画均为本文新制。"
   },
-  "dateModified": "2026-10-30"
+  "dateModified": "2026-11-01"
 }
