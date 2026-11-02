@@ -15,6 +15,7 @@
 - `content/Plan-a-Run-Walk-Workout/`：15 步英文稿，16 张插画全部为本文新制，体检 0 error；素材包 `downloads/Run-Walk-Workout-Upload.zip`。待真人审校，未发布。
 - `downloads/All-16-Articles-Upload.zip`：前 16 篇成稿的合集包，内含各篇独立文件夹与一个本地总目录页；每篇内容与对应单篇包逐字节一致。该文件已接近 GitHub 50 MB 建议上限，第 17 篇起不再更新合集，改以增量包续传。
 - `downloads/Add-On-4-New-Articles-Upload.zip`：增量包，只装第 11–14 篇（遛狗、水彩、一对一会议、干手护理），但根目录的总目录页按 14 篇生成；适合已经上传过前 10 篇、只想补传新增的情况。由 `tools/package_increment.py` 生成。
+- `downloads/下载清单.md`：**逐篇下载对照表**（23 篇 × 单篇包 × 大小 × 直链）。已上传过的篇目直接跳过，不要重复下载合集包或增量包。从第 24 篇起只产出该篇的单篇包，不再每轮重打增量包；需要补齐若干篇时再临时合并。
 - `downloads/Add-On-Since-All-16-Upload.zip`：**最新增量包**，装 All-16 之后的全部新篇目（目前为第 17 篇《How to Organize a Holiday Potluck》、第 18 篇《How to Plan a School Club Meeting》、第 19 篇《How to Map a Philosophical Argument》、第 20 篇《How to Make a Sincere Apology》、第 21 篇《How to Listen More Actively》、第 22 篇《How to Set a Personal Boundary》与第 23 篇《How to Handle a Disagreement Calmly》），根目录总目录页按 23 篇生成；适合已上传过前 16 篇者续传。后续新篇会继续并入这个同名包，链接不变。
 - `downloads/Add-On-Hang-a-Picture-Upload.zip`：上一版增量包，只装第 16 篇，目录页按 16 篇生成。
 - 包内结构：单篇 35 个条目 = `index.html` + `Article-English.txt` + `README-中文.txt` + `Images/` 下 16 张插画 × 两档（`-1600.webp` 1600×900 与 `-960.webp` 960×540）；合集为 篇数×35 + 2。网页用 `srcset` 按屏幕宽度自动选档，手机只下载小图，封面不走懒加载。
