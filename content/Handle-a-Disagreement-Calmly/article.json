@@ -43,7 +43,7 @@
           "title": "Notice the body before the argument",
           "body": "Anger arrives physically first: a hot face, a tight jaw, a faster heartbeat, the sudden clarity of exactly what to say. Those signals are the most reliable warning you will get, and they appear a second or two before the sentence you would regret. Learn your own pattern so you can recognise it mid-conversation rather than afterwards.",
           "tip": "Grip is a good tell. If you have tightened your hand around a mug, a phone or the steering wheel, you are further up the scale than you think.",
-          "imageTodo": {
+          "image": {
             "base": "01-notice-the-body",
             "alt": "Close view of a person's hands gripping a mug tightly on a worktop, shoulders raised and jaw set."
           }
@@ -52,16 +52,16 @@
           "title": "Slow the first reply down",
           "body": "The first sentence sets the temperature of everything that follows, and it is almost always the worst one available. Breathe out slowly from the diaphragm, let two or three seconds pass, and answer the second thought rather than the first. If you need a phrase to buy the pause, use one: let me think about that for a second.",
           "tip": "Lower and slower beats louder. Dropping your volume slightly makes the other person match it more often than not.",
-          "imageTodo": {
+          "image": {
             "base": "02-slow-the-first-reply",
-            "alt": "A person standing at a window with one hand on the frame, breathing out slowly before turning back to the room."
+            "alt": "A person standing at a tall sash window with one hand on the frame, breathing out slowly while another person waits on the sofa behind them."
           }
         },
         {
           "title": "Work out what the disagreement is actually about",
           "body": "Most arguments are three different arguments tangled together: a disagreement about facts, about what something means, or about how the decision gets made. Say which one you are in. Facts can be checked, meaning has to be explained, and process can be renegotiated — and nothing moves while you are swapping evidence at someone who is upset about the process.",
           "tip": "Ask it out loud: are we disagreeing about what happened, about what it meant, or about who decides?",
-          "imageTodo": {
+          "image": {
             "base": "03-what-is-it-about",
             "alt": "Two people at a table with a single blank sheet of paper between them, one pointing at it while the other leans in."
           }
@@ -70,7 +70,7 @@
           "title": "Check your own fairness story",
           "body": "People do not weigh fairness neutrally. Negotiation researchers call it self-serving fairness: we define what counts as fair in ways that happen to suit us, then experience that definition as objective. Before you argue the point, ask what a neutral observer would say about your claim, and whether the version in your head gives you a slightly flattering role.",
           "tip": "If your account has you being reasonable throughout and them being difficult throughout, it is a story rather than a record.",
-          "imageTodo": {
+          "image": {
             "base": "04-check-your-story",
             "alt": "A person sitting alone on a bus looking out of the window, thinking something over with their reflection faint in the glass."
           }
@@ -79,7 +79,7 @@
           "title": "Take never and always out of your vocabulary",
           "body": "You always do this and you never listen are rarely accurate, and the APA notes that they do two bad things at once: they make your anger feel justified and they humiliate the person whose help you need to fix anything. Replace them with the specific instance and the specific effect. The argument becomes smaller and much easier to settle.",
           "tip": "Swap demands for preferences. I would like us to decide this tonight lands very differently from we have to decide this tonight.",
-          "imageTodo": {
+          "image": {
             "base": "05-drop-never-and-always",
             "alt": "A person at a kitchen counter stopping mid-sentence with a hand raised to their mouth, rephrasing before speaking."
           }
@@ -94,16 +94,16 @@
           "title": "Agree how you are going to talk before you talk",
           "body": "Thirty seconds of process saves an hour of heat. Agree out loud: one topic, no interruptions, we stop at half past, either of us can call a break. It sounds stiff, and it works, because it gives you something to point at later that is not the other person's behaviour. It also makes a break feel procedural rather than like storming off.",
           "tip": "Sit at an angle rather than directly opposite. Face to face across a table reads as confrontation to most people.",
-          "imageTodo": {
+          "image": {
             "base": "06-agree-the-procedure",
-            "alt": "Two people at a cafe table setting a small plain-faced kitchen timer down between them before they start talking."
+            "alt": "Two people at a round cafe table with a small plain-faced timer standing between their cups before they start talking."
           }
         },
         {
           "title": "State your position once, then explain the why",
           "body": "Say what you want in one sentence, then spend your time on the reason behind it rather than repeating the demand louder. I want to keep Sundays free is a position; what sits underneath — I am running out of recovery time and I am afraid of getting ill again — is the part that can actually be negotiated. People argue with positions and work with reasons.",
           "tip": "Keep the reason about you rather than about them. It is information, not a charge sheet.",
-          "imageTodo": {
+          "image": {
             "base": "07-state-your-position",
             "alt": "Two people sitting at an angle on office chairs in a small meeting room, one speaking while the other listens with crossed ankles."
           }
@@ -112,7 +112,7 @@
           "title": "Ask what sits underneath their position",
           "body": "Then do the same for them: why do they want the solution they proposed, and what would it get them. Berkeley's conflict guidance treats this as the central move, because needs usually have several solutions while positions have only one. Ask, listen to the answer, and say it back before you respond to it.",
           "tip": "The question that unlocks most disagreements is simply: what would that give you that the other option would not?",
-          "imageTodo": {
+          "image": {
             "base": "08-ask-their-need",
             "alt": "Two neighbours talking over a low garden fence, one asking a question while the other gestures towards their plot."
           }
@@ -121,7 +121,7 @@
           "title": "Find the smallest thing you both agree on",
           "body": "You do not have to agree on the conclusion to agree on something. Agree on the problem, on the procedure, on what you are each most worried about, or on one small change you can try this week. A small shared yes changes the shape of the conversation, because you are now two people with a problem rather than two problems facing each other.",
           "tip": "Name the shared worry out loud. Neither of us wants this to drag on for a month is usually true and surprisingly disarming.",
-          "imageTodo": {
+          "image": {
             "base": "09-smallest-agreement",
             "alt": "Two hands reaching towards the same point on a blank sheet of paper on a table, fingertips almost touching."
           }
@@ -130,9 +130,9 @@
           "title": "Look for a trade rather than a win",
           "body": "Put three or four options on the table rather than defending one, and look for the differences in what each of you cares about most — that is where trades live. You take the early mornings, I take the weekends. We try your version for a month and review it. Multiple options also lower the temperature, because the conversation stops being a referendum on one idea.",
           "tip": "Know what you will do if you cannot agree, and keep it to yourself as a fallback rather than deploying it as a threat.",
-          "imageTodo": {
+          "image": {
             "base": "10-trade-not-win",
-            "alt": "Two people standing at a large blank sheet on an easel, sketching plain empty boxes and arrows with a marker."
+            "alt": "Two people standing at a large sheet of paper on an easel, sketching three empty boxes joined by arrows with a marker."
           }
         }
       ]
@@ -145,25 +145,25 @@
           "title": "Call a break with a return time",
           "body": "When either of you is too wound up to listen, stop — but stop properly. A break without a return time is an abandonment, and it teaches the other person to resist the next one. Say the sentence in full: I am too wound up to be fair right now, let us pick this up at eight. Then actually come back at eight, even if the subject has gone quiet.",
           "tip": "Use the break to settle rather than to rehearse. Walking, washing up and slow breathing all work; replaying the argument does not.",
-          "imageTodo": {
+          "image": {
             "base": "11-call-a-break",
-            "alt": "One person stepping out through patio doors into a garden at dusk while the other stays in the lit room behind."
+            "alt": "One person pausing in an open patio doorway at dusk, head lowered, while the other waits in the lamp-lit living room behind."
           }
         },
         {
           "title": "Do not vent to feel better",
           "body": "Shouting it out, hammering a pillow or ringing a friend to run through the whole thing again feels productive and is not. Research on anger is consistent: expressing rage tends to escalate it rather than drain it. Calming works — slow breathing, a repeated steadying word, a walk — and leaves you able to return to the actual problem.",
           "tip": "There is a difference between talking something over with one trusted person and rehearsing your case to five. The second is practice for round two.",
-          "imageTodo": {
+          "image": {
             "base": "12-dont-vent",
-            "alt": "A person walking briskly along a tree-lined path with their phone left in a coat pocket, breathing out."
+            "alt": "A person in a dark coat walking briskly along a leaf-strewn park path between autumn trees, hands pushed into their pockets."
           }
         },
         {
           "title": "Argue with the position, not the person",
           "body": "Sarcasm, eye-rolling and little digs at character do more damage than the disagreement itself, and they are remembered long after the subject is settled. Keep your criticism aimed at the idea, use humour only if it is warm rather than barbed, and allow the other person a route back that does not require humiliation.",
           "tip": "Small physical courtesies — pouring the tea, moving your chair closer — do more to keep a hard conversation civil than any phrasing.",
-          "imageTodo": {
+          "image": {
             "base": "13-position-not-person",
             "alt": "Two people at a kitchen table mid-discussion, one pushing a bowl of fruit towards the other as a small courtesy."
           }
@@ -172,18 +172,18 @@
           "title": "Write down what you actually agreed",
           "body": "Memory is partisan, so finish by writing the agreement in plain terms: what each of you will do, by when, and what you will try first. Three lines on a shared note is enough. Then set a date to review it — a fortnight is about right — so that adjusting the arrangement is a planned conversation rather than the start of the next argument.",
           "tip": "Read it back out loud before you both leave. Half of all apparent agreements turn out to be two different agreements.",
-          "imageTodo": {
+          "image": {
             "base": "14-write-it-down",
-            "alt": "Two people leaning over a notebook on a table while one writes a short list of lines, the other watching and nodding."
+            "alt": "Two people leaning over an open notebook under a lamp while one writes a short list of lines and the other watches."
           }
         },
         {
           "title": "Know when to bring in a third person",
           "body": "Some disagreements are stuck because of sunk costs rather than substance: both sides have invested too much pride to move. If you have been round the same loop three times, bring in someone neutral — a mediator, an ombuds service, HR, or in family matters a counsellor. Asking for help early is cheaper than the version where you ask for it after the relationship has worn through.",
           "tip": "Agree the third party together. A referee chosen by one side starts the next argument instead of ending this one.",
-          "imageTodo": {
+          "image": {
             "base": "15-bring-in-a-third-person",
-            "alt": "Three people around a small round table, one sitting slightly apart as a neutral facilitator with an open notebook."
+            "alt": "Three people seated around a small round table, one slightly apart with an open notebook on their knee acting as a neutral third party."
           }
         }
       ]
@@ -265,7 +265,7 @@
     "note": "Four statements from an argument to sort into stated position or underlying need, including one that sounds like a need but is a position in disguise."
   },
   "publishing": {
-    "status": "draft",
+    "status": "ready-for-review",
     "author": "Editorial draft",
     "reviewer": "",
     "datePublished": null,
@@ -273,33 +273,17 @@
     "readingTimeMinutes": 9,
     "wordCount": null,
     "internalLinkCount": 4,
-    "imageCount": 0,
-    "imagePending": 16,
+    "imageCount": 16,
+    "imagePending": 0,
     "expertReviewed": false,
     "reviewNote": "Interpersonal conflict and anger content. Before publication a qualified counsellor, mediator or psychologist should review the framing, the safety warning should be checked against the guidance of a domestic abuse organisation in the publishing country, and the workplace paragraph against local employment practice.",
     "imageNote": "Illustrations are drawn for this guide only."
   },
   "imageStatus": {
-    "heroReady": false,
-    "stepImagesReady": 0,
-    "stepImagesPending": [
-      "01-notice-the-body",
-      "02-slow-the-first-reply",
-      "03-what-is-it-about",
-      "04-check-your-story",
-      "05-drop-never-and-always",
-      "06-agree-the-procedure",
-      "07-state-your-position",
-      "08-ask-their-need",
-      "09-smallest-agreement",
-      "10-trade-not-win",
-      "11-call-a-break",
-      "12-dont-vent",
-      "13-position-not-person",
-      "14-write-it-down",
-      "15-bring-in-a-third-person"
-    ],
-    "note": "Illustrations in progress for this guide."
+    "heroReady": true,
+    "stepImagesReady": 15,
+    "stepImagesPending": [],
+    "note": "All illustrations drawn for this guide."
   },
   "dateModified": "2026-11-02"
 }
