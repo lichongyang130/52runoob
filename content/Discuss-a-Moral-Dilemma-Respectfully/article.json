@@ -131,7 +131,7 @@
           "title": "Cool the room when it heats up",
           "body": "Charged moments are normal, and the fix is usually procedural rather than emotional. Name what is happening in plain terms, then give the group two minutes to write instead of speak. Return to the ground rules, restate the last point in neutral words, or call a short break and open a window. A facilitator who stays even-tempered and slows the pace is doing more good than one who tries to referee the argument on the spot.",
           "tip": "Keep a kettle in the room. A five-minute tea break resolves more tension than a five-minute speech about tone.",
-          "imageTodo": {
+          "image": {
             "base": "10-cool-the-room",
             "alt": "Two people standing in a corridor during a break, holding mugs beside a window that one of them has pushed open, the meeting room door ajar behind."
           }
@@ -146,16 +146,16 @@
           "title": "Make the best case for the option you reject",
           "body": "Ask each person, or each pair, to argue briefly for the side they do not hold, then ask somebody who actually holds that view whether the version was fair. This is the single quickest way to lower the temperature, because it forces everyone to notice that the other option has reasons behind it rather than motives. It also exposes the thin arguments on your own side, which is uncomfortable and useful.",
           "tip": "If nobody in the room holds one of the views, read the strongest published statement of it aloud instead.",
-          "imageTodo": {
+          "image": {
             "base": "11-argue-the-other-side",
-            "alt": "Two people sitting at right angles on a sofa and armchair, one gesturing towards the other's seat while the second listens with folded arms."
+            "alt": "A man on a sofa gesturing towards the empty cushion beside him as he argues for a view he does not hold, while a woman in the armchair opposite listens with folded arms."
           }
         },
         {
           "title": "Say out loud what is lost either way",
           "body": "In a real dilemma every route costs something, and the cost does not disappear once a choice is made. Name it: the promise that will be broken, the person who will be let down, the risk somebody else now carries. Groups that skip this step tend to produce decisions that sound tidy and feel wrong afterwards. Groups that do it find the remaining disagreement shrinks, because people stop defending the claim that their option is free.",
           "tip": "Write the losses on the same sheet as the decision. Future readers need to see what was weighed, not only what was chosen.",
-          "imageTodo": {
+          "image": {
             "base": "12-what-is-lost",
             "alt": "A person sitting alone by a rain-flecked window after the meeting, holding a mug in both hands and looking out at a grey street."
           }
@@ -164,7 +164,7 @@
           "title": "Choose the kind of ending the group actually needs",
           "body": "Sometimes you need a decision, sometimes a recommendation with the dissent recorded, sometimes nothing more than a clearer map of the disagreement. Decide which, and say it. Forcing consensus on a genuine dilemma produces a false unanimity that collapses the first time somebody is asked to act on it. A framework can structure the thinking, but it is not an algorithm: somebody still has to make the judgement call.",
           "tip": "Record minority positions by name only with permission. Otherwise record them as an unattributed view that was argued in the room.",
-          "imageTodo": {
+          "image": {
             "base": "13-kind-of-ending",
             "alt": "A show of hands around a meeting table, several hands raised and two people keeping their hands flat on the table while a facilitator watches."
           }
@@ -173,7 +173,7 @@
           "title": "Recap out loud, and in writing",
           "body": "Save the last five minutes. Summarise the main points, the places the group split, the questions still open and anything anyone agreed to do next, and get that onto paper before people leave. Teaching centres also ask participants to write a private minute at the end: what you learned, what question remains, and what you heard from somebody else that you would not have thought of alone. Read those before the next session.",
           "tip": "Circulate the recap within a day. A summary that arrives a week later reads like someone else's meeting.",
-          "imageTodo": {
+          "image": {
             "base": "14-recap",
             "alt": "A facilitator reading back from a flip chart covered in soft grey handwriting while participants gather coats and bags behind them."
           }
@@ -182,7 +182,7 @@
           "title": "Follow up with the people, not just the file",
           "body": "Check on anyone for whom the case was personal rather than theoretical, especially if they spoke. If the dilemma is live and belongs to a real person or organisation, make sure the proper route is being used as well as the conversation: a clinical ethics service, a safeguarding lead, a union representative, a professional body. Come back to the case when facts change, and ask the group what it would do differently next time.",
           "tip": "Agree a date to revisit before you leave the room. Dilemmas that are parked without a date are simply dropped.",
-          "imageTodo": {
+          "image": {
             "base": "15-follow-up",
             "alt": "Two colleagues walking down the steps outside a community building at dusk, talking, one with a bag over the shoulder and the lit doorway behind them."
           }
@@ -266,7 +266,7 @@
     "note": "Four short scenarios to sort into genuine dilemma, overridden conflict or factual dispute in disguise, including one where a role duty collides with a general duty."
   },
   "publishing": {
-    "status": "draft",
+    "status": "ready-for-review",
     "author": "Editorial draft",
     "reviewer": "",
     "datePublished": null,
@@ -274,24 +274,17 @@
     "readingTimeMinutes": 9,
     "wordCount": null,
     "internalLinkCount": 4,
-    "imageCount": 10,
-    "imagePending": 6,
+    "imageCount": 16,
+    "imagePending": 0,
     "expertReviewed": false,
     "reviewNote": "Applied ethics and group facilitation guide with safeguarding adjacency. Before publication an ethics educator or clinical ethics practitioner should check the use of the six-lens framework and the role-versus-general duty distinction, and the reporting-route warning should be matched to the safeguarding and whistleblowing channels of the publishing country.",
     "imageNote": "Illustrations are drawn for this guide only."
   },
   "imageStatus": {
     "heroReady": true,
-    "stepImagesReady": 9,
-    "stepImagesPending": [
-      "10-cool-the-room",
-      "11-argue-the-other-side",
-      "12-what-is-lost",
-      "13-kind-of-ending",
-      "14-recap",
-      "15-follow-up"
-    ],
-    "note": "Illustrations in progress for this guide."
+    "stepImagesReady": 15,
+    "stepImagesPending": [],
+    "note": "All illustrations for this guide are complete and drawn for it alone."
   },
   "dateModified": "2026-11-03"
 }
