@@ -44,16 +44,16 @@
           "title": "Write the one question both views answer",
           "body": "A comparison only works if both positions are answers to the same question. Write that question in a single sentence before anything else, and make it a question rather than a pairing of names. Not Kant against Mill, but: what makes an action the right one to do? If you cannot fit both views under one question, you are holding two separate debates and should split them. Keep the sentence at the top of the page, because it is what stops the comparison wandering.",
           "tip": "If one view answers what is true and the other answers what we should do, write two questions and treat them as two comparisons.",
-          "imageTodo": {
+          "image": {
             "base": "01-one-question",
-            "alt": "A person at a kitchen table writing a single line on an index card propped against a mug, with two closed books beside them."
+            "alt": "A person at a kitchen table writing one short line on a small card lying flat beside a mug, with a stack of books and a bowl of apples nearby and herbs on the windowsill."
           }
         },
         {
           "title": "Take each view from its own source",
           "body": "Read at least one passage per side written or endorsed by somebody who holds the view. Critics compress their opponents, textbooks compress everyone, and a summary of a summary drifts a long way from the original in three steps. You do not need the complete works; a chapter, an article or a well-chosen extract is enough to hear the position in its own voice. Note where each text was published and when, because a view often changes across an author's career.",
           "tip": "Our guide to reading a philosophical text covers how to get through a dense passage without rereading it six times.",
-          "imageTodo": {
+          "image": {
             "base": "02-own-source",
             "alt": "A person in a library aisle reaching up to pull a plain-spined volume from a high shelf, a second book already tucked under one arm."
           }
@@ -62,7 +62,7 @@
           "title": "State each view in one sentence its defender would accept",
           "body": "Now compress each position into a single sentence, and apply the test that matters: would somebody who actually holds this view nod at your sentence? If they would object, you have built the comparison on a caricature, and it will collapse the moment a defender reads it. Rewrite until both sentences pass. This is harder than it sounds, because the charitable version of a view is usually more careful and more qualified than the slogan version.",
           "tip": "Write both sentences on separate cards. If one is twice the length of the other, you have understood one view better than the other.",
-          "imageTodo": {
+          "image": {
             "base": "03-one-sentence",
             "alt": "Two small index cards side by side on a desk, each carrying a single line of soft handwriting, a hand setting the second card straight."
           }
@@ -71,7 +71,7 @@
           "title": "Build a grid before you build an argument",
           "body": "Writing centres recommend a simple chart for exactly this job: criteria down the left-hand side, the two views across the top, one box for each pair. Useful criteria include the central claim, the main argument, what counts as evidence, the hard cases, and the practical upshot. Fill the boxes from your reading rather than from memory. The empty boxes are the most informative part of the grid, because each one marks something you have not actually looked up yet.",
           "tip": "Keep the grid to one page. If it needs two, you are comparing three things, not two.",
-          "imageTodo": {
+          "image": {
             "base": "04-comparison-grid",
             "alt": "Overhead view of a notebook page being ruled into a grid of empty boxes with a wooden ruler and pencil, a cup of coffee at the corner."
           }
@@ -80,7 +80,7 @@
           "title": "Find the real point of disagreement",
           "body": "Scan the grid for the row where the two views genuinely collide, and check first that the collision is real. Sometimes both sides use one word in two senses, and the dispute dissolves once you say which sense you mean. Philosophers also separate disagreement about what is true from disagreement about what to do, and the difference is practical: you can suspend judgement about a claim, but somebody who must act still has to act or not act.",
           "tip": "Underline the disputed words in both one-sentence summaries. Freedom, cause, good and natural are the usual suspects.",
-          "imageTodo": {
+          "image": {
             "base": "05-real-disagreement",
             "alt": "Two people at a cafe table leaning over one shared sheet of paper, one pointing at a line partway down it while the other holds a pen."
           }
@@ -95,16 +95,16 @@
           "title": "Compare what each view takes for granted",
           "body": "Behind every position sits a set of things it never argues for: a picture of what people are like, of what counts as knowing something, of what a good explanation has to do. Write two or three of these background assumptions for each side. Very often the real split is upstream of the arguments, in what each author thought was too obvious to defend, and a comparison that stays at the level of conclusions will never find it.",
           "tip": "Ask of each view: what would have to be false about the world for this position to be a non-starter?",
-          "imageTodo": {
+          "image": {
             "base": "06-assumptions",
-            "alt": "A person sitting on the floor beside a low bookshelf with two books open on their knees, plain coloured sticky tabs along the page edges."
+            "alt": "A man sitting on a rug against a low bookshelf with an open book across his knees, plain coloured paper tabs along its page edges, a stack of books and a sleeping cat beside him."
           }
         },
         {
           "title": "Reconstruct the argument on each side",
           "body": "Set out each position as premises followed by a conclusion, one short line per premise. Then ask where your two reconstructions diverge. Sometimes the two sides share every premise but one, which makes the comparison narrow and tractable. Sometimes they share all the premises and differ about whether the conclusion follows, which is a very different problem. Naming which kind of disagreement you have saves you from arguing past the actual fault line.",
           "tip": "Number the premises on both sides. Then you can write a sentence as precise as: the two agree except at premise three.",
-          "imageTodo": {
+          "image": {
             "base": "07-reconstruct",
             "alt": "A hand drawing a chain of empty boxes joined by arrows on a large sheet of paper spread across a table."
           }
@@ -113,7 +113,7 @@
           "title": "Run both views on the same case",
           "body": "Pick one concrete case that both views have to handle, and write down the verdict each gives. This is the oldest engine in moral and political philosophy: principles and judgements about cases get adjusted against each other until they agree, a method Rawls called reflective equilibrium. When a principle delivers a verdict you cannot accept, you have two honest options. Revise the principle, or accept the verdict and say plainly why the discomfort is survivable.",
           "tip": "Choose a case neither author discusses. Worked examples are chosen by authors because their own theory handles them well.",
-          "imageTodo": {
+          "image": {
             "base": "08-same-case",
             "alt": "Three people around a seminar table, one laying a single card in the middle while the others lean in to look at it."
           }
@@ -122,7 +122,7 @@
           "title": "Write the strongest objection to each view",
           "body": "Spend ten minutes as the prosecution for each side in turn, and write the sharpest objection you can find, not the easiest. Then switch back and write the reply the defender would actually give, using the resources their own position provides. If you cannot construct a reply for one side, that is a real finding and belongs in your conclusion. If you can, you now know which objections a thoughtful supporter has already absorbed.",
           "tip": "Use a different coloured pen for the objection and the reply. It stops the two voices blurring into your own.",
-          "imageTodo": {
+          "image": {
             "base": "09-strongest-objection",
             "alt": "A notepad on a desk written in two colours of ink, a hand holding one pen with a second pen lying uncapped alongside."
           }
@@ -279,25 +279,16 @@
     "readingTimeMinutes": 9,
     "wordCount": null,
     "internalLinkCount": 4,
-    "imageCount": 0,
-    "imagePending": 16,
+    "imageCount": 10,
+    "imagePending": 6,
     "expertReviewed": false,
     "reviewNote": "Philosophy methodology guide. Before publication a philosophy tutor should check the characterisations of reflective equilibrium and of the peer-disagreement literature, and the coursework warning should be matched to the academic-integrity wording used in the publishing country.",
     "imageNote": "Illustrations are drawn for this guide only."
   },
   "imageStatus": {
-    "heroReady": false,
-    "stepImagesReady": 0,
+    "heroReady": true,
+    "stepImagesReady": 9,
     "stepImagesPending": [
-      "01-one-question",
-      "02-own-source",
-      "03-one-sentence",
-      "04-comparison-grid",
-      "05-real-disagreement",
-      "06-assumptions",
-      "07-reconstruct",
-      "08-same-case",
-      "09-strongest-objection",
       "10-shared-ground",
       "11-what-would-move-you",
       "12-price-each-view",
