@@ -19,8 +19,13 @@ function catHref(slug) {
 }
 
 function subHref(slug, sub) {
-  const q = encodeURIComponent(sub);
-  return `/search?q=${q}`;
+  const s = String(sub || "")
+    .trim()
+    .replace(/['’]/g, "")
+    .replace(/&/g, "and")
+    .replace(/[^a-zA-Z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+  return `/category/${s}`;
 }
 
 const TOP_LINKS = [

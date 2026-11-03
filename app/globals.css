@@ -2285,3 +2285,479 @@ p { margin: 0 0 1em; }
     break-inside: avoid;
   }
 }
+
+/* ============================================================================
+   Category & Secondary Category Page
+   (modeled after https://www.wikihow.com/Category:Games)
+   ============================================================================ */
+.wk-catpage {
+  background: #f1f1f1;
+  min-height: calc(100vh - 64px);
+  padding-bottom: 64px;
+  color: #242424;
+}
+.wk-catpage + .site-footer {
+  margin-top: 0;
+}
+
+.wk-catpage-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 296px;
+  gap: 16px;
+  align-items: start;
+  padding-top: 14px;
+}
+.wk-catpage-main {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-width: 0;
+}
+.wk-catpage-side {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  min-width: 0;
+}
+
+/* Category Hero Card */
+.wk-cat-hero {
+  padding: 20px 26px 24px;
+}
+.wk-cat-crumb-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+.wk-cat-back {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: 1px solid #d5ddd0;
+  background: #f3f7ef;
+  color: #46733b;
+  font-size: 14px;
+  font-weight: 800;
+  display: inline-grid;
+  place-items: center;
+  line-height: 1;
+  flex-shrink: 0;
+}
+.wk-cat-back:hover {
+  background: #e3eedb;
+  color: #2d5124;
+}
+.wk-cat-crumbs {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: #507f44;
+}
+.wk-cat-crumbs a {
+  color: #507f44;
+}
+.wk-cat-crumbs a:hover {
+  text-decoration: underline;
+}
+
+.wk-cat-h1 {
+  font-family: var(--font-body);
+  font-size: clamp(1.75rem, 2.7vw, 2.3rem);
+  font-weight: 800;
+  color: #202020;
+  line-height: 1.15;
+  margin: 0 0 10px;
+}
+.wk-cat-intro {
+  font-size: 15.5px;
+  line-height: 1.65;
+  color: #303030;
+  margin: 0;
+}
+
+/* Featured Topics strip inside Category Hero */
+.wk-feattopics {
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid #eaeaea;
+}
+.wk-feattopics-title {
+  font-family: var(--font-body);
+  font-size: 15.5px;
+  font-weight: 800;
+  color: #222222;
+  margin: 0 0 11px;
+}
+.wk-feattopics-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 10px;
+}
+.wk-feattopic-card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid #dfe5da;
+  border-radius: 6px;
+  padding: 6px 10px 6px 6px;
+  background: #f9fbf7;
+  color: #222;
+  font-size: 13.5px;
+  font-weight: 700;
+  transition: border-color 0.14s, background 0.14s, transform 0.14s;
+}
+.wk-feattopic-card:hover {
+  border-color: #7cb342;
+  background: #f1f7eb;
+  color: #2a5320;
+  transform: translateY(-1px);
+}
+.wk-feattopic-thumb {
+  width: 44px;
+  height: 34px;
+  border-radius: 4px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.wk-feattopic-thumb .illus {
+  width: 100%;
+  height: 100%;
+}
+
+/* Section Card (Featured Articles & Articles about {Category}) */
+.wk-cat-block {
+  padding: 20px 26px 26px;
+}
+.wk-cat-block-head {
+  padding-bottom: 11px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid #e6e6e6;
+}
+.wk-cat-block-head h2 {
+  font-family: var(--font-body);
+  font-size: 19.5px;
+  font-weight: 800;
+  color: #222222;
+  margin: 0;
+}
+
+/* 4-column thumbnail grid like wikihow.com/Category:Games */
+.wk-cattile-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+.wk-cattile {
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border: 1px solid #e3e3e3;
+  border-radius: 6px;
+  overflow: hidden;
+  color: #222222;
+  transition: box-shadow 0.16s, transform 0.16s, border-color 0.16s;
+}
+.wk-cattile:hover {
+  border-color: #9ec479;
+  box-shadow: 0 5px 16px rgba(40, 60, 30, 0.11);
+  transform: translateY(-2px);
+  color: #222222;
+}
+.wk-cattile-art {
+  position: relative;
+  background: #eef3ea;
+  overflow: hidden;
+}
+.wk-cattile-art img,
+.wk-cattile-art .illus {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 5 / 4;
+  object-fit: cover;
+}
+.wk-cattile-body {
+  padding: 9px 11px 12px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.wk-cattile-kicker {
+  font-size: 11.5px;
+  font-weight: 600;
+  color: #666666;
+  line-height: 1.2;
+}
+.wk-cattile-title {
+  font-family: var(--font-body);
+  font-size: 13.8px;
+  font-weight: 800;
+  line-height: 1.32;
+  color: #222222;
+  margin: 3px 0 0;
+}
+.wk-cattile:hover .wk-cattile-title {
+  color: #3b6e2e;
+}
+
+/* Category Pagination Bar (Previous / 1 2 / Next) */
+.wk-cat-pager {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 24px;
+  padding-top: 18px;
+  border-top: 1px solid #eaeaea;
+}
+.wk-pager-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 7px 16px;
+  border: 1px solid #cfcfcf;
+  border-radius: 4px;
+  background: #ffffff;
+  color: #2c2c2c;
+  font-size: 13px;
+  font-weight: 700;
+}
+.wk-pager-btn:hover {
+  border-color: #7cb342;
+  color: #3b6e2e;
+  background: #f7fbf3;
+}
+.wk-pager-btn.is-disabled {
+  opacity: 0.45;
+  pointer-events: none;
+}
+.wk-pager-nums {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.wk-pager-nums a {
+  min-width: 32px;
+  height: 32px;
+  border-radius: 4px;
+  border: 1px solid #d5d5d5;
+  display: grid;
+  place-items: center;
+  font-size: 13px;
+  font-weight: 700;
+  color: #333;
+}
+.wk-pager-nums a:hover {
+  border-color: #7cb342;
+  color: #3b6e2e;
+}
+.wk-pager-nums a.is-active {
+  background: #7cb342;
+  border-color: #7cb342;
+  color: #ffffff;
+}
+
+/* Sidebar: Related Topics Tree */
+.wk-reltopics-card {
+  padding: 16px 18px;
+}
+.wk-reltopics-heading {
+  font-family: var(--font-body);
+  font-size: 17px;
+  font-weight: 800;
+  color: #222222;
+  margin: 0 0 12px;
+  padding-bottom: 9px;
+  border-bottom: 1px solid #e6e6e6;
+}
+.wk-reltopics-list {
+  display: flex;
+  flex-direction: column;
+}
+.wk-reltopic-group {
+  border-bottom: 1px solid #efefef;
+  padding: 8px 0;
+}
+.wk-reltopic-group:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+.wk-reltopic-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+.wk-reltopic-parent {
+  font-size: 14px;
+  font-weight: 800;
+  color: #2d5f22;
+  line-height: 1.35;
+}
+.wk-reltopic-parent:hover {
+  text-decoration: underline;
+}
+.wk-reltopic-toggle {
+  width: 24px;
+  height: 24px;
+  border: 0;
+  background: transparent;
+  color: #666;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  border-radius: 4px;
+}
+.wk-reltopic-toggle:hover {
+  background: #f2f5ef;
+  color: #2d5f22;
+}
+.wk-reltopic-toggle svg {
+  width: 14px;
+  height: 14px;
+}
+.wk-reltopic-children {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: 7px;
+}
+.wk-reltopic-pill {
+  display: inline-block;
+  font-size: 11.8px;
+  font-weight: 600;
+  color: #3f523a;
+  background: #f2f6ee;
+  border: 1px solid #dce6d4;
+  border-radius: 4px;
+  padding: 3px 8px;
+  line-height: 1.35;
+}
+.wk-reltopic-pill:hover {
+  background: #e3eedb;
+  border-color: #9ec479;
+  color: #224619;
+}
+
+/* Sidebar: Weekly Newsletter Card */
+.wk-cat-newsletter {
+  background: #eef4e6;
+  border-color: #d6e4c6;
+  text-align: center;
+  padding: 18px 16px;
+}
+.wk-cat-nl-icon {
+  font-size: 22px;
+  margin-bottom: 4px;
+}
+.wk-cat-newsletter h4 {
+  font-family: var(--font-body);
+  font-size: 15.5px;
+  font-weight: 800;
+  color: #222;
+  margin: 0 0 4px;
+}
+.wk-cat-newsletter p {
+  font-size: 12.5px;
+  color: #4f5d48;
+  margin: 0 0 12px;
+}
+.wk-cat-nl-form {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+.wk-cat-nl-form input {
+  width: 100%;
+  border: 1px solid #c6d4b7;
+  border-radius: 4px;
+  padding: 8px 10px;
+  font-size: 13px;
+  background: #ffffff;
+}
+.wk-cat-nl-form button {
+  width: 100%;
+  border: 0;
+  border-radius: 4px;
+  padding: 8px 12px;
+  background: #507f44;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.wk-cat-nl-form button:hover {
+  background: #3f6735;
+}
+.wk-cat-nl-ok {
+  background: #ffffff;
+  border: 1px solid #bdd3a8;
+  color: #2f5b23;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 8px;
+  border-radius: 4px;
+}
+
+/* Sidebar: Join Us in Our Mission Card */
+.wk-mission-card h4 {
+  font-family: var(--font-body);
+  font-size: 15.5px;
+  font-weight: 800;
+  color: #222222;
+  margin: 0 0 7px;
+}
+.wk-mission-card p {
+  font-size: 12.8px;
+  line-height: 1.56;
+  color: #444444;
+  margin: 0 0 12px;
+}
+.wk-mission-btn {
+  display: block;
+  text-align: center;
+  background: #7cb342;
+  color: #ffffff;
+  font-size: 13.5px;
+  font-weight: 800;
+  padding: 9px 14px;
+  border-radius: 4px;
+}
+.wk-mission-btn:hover {
+  background: #689a35;
+  color: #ffffff;
+}
+
+@media (max-width: 1020px) {
+  .wk-catpage-grid {
+    grid-template-columns: 1fr;
+  }
+  .wk-cattile-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 720px) {
+  .wk-cattile-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .wk-cat-hero,
+  .wk-cat-block {
+    padding: 16px;
+  }
+}
+
+@media (max-width: 460px) {
+  .wk-cattile-grid {
+    grid-template-columns: 1fr;
+  }
+}
