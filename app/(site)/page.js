@@ -3,7 +3,7 @@ import { Illustration } from "../../components/Illustration";
 import BooksIllustration from "../../components/BooksIllustration";
 import { MiniCard } from "../../components/ArticleCard";
 import {
-  listCategories,
+  listMainCategories,
   listArticles,
   popularArticles,
   randomArticle,
@@ -21,7 +21,7 @@ const BADGE_BY_CATEGORY = {
 };
 
 export default function HomePage() {
-  const categories = listCategories();
+  const categories = listMainCategories();
   const trending = popularArticles(6);
   const featured = listArticles({ featured: true, limit: 4 });
   const latest = listArticles({ limit: 4 });

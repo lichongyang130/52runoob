@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { ArticleCard } from "../../../components/ArticleCard";
-import { searchArticles, listCategories } from "../../../lib/queries";
+import { searchArticles, listMainCategories } from "../../../lib/queries";
 
 export const dynamic = "force-dynamic";
 
@@ -10,7 +10,7 @@ export default async function SearchPage({ searchParams }) {
   const sp = await searchParams;
   const q = (sp?.q || "").toString().trim();
   const results = q ? searchArticles(q) : [];
-  const categories = listCategories();
+  const categories = listMainCategories();
 
   return (
     <main className="page">

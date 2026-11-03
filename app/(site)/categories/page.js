@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { listCategories, listArticles } from "../../../lib/queries";
+import { listMainCategories, listArticles } from "../../../lib/queries";
 
 export const dynamic = "force-dynamic";
 
@@ -10,7 +10,7 @@ export const metadata = {
 };
 
 export default function CategoriesPage() {
-  const categories = listCategories();
+  const categories = listMainCategories();
 
   return (
     <main className="page">

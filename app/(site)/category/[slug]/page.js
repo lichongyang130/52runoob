@@ -4,7 +4,7 @@ import { ArticleCard } from "../../../../components/ArticleCard";
 import {
   getCategoryBySlug,
   listArticles,
-  listCategories,
+  listMainCategories,
   countArticles,
 } from "../../../../lib/queries";
 
@@ -36,7 +36,7 @@ export default async function CategoryPage({ params, searchParams }) {
   });
   const total = countArticles({ categoryId: category.id });
   const pages = Math.max(1, Math.ceil(total / PAGE_SIZE));
-  const allCategories = listCategories();
+  const allCategories = listMainCategories();
 
   return (
     <main className="page">

@@ -73,6 +73,15 @@ export default async function AdminCategoriesPage({ searchParams }) {
                         </span>
                         <div>
                           <b>{c.name}</b>
+                          {c.nav_group === "extra" ? (
+                            <span
+                              className="pill pill-draft"
+                              style={{ marginLeft: 8 }}
+                              title="Shown in the Explore menu only — no articles yet"
+                            >
+                              menu only
+                            </span>
+                          ) : null}
                           <div style={{ fontSize: 12, color: "var(--muted)" }}>
                             {c.description}
                           </div>

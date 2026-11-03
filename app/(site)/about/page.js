@@ -1,13 +1,13 @@
 import Link from "next/link";
 import { Illustration } from "../../../components/Illustration";
-import { adminStats, listCategories } from "../../../lib/queries";
+import { adminStats, listMainCategories } from "../../../lib/queries";
 
 export const dynamic = "force-dynamic";
 export const metadata = { title: "About Howcompass" };
 
 export default function AboutPage() {
   const stats = adminStats();
-  const categories = listCategories();
+  const categories = listMainCategories();
 
   return (
     <main>
