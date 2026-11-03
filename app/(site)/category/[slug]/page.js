@@ -55,6 +55,7 @@ function resolveCategoryView(rawSlug) {
       parentSlug: null,
       parentName: "Categories",
       parentHref: "/categories",
+      heroBanner: enrich.heroBanner || "/img/categories/arts-hero.jpg",
       description: primary.description,
       introLinks: combined.slice(0, 4).map((a) => ({
         label: a.title,
@@ -76,6 +77,7 @@ function resolveCategoryView(rawSlug) {
     parentSlug: sub.parentSlug,
     parentName: sub.parentName,
     parentHref: `/category/${sub.parentSlug}`,
+    heroBanner: null,
     description: sub.description,
     introLinks:
       sub.introLinks ||
@@ -142,6 +144,51 @@ function CategoryArticleTile({ item }) {
   );
 }
 
+function PrimaryIntroCopy({ view }) {
+  if (view.slug === "Arts-and-Entertainment") {
+    return (
+      <p className="wk-pcat-intro">
+        Learn to{" "}
+        <Link href="/how-to/Be-Well-Read" className="wk-pcat-link">
+          be well read
+        </Link>
+        , become a better artist, and sell your own music with
+        Howcompass&apos;s Arts and Entertainment category. Our articles can help
+        you develop talent in multiple areas and be a good entertainer. Check
+        out how-tos on{" "}
+        <Link href="/how-to/Be-a-Good-Ventriloquist" className="wk-pcat-link">
+          learning ventriloquism
+        </Link>
+        ,{" "}
+        <Link href="/how-to/Make-a-Radio-Show" className="wk-pcat-link">
+          making your own radio show
+        </Link>
+        , becoming a professional storyteller, and more.
+      </p>
+    );
+  }
+
+  return (
+    <p className="wk-pcat-intro">
+      {view.description}{" "}
+      {view.introLinks && view.introLinks.length > 0 ? (
+        <>
+          Check out how-tos on{" "}
+          {view.introLinks.map((l, i, arr) => (
+            <span key={l.href}>
+              {i > 0 ? (i === arr.length - 1 ? ", and " : ", ") : ""}
+              <Link href={l.href} className="wk-pcat-link">
+                {l.label.toLowerCase()}
+              </Link>
+            </span>
+          ))}
+          , and more.
+        </>
+      ) : null}
+    </p>
+  );
+}
+
 export default async function CategoryPage({ params, searchParams }) {
   const { slug } = await params;
   const sp = await searchParams;
@@ -150,8 +197,6 @@ export default async function CategoryPage({ params, searchParams }) {
   const view = resolveCategoryView(slug);
   const allCategories = listMainCategories();
 
-  // Primary categories show 4 Featured Articles (1 row of 4, like Category:Arts-and-Entertainment);
-  // Secondary categories show up to 8 Featured Articles (2 rows of 4, like Category:Games).
   const featuredCap = view.isSubcategory ? 8 : 4;
   const featuredList = view.articles
     .filter((a) => a.featured)
@@ -165,9 +210,205 @@ export default async function CategoryPage({ params, searchParams }) {
     currentPage * PAGE_SIZE
   );
 
+  /* ==========================================================================
+     PRIMARY CATEGORY VIEW (e.g. /category/Arts-and-Entertainment)
+     Matches the supplied screenshot of wikihow.com/Category:Arts-and-Entertainment
+     ========================================================================== */
+  if (!view.isSubcategory) {
+    return (
+      <main className="wk-pcat-page">
+        {/* Full-bleed atmospheric hero banner with centered title & pill search */}
+        <section
+          className="wk-pcat-banner"
+          style={{
+            backgroundImage: `linear-gradient(rgba(18, 22, 20, 0.44), rgba(18, 22, 20, 0.52)), url("${view.heroBanner}")`,
+          }}
+        >
+          <div className="wk-pcat-banner-inner">
+            <h1 className="wk-pcat-banner-title">{view.name}</h1>
+            <form
+              className="wk-pcat-search"
+              action="/search"
+              method="get"
+              role="search"
+            >
+              <input
+                id="category_banner_search_input"
+                type="search"
+                name="q"
+                placeholder="I want to learn how to..."
+                aria-label={`Search ${view.name}`}
+              />
+              <button type="submit" aria-label="Search">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <circle
+                    cx="10.5"
+                    cy="10.5"
+                    r="6.5"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2.2"
+                  />
+                  <path
+                    d="M15.5 15.5L21 21"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2.2"
+                    strokeLinecap="round"
+                  />
+                </svg>
+              </button>
+            </form>
+          </div>
+        </section>
+
+        {/* White body container */}
+        <div className="wk-pcat-container">
+          <div className="wk-pcat-home-row">
+            <Link href="/">Home</Link>
+          </div>
+
+          <section className="wk-pcat-lead">
+            <h2>{view.name}</h2>
+            <PrimaryIntroCopy view={view} />
+          </section>
+
+          {/* Featured Topics — 4 rounded dark-overlay image cards with centered white label */}
+          {view.featuredTopics && view.featuredTopics.length > 0 ? (
+            <section className="wk-pcat-section">
+              <h2 className="wk-pcat-sec-title">Featured Topics</h2>
+              <div className="wk-pcat-topic-grid">
+                {view.featuredTopics.map((ft) => (
+                  <Link
+                    key={ft.name}
+                    href={`/category/${ft.slug}`}
+                    className="wk-pcat-topic-card"
+                  >
+                    {ft.image ? (
+                      <img
+                        src={ft.image}
+                        alt={ft.name}
+                        loading="lazy"
+                        width="320"
+                        height="140"
+                      />
+                    ) : (
+                      <div className="wk-pcat-topic-fallback">
+                        <Illustration name={ft.illus || "art"} />
+                      </div>
+                    )}
+                    <span className="wk-pcat-topic-scrim" aria-hidden="true" />
+                    <span className="wk-pcat-topic-label">{ft.name}</span>
+                  </Link>
+                ))}
+              </div>
+            </section>
+          ) : null}
+
+          {/* Featured Articles */}
+          {featuredList.length > 0 ? (
+            <section className="wk-pcat-section">
+              <h2 className="wk-pcat-sec-title">Featured Articles</h2>
+              <div className="wk-cattile-grid">
+                {featuredList.map((item) => (
+                  <CategoryArticleTile key={item.slug} item={item} />
+                ))}
+              </div>
+            </section>
+          ) : null}
+
+          {/* Articles about {Category} */}
+          <section className="wk-pcat-section" id="all-articles">
+            <h2 className="wk-pcat-sec-title">Articles about {view.name}</h2>
+            <div className="wk-cattile-grid">
+              {pagedArticles.map((item) => (
+                <CategoryArticleTile key={item.slug} item={item} />
+              ))}
+            </div>
+
+            <nav className="wk-cat-pager" aria-label="Category pagination">
+              <Link
+                href={`/category/${view.slug}?pg=${Math.max(1, currentPage - 1)}`}
+                className={`wk-pager-btn ${currentPage <= 1 ? "is-disabled" : ""}`}
+              >
+                Previous
+              </Link>
+              <ul className="wk-pager-nums">
+                {Array.from({ length: Math.max(2, totalPages) }).map((_, i) => {
+                  const p = i + 1;
+                  return (
+                    <li key={p}>
+                      <Link
+                        href={`/category/${view.slug}?pg=${p}`}
+                        className={currentPage === p ? "is-active" : ""}
+                      >
+                        {p}
+                      </Link>
+                    </li>
+                  );
+                })}
+              </ul>
+              <Link
+                href={`/category/${view.slug}?pg=${Math.min(Math.max(2, totalPages), currentPage + 1)}`}
+                className={`wk-pager-btn ${currentPage >= Math.max(2, totalPages) ? "is-disabled" : ""}`}
+              >
+                Next
+              </Link>
+            </nav>
+          </section>
+
+          {/* Related Topics + Sidebar Mission below main articles */}
+          <div className="wk-pcat-bottom-grid">
+            <section className="wk-pcat-section">
+              <h2 className="wk-pcat-sec-title">Related Topics</h2>
+              <RelatedTopicsTree topics={view.relatedTopics} />
+            </section>
+
+            <aside className="wk-catpage-side">
+              <CategoryNewsletterCard />
+              <section className="wk-side-card wk-mission-card">
+                <h4>Join us in our mission</h4>
+                <p>
+                  For over two decades, we&apos;ve been on a mission: to help
+                  everyone in the world learn how to do anything. Our articles
+                  are human written and expert endorsed to ensure readers like
+                  you get reliable, current information.{" "}
+                  <strong>
+                    Before you get back to learning, explore our full library of
+                    illustrated guides. Thank you.
+                  </strong>
+                </p>
+                <Link href="/about" className="wk-mission-btn">
+                  Let&apos;s do this!
+                </Link>
+              </section>
+            </aside>
+          </div>
+
+          {/* New Articles about {Category} */}
+          {view.newArticles && view.newArticles.length > 0 ? (
+            <section className="wk-pcat-section" id="new-articles">
+              <h2 className="wk-pcat-sec-title">
+                New Articles about {view.name}
+              </h2>
+              <div className="wk-cattile-grid">
+                {view.newArticles.map((item) => (
+                  <CategoryArticleTile key={item.slug} item={item} />
+                ))}
+              </div>
+            </section>
+          ) : null}
+        </div>
+      </main>
+    );
+  }
+
+  /* ==========================================================================
+     SECONDARY CATEGORY VIEW (e.g. /category/Games)
+     Matches wikihow.com/Category:Games
+     ========================================================================== */
   return (
     <main className="wk-catpage">
-      {/* Top trust bar */}
       <div className="wk-trust-bar">
         <div className="wk-article-container wk-trust-inner">
           <span className="wk-trust-icon" aria-hidden="true">
@@ -182,9 +423,7 @@ export default async function CategoryPage({ params, searchParams }) {
       </div>
 
       <div className="wk-article-container wk-catpage-grid">
-        {/* ==================== LEFT MAIN COLUMN ==================== */}
         <div className="wk-catpage-main">
-          {/* HERO / INTRO CARD */}
           <section className="wk-card wk-cat-hero">
             <div className="wk-cat-crumb-row">
               <Link
@@ -196,12 +435,8 @@ export default async function CategoryPage({ params, searchParams }) {
               </Link>
               <nav className="wk-cat-crumbs" aria-label="Breadcrumb">
                 <Link href="/categories">Categories</Link>
-                {view.isSubcategory ? (
-                  <>
-                    <span className="wk-bc-sep">»</span>
-                    <Link href={view.parentHref}>{view.parentName}</Link>
-                  </>
-                ) : null}
+                <span className="wk-bc-sep">»</span>
+                <Link href={view.parentHref}>{view.parentName}</Link>
                 <span className="wk-bc-sep">»</span>
                 <span>{view.name}</span>
               </nav>
@@ -210,36 +445,7 @@ export default async function CategoryPage({ params, searchParams }) {
             <h1 className="wk-cat-h1">{view.name}</h1>
 
             <p className="wk-cat-intro">
-              {view.slug === "Arts-and-Entertainment" ? (
-                <>
-                  Learn to{" "}
-                  <Link href="/how-to/Be-Well-Read" className="wk-inline-link">
-                    be well read
-                  </Link>
-                  , become a better artist, and sell your own music with
-                  Howcompass&apos;s Arts and Entertainment category. Our
-                  articles can help you develop talent in multiple areas and be
-                  a good entertainer. Check out how-tos on{" "}
-                  <Link
-                    href="/how-to/Be-a-Good-Ventriloquist"
-                    className="wk-inline-link"
-                  >
-                    learning ventriloquism
-                  </Link>
-                  ,{" "}
-                  <Link
-                    href="/how-to/Make-a-Radio-Show"
-                    className="wk-inline-link"
-                  >
-                    making your own radio show
-                  </Link>
-                  , becoming a professional{" "}
-                  <Link href="/how-to/Tell-a-Story" className="wk-inline-link">
-                    storyteller
-                  </Link>
-                  , and more.
-                </>
-              ) : view.name === "Games" ? (
+              {view.name === "Games" ? (
                 <>
                   Discover new games and become a master of your old favorites
                   with Howcompass&apos;s Games category! Learn all about classic
@@ -299,32 +505,8 @@ export default async function CategoryPage({ params, searchParams }) {
                 </>
               )}
             </p>
-
-            {/* FEATURED TOPICS (4 Wide Banner Cards like Category:Arts-and-Entertainment) */}
-            {view.featuredTopics && view.featuredTopics.length > 0 ? (
-              <div className="wk-feattopics">
-                <h2 className="wk-feattopics-title">Featured Topics</h2>
-                <div className="wk-feattopics-banners">
-                  {view.featuredTopics.map((ft) => (
-                    <Link
-                      key={ft.name}
-                      href={`/category/${ft.slug}`}
-                      className="wk-feattopic-banner"
-                    >
-                      <div className="wk-feattopic-banner-art">
-                        <Illustration name={ft.illus || "art"} />
-                      </div>
-                      <span className="wk-feattopic-banner-label">
-                        {ft.name}
-                      </span>
-                    </Link>
-                  ))}
-                </div>
-              </div>
-            ) : null}
           </section>
 
-          {/* FEATURED ARTICLES SECTION */}
           {featuredList.length > 0 ? (
             <section className="wk-card wk-cat-block">
               <header className="wk-cat-block-head">
@@ -338,7 +520,6 @@ export default async function CategoryPage({ params, searchParams }) {
             </section>
           ) : null}
 
-          {/* ARTICLES ABOUT {CATEGORY} SECTION */}
           <section className="wk-card wk-cat-block" id="all-articles">
             <header className="wk-cat-block-head">
               <h2>Articles about {view.name}</h2>
@@ -349,7 +530,6 @@ export default async function CategoryPage({ params, searchParams }) {
               ))}
             </div>
 
-            {/* Pagination bar */}
             <nav className="wk-cat-pager" aria-label="Category pagination">
               <Link
                 href={`/category/${view.slug}?pg=${Math.max(1, currentPage - 1)}`}
@@ -380,36 +560,16 @@ export default async function CategoryPage({ params, searchParams }) {
               </Link>
             </nav>
           </section>
-
-          {/* NEW ARTICLES ABOUT {CATEGORY} SECTION (Primary Category Directory block) */}
-          {!view.isSubcategory &&
-          view.newArticles &&
-          view.newArticles.length > 0 ? (
-            <section className="wk-card wk-cat-block" id="new-articles">
-              <header className="wk-cat-block-head">
-                <h2>New Articles about {view.name}</h2>
-              </header>
-              <div className="wk-cattile-grid">
-                {view.newArticles.map((item) => (
-                  <CategoryArticleTile key={item.slug} item={item} />
-                ))}
-              </div>
-            </section>
-          ) : null}
         </div>
 
-        {/* ==================== RIGHT SIDEBAR COLUMN ==================== */}
         <aside className="wk-catpage-side">
-          {/* RELATED TOPICS TREE CARD */}
           <section className="wk-side-card wk-reltopics-card">
             <h2 className="wk-reltopics-heading">Related Topics</h2>
             <RelatedTopicsTree topics={view.relatedTopics} />
           </section>
 
-          {/* WEEKLY NEWSLETTER CARD */}
           <CategoryNewsletterCard />
 
-          {/* JOIN US IN OUR MISSION CARD */}
           <section className="wk-side-card wk-mission-card">
             <h4>Join us in our mission</h4>
             <p>
@@ -427,7 +587,6 @@ export default async function CategoryPage({ params, searchParams }) {
             </Link>
           </section>
 
-          {/* BROWSE ALL PRIMARY CATEGORIES */}
           <section className="wk-side-card">
             <h4 className="wk-side-heading">Browse Main Categories</h4>
             <ul className="wk-side-nav">
