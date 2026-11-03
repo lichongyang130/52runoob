@@ -1247,3 +1247,1041 @@ p { margin: 0 0 1em; }
 .related-list a { font-weight: 600; color: #3c6a1e; }
 .related-list a:hover { color: #2c5114; text-decoration: underline; }
 .related-list span { font-size: 12px; color: var(--muted); white-space: nowrap; }
+
+/* ============================================================================
+   Article Content Page — wikiHow Card & Full-Width Step Layout
+   (modeled after https://www.wikihow.com/Hold-a-Drumstick screenshot)
+   ============================================================================ */
+.wk-article-page {
+  background: #f1f1f1;
+  min-height: calc(100vh - 64px);
+  padding-bottom: 64px;
+  color: #262626;
+}
+.wk-article-page + .site-footer {
+  margin-top: 0;
+}
+
+.wk-article-container {
+  max-width: 1090px;
+  margin: 0 auto;
+  padding: 0 18px;
+}
+
+/* Top light-green trust bar directly below header */
+.wk-trust-bar {
+  background: #e0e9d7;
+  border-bottom: 1px solid #cddbc0;
+  font-size: 12.5px;
+  color: #3d4a35;
+  padding: 6px 0;
+}
+.wk-trust-inner {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  line-height: 1.35;
+}
+.wk-trust-icon {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #507f44;
+  color: #fff;
+  font-size: 10.5px;
+  font-weight: 800;
+  display: inline-grid;
+  place-items: center;
+  flex-shrink: 0;
+}
+.wk-trust-inner a {
+  color: #2f5b23;
+  font-weight: 700;
+}
+.wk-trust-inner a:hover {
+  text-decoration: underline;
+}
+
+/* Main 2-column grid */
+.wk-article-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 296px;
+  gap: 16px;
+  align-items: start;
+  padding-top: 14px;
+}
+.wk-main-col {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-width: 0;
+}
+.wk-side-col {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  min-width: 0;
+}
+
+/* Shared white card container */
+.wk-card {
+  background: #ffffff;
+  border: 1px solid #dcdcdc;
+  border-radius: 4px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+}
+
+/* ---------------- Card 1: Intro / Title / TOC / Action Row ---------------- */
+.wk-intro-card {
+  padding: 20px 26px 24px;
+}
+.wk-breadcrumbs {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #507f44;
+  margin-bottom: 6px;
+}
+.wk-breadcrumbs a {
+  color: #507f44;
+}
+.wk-breadcrumbs a:hover {
+  text-decoration: underline;
+}
+.wk-bc-sep {
+  color: #7b8a74;
+  font-size: 12px;
+}
+
+.wk-article-title {
+  font-family: var(--font-body);
+  font-size: clamp(1.65rem, 2.55vw, 2.15rem);
+  font-weight: 800;
+  line-height: 1.18;
+  letter-spacing: -0.02em;
+  color: #202020;
+  margin: 0 0 6px;
+}
+
+.wk-article-sub {
+  font-style: italic;
+  font-size: 15px;
+  line-height: 1.45;
+  color: #595959;
+  margin: 0 0 12px;
+}
+
+.wk-byline-block {
+  font-size: 12.5px;
+  line-height: 1.55;
+  color: #555555;
+  margin-bottom: 12px;
+}
+.wk-byline-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+.wk-byline-author {
+  color: #3b6e2e;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.wk-byline-author:hover {
+  color: #264c1c;
+}
+.wk-verified-pill {
+  display: inline-grid;
+  place-items: center;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #2b7de9;
+  color: #fff;
+  font-size: 9px;
+  font-weight: 800;
+  margin: 0 2px;
+}
+.wk-byline-meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px;
+  color: #666;
+  margin-top: 2px;
+}
+.wk-fact-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: #3b6e2e;
+  font-weight: 700;
+}
+.wk-fact-link:hover {
+  text-decoration: underline;
+}
+.wk-fact-box {
+  color: #507f44;
+  font-size: 13px;
+}
+
+/* Inline Pipe-Separated Jump Bar */
+.wk-jump-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  row-gap: 4px;
+  padding: 6px 0 12px;
+  font-size: 13px;
+  line-height: 1.4;
+}
+.wk-jump-item {
+  display: inline-flex;
+  align-items: center;
+}
+.wk-jump-item + .wk-jump-item::before {
+  content: "|";
+  color: #b5b5b5;
+  margin: 0 8px;
+  font-weight: 400;
+}
+.wk-jump-item a {
+  color: #3b6e2e;
+  font-weight: 700;
+}
+.wk-jump-item a:hover {
+  color: #254b1c;
+  text-decoration: underline;
+}
+
+/* Action Buttons Row (Download PDF / Share / Preferred Source) */
+.wk-action-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+.wk-act-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  height: 34px;
+  padding: 0 13px;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 12.5px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.14s, border-color 0.14s, color 0.14s;
+}
+.wk-act-ico {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+}
+.wk-act-pdf {
+  background: #507f44;
+  border: 1px solid #446e39;
+  color: #ffffff;
+}
+.wk-act-pdf:hover {
+  background: #426b37;
+}
+.wk-act-outline {
+  background: #ffffff;
+  border: 1px solid #cccccc;
+  color: #303030;
+}
+.wk-act-outline:hover {
+  background: #f7f7f7;
+  border-color: #b3b3b3;
+}
+.wk-act-pref.is-active {
+  background: #eef6e8;
+  border-color: #7cb342;
+  color: #2e5922;
+}
+.wk-pref-badge {
+  width: 16px;
+  height: 16px;
+  display: inline-flex;
+}
+.wk-pref-badge svg {
+  width: 100%;
+  height: 100%;
+}
+
+.wk-intro-p {
+  font-size: 15.5px;
+  line-height: 1.66;
+  color: #2e2e2e;
+  margin: 0;
+}
+.wk-inline-link {
+  color: #3b6e2e;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.wk-inline-link:hover {
+  color: #24471b;
+}
+
+/* ---------------- Card 2: "How do you ...?" Overview Card ---------------- */
+.wk-overview-card {
+  overflow: hidden;
+}
+.wk-overview-header {
+  padding: 13px 26px;
+  border-bottom: 1px solid #e6e6e6;
+  background: #ffffff;
+}
+.wk-overview-header h2 {
+  font-family: var(--font-body);
+  font-size: 16.5px;
+  font-weight: 800;
+  color: #222222;
+  margin: 0;
+}
+.wk-overview-body {
+  padding: 20px 26px 22px;
+}
+.wk-overview-media {
+  position: relative;
+  border-radius: 2px;
+  overflow: hidden;
+  background: #eef3ea;
+  margin-bottom: 14px;
+}
+.wk-overview-media img,
+.wk-overview-media .illus {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+}
+.wk-overview-text {
+  font-size: 15px;
+  line-height: 1.62;
+  color: #333333;
+  margin: 0;
+}
+
+/* Corner watermark on step & overview images */
+.wk-watermark {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background: rgba(68, 92, 58, 0.78);
+  color: rgba(255, 255, 255, 0.94);
+  font-size: 11px;
+  font-weight: 500;
+  padding: 3px 9px;
+  letter-spacing: 0.01em;
+  pointer-events: none;
+}
+.wk-watermark b {
+  font-weight: 800;
+  color: #ffffff;
+}
+
+/* ---------------- Cards 3..N: Method Cards & Full-Width Steps -------------- */
+.wk-method-card {
+  overflow: hidden;
+  scroll-margin-top: 84px;
+}
+.wk-method-bar {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: #ffffff;
+  border-bottom: 1px solid #e4e4e4;
+  padding-right: 18px;
+  min-height: 56px;
+}
+.wk-method-badge {
+  background: #88af69;
+  color: #ffffff;
+  width: 60px;
+  min-height: 56px;
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 4px;
+  flex-shrink: 0;
+  text-align: center;
+}
+.wk-method-badge-label {
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+}
+.wk-method-badge-num {
+  font-size: 21px;
+  font-weight: 800;
+  line-height: 1.15;
+}
+.wk-method-heading {
+  font-family: var(--font-body);
+  font-size: 18.5px;
+  font-weight: 800;
+  color: #222222;
+  margin: 0;
+  padding: 10px 0;
+  flex: 1;
+}
+.wk-method-pdf {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #507f44;
+  border: 1px solid #446e39;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 7px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+.wk-method-pdf:hover {
+  background: #426b37;
+}
+
+/* Individual step inside a Method card */
+.wk-step-item {
+  border-bottom: 1px solid #e6e6e6;
+}
+.wk-step-item:last-child {
+  border-bottom: 0;
+}
+
+.wk-step-media {
+  position: relative;
+  width: 100%;
+  background: #eef3ea;
+  border-bottom: 1px solid #ededed;
+}
+.wk-step-media img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+}
+.wk-step-media .illus {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+}
+
+.wk-step-row {
+  display: grid;
+  grid-template-columns: 38px minmax(0, 1fr);
+  gap: 12px;
+  padding: 20px 26px 26px;
+  align-items: start;
+}
+.wk-step-num {
+  font-family: var(--font-body);
+  font-size: 36px;
+  font-weight: 800;
+  line-height: 0.95;
+  color: #545454;
+  user-select: none;
+}
+.wk-step-prose {
+  min-width: 0;
+}
+.wk-step-p {
+  font-size: 15.5px;
+  line-height: 1.64;
+  color: #2b2b2b;
+  margin: 0;
+}
+.wk-step-lead {
+  font-weight: 800;
+  color: #1a1a1a;
+}
+.wk-cite {
+  font-size: 11px;
+  font-weight: 700;
+  margin-left: 2px;
+}
+.wk-cite a {
+  color: #3b6e2e;
+}
+.wk-cite a:hover {
+  text-decoration: underline;
+}
+
+.wk-step-bullets {
+  margin: 12px 0 0;
+  padding-left: 22px;
+  list-style: disc;
+}
+.wk-step-bullets li {
+  font-size: 14.8px;
+  line-height: 1.6;
+  color: #333333;
+  margin-bottom: 8px;
+}
+.wk-step-bullets li:last-child {
+  margin-bottom: 0;
+}
+.wk-cite-inline {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  font-size: 11.5px;
+  font-weight: 700;
+  margin-left: 4px;
+  vertical-align: baseline;
+}
+.wk-cite-inline a {
+  color: #3b6e2e;
+}
+.wk-cite-check {
+  display: inline-grid;
+  place-items: center;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #507f44;
+  color: #ffffff;
+  font-size: 9px;
+}
+
+/* ---------------- Secondary Section Cards (Q&A, Tips, Refs) ---------------- */
+.wk-section-card {
+  overflow: hidden;
+  scroll-margin-top: 84px;
+}
+.wk-section-bar {
+  background: #88af69;
+  color: #ffffff;
+  padding: 11px 22px;
+}
+.wk-warn-card .wk-section-bar {
+  background: #d97543;
+}
+.wk-section-bar h2 {
+  font-family: var(--font-body);
+  font-size: 18px;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0;
+}
+.wk-section-body {
+  padding: 20px 26px 24px;
+}
+.wk-bullet-list {
+  margin: 0;
+  padding-left: 22px;
+  list-style: disc;
+}
+.wk-bullet-list li {
+  font-size: 15px;
+  line-height: 1.62;
+  color: #2f2f2f;
+  margin-bottom: 10px;
+}
+.wk-bullet-list li:last-child {
+  margin-bottom: 0;
+}
+
+.wk-qa-q {
+  color: #507f44;
+  font-weight: 800;
+  margin-right: 4px;
+}
+.wk-qa-expert {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+.wk-qa-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #507f44;
+  color: #fff;
+  font-weight: 800;
+  font-size: 13px;
+  display: grid;
+  place-items: center;
+}
+.wk-qa-expert strong {
+  display: block;
+  font-size: 13px;
+  color: #222;
+}
+.wk-qa-expert span {
+  display: block;
+  font-size: 11.5px;
+  color: #6b6b6b;
+}
+
+/* Related guides 2x2 visual grid */
+.wk-related-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+.wk-related-tile {
+  display: grid;
+  grid-template-columns: 110px minmax(0, 1fr);
+  border: 1px solid #e2e2e2;
+  border-radius: 4px;
+  overflow: hidden;
+  background: #fafafa;
+  color: #222;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+.wk-related-tile:hover {
+  border-color: #7cb342;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.07);
+  color: #222;
+}
+.wk-related-thumb .illus {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 4 / 3;
+}
+.wk-related-caption {
+  padding: 10px 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.wk-related-caption span {
+  font-size: 11.5px;
+  color: #666;
+}
+.wk-related-caption strong {
+  font-size: 13.5px;
+  line-height: 1.3;
+  color: #222;
+}
+
+.wk-helpful-card {
+  padding: 22px 26px;
+  text-align: center;
+  background: #f9fbf7;
+}
+.wk-helpful-card h3 {
+  font-family: var(--font-body);
+  font-size: 18px;
+  font-weight: 800;
+  margin: 0 0 6px;
+}
+.wk-helpful-card p {
+  font-size: 14px;
+  color: #555;
+  margin: 0 0 14px;
+}
+
+/* =========================== RIGHT SIDEBAR CARDS =========================== */
+.wk-side-card {
+  background: #ffffff;
+  border: 1px solid #dcdcdc;
+  border-radius: 4px;
+  padding: 16px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+}
+
+/* Sidebar Card 1: Co-Author + Star Rating + Stats */
+.wk-author-top {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: 13px;
+  border-bottom: 1px solid #e6e6e6;
+}
+.wk-author-avatar-wrap {
+  position: relative;
+  width: 52px;
+  height: 52px;
+  flex-shrink: 0;
+}
+.wk-author-avatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #507f44, #2f4e27);
+  color: #ffffff;
+  font-family: var(--font-display);
+  font-size: 21px;
+  font-weight: 700;
+  display: grid;
+  place-items: center;
+}
+.wk-author-check {
+  position: absolute;
+  right: -2px;
+  bottom: -2px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #2b7de9;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  font-size: 10px;
+  font-weight: 800;
+  display: grid;
+  place-items: center;
+}
+.wk-author-info {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+.wk-author-kicker {
+  font-size: 11.5px;
+  color: #666666;
+}
+.wk-author-name {
+  font-size: 14.5px;
+  font-weight: 800;
+  color: #202020;
+  line-height: 1.25;
+}
+.wk-author-role {
+  font-size: 11.5px;
+  color: #5c5c5c;
+  margin-top: 1px;
+}
+
+.wk-author-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-top: 12px;
+  gap: 12px;
+  align-items: center;
+}
+.wk-author-stats-right {
+  border-left: 1px solid #e6e6e6;
+  padding-left: 12px;
+  font-size: 11.5px;
+  line-height: 1.65;
+  color: #555555;
+}
+.wk-author-stats-right b {
+  color: #222222;
+}
+
+/* Interactive 5-Star Rating widget */
+.wk-star-box {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.wk-stars-row {
+  display: inline-flex;
+  gap: 2px;
+}
+.wk-star-btn {
+  background: none;
+  border: 0;
+  padding: 0;
+  font-size: 19px;
+  line-height: 1;
+  color: #cfd4d0;
+  cursor: pointer;
+  transition: color 0.12s, transform 0.12s;
+}
+.wk-star-btn.is-lit {
+  color: #7cb342;
+}
+.wk-star-btn:hover {
+  transform: scale(1.12);
+}
+.wk-star-votes {
+  font-size: 11px;
+  color: #6b6b6b;
+}
+.wk-star-cta {
+  font-size: 11.5px;
+  font-weight: 700;
+  color: #2c2c2c;
+}
+
+/* Sidebar Card 2: Reader Testimonial */
+.wk-story-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+.wk-story-avatar {
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+}
+.wk-story-avatar svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.wk-story-author {
+  display: block;
+  font-size: 13px;
+  font-weight: 700;
+  color: #222222;
+}
+.wk-story-date {
+  display: block;
+  font-size: 11px;
+  color: #777777;
+}
+.wk-story-quote {
+  font-size: 12.8px;
+  line-height: 1.55;
+  color: #363636;
+  margin: 0 0 10px;
+}
+.wk-story-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 700;
+  border-top: 1px solid #eeeeee;
+  padding-top: 8px;
+}
+.wk-story-links a {
+  color: #3b6e2e;
+}
+.wk-story-links a:hover {
+  text-decoration: underline;
+}
+
+/* Sidebar Card 3: Promo Banner Card */
+.wk-promo-card {
+  padding: 0;
+  overflow: hidden;
+}
+.wk-promo-banner {
+  background: linear-gradient(160deg, #243c2c 0%, #35583a 100%);
+  color: #ffffff;
+  padding: 16px 16px 14px;
+}
+.wk-promo-eyebrow {
+  display: inline-block;
+  font-size: 10.5px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #b7df89;
+  margin-bottom: 4px;
+}
+.wk-promo-banner h4 {
+  font-family: var(--font-display);
+  font-size: 18px;
+  line-height: 1.24;
+  color: #ffffff;
+  margin: 0 0 12px;
+}
+.wk-promo-illus {
+  border-radius: 6px;
+  overflow: hidden;
+  border: 2px solid rgba(255, 255, 255, 0.18);
+  margin-bottom: 12px;
+}
+.wk-promo-illus .illus {
+  aspect-ratio: 16 / 10;
+}
+.wk-promo-foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ffffff;
+  margin: 0 -16px -14px;
+  padding: 10px 16px;
+}
+.wk-promo-brand {
+  font-family: var(--font-display);
+  font-size: 17px;
+  font-weight: 700;
+  color: #507f44;
+}
+.wk-promo-brand b {
+  color: #2b4718;
+}
+.wk-promo-cta {
+  background: #2b7de9;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 6px 14px;
+  border-radius: 999px;
+}
+.wk-promo-cta:hover {
+  background: #1c65c8;
+  color: #ffffff;
+}
+
+/* Sidebar Card 4: Sticky In-This-Article + Related */
+.wk-side-sticky {
+  position: sticky;
+  top: 80px;
+}
+.wk-side-heading {
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #555555;
+  margin: 0 0 10px;
+}
+.wk-side-nav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.wk-side-nav li {
+  border-bottom: 1px solid #f0f0f0;
+}
+.wk-side-nav li:last-child {
+  border-bottom: 0;
+}
+.wk-side-nav a {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 7px 0;
+  font-size: 13px;
+  font-weight: 600;
+  color: #2f2f2f;
+}
+.wk-side-nav a:hover {
+  color: #507f44;
+}
+.wk-side-num {
+  width: 20px;
+  height: 20px;
+  border-radius: 3px;
+  background: #88af69;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 800;
+  display: inline-grid;
+  place-items: center;
+  flex-shrink: 0;
+}
+
+.wk-side-related {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.wk-side-rel-item {
+  display: grid;
+  grid-template-columns: 74px minmax(0, 1fr);
+  gap: 10px;
+  align-items: center;
+  color: #222;
+}
+.wk-side-rel-item:hover strong {
+  color: #507f44;
+  text-decoration: underline;
+}
+.wk-side-rel-art {
+  border-radius: 4px;
+  overflow: hidden;
+  border: 1px solid #e4e4e4;
+}
+.wk-side-rel-art .illus {
+  aspect-ratio: 4 / 3;
+}
+.wk-side-rel-txt {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+.wk-side-rel-txt span {
+  font-size: 11px;
+  color: #777;
+}
+.wk-side-rel-txt strong {
+  font-size: 12.8px;
+  line-height: 1.3;
+  color: #222;
+}
+
+@media (max-width: 960px) {
+  .wk-article-grid {
+    grid-template-columns: 1fr;
+  }
+  .wk-side-sticky {
+    position: static;
+  }
+}
+
+@media (max-width: 640px) {
+  .wk-intro-card,
+  .wk-overview-body,
+  .wk-section-body {
+    padding: 16px 16px 20px;
+  }
+  .wk-overview-header {
+    padding: 12px 16px;
+  }
+  .wk-step-row {
+    grid-template-columns: 28px minmax(0, 1fr);
+    gap: 10px;
+    padding: 16px 16px 20px;
+  }
+  .wk-step-num {
+    font-size: 28px;
+  }
+  .wk-method-bar {
+    padding-right: 12px;
+  }
+  .wk-method-pdf span {
+    display: none;
+  }
+  .wk-related-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media print {
+  .wk-header,
+  .wk-trust-bar,
+  .wk-side-col,
+  .wk-action-row,
+  .wk-method-pdf,
+  .wk-helpful-card,
+  #comments,
+  .site-footer,
+  .to-top,
+  .read-progress {
+    display: none !important;
+  }
+  .wk-article-page {
+    background: #fff !important;
+  }
+  .wk-article-grid {
+    display: block !important;
+  }
+  .wk-card {
+    border: 1px solid #ccc !important;
+    margin-bottom: 16px !important;
+    break-inside: avoid;
+  }
+}

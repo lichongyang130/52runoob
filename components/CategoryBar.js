@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 
 export default function CategoryBar({ categories = [] }) {
   const pathname = usePathname();
-  if (pathname === "/") return null;
+  if (pathname === "/" || pathname.startsWith("/how-to/")) return null;
 
   return (
     <div className="wk-catbar">

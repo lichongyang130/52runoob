@@ -2,6 +2,182 @@
 
 import { useState } from "react";
 
+export function ArticleActionButtons({ title }) {
+  const [shareMsg, setShareMsg] = useState(null);
+  const [preferred, setPreferred] = useState(false);
+
+  function handlePrint() {
+    if (typeof window !== "undefined") {
+      window.print();
+    }
+  }
+
+  async function handleShare() {
+    if (typeof window === "undefined") return;
+    const url = window.location.href;
+    if (navigator.share) {
+      try {
+        await navigator.share({ title: `How to ${title}`, url });
+        return;
+      } catch (e) {
+        /* fallback to clipboard */
+      }
+    }
+    try {
+      await navigator.clipboard.writeText(url);
+      setShareMsg("Link copied!");
+      setTimeout(() => setShareMsg(null), 2200);
+    } catch (e) {
+      setShareMsg("Copy URL from address bar");
+      setTimeout(() => setShareMsg(null), 2200);
+    }
+  }
+
+  return (
+    <div className="wk-action-row">
+      <button
+        type="button"
+        className="wk-act-btn wk-act-pdf"
+        onClick={handlePrint}
+      >
+        <svg viewBox="0 0 16 16" aria-hidden="true" className="wk-act-ico">
+          <path
+            d="M8 1.5v8.2M4.8 6.8L8 10l3.2-3.2M2.5 12.5h11v1.5h-11z"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="1.8"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+        <span>Download PDF</span>
+      </button>
+
+      <button
+        type="button"
+        className="wk-act-btn wk-act-outline"
+        onClick={handleShare}
+      >
+        <svg viewBox="0 0 16 16" aria-hidden="true" className="wk-act-ico">
+          <circle cx="12" cy="3.2" r="2" fill="currentColor" />
+          <circle cx="4" cy="8" r="2" fill="currentColor" />
+          <circle cx="12" cy="12.8" r="2" fill="currentColor" />
+          <path
+            d="M5.7 7l4.6-2.8M5.7 9l4.6 2.8"
+            stroke="currentColor"
+            strokeWidth="1.5"
+          />
+        </svg>
+        <span>{shareMsg || "Share"}</span>
+      </button>
+
+      <button
+        type="button"
+        className={`wk-act-btn wk-act-outline wk-act-pref ${preferred ? "is-active" : ""}`}
+        onClick={() => setPreferred((p) => !p)}
+      >
+        <span className="wk-pref-badge" aria-hidden="true">
+          <svg viewBox="0 0 16 16">
+            <circle cx="8" cy="8" r="7" fill="#eef5e8" stroke="#7cb342" strokeWidth="1.4" />
+            <path d="M8 2.5l1.6 3.9L13.5 8 9.6 9.6 8 13.5 6.4 9.6 2.5 8l3.9-1.6z" fill="#507f44" />
+          </svg>
+        </span>
+        <span>
+          {preferred
+            ? "Saved as preferred guide"
+            : "Set as preferred source on Howcompass"}
+        </span>
+      </button>
+    </div>
+  );
+}
+
+export function MethodPdfButton() {
+  return (
+    <button
+      type="button"
+      className="wk-method-pdf"
+      onClick={() => {
+        if (typeof window !== "undefined") window.print();
+      }}
+    >
+      <svg viewBox="0 0 16 16" aria-hidden="true" className="wk-act-ico">
+        <path
+          d="M8 1.5v8.2M4.8 6.8L8 10l3.2-3.2M2.5 12.5h11v1.5h-11z"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.8"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </svg>
+      <span>Download PDF</span>
+    </button>
+  );
+}
+
+export function SidebarStarRating({ articleId, helpfulYes = 48, helpfulNo = 4 }) {
+  const [counts, setCounts] = useState({
+    yes: Math.max(12, Number(helpfulYes) || 48),
+    no: Number(helpfulNo) || 3,
+  });
+  const [hoverStar, setHoverStar] = useState(0);
+  const [selectedStar, setSelectedStar] = useState(0);
+
+  const totalVotes = counts.yes + counts.no;
+  const pct = totalVotes > 0 ? Math.round((counts.yes / totalVotes) * 100) : 92;
+  const activeStars = hoverStar || selectedStar || 4;
+
+  async function rate(star) {
+    if (selectedStar) return;
+    setSelectedStar(star);
+    const helpful = star >= 4;
+    try {
+      const res = await fetch("/api/vote", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ articleId, helpful }),
+      });
+      const data = await res.json();
+      if (data.ok) {
+        setCounts({ yes: data.helpful_yes, no: data.helpful_no });
+      }
+    } catch (e) {
+      /* best effort */
+    }
+  }
+
+  return (
+    <div className="wk-star-box">
+      <div
+        className="wk-stars-row"
+        onMouseLeave={() => setHoverStar(0)}
+        role="group"
+        aria-label="Rate this article from 1 to 5 stars"
+      >
+        {[1, 2, 3, 4, 5].map((s) => (
+          <button
+            key={s}
+            type="button"
+            className={`wk-star-btn ${s <= activeStars ? "is-lit" : ""}`}
+            onMouseEnter={() => setHoverStar(s)}
+            onClick={() => rate(s)}
+            aria-label={`Rate ${s} out of 5 stars`}
+          >
+            ★
+          </button>
+        ))}
+      </div>
+      <div className="wk-star-votes">
+        {totalVotes} votes - {pct}%
+      </div>
+      <div className="wk-star-cta">
+        {selectedStar ? "Thanks for rating!" : "Click a star to rate"}
+      </div>
+    </div>
+  );
+}
+
 export function HelpfulBox({ articleId, helpfulYes, helpfulNo }) {
   const [counts, setCounts] = useState({ yes: helpfulYes, no: helpfulNo });
   const [voted, setVoted] = useState(false);
@@ -27,7 +203,7 @@ export function HelpfulBox({ articleId, helpfulYes, helpfulNo }) {
   }
 
   return (
-    <div className="helpful-box">
+    <div className="wk-card wk-helpful-card" id="helpful">
       <h3>
         {voted ? "Thanks for your feedback!" : "Did this article help you?"}
       </h3>
@@ -42,14 +218,14 @@ export function HelpfulBox({ articleId, helpfulYes, helpfulNo }) {
           onClick={() => vote(true)}
           disabled={voted || busy}
         >
-          👍 Yes, it helped
+          Yes
         </button>
         <button
           className="btn btn-outline"
           onClick={() => vote(false)}
           disabled={voted || busy}
         >
-          👎 Not really
+          No
         </button>
       </div>
     </div>
