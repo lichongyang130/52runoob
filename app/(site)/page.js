@@ -1,125 +1,132 @@
 import Link from 'next/link';
 import { Illustration } from '../../components/Illustration';
-import { ArticleCard, MiniCard } from '../../components/ArticleCard';
-import { listCategories, listArticles, popularArticles } from '../../lib/queries';
+import BooksIllustration from '../../components/BooksIllustration';
+import { MiniCard } from '../../components/ArticleCard';
+import { listCategories, listArticles, popularArticles, randomArticle } from '../../lib/queries';
 
 export const dynamic = 'force-dynamic';
 
+function expertFor(article) {
+  const name = String(article.author || '');
+  return name.replace(/^wikiHow\s*/i, '').replace(/\s*Team$/i, '') || 'Expert';
+}
+
 export default function HomePage() {
   const categories = listCategories();
-  const featured = listArticles({ featured: true, limit: 5 });
-  const latest = listArticles({ limit: 9 });
-  const popular = popularArticles(6);
-  const hero = featured[0] || latest[0];
-  const sideFeatures = (featured.length > 1 ? featured.slice(1) : latest.slice(1)).slice(0, 3);
+  const trending = popularArticles(6);
+  const featured = listArticles({ featured: true, limit: 4 });
+  const latest = listArticles({ limit: 4 });
+  const pick = latest[0] || featured[0];
+  const totalCount = categories.reduce((n, c) => n + c.article_count, 0);
+  const random = randomArticle();
 
   return (
-    <main>
-      {/* ---------------------------------- hero --------------------------------- */}
-      <section className="hero">
-        <div className="container hero-grid">
-          <div>
-            <span className="hero-badge">🌿 Learn how to do just about anything</span>
-            <h1>
-              Learn how to do <span style={{ color: 'var(--green-dark)' }}>anything</span>, one
-              clear step at a time.
-            </h1>
-            <p className="lead">
-              Thousands of illustrated how-tos written by people who actually did the thing.
-              No fluff, no paywall — just steps you can follow today.
-            </p>
-            <div className="inline-form" style={{ marginTop: 22, maxWidth: 520 }}>
-              <form className="search" action="/search" method="get" style={{ width: '100%' }}>
-                <input type="search" name="q" placeholder="What do you want to learn today?" aria-label="Search how-tos" />
-                <button type="submit">Search</button>
-              </form>
-            </div>
-            <div className="hero-stats">
-              <div className="hero-stat">
-                <strong>{categories.reduce((n, c) => n + c.article_count, 0)}</strong>
-                <span>How-tos</span>
-              </div>
-              <div className="hero-stat">
-                <strong>{categories.length}</strong>
-                <span>Categories</span>
-              </div>
-              <div className="hero-stat">
-                <strong>100%</strong>
-                <span>Free to read</span>
-              </div>
-            </div>
+    <main className="wk-home">
+      {/* --------------------------------- hero --------------------------------- */}
+      <section className="wk-hero">
+        <div className="container wk-hero-grid">
+          <div className="wk-hero-copy">
+            <h1>Welcome to wikiHow, the most trusted how-to site on the internet.</h1>
+            <p className="wk-hero-sub">What will you learn on wikiHow today?</p>
+
+            <form className="wk-hero-search" action="/search" method="get" role="search">
+              <svg viewBox="0 0 24 24" aria-hidden="true" className="wk-search-icon">
+                <circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" strokeWidth="2" />
+                <path d="M16.5 16.5L21 21" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+              </svg>
+              <input type="search" name="q" placeholder="Search how to..." aria-label="Search how to" />
+              <button type="submit">Search</button>
+            </form>
+
+            <Link href="/random" className="wk-dice">
+              Roll the wikiDice
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="3.5" y="3.5" width="17" height="17" rx="4" fill="none" stroke="currentColor" strokeWidth="1.8" />
+                <circle cx="8.5" cy="8.5" r="1.5" fill="currentColor" />
+                <circle cx="15.5" cy="8.5" r="1.5" fill="currentColor" />
+                <circle cx="12" cy="12" r="1.5" fill="currentColor" />
+                <circle cx="8.5" cy="15.5" r="1.5" fill="currentColor" />
+                <circle cx="15.5" cy="15.5" r="1.5" fill="currentColor" />
+              </svg>
+            </Link>
           </div>
 
-          <div className="hero-art">
-            <Link href={`/wikiHow/${hero?.slug || ''}`} aria-label={hero?.title}>
-              <Illustration name={hero?.hero_image || 'idea'} ratio="3 / 4" />
-            </Link>
-            <Link href={`/wikiHow/${latest[1]?.slug || ''}`} aria-label={latest[1]?.title}>
-              <Illustration name={latest[1]?.hero_image || 'books'} ratio="4 / 3" />
-            </Link>
-            <Link href={`/wikiHow/${latest[2]?.slug || ''}`} aria-label={latest[2]?.title}>
-              <Illustration name={latest[2]?.hero_image || 'camera'} ratio="4 / 3" />
-            </Link>
+          <div className="wk-hero-art">
+            <BooksIllustration />
           </div>
         </div>
       </section>
 
-      {/* ------------------------------- categories ------------------------------ */}
-      <section className="section">
+      {/* ------------------------------- trending ------------------------------- */}
+      <section className="wk-section">
         <div className="container">
-          <div className="section-head">
-            <div>
-              <div className="eyebrow">Browse by topic</div>
-              <h2>Pick a category, start learning</h2>
-            </div>
-            <Link href="/categories" className="btn btn-outline btn-sm">
-              All categories →
+          <div className="wk-section-head">
+            <h2>Trending Now</h2>
+            <Link href="/wikiHow" className="wk-more">
+              See more trending
+              <span aria-hidden="true">›</span>
             </Link>
           </div>
-          <div className="cat-grid">
-            {categories.map((c) => (
-              <Link key={c.id} href={`/category/${c.slug}`} className="cat-card">
-                <span className="cat-emoji" style={{ background: `${c.color}1f` }}>
-                  {c.emoji}
-                </span>
-                <span>
-                  <h3>{c.name}</h3>
-                  <span className="count">{c.article_count} how-tos</span>
-                </span>
+
+          <div className="wk-trend-grid">
+            {trending.map((a, i) => (
+              <Link key={a.id} href={`/wikiHow/${a.slug}`} className="wk-trend-card">
+                <div className="wk-trend-art">
+                  <span className="wk-expert">
+                    <span className="wk-expert-badge" aria-hidden="true">
+                      <svg viewBox="0 0 24 24">
+                        <circle cx="12" cy="9" r="3.6" fill="currentColor" />
+                        <path d="M4.8 20c1.5-3.4 4-5.1 7.2-5.1s5.7 1.7 7.2 5.1z" fill="currentColor" />
+                        <path d="M12 3.2l1.5 2.1-1.5 1.4-1.5-1.4z" fill="currentColor" />
+                      </svg>
+                    </span>
+                    Expert
+                  </span>
+                  <Illustration name={a.hero_image || 'idea'} ratio="4 / 3" />
+                  <span className="wk-rank">{i + 1}</span>
+                </div>
+                <div className="wk-trend-body">
+                  <span className="wk-kicker">Quiz</span>
+                  <h3>{a.title}</h3>
+                </div>
               </Link>
             ))}
           </div>
         </div>
       </section>
 
-      {/* -------------------------------- featured ------------------------------- */}
-      <section className="section section-soft">
+      {/* ------------------------- how-to pick + featured ------------------------ */}
+      <section className="wk-section wk-section-tint">
         <div className="container">
-          <div className="section-head">
-            <div>
-              <div className="eyebrow">Featured this week</div>
-              <h2>Hand-picked guides to get you started</h2>
-            </div>
+          <div className="wk-section-head">
+            <h2>How-to of the day</h2>
+            <Link href="/categories" className="wk-more">
+              Browse all categories
+              <span aria-hidden="true">›</span>
+            </Link>
           </div>
-          <div className="feature-grid">
-            {hero ? (
-              <Link href={`/wikiHow/${hero.slug}`} className="feature-main">
-                <Illustration name={hero.hero_image || 'idea'} />
-                <div className="card-body">
-                  <span className="card-tag" style={{ position: 'static', alignSelf: 'flex-start', marginBottom: 8 }}>
-                    {hero.category_name}
-                  </span>
-                  <h3>{hero.title}</h3>
-                  <p>{hero.summary}</p>
-                  <div className="card-meta">
-                    <span>⏱ {hero.read_time} min</span>
-                    <span>👍 {hero.helpful_yes} found this helpful</span>
+
+          <div className="wk-featured-grid">
+            {pick ? (
+              <Link href={`/wikiHow/${pick.slug}`} className="wk-feature-main">
+                <div className="wk-feature-art">
+                  <Illustration name={pick.hero_image || 'idea'} ratio="16 / 10" />
+                </div>
+                <div className="wk-feature-body">
+                  {pick.category_name ? <span className="wk-pill">{pick.category_name}</span> : null}
+                  <h3>How to {pick.title}</h3>
+                  <p>{pick.summary}</p>
+                  <div className="wk-feature-meta">
+                    <span>⏱ {pick.read_time} min read</span>
+                    <span>👍 {Number(pick.helpful_yes || 0).toLocaleString()} found helpful</span>
+                    <span>👁 {Number(pick.views).toLocaleString()} views</span>
                   </div>
                 </div>
               </Link>
             ) : null}
-            <div className="feature-side">
-              {sideFeatures.map((a) => (
+
+            <div className="wk-feature-side">
+              {featured.slice(0, 3).map((a) => (
                 <MiniCard key={a.id} article={a} />
               ))}
             </div>
@@ -127,66 +134,80 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ---------------------------------- latest ------------------------------- */}
-      <section className="section">
+      {/* ------------------------------ categories ------------------------------ */}
+      <section className="wk-section">
         <div className="container">
-          <div className="section-head">
-            <div>
-              <div className="eyebrow">Fresh from the community</div>
-              <h2>Recently updated how-tos</h2>
-            </div>
-            <Link href="/search" className="btn btn-outline btn-sm">
-              Browse all →
+          <div className="wk-section-head">
+            <h2>Explore {totalCount} how-tos</h2>
+            <Link href="/categories" className="wk-more">
+              See all {categories.length} categories
+              <span aria-hidden="true">›</span>
             </Link>
           </div>
-          <div className="card-grid">
-            {latest.map((a) => (
-              <ArticleCard key={a.id} article={a} />
+
+          <div className="wk-cat-grid">
+            {categories.map((c) => (
+              <Link key={c.id} href={`/category/${c.slug}`} className="wk-cat-card">
+                <span className="wk-cat-emoji" style={{ background: `${c.color}22` }}>
+                  {c.emoji}
+                </span>
+                <span className="wk-cat-text">
+                  <strong>{c.name}</strong>
+                  <span>{c.article_count} how-tos</span>
+                </span>
+              </Link>
             ))}
           </div>
         </div>
       </section>
 
-      {/* --------------------------------- popular ------------------------------- */}
-      <section className="section section-soft">
+      {/* -------------------------------- latest ------------------------------- */}
+      <section className="wk-section wk-section-tint">
         <div className="container">
-          <div className="hero-grid" style={{ alignItems: 'start', gap: 40 }}>
-            <div>
-              <div className="eyebrow" style={{ marginBottom: 8 }}>
-                Trending now
-              </div>
-              <h2 style={{ marginBottom: 18 }}>Most-read how-tos this month</h2>
-              <div className="trend-list">
-                {popular.map((a, i) => (
-                  <Link key={a.id} href={`/wikiHow/${a.slug}`} className="trend-item">
-                    <span className="trend-num">{i + 1}</span>
-                    <span>
-                      <h4>{a.title}</h4>
-                      <div className="meta">
-                        {a.category_name} · {Number(a.views).toLocaleString()} views
-                      </div>
-                    </span>
-                  </Link>
-                ))}
-              </div>
-            </div>
-            <div className="panel" style={{ background: '#fff', margin: 0 }}>
-              <h3>
-                <span className="panel-icon">✍️</span> Be part of the manual
-              </h3>
-              <p style={{ fontSize: 14.5, color: 'var(--ink-soft)' }}>
-                Every word on this site started as someone&apos;s real experience. Share a skill you
-                have and help thousands of readers do it too.
-              </p>
-              <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap', marginTop: 14 }}>
-                <Link href="/about#contribute" className="btn btn-primary">
-                  Start writing
-                </Link>
-                <Link href="/about" className="btn btn-outline">
-                  How it works
-                </Link>
-              </div>
-            </div>
+          <div className="wk-section-head">
+            <h2>Recently updated</h2>
+            <Link href="/wikiHow" className="wk-more">
+              All how-tos
+              <span aria-hidden="true">›</span>
+            </Link>
+          </div>
+          <div className="wk-latest-grid">
+            {latest.map((a) => (
+              <Link key={a.id} href={`/wikiHow/${a.slug}`} className="wk-latest-card">
+                <div className="wk-latest-art">
+                  <Illustration name={a.hero_image || 'idea'} ratio="16 / 9" />
+                  {a.category_name ? <span className="wk-pill wk-pill-float">{a.category_name}</span> : null}
+                </div>
+                <h3>How to {a.title}</h3>
+                <p>{a.summary}</p>
+                <span className="wk-latest-meta">
+                  {Number(a.views).toLocaleString()} views · {a.read_time} min read
+                </span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* --------------------------------- CTA --------------------------------- */}
+      <section className="wk-cta">
+        <div className="container wk-cta-inner">
+          <div>
+            <h2>Anyone can write a how-to.</h2>
+            <p>
+              Every article on wikiHow started with someone who had done the thing and wanted to
+              help. Share a skill you have — an editor will help you polish it.
+            </p>
+          </div>
+          <div className="wk-cta-actions">
+            <Link href="/about#contribute" className="wk-btn wk-btn-solid">
+              Start writing
+            </Link>
+            {random ? (
+              <Link href={`/wikiHow/${random.slug}`} className="wk-btn wk-btn-ghost">
+                🎲 Random how-to
+              </Link>
+            ) : null}
           </div>
         </div>
       </section>
