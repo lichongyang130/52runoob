@@ -1038,12 +1038,15 @@ p { margin: 0 0 1em; }
 .wk-hero-search input:focus-visible { outline: none; }
 .search input:focus-visible { outline: none; }
 
-@media (max-width: 760px) {
-  /* keep the random action, drop secondary chrome on small screens */
-  .wk-actions .wk-action:nth-of-type(2) { display: none; }
+/* Progressive disclosure of header actions. Explore + Random always stay
+   reachable; secondary chrome drops out as space runs out. */
+@media (max-width: 900px) {
+  .wk-hide-md { display: none !important; }
 }
 @media (max-width: 560px) {
-  .wk-actions .wk-action:nth-of-type(1) { display: none; }
+  .wk-hide-sm { display: none !important; }
+}
+@media (max-width: 560px) {
   .wk-logo-word { font-size: 21px; }
   .wk-logo-mark { width: 27px; height: 27px; border-radius: 8px; }
   .wk-logo-mark svg { width: 20px; height: 20px; }
@@ -1156,3 +1159,27 @@ p { margin: 0 0 1em; }
   .wk-ex-top, .wk-ex-mid, .wk-ex-bottom { grid-template-columns: 1fr; }
   .wk-ex-bottom ul { margin-bottom: 12px; }
 }
+
+/* ------------------------- homepage detail fixes -------------------------- */
+.skip-link {
+  position: absolute; left: 12px; top: -48px; z-index: 200;
+  background: #fff; color: #2f4a17; font-weight: 700; font-size: 14px;
+  padding: 10px 16px; border-radius: 0 0 8px 8px;
+  box-shadow: 0 4px 14px rgba(30, 50, 20, .2);
+  transition: top .15s;
+}
+.skip-link:focus { top: 0; color: #2f4a17; }
+#main:focus { outline: none; }
+
+/* WCAG AA contrast: kicker + "see more" links were too light */
+.wk-kicker { color: #5b6a72; }
+.wk-more { color: #5d8f27; }
+.wk-more:hover { color: #436919; }
+
+/* keep the hero art below the headline on small screens */
+@media (max-width: 900px) {
+  .wk-hero-art { order: 0; }
+}
+
+/* don't let a long category name wrap the count awkwardly */
+.wk-cat-text strong { overflow-wrap: anywhere; }

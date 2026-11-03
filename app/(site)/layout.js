@@ -16,8 +16,13 @@ export default function SiteLayout({ children }) {
   }
   return (
     <>
+      <a href="#main" className="skip-link">
+        Skip to main content
+      </a>
       <Header categories={categories} allCategories={allCategories} />
-      {children}
+      <div id="main" tabIndex={-1}>
+        {children}
+      </div>
       <Footer categories={categories} />
     </>
   );

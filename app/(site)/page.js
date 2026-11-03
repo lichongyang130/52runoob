@@ -21,7 +21,11 @@ const BADGE_BY_CATEGORY = {
 };
 
 export default function HomePage() {
-  const categories = listMainCategories();
+  /* Homepage showcases categories that actually have articles, most-filled
+     first — empty ones stay reachable from /categories and the Explore menu. */
+  const categories = listMainCategories()
+    .filter((c) => c.article_count > 0)
+    .sort((a, b) => b.article_count - a.article_count);
   const trending = popularArticles(6);
   const featured = listArticles({ featured: true, limit: 4 });
   const latest = listArticles({ limit: 4 });
@@ -108,7 +112,7 @@ export default function HomePage() {
         <div className="container">
           <div className="wk-section-head">
             <h2>Trending Now</h2>
-            <Link href="/how-to" className="wk-more">
+            <Link href="/how-to?sort=popular" className="wk-more">
               See more trending
               <span aria-hidden="true">›</span>
             </Link>
@@ -124,7 +128,7 @@ export default function HomePage() {
                 <div className="wk-trend-art">
                   <span className="wk-expert">
                     <span className="wk-expert-badge" aria-hidden="true">
-                      <svg viewBox="0 0 24 24">
+                      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                         <circle cx="12" cy="9" r="3.6" fill="currentColor" />
                         <path
                           d="M4.8 20c1.5-3.4 4-5.1 7.2-5.1s5.7 1.7 7.2 5.1z"
@@ -226,7 +230,9 @@ export default function HomePage() {
                 </span>
                 <span className="wk-cat-text">
                   <strong>{c.name}</strong>
-                  <span>{c.article_count} how-tos</span>
+                  <span>
+                    {c.article_count} {c.article_count === 1 ? "how-to" : "how-tos"}
+                  </span>
                 </span>
               </Link>
             ))}
@@ -291,7 +297,23 @@ export default function HomePage() {
                 href={`/how-to/${random.slug}`}
                 className="wk-btn wk-btn-ghost"
               >
-                🎲 Random how-to
+                <svg
+                  viewBox="0 0 24 24"
+                  width="18"
+                  height="18"
+                  aria-hidden="true"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.8"
+                >
+                  <rect x="3.5" y="3.5" width="17" height="17" rx="4" />
+                  <circle cx="8.6" cy="8.6" r="1.4" fill="currentColor" stroke="none" />
+                  <circle cx="15.4" cy="8.6" r="1.4" fill="currentColor" stroke="none" />
+                  <circle cx="12" cy="12" r="1.4" fill="currentColor" stroke="none" />
+                  <circle cx="8.6" cy="15.4" r="1.4" fill="currentColor" stroke="none" />
+                  <circle cx="15.4" cy="15.4" r="1.4" fill="currentColor" stroke="none" />
+                </svg>
+                Random how-to
               </Link>
             ) : null}
           </div>

@@ -6,6 +6,10 @@ const ICONS = {
   quizzes: (
     <svg
       viewBox="0 0 24 24"
+      aria-hidden="true"
+      focusable="false"
+      aria-hidden="true"
+      focusable="false"
       fill="none"
       stroke="currentColor"
       strokeWidth="1.9"
@@ -19,6 +23,10 @@ const ICONS = {
   explore: (
     <svg
       viewBox="0 0 24 24"
+      aria-hidden="true"
+      focusable="false"
+      aria-hidden="true"
+      focusable="false"
       fill="none"
       stroke="currentColor"
       strokeWidth="1.9"
@@ -32,6 +40,10 @@ const ICONS = {
   login: (
     <svg
       viewBox="0 0 24 24"
+      aria-hidden="true"
+      focusable="false"
+      aria-hidden="true"
+      focusable="false"
       fill="none"
       stroke="currentColor"
       strokeWidth="1.9"
@@ -45,6 +57,10 @@ const ICONS = {
   random: (
     <svg
       viewBox="0 0 24 24"
+      aria-hidden="true"
+      focusable="false"
+      aria-hidden="true"
+      focusable="false"
       fill="none"
       stroke="currentColor"
       strokeWidth="1.9"
@@ -65,7 +81,7 @@ export default function Header({ categories = [], allCategories = [] }) {
       <div className="wk-header-inner">
         <Link href="/" className="wk-logo" aria-label="Howcompass home">
           <span className="wk-logo-mark" aria-hidden="true">
-            <svg viewBox="0 0 32 32">
+            <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false">
               <circle cx="16" cy="16" r="13.4" fill="none" stroke="currentColor" strokeWidth="2.4" />
               <path d="M16 4.6l3.1 8.3L27.4 16l-8.3 3.1L16 27.4l-3.1-8.3L4.6 16l8.3-3.1z" fill="currentColor" />
               <circle cx="16" cy="16" r="2.1" fill="#fff" />
@@ -92,16 +108,16 @@ export default function Header({ categories = [], allCategories = [] }) {
         </form>
 
         <nav className="wk-actions" aria-label="Site">
-          <Link href="/admin/login" className="wk-pro">
+          <Link href="/admin/login" className="wk-pro wk-hide-sm">
             <span className="wk-pro-text">PRO</span>
             <span className="wk-pro-bolt">⚡</span>
           </Link>
-          <Link href="/categories" className="wk-action">
+          <Link href="/categories" className="wk-action wk-action-quizzes wk-hide-md">
             <span className="wk-action-icon">{ICONS.quizzes}</span>
             <span className="wk-action-label">Quizzes</span>
           </Link>
           <ExploreMenu allCategories={allCategories} />
-          <Link href="/admin/login" className="wk-action">
+          <Link href="/admin/login" className="wk-action wk-action-login wk-hide-sm">
             <span className="wk-action-icon">{ICONS.login}</span>
             <span className="wk-action-label">Log in</span>
           </Link>

@@ -4,8 +4,23 @@ import { listArticles, listCategories } from "../../../lib/queries";
 export const dynamic = "force-dynamic";
 export const metadata = { title: "All How-Tos" };
 
-export default function AllHowTosPage() {
-  const articles = listArticles({ limit: 500 });
+const SORTS = {
+  newest: "Recently updated",
+  popular: "Most read",
+  alpha: "A–Z",
+};
+
+export default async function AllHowTosPage({ searchParams }) {
+  const sp = await searchParams;
+  const sort = Object.keys(SORTS).includes(sp?.sort) ? sp.sort : "newest";
+
+  let articles = listArticles({ limit: 500 });
+  if (sort === "popular") {
+    articles = [...articles].sort((a, b) => b.views - a.views);
+  } else if (sort === "alpha") {
+    articles = [...articles].sort((a, b) => a.title.localeCompare(b.title));
+  }
+
   const categories = listCategories();
   const grouped = categories
     .map((c) => ({
@@ -27,11 +42,32 @@ export default function AllHowTosPage() {
           <div>
             <div className="eyebrow">Complete index</div>
             <h1 style={{ marginBottom: 4 }}>All How-Tos</h1>
-            <p>{articles.length} illustrated guides, grouped by category.</p>
+            <p>
+              {articles.length} illustrated guides,{" "}
+              {sort === "popular" ? "sorted by reads" : sort === "alpha" ? "sorted A–Z" : "newest first"}
+              .
+            </p>
           </div>
-          <Link href="/random" className="btn btn-outline btn-sm">
-            🎲 Surprise me
-          </Link>
+          <div style={{ display: "flex", gap: 10, alignItems: "center" }}>
+            <form method="get" style={{ display: "flex", gap: 8, alignItems: "center" }}>
+              <label htmlFor="sort" style={{ fontSize: 13, fontWeight: 600, color: "var(--muted)" }}>
+                Sort
+              </label>
+              <select id="sort" name="sort" className="select" defaultValue={sort} style={{ width: "auto" }}>
+                {Object.entries(SORTS).map(([value, label]) => (
+                  <option key={value} value={value}>
+                    {label}
+                  </option>
+                ))}
+              </select>
+              <button className="btn btn-outline btn-sm" type="submit">
+                Apply
+              </button>
+            </form>
+            <Link href="/random" className="btn btn-outline btn-sm">
+              🎲 Surprise me
+            </Link>
+          </div>
         </div>
 
         <div style={{ display: "grid", gap: 26 }}>

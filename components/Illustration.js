@@ -38,7 +38,9 @@ function Frame({ bg, children, ratio = "4 / 3", className = "", style = {} }) {
       className={`illus ${className}`}
       style={{ aspectRatio: ratio, ...style }}
       preserveAspectRatio="xMidYMid slice"
-      role="img"
+      role="presentation"
+      aria-hidden="true"
+      focusable="false"
     >
       <rect width="400" height="300" fill={bg} />
       {children}
