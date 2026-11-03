@@ -2,11 +2,11 @@ import "./globals.css";
 
 export const metadata = {
   title: {
-    default: "howcompass — How to do anything",
-    template: "%s | howcompass",
+    default: "Howcompass — How to do anything",
+    template: "%s | Howcompass",
   },
   description:
-    "howcompass is the world's how-to manual. Learn how to cook, garden, play guitar, save money, train a puppy, and just about anything else — step by step, with pictures.",
+    "Howcompass is the world's how-to manual. Learn how to cook, garden, play guitar, save money, train a puppy, and just about anything else — step by step, with pictures.",
   icons: { icon: "/favicon.svg" },
 };
 

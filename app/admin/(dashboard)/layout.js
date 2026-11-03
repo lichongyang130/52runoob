@@ -16,7 +16,7 @@ export default async function AdminLayout({ children }) {
     <div className="admin-shell">
       <aside className="admin-side">
         <Link href="/" className="brand">
-          <span className="logo-mark">h</span> howcompass Admin
+          <span className="logo-mark">h</span> Howcompass Admin
         </Link>
         <AdminNav role={user.role} />
       </aside>

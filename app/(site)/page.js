@@ -36,9 +36,9 @@ export default function HomePage() {
         <div className="container wk-hero-grid">
           <div className="wk-hero-copy">
             <h1>
-              Welcome to howcompass, the most trusted how-to site on the internet.
+              Welcome to Howcompass, the most trusted how-to site on the internet.
             </h1>
-            <p className="wk-hero-sub">What will you learn on howcompass today?</p>
+            <p className="wk-hero-sub">What will you learn on Howcompass today?</p>
 
             <form
               className="wk-hero-search"
@@ -277,7 +277,7 @@ export default function HomePage() {
           <div>
             <h2>Anyone can write a how-to.</h2>
             <p>
-              Every article on howcompass started with someone who had done the
+              Every article on Howcompass started with someone who had done the
               thing and wanted to help. Share a skill you have — an editor will
               help you polish it.
             </p>

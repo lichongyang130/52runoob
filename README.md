@@ -1,6 +1,6 @@
-# howcompass — Front Office + Admin CMS
+# Howcompass — Front Office + Admin CMS
 
-**howcompass** is a full-stack, English-language how-to site: an illustrated public front end,
+**Howcompass** is a full-stack, English-language how-to site: an illustrated public front end,
 and a complete editorial back office for writing, publishing and moderating content.
 The layout and illustration style are modelled on wikiHow as a design reference; all copy,
 artwork and data in this repository are original.

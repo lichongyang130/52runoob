@@ -25,7 +25,7 @@ export default function ArticleEditor({ article, categories }) {
     article?.category_id || categories[0]?.id || "",
   );
   const [hero, setHero] = useState(article?.hero_image || "idea");
-  const [author, setAuthor] = useState(article?.author || "howcompass Staff");
+  const [author, setAuthor] = useState(article?.author || "Howcompass Staff");
   const [status, setStatus] = useState(article?.status || "draft");
   const [featured, setFeatured] = useState(Boolean(article?.featured));
   const [readTime, setReadTime] = useState(article?.read_time || 5);
@@ -576,7 +576,7 @@ export default function ArticleEditor({ article, categories }) {
               </select>
               <div className="hint">
                 Illustrations are generated as flat vector scenes, in the
-                howcompass style.
+                Howcompass style.
               </div>
             </div>
           </div>

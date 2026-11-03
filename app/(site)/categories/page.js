@@ -6,7 +6,7 @@ export const dynamic = "force-dynamic";
 export const metadata = {
   title: "All Categories",
   description:
-    "Browse every howcompass category — from food and gardening to finance and fitness.",
+    "Browse every Howcompass category — from food and gardening to finance and fitness.",
 };
 
 export default function CategoriesPage() {

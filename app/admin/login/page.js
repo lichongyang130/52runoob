@@ -17,7 +17,7 @@ export default async function LoginPage({ searchParams }) {
         <Link href="/" className="logo">
           <span className="logo-mark">h</span>
           <span>
-            how<span className="logo-how">compass</span>
+            How<span className="logo-how">compass</span>
           </span>
         </Link>
         <p className="sub">Sign in to the editorial dashboard</p>

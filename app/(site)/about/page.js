@@ -3,7 +3,7 @@ import { Illustration } from "../../../components/Illustration";
 import { adminStats, listCategories } from "../../../lib/queries";
 
 export const dynamic = "force-dynamic";
-export const metadata = { title: "About howcompass" };
+export const metadata = { title: "About Howcompass" };
 
 export default function AboutPage() {
   const stats = adminStats();
@@ -19,7 +19,7 @@ export default function AboutPage() {
               We&apos;re building the world&apos;s most useful how-to manual.
             </h1>
             <p className="lead">
-              howcompass exists so that anyone, anywhere, can learn to do something
+              Howcompass exists so that anyone, anywhere, can learn to do something
               new — without paying for it, and without wading through ads to
               find the actual steps.
             </p>
@@ -48,7 +48,7 @@ export default function AboutPage() {
 
       <section className="section">
         <div className="container wrap-narrow">
-          <h2>How a howcompass article gets made</h2>
+          <h2>How a Howcompass article gets made</h2>
           <p>
             Every article starts with a real question someone needed answered.
             From there, our editors turn rough notes into a numbered list of

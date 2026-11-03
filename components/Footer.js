@@ -8,11 +8,11 @@ export default function Footer({ categories = [] }) {
           <Link href="/" className="logo">
             <span className="logo-mark">h</span>
             <span>
-              how<span className="logo-how">compass</span>
+              How<span className="logo-how">compass</span>
             </span>
           </Link>
           <p>
-            howcompass is a collaborative how-to manual built by people who want
+            Howcompass is a collaborative how-to manual built by people who want
             to help. Every article is editable, illustrated, and written to be
             useful — not clever.
           </p>
@@ -48,7 +48,7 @@ export default function Footer({ categories = [] }) {
 
       <div className="container footer-bottom">
         <span>
-          © {new Date().getFullYear()} howcompass — a demo project for
+          © {new Date().getFullYear()} Howcompass — a demo project for
           learning purposes.
         </span>
         <div className="footer-legal">
