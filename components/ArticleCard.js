@@ -5,7 +5,9 @@ export function ArticleCard({ article }) {
   return (
     <Link href={`/how-to/${article.slug}`} className="card">
       <div className="card-art">
-        <Illustration name={article.hero_image || "idea"} />
+        <Illustration
+          name={article.first_step_image || article.hero_image || "idea"}
+        />
         {article.category_name ? (
           <span className="card-tag">{article.category_name}</span>
         ) : null}
@@ -26,7 +28,10 @@ export function MiniCard({ article }) {
   return (
     <Link href={`/how-to/${article.slug}`} className="mini-card">
       <span className="illus-wrap">
-        <Illustration name={article.hero_image || "idea"} ratio="1 / 1" />
+        <Illustration
+          name={article.first_step_image || article.hero_image || "idea"}
+          ratio="1 / 1"
+        />
       </span>
       <span>
         <h4>{article.title}</h4>

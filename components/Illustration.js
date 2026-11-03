@@ -916,20 +916,48 @@ function Idea({ bg = PALETTE.lemon }) {
 
 const SCENES = {
   carbonara: Carbonara,
+  bread: Carbonara,
+  cook: Carbonara,
+  plate: Carbonara,
   tomatoes: Tomatoes,
   tomatoes2: Tomatoes,
+  plant: Tomatoes,
+  leaf: Tomatoes,
+  home: Tomatoes,
+  sparkle: Tomatoes,
   guitar: Guitar,
+  music: Guitar,
   puppy: Puppy,
   watercolor: Watercolor,
+  draw: Watercolor,
+  art: Watercolor,
   resume: Resume,
+  key: Resume,
+  compass: Resume,
+  check: Resume,
   cookies: Cookies,
+  coffee: Cookies,
   money: Money,
   camera: Camera,
   stretch: Stretch,
+  run: Stretch,
+  trophy: Stretch,
   laptop: Laptop,
+  phone: Laptop,
+  code: Laptop,
+  wifi: Laptop,
   books: Books,
+  book: Books,
   heart: Heart,
+  star: Heart,
+  smile: Heart,
+  user: Heart,
   craft: Craft,
+  puzzle: Craft,
+  target: Craft,
+  wood: Craft,
+  sew: Craft,
+  globe: Craft,
   paw: Paw,
   idea: Idea,
 };
@@ -946,6 +974,19 @@ const ACCENTS = [
 ];
 
 export function Illustration({ name = "idea", className = "", ratio, style }) {
+  if (typeof name === "string" && name.startsWith("/")) {
+    return (
+      <span className={`illus-wrap ${className}`} style={style}>
+        <img
+          src={name}
+          alt=""
+          className="illus"
+          style={{ aspectRatio: ratio || "4 / 3", objectFit: "cover", width: "100%", display: "block" }}
+          loading="lazy"
+        />
+      </span>
+    );
+  }
   const Scene = SCENES[name] || SCENES.idea;
   return (
     <span className={`illus-wrap ${className}`} style={style}>

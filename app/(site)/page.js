@@ -142,7 +142,7 @@ export default function HomePage() {
                     </span>
                     Expert
                   </span>
-                  <Illustration name={a.hero_image || "idea"} ratio="4 / 3" />
+                  <Illustration name={a.first_step_image || a.hero_image || "idea"} ratio="4 / 3" />
                   <span className="wk-rank">{i + 1}</span>
                 </div>
                 <div className="wk-trend-body">
@@ -173,7 +173,7 @@ export default function HomePage() {
               <Link href={`/how-to/${pick.slug}`} className="wk-feature-main">
                 <div className="wk-feature-art">
                   <Illustration
-                    name={pick.hero_image || "idea"}
+                    name={pick.first_step_image || pick.hero_image || "idea"}
                     ratio="16 / 10"
                   />
                 </div>
@@ -258,7 +258,7 @@ export default function HomePage() {
                 className="wk-latest-card"
               >
                 <div className="wk-latest-art">
-                  <Illustration name={a.hero_image || "idea"} ratio="16 / 9" />
+                  <Illustration name={a.first_step_image || a.hero_image || "idea"} ratio="16 / 9" />
                   {a.category_name ? (
                     <span className="wk-pill wk-pill-float">
                       {a.category_name}

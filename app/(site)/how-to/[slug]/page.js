@@ -509,7 +509,7 @@ export default async function ArticlePage({ params }) {
                       key={r.id}
                     >
                       <div className="wk-related-thumb">
-                        <Illustration name={r.hero_image || "idea"} />
+                        <Illustration name={r.first_step_image || r.hero_image || "idea"} />
                       </div>
                       <div className="wk-related-caption">
                         <span>How to</span>
@@ -744,7 +744,7 @@ export default async function ArticlePage({ params }) {
                       key={r.id}
                     >
                       <div className="wk-side-rel-art">
-                        <Illustration name={r.hero_image || "idea"} />
+                        <Illustration name={r.first_step_image || r.hero_image || "idea"} />
                       </div>
                       <div className="wk-side-rel-txt">
                         <span>How to</span>
