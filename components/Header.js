@@ -1,6 +1,7 @@
 import Link from "next/link";
 import CategoryBar from "./CategoryBar";
 import ExploreMenu from "./ExploreMenu";
+import LoginMenu from "./LoginMenu";
 
 const ICONS = {
   quizzes: (
@@ -117,10 +118,7 @@ export default function Header({ categories = [], allCategories = [] }) {
             <span className="wk-action-label">Quizzes</span>
           </Link>
           <ExploreMenu allCategories={allCategories} />
-          <Link href="/admin/login" className="wk-action wk-action-login wk-hide-sm">
-            <span className="wk-action-icon">{ICONS.login}</span>
-            <span className="wk-action-label">Log in</span>
-          </Link>
+          <LoginMenu />
           <Link href="/random" className="wk-action">
             <span className="wk-action-icon">{ICONS.random}</span>
             <span className="wk-action-label">Random</span>
