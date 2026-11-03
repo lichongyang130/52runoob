@@ -1,11 +1,11 @@
-'use client';
+"use client";
 
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function CategoryBar({ categories = [] }) {
   const pathname = usePathname();
-  if (pathname === '/') return null;
+  if (pathname === "/") return null;
 
   return (
     <div className="wk-catbar">
@@ -14,7 +14,11 @@ export default function CategoryBar({ categories = [] }) {
           All how-tos
         </Link>
         {categories.map((c) => (
-          <Link key={c.id} href={`/category/${c.slug}`} className={pathname === `/category/${c.slug}` ? 'active' : ''}>
+          <Link
+            key={c.id}
+            href={`/category/${c.slug}`}
+            className={pathname === `/category/${c.slug}` ? "active" : ""}
+          >
             {c.name}
           </Link>
         ))}

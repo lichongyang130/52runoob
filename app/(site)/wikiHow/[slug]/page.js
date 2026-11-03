@@ -1,15 +1,26 @@
-import Link from 'next/link';
-import { notFound } from 'next/navigation';
-import { Illustration, StepIllustration } from '../../../../components/Illustration';
-import { HelpfulBox, CommentList } from '../../../../components/ArticleInteractions';
-import { getArticleBySlug, relatedArticles, incrementViews } from '../../../../lib/queries';
+import Link from "next/link";
+import { notFound } from "next/navigation";
+import {
+  Illustration,
+  StepIllustration,
+} from "../../../../components/Illustration";
+import {
+  HelpfulBox,
+  CommentList,
+} from "../../../../components/ArticleInteractions";
+import ReadingProgress from "../../../../components/ReadingProgress";
+import {
+  getArticleBySlug,
+  relatedArticles,
+  incrementViews,
+} from "../../../../lib/queries";
 
-export const dynamic = 'force-dynamic';
+export const dynamic = "force-dynamic";
 
 export async function generateMetadata({ params }) {
   const { slug } = await params;
   const article = getArticleBySlug(slug);
-  if (!article) return { title: 'Article not found' };
+  if (!article) return { title: "Article not found" };
   return {
     title: `How to ${article.title}`,
     description: article.summary,
@@ -32,6 +43,7 @@ export default async function ArticlePage({ params }) {
 
   return (
     <main className="page">
+      <ReadingProgress />
       <div className="container">
         <div className="breadcrumbs">
           <Link href="/">Home</Link>
@@ -40,7 +52,9 @@ export default async function ArticlePage({ params }) {
           <span className="sep">›</span>
           {article.category_slug ? (
             <>
-              <Link href={`/category/${article.category_slug}`}>{article.category_name}</Link>
+              <Link href={`/category/${article.category_slug}`}>
+                {article.category_name}
+              </Link>
               <span className="sep">›</span>
             </>
           ) : null}
@@ -53,7 +67,8 @@ export default async function ArticlePage({ params }) {
               <h1>How to {article.title}</h1>
               <div className="article-meta">
                 <span>
-                  Co-authored by <b style={{ color: 'var(--ink)' }}>{article.author}</b>
+                  Co-authored by{" "}
+                  <b style={{ color: "var(--ink)" }}>{article.author}</b>
                 </span>
                 <span className="dot" />
                 <span>Updated {String(article.updated_at).slice(0, 10)}</span>
@@ -65,15 +80,15 @@ export default async function ArticlePage({ params }) {
             </header>
 
             <div className="article-hero">
-              <Illustration name={article.hero_image || 'idea'} />
+              <Illustration name={article.hero_image || "idea"} />
             </div>
 
             <div className="expert-badge">
               <span className="avatar">{article.author.slice(0, 1)}</span>
               <div>
                 <b>Reviewed by the {article.author}</b>
-                Our team of editors verifies each step for accuracy, safety, and clarity before
-                publishing.
+                Our team of editors verifies each step for accuracy, safety, and
+                clarity before publishing.
               </div>
             </div>
 
@@ -92,7 +107,9 @@ export default async function ArticlePage({ params }) {
                     <>
                       {article.methods.map((m, i) => (
                         <li key={m.id}>
-                          <a href={`#method-${i + 1}`}>{m.title || `Method ${i + 1}`}</a>
+                          <a href={`#method-${i + 1}`}>
+                            {m.title || `Method ${i + 1}`}
+                          </a>
                         </li>
                       ))}
                       {article.tips.length ? (
@@ -140,11 +157,23 @@ export default async function ArticlePage({ params }) {
             ) : null}
 
             {article.intro ? (
-              <p style={{ fontSize: 17, color: 'var(--ink-soft)', marginBottom: 30 }}>{article.intro}</p>
+              <p
+                style={{
+                  fontSize: 17,
+                  color: "var(--ink-soft)",
+                  marginBottom: 30,
+                }}
+              >
+                {article.intro}
+              </p>
             ) : null}
 
             {article.methods.map((method, mi) => (
-              <section className="method" id={`method-${mi + 1}`} key={method.id}>
+              <section
+                className="method"
+                id={`method-${mi + 1}`}
+                key={method.id}
+              >
                 {article.methods.length > 1 ? (
                   <h2 className="method-title">
                     <span className="method-num">{mi + 1}</span>
@@ -162,7 +191,10 @@ export default async function ArticlePage({ params }) {
                   return (
                     <div className="step" key={step.id}>
                       <div className="step-art">
-                        <StepIllustration name={article.hero_image || 'idea'} index={n} />
+                        <StepIllustration
+                          name={article.hero_image || "idea"}
+                          index={n}
+                        />
                       </div>
                       <div className="step-body">
                         <h4>Step {n}</h4>
@@ -216,7 +248,8 @@ export default async function ArticlePage({ params }) {
             {article.faqs.length ? (
               <section className="panel" id="faq">
                 <h3>
-                  <span className="panel-icon">❓</span> Frequently Asked Questions
+                  <span className="panel-icon">❓</span> Frequently Asked
+                  Questions
                 </h3>
                 <div className="qa">
                   {article.faqs.map((f) => (
@@ -229,13 +262,18 @@ export default async function ArticlePage({ params }) {
               </section>
             ) : null}
 
-            <HelpfulBox articleId={article.id} helpfulYes={article.helpful_yes} helpfulNo={article.helpful_no} />
+            <HelpfulBox
+              articleId={article.id}
+              helpfulYes={article.helpful_yes}
+              helpfulNo={article.helpful_no}
+            />
 
             <section className="panel" id="comments">
               <h3>
-                <span className="panel-icon">💬</span> Reader Comments ({article.comments.length})
+                <span className="panel-icon">💬</span> Reader Comments (
+                {article.comments.length})
               </h3>
-              <CommentList initial={article.comments} />
+              <CommentList initial={article.comments} articleId={article.id} />
             </section>
           </article>
 
@@ -246,7 +284,9 @@ export default async function ArticlePage({ params }) {
                 {article.methods.length > 1
                   ? article.methods.map((m, i) => (
                       <li key={m.id}>
-                        <a href={`#method-${i + 1}`}>{m.title || `Method ${i + 1}`}</a>
+                        <a href={`#method-${i + 1}`}>
+                          {m.title || `Method ${i + 1}`}
+                        </a>
                         <span className="meta">{m.steps.length} steps</span>
                       </li>
                     ))
@@ -280,12 +320,25 @@ export default async function ArticlePage({ params }) {
               </ul>
             </div>
 
-            <div className="aside-card" style={{ background: 'var(--bg-warm)' }}>
+            <div
+              className="aside-card"
+              style={{ background: "var(--bg-warm)" }}
+            >
               <h4>Keep learning</h4>
-              <p style={{ fontSize: 13.5, color: 'var(--ink-soft)', marginBottom: 12 }}>
-                Browse the full {article.category_name} category for more illustrated guides.
+              <p
+                style={{
+                  fontSize: 13.5,
+                  color: "var(--ink-soft)",
+                  marginBottom: 12,
+                }}
+              >
+                Browse the full {article.category_name} category for more
+                illustrated guides.
               </p>
-              <Link href={`/category/${article.category_slug}`} className="btn btn-outline btn-sm btn-block">
+              <Link
+                href={`/category/${article.category_slug}`}
+                className="btn btn-outline btn-sm btn-block"
+              >
                 More in {article.category_name}
               </Link>
             </div>

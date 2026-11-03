@@ -1,14 +1,17 @@
-import Link from 'next/link';
-import { listArticles, listCategories } from '../../../lib/queries';
+import Link from "next/link";
+import { listArticles, listCategories } from "../../../lib/queries";
 
-export const dynamic = 'force-dynamic';
-export const metadata = { title: 'All How-Tos' };
+export const dynamic = "force-dynamic";
+export const metadata = { title: "All How-Tos" };
 
 export default function AllHowTosPage() {
   const articles = listArticles({ limit: 500 });
   const categories = listCategories();
   const grouped = categories
-    .map((c) => ({ category: c, items: articles.filter((a) => a.category_id === c.id) }))
+    .map((c) => ({
+      category: c,
+      items: articles.filter((a) => a.category_id === c.id),
+    }))
     .filter((g) => g.items.length);
 
   return (
@@ -31,13 +34,24 @@ export default function AllHowTosPage() {
           </Link>
         </div>
 
-        <div style={{ display: 'grid', gap: 26 }}>
+        <div style={{ display: "grid", gap: 26 }}>
           {grouped.map(({ category, items }) => (
-            <section key={category.id} className="panel" style={{ marginBottom: 0 }}>
+            <section
+              key={category.id}
+              className="panel"
+              style={{ marginBottom: 0 }}
+            >
               <h3 style={{ marginBottom: 12 }}>
                 <span style={{ marginRight: 8 }}>{category.emoji}</span>
                 <Link href={`/category/${category.slug}`}>{category.name}</Link>
-                <span style={{ fontSize: 12, color: 'var(--muted)', fontWeight: 400, marginLeft: 8 }}>
+                <span
+                  style={{
+                    fontSize: 12,
+                    color: "var(--muted)",
+                    fontWeight: 400,
+                    marginLeft: 8,
+                  }}
+                >
                   ({items.length})
                 </span>
               </h3>

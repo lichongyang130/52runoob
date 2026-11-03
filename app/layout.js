@@ -1,13 +1,13 @@
-import './globals.css';
+import "./globals.css";
 
 export const metadata = {
   title: {
-    default: 'wikiHow — How to do anything',
-    template: '%s | wikiHow',
+    default: "wikiHow — How to do anything",
+    template: "%s | wikiHow",
   },
   description:
     "wikiHow is the world's how-to manual. Learn how to cook, garden, play guitar, save money, train a puppy, and just about anything else — step by step, with pictures.",
-  icons: { icon: '/favicon.svg' },
+  icons: { icon: "/favicon.svg" },
 };
 
 export default function RootLayout({ children }) {

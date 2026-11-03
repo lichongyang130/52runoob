@@ -1,15 +1,24 @@
-import Link from 'next/link';
-import { Illustration } from '../../components/Illustration';
-import BooksIllustration from '../../components/BooksIllustration';
-import { MiniCard } from '../../components/ArticleCard';
-import { listCategories, listArticles, popularArticles, randomArticle } from '../../lib/queries';
+import Link from "next/link";
+import { Illustration } from "../../components/Illustration";
+import BooksIllustration from "../../components/BooksIllustration";
+import { MiniCard } from "../../components/ArticleCard";
+import {
+  listCategories,
+  listArticles,
+  popularArticles,
+  randomArticle,
+} from "../../lib/queries";
 
-export const dynamic = 'force-dynamic';
+export const dynamic = "force-dynamic";
 
-function expertFor(article) {
-  const name = String(article.author || '');
-  return name.replace(/^wikiHow\s*/i, '').replace(/\s*Team$/i, '') || 'Expert';
-}
+const BADGE_BY_CATEGORY = {
+  Health: "Expert Q&A",
+  "Finance-and-Business": "Review",
+  "Food-and-Entertaining": "Tested",
+  "Home-and-Garden": "Tested",
+  "Pets-and-Animals": "Expert Q&A",
+  "Work-World": "Review",
+};
 
 export default function HomePage() {
   const categories = listCategories();
@@ -26,22 +35,59 @@ export default function HomePage() {
       <section className="wk-hero">
         <div className="container wk-hero-grid">
           <div className="wk-hero-copy">
-            <h1>Welcome to wikiHow, the most trusted how-to site on the internet.</h1>
+            <h1>
+              Welcome to wikiHow, the most trusted how-to site on the internet.
+            </h1>
             <p className="wk-hero-sub">What will you learn on wikiHow today?</p>
 
-            <form className="wk-hero-search" action="/search" method="get" role="search">
-              <svg viewBox="0 0 24 24" aria-hidden="true" className="wk-search-icon">
-                <circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" strokeWidth="2" />
-                <path d="M16.5 16.5L21 21" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+            <form
+              className="wk-hero-search"
+              action="/search"
+              method="get"
+              role="search"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                className="wk-search-icon"
+              >
+                <circle
+                  cx="11"
+                  cy="11"
+                  r="7"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                />
+                <path
+                  d="M16.5 16.5L21 21"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                />
               </svg>
-              <input type="search" name="q" placeholder="Search how to..." aria-label="Search how to" />
+              <input
+                type="search"
+                name="q"
+                placeholder="Search how to..."
+                aria-label="Search how to"
+              />
               <button type="submit">Search</button>
             </form>
 
             <Link href="/random" className="wk-dice">
               Roll the wikiDice
               <svg viewBox="0 0 24 24" aria-hidden="true">
-                <rect x="3.5" y="3.5" width="17" height="17" rx="4" fill="none" stroke="currentColor" strokeWidth="1.8" />
+                <rect
+                  x="3.5"
+                  y="3.5"
+                  width="17"
+                  height="17"
+                  rx="4"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.8"
+                />
                 <circle cx="8.5" cy="8.5" r="1.5" fill="currentColor" />
                 <circle cx="15.5" cy="8.5" r="1.5" fill="currentColor" />
                 <circle cx="12" cy="12" r="1.5" fill="currentColor" />
@@ -70,23 +116,35 @@ export default function HomePage() {
 
           <div className="wk-trend-grid">
             {trending.map((a, i) => (
-              <Link key={a.id} href={`/wikiHow/${a.slug}`} className="wk-trend-card">
+              <Link
+                key={a.id}
+                href={`/wikiHow/${a.slug}`}
+                className="wk-trend-card"
+              >
                 <div className="wk-trend-art">
                   <span className="wk-expert">
                     <span className="wk-expert-badge" aria-hidden="true">
                       <svg viewBox="0 0 24 24">
                         <circle cx="12" cy="9" r="3.6" fill="currentColor" />
-                        <path d="M4.8 20c1.5-3.4 4-5.1 7.2-5.1s5.7 1.7 7.2 5.1z" fill="currentColor" />
-                        <path d="M12 3.2l1.5 2.1-1.5 1.4-1.5-1.4z" fill="currentColor" />
+                        <path
+                          d="M4.8 20c1.5-3.4 4-5.1 7.2-5.1s5.7 1.7 7.2 5.1z"
+                          fill="currentColor"
+                        />
+                        <path
+                          d="M12 3.2l1.5 2.1-1.5 1.4-1.5-1.4z"
+                          fill="currentColor"
+                        />
                       </svg>
                     </span>
                     Expert
                   </span>
-                  <Illustration name={a.hero_image || 'idea'} ratio="4 / 3" />
+                  <Illustration name={a.hero_image || "idea"} ratio="4 / 3" />
                   <span className="wk-rank">{i + 1}</span>
                 </div>
                 <div className="wk-trend-body">
-                  <span className="wk-kicker">Quiz</span>
+                  <span className="wk-kicker">
+                    {BADGE_BY_CATEGORY[a.category_slug] || "How-To"}
+                  </span>
                   <h3>{a.title}</h3>
                 </div>
               </Link>
@@ -110,15 +168,23 @@ export default function HomePage() {
             {pick ? (
               <Link href={`/wikiHow/${pick.slug}`} className="wk-feature-main">
                 <div className="wk-feature-art">
-                  <Illustration name={pick.hero_image || 'idea'} ratio="16 / 10" />
+                  <Illustration
+                    name={pick.hero_image || "idea"}
+                    ratio="16 / 10"
+                  />
                 </div>
                 <div className="wk-feature-body">
-                  {pick.category_name ? <span className="wk-pill">{pick.category_name}</span> : null}
+                  {pick.category_name ? (
+                    <span className="wk-pill">{pick.category_name}</span>
+                  ) : null}
                   <h3>How to {pick.title}</h3>
                   <p>{pick.summary}</p>
                   <div className="wk-feature-meta">
                     <span>⏱ {pick.read_time} min read</span>
-                    <span>👍 {Number(pick.helpful_yes || 0).toLocaleString()} found helpful</span>
+                    <span>
+                      👍 {Number(pick.helpful_yes || 0).toLocaleString()} found
+                      helpful
+                    </span>
                     <span>👁 {Number(pick.views).toLocaleString()} views</span>
                   </div>
                 </div>
@@ -147,8 +213,15 @@ export default function HomePage() {
 
           <div className="wk-cat-grid">
             {categories.map((c) => (
-              <Link key={c.id} href={`/category/${c.slug}`} className="wk-cat-card">
-                <span className="wk-cat-emoji" style={{ background: `${c.color}22` }}>
+              <Link
+                key={c.id}
+                href={`/category/${c.slug}`}
+                className="wk-cat-card"
+              >
+                <span
+                  className="wk-cat-emoji"
+                  style={{ background: `${c.color}22` }}
+                >
                   {c.emoji}
                 </span>
                 <span className="wk-cat-text">
@@ -173,15 +246,24 @@ export default function HomePage() {
           </div>
           <div className="wk-latest-grid">
             {latest.map((a) => (
-              <Link key={a.id} href={`/wikiHow/${a.slug}`} className="wk-latest-card">
+              <Link
+                key={a.id}
+                href={`/wikiHow/${a.slug}`}
+                className="wk-latest-card"
+              >
                 <div className="wk-latest-art">
-                  <Illustration name={a.hero_image || 'idea'} ratio="16 / 9" />
-                  {a.category_name ? <span className="wk-pill wk-pill-float">{a.category_name}</span> : null}
+                  <Illustration name={a.hero_image || "idea"} ratio="16 / 9" />
+                  {a.category_name ? (
+                    <span className="wk-pill wk-pill-float">
+                      {a.category_name}
+                    </span>
+                  ) : null}
                 </div>
                 <h3>How to {a.title}</h3>
                 <p>{a.summary}</p>
                 <span className="wk-latest-meta">
-                  {Number(a.views).toLocaleString()} views · {a.read_time} min read
+                  {Number(a.views).toLocaleString()} views · {a.read_time} min
+                  read
                 </span>
               </Link>
             ))}
@@ -195,8 +277,9 @@ export default function HomePage() {
           <div>
             <h2>Anyone can write a how-to.</h2>
             <p>
-              Every article on wikiHow started with someone who had done the thing and wanted to
-              help. Share a skill you have — an editor will help you polish it.
+              Every article on wikiHow started with someone who had done the
+              thing and wanted to help. Share a skill you have — an editor will
+              help you polish it.
             </p>
           </div>
           <div className="wk-cta-actions">
@@ -204,7 +287,10 @@ export default function HomePage() {
               Start writing
             </Link>
             {random ? (
-              <Link href={`/wikiHow/${random.slug}`} className="wk-btn wk-btn-ghost">
+              <Link
+                href={`/wikiHow/${random.slug}`}
+                className="wk-btn wk-btn-ghost"
+              >
                 🎲 Random how-to
               </Link>
             ) : null}

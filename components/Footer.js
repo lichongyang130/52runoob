@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import Link from "next/link";
 
 export default function Footer({ categories = [] }) {
   return (
@@ -12,8 +12,9 @@ export default function Footer({ categories = [] }) {
             </span>
           </Link>
           <p>
-            wikiHow is a collaborative how-to manual built by people who want to help. Every
-            article is editable, illustrated, and written to be useful — not clever.
+            wikiHow is a collaborative how-to manual built by people who want to
+            help. Every article is editable, illustrated, and written to be
+            useful — not clever.
           </p>
         </div>
 
@@ -46,7 +47,10 @@ export default function Footer({ categories = [] }) {
       </div>
 
       <div className="container footer-bottom">
-        <span>© {new Date().getFullYear()} wikiHow Clone — a demo project for learning purposes.</span>
+        <span>
+          © {new Date().getFullYear()} wikiHow Clone — a demo project for
+          learning purposes.
+        </span>
         <div className="footer-legal">
           <Link href="/terms">Terms of Use</Link>
           <Link href="/privacy">Privacy</Link>

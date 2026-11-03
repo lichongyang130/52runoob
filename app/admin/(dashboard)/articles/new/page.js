@@ -1,7 +1,7 @@
-import ArticleEditor from '../../../../../components/ArticleEditor';
-import { listCategories } from '../../../../../lib/queries';
+import ArticleEditor from "../../../../../components/ArticleEditor";
+import { listCategories } from "../../../../../lib/queries";
 
-export const dynamic = 'force-dynamic';
+export const dynamic = "force-dynamic";
 
 export default function NewArticlePage() {
   const categories = listCategories();

@@ -1,8 +1,8 @@
-import Header from '../../components/Header';
-import Footer from '../../components/Footer';
-import { listCategories } from '../../lib/queries';
+import Header from "../../components/Header";
+import Footer from "../../components/Footer";
+import { listCategories } from "../../lib/queries";
 
-export const dynamic = 'force-dynamic';
+export const dynamic = "force-dynamic";
 
 export default function SiteLayout({ children }) {
   let categories = [];
