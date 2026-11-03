@@ -12,7 +12,8 @@ import {
 import {
   getSubcategoryInfo,
   getPrimaryEnrichment,
-  GAMES_ARTICLES,
+  ARTS_ARTICLES,
+  ARTS_NEW_ARTICLES,
 } from "../../../../lib/subcategories";
 
 export const dynamic = "force-dynamic";
@@ -27,8 +28,8 @@ function resolveCategoryView(rawSlug) {
   if (primary) {
     const dbArticles = listArticles({ categoryId: primary.id, limit: 36 });
     const enrich = getPrimaryEnrichment(primary.slug);
+    const pool = enrich.showcaseArticles || ARTS_ARTICLES;
 
-    // Combine real DB articles with curated showcase items so the grid is always rich
     const combined = [
       ...dbArticles.map((a) => ({
         slug: a.slug,
@@ -41,12 +42,9 @@ function resolveCategoryView(rawSlug) {
       })),
     ];
 
-    if (combined.length < 12) {
-      for (const extra of GAMES_ARTICLES) {
-        if (!combined.some((x) => x.slug === extra.slug)) {
-          combined.push(extra);
-        }
-        if (combined.length >= 12) break;
+    for (const extra of pool) {
+      if (!combined.some((x) => x.slug === extra.slug)) {
+        combined.push(extra);
       }
     }
 
@@ -65,10 +63,11 @@ function resolveCategoryView(rawSlug) {
       featuredTopics: enrich.featuredTopics,
       relatedTopics: enrich.relatedTopics,
       articles: combined,
+      newArticles: enrich.newArticles || ARTS_NEW_ARTICLES,
     };
   }
 
-  // Secondary category (subcategory) such as Games, Crafts, Drawing, Board-Games, etc.
+  // Secondary category (subcategory) such as Games, Artwork, Books, Movies, Music, Crafts, Drawing
   const sub = getSubcategoryInfo(decoded);
   return {
     isSubcategory: true,
@@ -87,6 +86,7 @@ function resolveCategoryView(rawSlug) {
     featuredTopics: sub.featuredTopics,
     relatedTopics: sub.relatedTopics,
     articles: sub.articles,
+    newArticles: [],
   };
 }
 
@@ -150,7 +150,13 @@ export default async function CategoryPage({ params, searchParams }) {
   const view = resolveCategoryView(slug);
   const allCategories = listMainCategories();
 
-  const featuredList = view.articles.filter((a) => a.featured).slice(0, 8);
+  // Primary categories show 4 Featured Articles (1 row of 4, like Category:Arts-and-Entertainment);
+  // Secondary categories show up to 8 Featured Articles (2 rows of 4, like Category:Games).
+  const featuredCap = view.isSubcategory ? 8 : 4;
+  const featuredList = view.articles
+    .filter((a) => a.featured)
+    .slice(0, featuredCap);
+
   const allList = view.articles;
   const totalPages = Math.max(1, Math.ceil(allList.length / PAGE_SIZE));
   const currentPage = Math.min(page, totalPages);
@@ -204,7 +210,36 @@ export default async function CategoryPage({ params, searchParams }) {
             <h1 className="wk-cat-h1">{view.name}</h1>
 
             <p className="wk-cat-intro">
-              {view.name === "Games" ? (
+              {view.slug === "Arts-and-Entertainment" ? (
+                <>
+                  Learn to{" "}
+                  <Link href="/how-to/Be-Well-Read" className="wk-inline-link">
+                    be well read
+                  </Link>
+                  , become a better artist, and sell your own music with
+                  Howcompass&apos;s Arts and Entertainment category. Our
+                  articles can help you develop talent in multiple areas and be
+                  a good entertainer. Check out how-tos on{" "}
+                  <Link
+                    href="/how-to/Be-a-Good-Ventriloquist"
+                    className="wk-inline-link"
+                  >
+                    learning ventriloquism
+                  </Link>
+                  ,{" "}
+                  <Link
+                    href="/how-to/Make-a-Radio-Show"
+                    className="wk-inline-link"
+                  >
+                    making your own radio show
+                  </Link>
+                  , becoming a professional{" "}
+                  <Link href="/how-to/Tell-a-Story" className="wk-inline-link">
+                    storyteller
+                  </Link>
+                  , and more.
+                </>
+              ) : view.name === "Games" ? (
                 <>
                   Discover new games and become a master of your old favorites
                   with Howcompass&apos;s Games category! Learn all about classic
@@ -265,21 +300,23 @@ export default async function CategoryPage({ params, searchParams }) {
               )}
             </p>
 
-            {/* FEATURED TOPICS (Subcategory Pills) */}
+            {/* FEATURED TOPICS (4 Wide Banner Cards like Category:Arts-and-Entertainment) */}
             {view.featuredTopics && view.featuredTopics.length > 0 ? (
               <div className="wk-feattopics">
                 <h2 className="wk-feattopics-title">Featured Topics</h2>
-                <div className="wk-feattopics-row">
+                <div className="wk-feattopics-banners">
                   {view.featuredTopics.map((ft) => (
                     <Link
                       key={ft.name}
                       href={`/category/${ft.slug}`}
-                      className="wk-feattopic-card"
+                      className="wk-feattopic-banner"
                     >
-                      <div className="wk-feattopic-thumb">
-                        <Illustration name={ft.illus || "puzzle"} />
+                      <div className="wk-feattopic-banner-art">
+                        <Illustration name={ft.illus || "art"} />
                       </div>
-                      <span>{ft.name}</span>
+                      <span className="wk-feattopic-banner-label">
+                        {ft.name}
+                      </span>
                     </Link>
                   ))}
                 </div>
@@ -312,7 +349,7 @@ export default async function CategoryPage({ params, searchParams }) {
               ))}
             </div>
 
-            {/* Pagination bar matching wikihow.com/Category:Games */}
+            {/* Pagination bar */}
             <nav className="wk-cat-pager" aria-label="Category pagination">
               <Link
                 href={`/category/${view.slug}?pg=${Math.max(1, currentPage - 1)}`}
@@ -343,6 +380,22 @@ export default async function CategoryPage({ params, searchParams }) {
               </Link>
             </nav>
           </section>
+
+          {/* NEW ARTICLES ABOUT {CATEGORY} SECTION (Primary Category Directory block) */}
+          {!view.isSubcategory &&
+          view.newArticles &&
+          view.newArticles.length > 0 ? (
+            <section className="wk-card wk-cat-block" id="new-articles">
+              <header className="wk-cat-block-head">
+                <h2>New Articles about {view.name}</h2>
+              </header>
+              <div className="wk-cattile-grid">
+                {view.newArticles.map((item) => (
+                  <CategoryArticleTile key={item.slug} item={item} />
+                ))}
+              </div>
+            </section>
+          ) : null}
         </div>
 
         {/* ==================== RIGHT SIDEBAR COLUMN ==================== */}
