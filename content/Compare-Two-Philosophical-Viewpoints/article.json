@@ -131,7 +131,7 @@
           "title": "Mark where the two views agree",
           "body": "Draw two overlapping circles and fill the middle with everything both sides accept. The overlap is usually larger than the labels suggest, and it does real work. It sets the stakes, because it shows how much turns on the remaining difference, and it keeps the comparison honest, because a view you are about to criticise probably gets most of the ordinary cases right for the same reasons your preferred view does.",
           "tip": "If the overlap fills the page and the disputed area is a sliver, say so. That is a result, not a failure.",
-          "imageTodo": {
+          "image": {
             "base": "10-shared-ground",
             "alt": "Hands drawing two large overlapping circles with coloured pencils on a sheet of paper, the circles left empty inside."
           }
@@ -146,25 +146,25 @@
           "title": "Decide in advance what would move you",
           "body": "Before you weigh the two views, write down what would change your mind: a case you could not stomach, a premise shown to be false, a consequence you had not noticed. Epistemologists who study disagreement insist on a related rule of independence. You may not dismiss somebody as unqualified simply because they reached a different conclusion from yours; that reasoning lets you keep any belief you like, forever, at no cost.",
           "tip": "Keep the note. Months later it tells you whether you changed your mind on evidence or simply drifted.",
-          "imageTodo": {
+          "image": {
             "base": "11-what-would-move-you",
-            "alt": "Two friends at a restaurant table with a small folded paper slip between them, one tilting their head while the other counts on their fingers."
+            "alt": "Two friends at a bistro table after a meal with a small folded paper slip lying blank on a saucer between them, one resting a hand on their chin while the other counts on their fingers."
           }
         },
         {
           "title": "Price each view before you judge it",
           "body": "Every position pays somewhere. One buys simplicity and pays in counterintuitive verdicts; another matches our judgements case by case and pays in extra machinery; a third is airtight within a narrow scope and silent outside it. List the bill for each side, then compare bills rather than hunting for a view with no costs at all. There is no such view, and demanding one just hands the win to whichever position you understand least.",
           "tip": "Write the costs in the same grid, as a final row. A comparison with no costs row is an advertisement.",
-          "imageTodo": {
+          "image": {
             "base": "12-price-each-view",
-            "alt": "A small kitchen balance scale on a desk with a smooth pebble in each pan, tipped slightly to one side."
+            "alt": "A brass balance scale on a wooden desk with a pebble in each shallow pan so the beam tips to one side, a stack of plain cloth-bound books beside it and a hand resting on the desk."
           }
         },
         {
           "title": "Write a thesis, not a tie",
           "body": "Both views are similar in some ways and different in others is not a conclusion; it is a description of the exercise. Say which view handles the shared question better, and in what respect, with the qualification the evidence supports. Suspending judgement is a legitimate conclusion, but only when you can say what blocks a decision and what would unblock it. A reader should finish your comparison knowing where you stand and why.",
           "tip": "Draft the thesis in the form: on the question of X, view A does better at Y, at the cost of Z.",
-          "imageTodo": {
+          "image": {
             "base": "13-write-a-thesis",
             "alt": "A fresh notebook page with one short line written at the top, two crumpled sheets of paper pushed to the side of the desk."
           }
@@ -173,7 +173,7 @@
           "title": "Choose an order before you write it up",
           "body": "There are two standard shapes. Point by point takes one criterion at a time and gives both views in each section, which suits close comparison. Side by side gives all of one view, then all of the other, which suits the case where one view is really a lens for examining the other. Either way, place your strongest point last, since that is the one a reader carries away.",
           "tip": "For a talk rather than an essay, point by point is safer. Listeners cannot flip back to check what you said about the first view.",
-          "imageTodo": {
+          "image": {
             "base": "14-choose-an-order",
             "alt": "Overhead view of hands rearranging a spread of small blank cards on a rug, moving them from two loose piles into two neat columns."
           }
@@ -182,7 +182,7 @@
           "title": "Date the verdict and leave it open",
           "body": "Write the date next to your conclusion, together with the one thing that would reopen it, and file the grid with the essay. Disagreement with a well-informed person who has seen your evidence is not a scoreboard to be settled this afternoon; it is a standing reason to keep checking. Come back after the next book, the next seminar, the next argument with a friend, and see whether the comparison still looks the way you left it.",
           "tip": "Reopen the file when you meet a case neither view predicted. That is the cheapest new evidence you will ever get.",
-          "imageTodo": {
+          "image": {
             "base": "15-date-and-revisit",
             "alt": "A person slipping a folded sheet into the back of a notebook and setting it on a shelf by a window at dusk."
           }
@@ -271,7 +271,7 @@
     "note": "Four short exchanges to sort into genuine disagreement, verbal dispute, or two different questions, including one pair that agrees on the facts but not on what to do."
   },
   "publishing": {
-    "status": "draft",
+    "status": "ready-for-review",
     "author": "Editorial draft",
     "reviewer": "",
     "datePublished": null,
@@ -279,24 +279,17 @@
     "readingTimeMinutes": 9,
     "wordCount": null,
     "internalLinkCount": 4,
-    "imageCount": 10,
-    "imagePending": 6,
+    "imageCount": 16,
+    "imagePending": 0,
     "expertReviewed": false,
     "reviewNote": "Philosophy methodology guide. Before publication a philosophy tutor should check the characterisations of reflective equilibrium and of the peer-disagreement literature, and the coursework warning should be matched to the academic-integrity wording used in the publishing country.",
     "imageNote": "Illustrations are drawn for this guide only."
   },
   "imageStatus": {
     "heroReady": true,
-    "stepImagesReady": 9,
-    "stepImagesPending": [
-      "10-shared-ground",
-      "11-what-would-move-you",
-      "12-price-each-view",
-      "13-write-a-thesis",
-      "14-choose-an-order",
-      "15-date-and-revisit"
-    ],
-    "note": "Illustrations in progress for this guide."
+    "stepImagesReady": 15,
+    "stepImagesPending": [],
+    "note": "All illustrations for this guide are complete and drawn for it alone."
   },
   "dateModified": "2026-11-03"
 }
