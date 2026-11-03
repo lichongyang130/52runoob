@@ -44,7 +44,7 @@
           "title": "Write the case as a choice between two goods",
           "body": "Put the dilemma on paper in two or three sentences: who has to act, what the two options are, and why each has something going for it. If one option is obviously right and the other is merely tempting, you have a hard decision rather than a dilemma, and the conversation should be about courage instead of ethics. A genuine dilemma survives the test that a reasonable person could choose either way and still be acting for a moral reason.",
           "tip": "Read the written case aloud before you start. Half the disagreements in the first ten minutes are about what the case actually says.",
-          "imageTodo": {
+          "image": {
             "base": "01-write-the-case",
             "alt": "A hand writing a few lines of soft grey handwriting on a large easel pad in an empty meeting room with chairs still stacked at the side."
           }
@@ -53,7 +53,7 @@
           "title": "Agree what the conversation is for",
           "body": "A discussion to reach a decision, a discussion to understand a case better, and a discussion to support somebody who has to decide are three different events. Say which one this is in the first minute, because it sets what counts as a good ending. Teaching centres treat a clearly stated purpose as the single most useful piece of preparation for a difficult discussion, and it is also the thing most groups skip.",
           "tip": "Write the purpose at the top of the flip chart. When the talk drifts, point at it rather than arguing about relevance.",
-          "imageTodo": {
+          "image": {
             "base": "02-agree-the-purpose",
             "alt": "Two organisers arranging chairs into a circle before a meeting, one of them pausing to set a flip chart stand in place near a window."
           }
@@ -62,7 +62,7 @@
           "title": "Set ground rules together, before anyone is annoyed",
           "body": "Agree a short list and make it visible: listen without interrupting, criticise ideas rather than people, avoid inflammatory language, let everybody speak, and never ask anyone to speak on behalf of a group they belong to. Add that passing is always allowed. Rules written by the group get followed; rules announced by a facilitator get ignored. Once they are agreed you can refer back to them later without it feeling like a personal reprimand.",
           "tip": "Keep the list to five lines. A long charter is a sign that nobody intends to use it.",
-          "imageTodo": {
+          "image": {
             "base": "03-ground-rules",
             "alt": "A sheet of flip chart paper taped to a wall carrying five short lines of soft grey handwriting, one person adding another line with a marker while others watch."
           }
@@ -71,7 +71,7 @@
           "title": "Build a shared factual base",
           "body": "Before anyone argues, list what is known, what is unknown, and what is being assumed. Sort the claims into those three columns as a group. Most heated ethical arguments turn out to contain a buried factual dispute, and it is much easier to say the facts are unclear here than to accuse somebody of making things up. Note which missing facts would actually change the answer; those are the ones worth chasing.",
           "tip": "Treat every number someone quotes from memory as unknown until it is checked. It usually is.",
-          "imageTodo": {
+          "image": {
             "base": "04-shared-facts",
             "alt": "Four people around a table sorting printed handouts into three piles, a laptop open to one side showing a plain pale screen and a jug of water between them."
           }
@@ -80,7 +80,7 @@
           "title": "List everybody with a stake",
           "body": "Name the people affected by each option, including the ones who are not in the room and will never read the minutes. Ethical frameworks start here for a reason: a decision usually looks different once the quiet stakeholders are written down. Mark whose stake is heaviest and whose is merely inconvenient. If somebody in the room is directly affected, say so openly and ask how they want to take part, rather than deciding for them.",
           "tip": "Add a line for future people: the next patient, the next intake of students, the next person in that job.",
-          "imageTodo": {
+          "image": {
             "base": "05-stakeholders",
             "alt": "Overhead view of a table where hands lay small blank cards in a ring around one central card, with a teapot and cups pushed to the edge."
           }
@@ -95,7 +95,7 @@
           "title": "Open with a round, not with the loudest voice",
           "body": "Go once around the group and let each person give a first reaction without interruption or comment, with the option to pass. A round takes five minutes and changes the whole session: quieter people have already spoken once, so speaking again is easier, and nobody has yet had the chance to stake out a position and defend it. Only after the round do you open the floor.",
           "tip": "If the group is larger than eight, do the round in pairs first, then collect one sentence from each pair.",
-          "imageTodo": {
+          "image": {
             "base": "06-open-with-a-round",
             "alt": "A circle of people on mismatched chairs in a village hall, one of them speaking while holding a smooth stone, the rest listening with hands in their laps."
           }
@@ -104,7 +104,7 @@
           "title": "Ask open questions with a boundary",
           "body": "Good discussion questions invite several answers but still fence the topic: what would you need to know before deciding, or what makes this one hard to talk about. Avoid double-barrelled questions that pose two problems at once, and avoid questions where you are fishing for a particular answer, because people can tell and will either guess or go quiet. Keep two or three spare questions for the silence that follows a hard moment.",
           "tip": "When an answer is thin, ask the person to say more about one word they used rather than repeating the question.",
-          "imageTodo": {
+          "image": {
             "base": "07-open-questions",
             "alt": "A facilitator standing beside a flip chart with one palm open in mid-question, the seated group leaning forward, afternoon light across the floor."
           }
@@ -113,7 +113,7 @@
           "title": "Run the case through several ethical lenses",
           "body": "Applied ethics centres suggest looking through a set of lenses in turn: whose rights are at stake, what each option gives people their due, which option does most good and least harm overall, what serves the community as a whole, what kind of person each choice makes you, and what the relationships and feelings of those involved require. The lenses are complementary and will sometimes disagree. That disagreement is information, not a malfunction.",
           "tip": "Assign one lens per pair for five minutes, then report back. It stops the group circling its favourite argument.",
-          "imageTodo": {
+          "image": {
             "base": "08-ethical-lenses",
             "alt": "Six plain cards fanned out across a wooden table with a pair of reading glasses resting on them and a notebook open nearby."
           }
@@ -122,7 +122,7 @@
           "title": "Separate role duties from general duties",
           "body": "Some obligations belong to everybody and some come with a job. A lifeguard must go into the water when most bystanders need not; a lawyer must keep a client's disclosures confidential when an ordinary friend need not. Many workplace dilemmas are a collision between the two, and the collision is much easier to discuss once it has a name. Ask which duties in this case attach to the role and which would apply to anyone standing there.",
           "tip": "If the case involves a regulated profession, find the relevant code of conduct and read the clause aloud.",
-          "imageTodo": {
+          "image": {
             "base": "09-role-duties",
             "alt": "A person wearing a staff lanyard pausing with one hand on the handle of a door in a quiet office corridor, a folder held against their chest."
           }
@@ -274,25 +274,16 @@
     "readingTimeMinutes": 9,
     "wordCount": null,
     "internalLinkCount": 4,
-    "imageCount": 0,
-    "imagePending": 16,
+    "imageCount": 10,
+    "imagePending": 6,
     "expertReviewed": false,
     "reviewNote": "Applied ethics and group facilitation guide with safeguarding adjacency. Before publication an ethics educator or clinical ethics practitioner should check the use of the six-lens framework and the role-versus-general duty distinction, and the reporting-route warning should be matched to the safeguarding and whistleblowing channels of the publishing country.",
     "imageNote": "Illustrations are drawn for this guide only."
   },
   "imageStatus": {
-    "heroReady": false,
-    "stepImagesReady": 0,
+    "heroReady": true,
+    "stepImagesReady": 9,
     "stepImagesPending": [
-      "01-write-the-case",
-      "02-agree-the-purpose",
-      "03-ground-rules",
-      "04-shared-facts",
-      "05-stakeholders",
-      "06-open-with-a-round",
-      "07-open-questions",
-      "08-ethical-lenses",
-      "09-role-duties",
       "10-cool-the-room",
       "11-argue-the-other-side",
       "12-what-is-lost",
