@@ -22,7 +22,7 @@ export default async function SearchPage({ searchParams }) {
         </div>
 
         <h1 style={{ marginBottom: 16 }}>
-          {q ? `Results for “${q}”` : "Search wikiHow"}
+          {q ? `Results for “${q}”` : "Search howcompass"}
         </h1>
 
         <form

@@ -6,7 +6,7 @@ export const dynamic = "force-dynamic";
 export const metadata = {
   title: "All Categories",
   description:
-    "Browse every wikiHow category — from food and gardening to finance and fitness.",
+    "Browse every howcompass category — from food and gardening to finance and fitness.",
 };
 
 export default function CategoriesPage() {
@@ -72,7 +72,7 @@ export default function CategoriesPage() {
                     articles.map((a) => (
                       <Link
                         key={a.id}
-                        href={`/wikiHow/${a.slug}`}
+                        href={`/how-to/${a.slug}`}
                         className="trend-item"
                       >
                         <span>

@@ -1,10 +1,12 @@
-# wikiHow Clone — Front Office + Admin CMS
+# howcompass — Front Office + Admin CMS
 
-A full-stack, English-language clone of the **wikiHow** how-to site: an illustrated public
-front end, and a complete editorial back office for writing, publishing and moderating content.
+**howcompass** is a full-stack, English-language how-to site: an illustrated public front end,
+and a complete editorial back office for writing, publishing and moderating content.
+The layout and illustration style are modelled on wikiHow as a design reference; all copy,
+artwork and data in this repository are original.
 
 Built with **Next.js 15 (App Router) + React 19**, **SQLite** (better-sqlite3, zero config),
-and a hand-drawn **flat vector illustration system** that mimics wikiHow's house art style
+and a hand-drawn **flat vector illustration system** that follows the wikiHow-style house art
 (soft tinted panels, rounded characters, no outlines, green accents).
 
 ---
@@ -17,7 +19,7 @@ npm run dev            # http://localhost:3000
 ```
 
 The SQLite database is created, migrated and seeded automatically on first request
-(`data/wikihow.db`). Nothing else to configure.
+(`data/howcompass.db`). Nothing else to configure.
 
 ```bash
 npm run build && npm start   # production mode
@@ -45,15 +47,16 @@ You can add more editors/admins under **Admin → Users** (admin role only).
 | `/` | Home: hero with search, category browser, featured rail, latest how-tos, trending list |
 | `/categories` | All categories with a preview of each category's articles |
 | `/category/[slug]` | Category landing page with pagination and related categories |
-| `/wikiHow` | Full alphabetical index of every article, grouped by category |
-| `/wikiHow/[slug]` | The article page (see below) |
+| `/how-to` | Full alphabetical index of every article, grouped by category |
+| `/how-to/[slug]` | The article page (see below) |
+| `/wikiHow/*` | Legacy redirects to `/how-to/*` |
 | `/search?q=` | Full-text-ish search over title/summary/intro |
 | `/random` | Redirects to a random published how-to |
 | `/about`, `/privacy`, `/terms` | Editorial standards, mission, legal pages |
 | `/sitemap.xml`, `/robots.txt` | SEO endpoints |
 | `404` | Custom not-found page with search |
 
-**Article page features** (modeled on wikiHow's layout):
+**Article page features** (modelled on wikiHow's article layout):
 
 - breadcrumb trail, "How to …" title, co-author line, updated date, read time, view count
 - hero illustration + reviewer badge
@@ -88,7 +91,7 @@ app/
   layout.js                 root layout + metadata
   globals.css               full design system (colors, type, components, responsive)
   (site)/                   public site, wrapped in Header + Footer
-    page.js  categories/  category/[slug]/  wikiHow/  wikiHow/[slug]/
+    page.js  categories/  category/[slug]/  how-to/  how-to/[slug]/
     search/  random/  about/  privacy/  terms/
   admin/
     login/                  public login screen
@@ -108,7 +111,7 @@ lib/
   queries.js                all read queries
   admin-actions.js          server actions: login/logout, save article, categories, users
   auth.js  session.js  util.js
-data/wikihow.db             generated at runtime (git-ignored)
+data/howcompass.db             generated at runtime (git-ignored)
 ```
 
 ## Content model

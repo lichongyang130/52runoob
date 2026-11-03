@@ -25,7 +25,7 @@ export default function ArticleEditor({ article, categories }) {
     article?.category_id || categories[0]?.id || "",
   );
   const [hero, setHero] = useState(article?.hero_image || "idea");
-  const [author, setAuthor] = useState(article?.author || "wikiHow Staff");
+  const [author, setAuthor] = useState(article?.author || "howcompass Staff");
   const [status, setStatus] = useState(article?.status || "draft");
   const [featured, setFeatured] = useState(Boolean(article?.featured));
   const [readTime, setReadTime] = useState(article?.read_time || 5);
@@ -175,7 +175,7 @@ export default function ArticleEditor({ article, categories }) {
                 }}
                 placeholder="Make-Pasta-Carbonara"
               />
-              <div className="hint">/wikiHow/{slug || "your-slug"}</div>
+              <div className="hint">/how-to/{slug || "your-slug"}</div>
             </div>
             <div className="field">
               <label htmlFor="summary">Quick summary</label>
@@ -500,7 +500,7 @@ export default function ArticleEditor({ article, categories }) {
             </button>
             {!isNew ? (
               <a
-                href={`/wikiHow/${article.slug}`}
+                href={`/how-to/${article.slug}`}
                 target="_blank"
                 className="btn btn-outline btn-block"
                 style={{ marginTop: 9 }}
@@ -576,7 +576,7 @@ export default function ArticleEditor({ article, categories }) {
               </select>
               <div className="hint">
                 Illustrations are generated as flat vector scenes, in the
-                wikiHow style.
+                howcompass style.
               </div>
             </div>
           </div>

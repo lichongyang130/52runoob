@@ -7,7 +7,7 @@ export default function sitemap() {
   const staticPaths = [
     "",
     "/categories",
-    "/wikiHow",
+    "/how-to",
     "/search",
     "/about",
     "/privacy",
@@ -20,7 +20,7 @@ export default function sitemap() {
     priority: 0.7,
   }));
   const articles = listArticles({ limit: 1000 }).map((a) => ({
-    url: `${base}/wikiHow/${a.slug}`,
+    url: `${base}/how-to/${a.slug}`,
     lastModified: new Date(a.updated_at),
     changeFrequency: "monthly",
     priority: 0.9,

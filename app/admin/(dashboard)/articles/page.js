@@ -136,7 +136,7 @@ export default async function AdminArticlesPage({ searchParams }) {
                         </span>
                       ) : null}
                       <div style={{ fontSize: 12, color: "var(--muted)" }}>
-                        /wikiHow/{a.slug}
+                        /how-to/{a.slug}
                       </div>
                     </td>
                     <td>{a.category_name || "—"}</td>
@@ -158,7 +158,7 @@ export default async function AdminArticlesPage({ searchParams }) {
                           Edit
                         </Link>
                         <Link
-                          href={`/wikiHow/${a.slug}`}
+                          href={`/how-to/${a.slug}`}
                           className="btn btn-ghost btn-sm"
                           target="_blank"
                         >

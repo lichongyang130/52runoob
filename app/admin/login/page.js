@@ -15,9 +15,9 @@ export default async function LoginPage({ searchParams }) {
     <div className="login-page">
       <div className="login-card">
         <Link href="/" className="logo">
-          <span className="logo-mark">w</span>
+          <span className="logo-mark">h</span>
           <span>
-            wiki<span className="logo-how">How</span>
+            how<span className="logo-how">compass</span>
           </span>
         </Link>
         <p className="sub">Sign in to the editorial dashboard</p>

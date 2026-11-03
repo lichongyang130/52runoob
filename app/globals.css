@@ -1,5 +1,5 @@
 /* ============================================================
-   wikiHow-inspired design system
+   howcompass-inspired design system
    ============================================================ */
 :root {
   --green: #7cb342;
@@ -97,6 +97,7 @@ p { margin: 0 0 1em; }
   box-shadow: inset 0 -2px 0 rgba(0,0,0,.12);
 }
 .logo-how { color: var(--green-dark); }
+.logo-mark { font-size: 18px; }
 
 .search {
   flex: 1;
@@ -748,7 +749,7 @@ p { margin: 0 0 1em; }
 }
 
 /* ============================================================
-   wikiHow 2024-style homepage & client chrome
+   howcompass homepage & client chrome
    ============================================================ */
 :root {
   --wk-green: #7cb342;
@@ -764,12 +765,18 @@ p { margin: 0 0 1em; }
   max-width: 1180px; margin: 0 auto; padding: 10px 22px;
   display: flex; align-items: center; gap: 20px; min-height: 64px;
 }
-.wk-logo { display: flex; align-items: center; gap: 14px; flex-shrink: 0; }
-.wk-logo-word {
-  font-family: var(--font-display); font-size: 27px; font-weight: 700;
-  color: #fff; letter-spacing: -0.5px; line-height: 1;
+.wk-logo { display: flex; align-items: center; gap: 11px; flex-shrink: 0; }
+.wk-logo-mark {
+  width: 32px; height: 32px; border-radius: 9px; flex-shrink: 0;
+  background: rgba(255,255,255,.18); color: #fff;
+  display: grid; place-items: center;
 }
-.wk-logo-word span { color: #2e4a17; }
+.wk-logo-mark svg { width: 24px; height: 24px; display: block; }
+.wk-logo-word {
+  font-family: var(--font-display); font-size: 25px; font-weight: 700;
+  color: #fff; letter-spacing: -0.6px; line-height: 1;
+}
+.wk-logo-word span { color: #2e4a17; font-weight: 700; }
 .wk-logo-tag {
   color: #f2f8e9; font-size: 15px; font-weight: 600;
   border-bottom: 2px solid rgba(255,255,255,.55); padding-bottom: 3px;
@@ -1043,7 +1050,10 @@ p { margin: 0 0 1em; }
 }
 @media (max-width: 560px) {
   .wk-actions .wk-action:nth-of-type(1) { display: none; }
-  .wk-logo-word { font-size: 23px; }
+  .wk-logo-word { font-size: 20px; }
+  .wk-logo-mark { width: 27px; height: 27px; border-radius: 8px; }
+  .wk-logo-mark svg { width: 20px; height: 20px; }
+  .wk-logo-tag { display: none; }
   .wk-header-inner { padding: 8px 14px; min-height: 56px; }
   .wk-catbar-inner, .container { padding-left: 14px; padding-right: 14px; }
   .step-art { max-width: none; }

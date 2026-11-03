@@ -5,6 +5,6 @@ export const dynamic = "force-dynamic";
 
 export default function RandomPage() {
   const row = randomArticle();
-  if (row?.slug) redirect(`/wikiHow/${row.slug}`);
+  if (row?.slug) redirect(`/how-to/${row.slug}`);
   redirect("/");
 }

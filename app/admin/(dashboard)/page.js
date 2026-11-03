@@ -98,7 +98,7 @@ export default function AdminDashboard() {
                     <td>{Number(a.views).toLocaleString()}</td>
                     <td style={{ textAlign: "right" }}>
                       <Link
-                        href={`/wikiHow/${a.slug}`}
+                        href={`/how-to/${a.slug}`}
                         className="btn btn-ghost btn-sm"
                         target="_blank"
                       >
@@ -166,7 +166,7 @@ export default function AdminDashboard() {
                       {c.body.slice(0, 110)}
                     </p>
                     <Link
-                      href={`/wikiHow/${c.slug}#comments`}
+                      href={`/how-to/${c.slug}#comments`}
                       style={{ fontSize: 12 }}
                     >
                       on {c.title}

@@ -1,4 +1,4 @@
-/* wikiHow-style stacked books + globe hero illustration. */
+/* howcompass-style stacked books + globe hero illustration. */
 
 export default function BooksIllustration({ className = "" }) {
   const Book = ({ y, h, x, w, color, edge, label, labelColor = "#fff" }) => (

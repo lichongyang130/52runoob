@@ -1,14 +1,14 @@
 {
-  "name": "wikihow-clone",
+  "name": "howcompass",
   "version": "1.0.0",
   "private": true,
-  "description": "A full-stack wikiHow clone: public how-to site + admin CMS",
+  "description": "A full-stack howcompass: public how-to site + admin CMS",
   "scripts": {
     "dev": "next dev -H 0.0.0.0 -p 3000",
     "build": "next build",
     "start": "next start -H 0.0.0.0 -p 3000",
     "lint": "next lint",
-    "db:reset": "node -e \"require('fs').rmSync('data/wikihow.db',{force:true});require('./lib/db.js')\""
+    "db:reset": "node -e \"require('fs').rmSync('data/howcompass.db',{force:true});require('./lib/db.js')\""
   },
   "dependencies": {
     "better-sqlite3": "^13.0.3",

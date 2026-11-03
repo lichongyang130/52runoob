@@ -72,7 +72,7 @@ export default async function AdminCommentsPage({ searchParams }) {
                     <td style={{ maxWidth: 380 }}>{c.body}</td>
                     <td>
                       <Link
-                        href={`/wikiHow/${c.slug}#comments`}
+                        href={`/how-to/${c.slug}#comments`}
                         className="title-cell"
                       >
                         {c.title}

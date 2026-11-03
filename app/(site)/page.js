@@ -36,9 +36,9 @@ export default function HomePage() {
         <div className="container wk-hero-grid">
           <div className="wk-hero-copy">
             <h1>
-              Welcome to wikiHow, the most trusted how-to site on the internet.
+              Welcome to howcompass, the most trusted how-to site on the internet.
             </h1>
-            <p className="wk-hero-sub">What will you learn on wikiHow today?</p>
+            <p className="wk-hero-sub">What will you learn on howcompass today?</p>
 
             <form
               className="wk-hero-search"
@@ -76,7 +76,7 @@ export default function HomePage() {
             </form>
 
             <Link href="/random" className="wk-dice">
-              Roll the wikiDice
+              Roll the Compass
               <svg viewBox="0 0 24 24" aria-hidden="true">
                 <rect
                   x="3.5"
@@ -108,7 +108,7 @@ export default function HomePage() {
         <div className="container">
           <div className="wk-section-head">
             <h2>Trending Now</h2>
-            <Link href="/wikiHow" className="wk-more">
+            <Link href="/how-to" className="wk-more">
               See more trending
               <span aria-hidden="true">›</span>
             </Link>
@@ -118,7 +118,7 @@ export default function HomePage() {
             {trending.map((a, i) => (
               <Link
                 key={a.id}
-                href={`/wikiHow/${a.slug}`}
+                href={`/how-to/${a.slug}`}
                 className="wk-trend-card"
               >
                 <div className="wk-trend-art">
@@ -166,7 +166,7 @@ export default function HomePage() {
 
           <div className="wk-featured-grid">
             {pick ? (
-              <Link href={`/wikiHow/${pick.slug}`} className="wk-feature-main">
+              <Link href={`/how-to/${pick.slug}`} className="wk-feature-main">
                 <div className="wk-feature-art">
                   <Illustration
                     name={pick.hero_image || "idea"}
@@ -239,7 +239,7 @@ export default function HomePage() {
         <div className="container">
           <div className="wk-section-head">
             <h2>Recently updated</h2>
-            <Link href="/wikiHow" className="wk-more">
+            <Link href="/how-to" className="wk-more">
               All how-tos
               <span aria-hidden="true">›</span>
             </Link>
@@ -248,7 +248,7 @@ export default function HomePage() {
             {latest.map((a) => (
               <Link
                 key={a.id}
-                href={`/wikiHow/${a.slug}`}
+                href={`/how-to/${a.slug}`}
                 className="wk-latest-card"
               >
                 <div className="wk-latest-art">
@@ -277,7 +277,7 @@ export default function HomePage() {
           <div>
             <h2>Anyone can write a how-to.</h2>
             <p>
-              Every article on wikiHow started with someone who had done the
+              Every article on howcompass started with someone who had done the
               thing and wanted to help. Share a skill you have — an editor will
               help you polish it.
             </p>
@@ -288,7 +288,7 @@ export default function HomePage() {
             </Link>
             {random ? (
               <Link
-                href={`/wikiHow/${random.slug}`}
+                href={`/how-to/${random.slug}`}
                 className="wk-btn wk-btn-ghost"
               >
                 🎲 Random how-to

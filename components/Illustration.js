@@ -1,4 +1,4 @@
-/* Hand-drawn flat vector illustrations in the wikiHow house style:
+/* Hand-drawn flat vector illustrations in the howcompass house style:
    soft tinted background, rounded shapes, no outlines, warm palette. */
 
 const PALETTE = {
@@ -953,7 +953,7 @@ export function Illustration({ name = "idea", className = "", ratio, style }) {
 }
 
 /* Step illustrations reuse the article scene with a rotating tint + badge,
-   the way wikiHow steps each get their own art panel. */
+   the way howcompass steps each get their own art panel. */
 export function StepIllustration({ name = "idea", index = 0, className = "" }) {
   const Scene = SCENES[name] || SCENES.idea;
   return (

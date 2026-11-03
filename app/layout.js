@@ -2,11 +2,11 @@ import "./globals.css";
 
 export const metadata = {
   title: {
-    default: "wikiHow — How to do anything",
-    template: "%s | wikiHow",
+    default: "howcompass — How to do anything",
+    template: "%s | howcompass",
   },
   description:
-    "wikiHow is the world's how-to manual. Learn how to cook, garden, play guitar, save money, train a puppy, and just about anything else — step by step, with pictures.",
+    "howcompass is the world's how-to manual. Learn how to cook, garden, play guitar, save money, train a puppy, and just about anything else — step by step, with pictures.",
   icons: { icon: "/favicon.svg" },
 };
 

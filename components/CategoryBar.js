@@ -10,7 +10,7 @@ export default function CategoryBar({ categories = [] }) {
   return (
     <div className="wk-catbar">
       <div className="wk-catbar-inner">
-        <Link href="/wikiHow" className="wk-catbar-home">
+        <Link href="/how-to" className="wk-catbar-home">
           All how-tos
         </Link>
         {categories.map((c) => (

@@ -58,7 +58,7 @@ export default function AllHowTosPage() {
               <ul className="aside-list multi-col">
                 {items.map((a) => (
                   <li key={a.id}>
-                    <Link href={`/wikiHow/${a.slug}`}>How to {a.title}</Link>
+                    <Link href={`/how-to/${a.slug}`}>How to {a.title}</Link>
                   </li>
                 ))}
               </ul>

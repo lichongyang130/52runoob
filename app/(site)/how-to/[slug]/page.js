@@ -313,7 +313,7 @@ export default async function ArticlePage({ params }) {
               <ul className="aside-list">
                 {related.map((r) => (
                   <li key={r.id}>
-                    <Link href={`/wikiHow/${r.slug}`}>{r.title}</Link>
+                    <Link href={`/how-to/${r.slug}`}>{r.title}</Link>
                     <span className="meta">{r.category_name}</span>
                   </li>
                 ))}

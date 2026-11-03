@@ -62,11 +62,18 @@ export default function Header({ categories = [] }) {
   return (
     <header className="wk-header">
       <div className="wk-header-inner">
-        <Link href="/" className="wk-logo" aria-label="wikiHow home">
-          <span className="wk-logo-word">
-            wiki<span>How</span>
+        <Link href="/" className="wk-logo" aria-label="howcompass home">
+          <span className="wk-logo-mark" aria-hidden="true">
+            <svg viewBox="0 0 32 32">
+              <circle cx="16" cy="16" r="13.4" fill="none" stroke="currentColor" strokeWidth="2.4" />
+              <path d="M16 4.6l3.1 8.3L27.4 16l-8.3 3.1L16 27.4l-3.1-8.3L4.6 16l8.3-3.1z" fill="currentColor" />
+              <circle cx="16" cy="16" r="2.1" fill="#fff" />
+            </svg>
           </span>
-          <span className="wk-logo-tag">to do anything…</span>
+          <span className="wk-logo-word">
+            how<span>compass</span>
+          </span>
+          <span className="wk-logo-tag">find your way to done</span>
         </Link>
 
         <form
@@ -78,8 +85,8 @@ export default function Header({ categories = [] }) {
           <input
             type="search"
             name="q"
-            placeholder="Search wikiHow"
-            aria-label="Search wikiHow"
+            placeholder="Search how-to guides"
+            aria-label="Search how-to guides"
           />
           <button type="submit">Search</button>
         </form>
