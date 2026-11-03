@@ -128,6 +128,9 @@ export default async function ArticlePage({ params }) {
                       <li>
                         <a href="#faq">FAQ</a>
                       </li>
+                      <li>
+                        <a href="#references">References</a>
+                      </li>
                     </>
                   ) : (
                     <>
@@ -149,6 +152,9 @@ export default async function ArticlePage({ params }) {
                       </li>
                       <li>
                         <a href="#faq">FAQ</a>
+                      </li>
+                      <li>
+                        <a href="#references">References</a>
                       </li>
                     </>
                   )}
@@ -191,10 +197,20 @@ export default async function ArticlePage({ params }) {
                   return (
                     <div className="step" key={step.id}>
                       <div className="step-art">
-                        <StepIllustration
-                          name={article.hero_image || "idea"}
-                          index={n}
-                        />
+                        {step.image ? (
+                          <img
+                            src={step.image}
+                            alt={`Step ${n}: ${(step.text || "").slice(0, 90)}`}
+                            loading="lazy"
+                            width="800"
+                            height="520"
+                          />
+                        ) : (
+                          <StepIllustration
+                            name={article.hero_image || "idea"}
+                            index={n}
+                          />
+                        )}
                       </div>
                       <div className="step-body">
                         <h4>Step {n}</h4>
@@ -259,6 +275,64 @@ export default async function ArticlePage({ params }) {
                     </details>
                   ))}
                 </div>
+              </section>
+            ) : null}
+
+            {article.references && article.references.length ? (
+              <section className="panel refs-panel" id="references">
+                <h3>
+                  <span className="panel-icon">🔗</span> References
+                </h3>
+                <ol className="refs-list">
+                  {article.references.map((r) => (
+                    <li key={r.id}>
+                      {r.url ? (
+                        <a
+                          href={r.url}
+                          target="_blank"
+                          rel="noopener noreferrer nofollow"
+                          className="ref-link"
+                        >
+                          {r.title}
+                          <span className="ref-out" aria-hidden="true">
+                            ↗
+                          </span>
+                        </a>
+                      ) : (
+                        <span>{r.title}</span>
+                      )}
+                      {r.publisher ? <span className="ref-pub">{r.publisher}</span> : null}
+                    </li>
+                  ))}
+                </ol>
+                <p className="refs-note">
+                  howcompass editors verify each step. Sources are listed so you can read the
+                  underlying guidance yourself.
+                </p>
+              </section>
+            ) : null}
+
+            {related.length ? (
+              <section className="panel" id="related">
+                <h3>
+                  <span className="panel-icon">🧭</span> Keep reading on howcompass
+                </h3>
+                <ul className="related-list">
+                  {related.map((r) => (
+                    <li key={r.id}>
+                      <Link href={`/how-to/${r.slug}`}>How to {r.title}</Link>
+                      <span>{r.category_name}</span>
+                    </li>
+                  ))}
+                  {article.category_slug ? (
+                    <li>
+                      <Link href={`/category/${article.category_slug}`}>
+                        More {article.category_name} guides
+                      </Link>
+                      <span>Category</span>
+                    </li>
+                  ) : null}
+                </ul>
               </section>
             ) : null}
 
