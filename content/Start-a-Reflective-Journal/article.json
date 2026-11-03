@@ -43,7 +43,7 @@
           "title": "Decide what the journal is for",
           "body": "A journal for a course, a journal for work decisions and a journal for sorting out your own head need different things. Name the purpose in one sentence before you buy anything, because that sentence decides the format, the length and how honest you can afford to be. If the entries will ever be assessed or read by somebody else, decide that now rather than later.",
           "tip": "Write the purpose on the inside cover. It is the thing you will forget first and need most.",
-          "imageTodo": {
+          "image": {
             "base": "01-decide-the-purpose",
             "alt": "A person in a stationery shop holding a plain notebook open at a blank page, considering it, with shelves of notebooks behind."
           }
@@ -52,7 +52,7 @@
           "title": "Choose paper or screen deliberately",
           "body": "Paper is slower, which suits reflection, and it cannot sync itself to a shared family account. A file is searchable, back-uppable and easier to keep private behind a passcode. Neither is better in the abstract. Pick the one that matches where you actually are when the thinking happens, and accept the trade-off that comes with it.",
           "tip": "If you choose a file, keep it out of shared folders and photo backups. Journals leak through convenience, not hacking.",
-          "imageTodo": {
+          "image": {
             "base": "02-paper-or-screen",
             "alt": "A plain notebook and a tablet with a blank glowing screen lying side by side on a wooden desk, a pen between them."
           }
@@ -61,7 +61,7 @@
           "title": "Attach it to something you already do",
           "body": "New habits survive when they ride on old ones. Put the journal where the trigger is — beside the kettle, in the bag you take to the train, on the bedside table — and write immediately after a fixed event rather than at a fixed time. After the commute, after the kids are down, after you close the laptop on Friday.",
           "tip": "The notebook has to be visible and open-able in one move. A journal inside a drawer inside a bag never gets written in.",
-          "imageTodo": {
+          "image": {
             "base": "03-attach-to-a-habit",
             "alt": "A kitchen worktop in the early morning with a steaming kettle, a mug and a closed notebook with a pen clipped to it waiting beside them."
           }
@@ -70,7 +70,7 @@
           "title": "Start with ten minutes, not a vow",
           "body": "Most abandoned journals were started with a promise of daily entries. Begin with ten minutes, twice a week, on the understanding that a short entry is a real entry. Length is not a measure of insight: four sentences that name a situation and a decision beat two pages of narration you will never reread.",
           "tip": "Set a timer and stop when it goes, even mid-thought. Leaving something unfinished makes the next session easier to start.",
-          "imageTodo": {
+          "image": {
             "base": "04-start-small",
             "alt": "A person sitting on a sofa with a notebook on their lap and a small sand timer running on the arm of the sofa beside them."
           }
@@ -79,7 +79,7 @@
           "title": "Decide the privacy rules first",
           "body": "Edinburgh's guidance is blunt about this: private reflection can take any form you like, and you should never share something you are not comfortable sharing. Decide who could read this, what you will do if someone does, and whether certain material — other people's health, a colleague's disclosure — belongs in it at all.",
           "tip": "If you need to write about something you would never want read, write it on loose paper and destroy it. Not everything has to be archived.",
-          "imageTodo": {
+          "image": {
             "base": "05-privacy-rules",
             "alt": "Hands placing a closed notebook into a bedside drawer, the drawer half open and a lamp glowing above."
           }
@@ -94,7 +94,7 @@
           "title": "Use what, so what, now what",
           "body": "Driscoll's model, built on Borton's three questions, is the easiest structure to remember and hard to beat: what happened, what does it mean, what will I do. Three short paragraphs. It fits any subject, from a tutorial that went badly to a conversation you handled well, and it stops an entry from turning into a complaint.",
           "tip": "Write the three headings before you write anything else. The empty middle section is what forces the thinking.",
-          "imageTodo": {
+          "image": {
             "base": "06-three-questions",
             "alt": "An open notebook page divided into three blocks of soft wavy handwriting marks, a hand resting at the edge of the page."
           }
@@ -103,7 +103,7 @@
           "title": "Get the facts down before the feelings take over",
           "body": "The what section is description: the context, what you were trying to achieve, what you actually did, what others did, how it ended, and the feelings it produced. Keep the account close to what a camera would have recorded, then add how it felt. Mixing the two makes it impossible to tell later whether your reading of the event was fair.",
           "tip": "Name the feeling plainly — irritated, relieved, humiliated. Vague words produce vague conclusions.",
-          "imageTodo": {
+          "image": {
             "base": "07-facts-first",
             "alt": "A person writing in a notebook balanced on their knee on a train, countryside blurring past the window beside them."
           }
@@ -112,7 +112,7 @@
           "title": "Ask so what, and answer it honestly",
           "body": "This is the part people skip. What does the episode tell you about how you work? What were you basing your decision on at the time, and what did you not know? Is there a reading, a theory or a rule of thumb that explains it better than your first interpretation? Bring in an outside idea here; it is the difference between a diary and a reflection.",
           "tip": "Write the sentence you would least like to be true, then decide whether it is. That is usually where the learning sits.",
-          "imageTodo": {
+          "image": {
             "base": "08-ask-so-what",
             "alt": "A person sitting on a park bench with a notebook, pen paused above the page, looking up into the trees while thinking."
           }
@@ -121,7 +121,7 @@
           "title": "Finish with a concrete now what",
           "body": "Edinburgh's toolkit warns against action plans that say only I will do better next time. Write what you will do, when, and how you will remind yourself: I will send the draft to Priya by Thursday and set a reminder on Tuesday. A reflection without a specific next action is a well-written shrug.",
           "tip": "If the action needs another person, name them and say when you will ask. Plans that depend on an unnamed someone do not happen.",
-          "imageTodo": {
+          "image": {
             "base": "09-concrete-next-step",
             "alt": "A hand pinning a small blank card to a corkboard above a desk, beside a calendar page with no writing on it."
           }
@@ -130,7 +130,7 @@
           "title": "Change the frame when entries get samey",
           "body": "The Reflection Toolkit lists several alternatives: Gibbs' six-stage cycle, the four F's of active reviewing — facts, feelings, findings, future — and CARL, which runs context, action, results, learning. Switching models every few weeks forces different questions and stops your journal becoming a template you fill in without thinking.",
           "tip": "Keep one framework for a whole month before judging it. Rotating every entry just produces confusion.",
-          "imageTodo": {
+          "image": {
             "base": "10-change-the-frame",
             "alt": "Two notebooks open side by side on a desk, one page ruled into boxes and the other in plain lines, both filled with wavy handwriting marks."
           }
@@ -145,7 +145,7 @@
           "title": "Write to yourself, not to an audience",
           "body": "Marcus Aurelius wrote what later editors called the Meditations for nobody but himself; the Greek title means, roughly, to himself. Scholars read it as self-instruction — reminders of principles he wanted ready when circumstances demanded them. Writing for an imagined reader produces performance. Writing to yourself produces the sentence you need to hear.",
           "tip": "If you catch yourself explaining background that you already know, you have started writing for an audience. Cut it.",
-          "imageTodo": {
+          "image": {
             "base": "11-write-to-yourself",
             "alt": "A person writing by lamplight at a desk at night, head bent over an open notebook with rows of wavy handwriting marks."
           }
@@ -154,7 +154,7 @@
           "title": "Keep a page of rules you are testing",
           "body": "Epictetus told his students to write down the responses they wanted to have, so the words would be ready to hand when they were needed. Keep one page for the short rules you are currently testing — ask before assuming, do not answer an email angry — and revisit them. A principle you cannot state in a line is not yet usable.",
           "tip": "Date each rule. Some will look wise in March and ridiculous by June, which is itself worth knowing.",
-          "imageTodo": {
+          "image": {
             "base": "12-rules-you-are-testing",
             "alt": "A hand copying a short line of wavy handwriting marks onto a small blank card that will fit inside a wallet."
           }
@@ -163,7 +163,7 @@
           "title": "Date everything and leave hooks for later",
           "body": "Put the date at the top of every entry and a two-word label in the margin — teaching, money, sleep, Dad. Labels are what make a year of entries searchable by hand. They also reveal volume: if nine entries in a row carry the same label, that subject is asking for a decision rather than more writing.",
           "tip": "Coloured tabs on the page edge do the same job in a paper notebook, with no need to index anything.",
-          "imageTodo": {
+          "image": {
             "base": "13-date-and-label",
             "alt": "Fingers pressing small coloured tabs onto the edges of notebook pages, several tabs already in place along the page block."
           }
@@ -172,7 +172,7 @@
           "title": "Reread at the end of each month",
           "body": "Set aside twenty minutes a month to read the last few entries in order, which is the only way the patterns show up. Look for repeated situations, promises you made and did not keep, and the ones you did. Scholars note that even the Meditations reads as scattered aphorisms until you look for the recurring concerns underneath; your own journal is no different.",
           "tip": "Write a short entry about the rereading itself. The monthly summary is usually the most useful page in the book.",
-          "imageTodo": {
+          "image": {
             "base": "14-reread-monthly",
             "alt": "A person at a kitchen table turning back through earlier notebook pages, one finger tracking down a page of wavy handwriting marks."
           }
@@ -181,9 +181,9 @@
           "title": "Know the line between reflecting and ruminating",
           "body": "Reflection moves: it ends with an interpretation or an action. Rumination circles the same pain in the same words and leaves you lower than it found you. If an entry has no new sentence in it, close the book and go for a walk. If several weeks of entries do that, talk to someone rather than writing more.",
           "tip": "A useful test: could you summarise the entry in one line that was not true before you wrote it? If not, stop for today.",
-          "imageTodo": {
+          "image": {
             "base": "15-reflection-not-rumination",
-            "alt": "A person closing a notebook on a table and standing up to put on a coat, with a front door and daylight beyond."
+            "alt": "A notebook lying closed on a side table while a person lifts a coat from a hook by the open front door, daylight and a garden path beyond."
           }
         }
       ]
@@ -265,7 +265,7 @@
     "note": "Four journal sentences to sort into description, interpretation or action, including one that looks like an action plan but commits to nothing."
   },
   "publishing": {
-    "status": "draft",
+    "status": "ready-for-review",
     "author": "Editorial draft",
     "reviewer": "",
     "datePublished": null,
@@ -273,33 +273,17 @@
     "readingTimeMinutes": 9,
     "wordCount": null,
     "internalLinkCount": 4,
-    "imageCount": 0,
-    "imagePending": 16,
+    "imageCount": 16,
+    "imagePending": 0,
     "expertReviewed": false,
     "reviewNote": "Reflective practice with mental health adjacency. Before publication a counsellor or reflective-practice educator should review the rumination and trauma warnings, and the privacy advice should be checked against the data protection expectations of the publishing country.",
     "imageNote": "Illustrations are drawn for this guide only."
   },
   "imageStatus": {
-    "heroReady": false,
-    "stepImagesReady": 0,
-    "stepImagesPending": [
-      "01-decide-the-purpose",
-      "02-paper-or-screen",
-      "03-attach-to-a-habit",
-      "04-start-small",
-      "05-privacy-rules",
-      "06-three-questions",
-      "07-facts-first",
-      "08-ask-so-what",
-      "09-concrete-next-step",
-      "10-change-the-frame",
-      "11-write-to-yourself",
-      "12-rules-you-are-testing",
-      "13-date-and-label",
-      "14-reread-monthly",
-      "15-reflection-not-rumination"
-    ],
-    "note": "Illustrations in progress for this guide."
+    "heroReady": true,
+    "stepImagesReady": 15,
+    "stepImagesPending": [],
+    "note": "All illustrations drawn for this guide."
   },
   "dateModified": "2026-11-03"
 }
