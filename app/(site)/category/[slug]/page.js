@@ -30,21 +30,19 @@ function resolveCategoryView(rawSlug) {
     const enrich = getPrimaryEnrichment(primary.slug);
     const pool = enrich.showcaseArticles || ARTS_ARTICLES;
 
-    const combined = [
-      ...dbArticles.map((a) => ({
-        slug: a.slug,
-        title: a.title,
-        kicker: "How to",
-        hero_image: a.hero_image || "idea",
-        image: a.first_step_image || "",
-        expert: true,
-        featured: Boolean(a.featured),
-      })),
-    ];
+    const combined = [...pool];
 
-    for (const extra of pool) {
-      if (!combined.some((x) => x.slug === extra.slug)) {
-        combined.push(extra);
+    for (const a of dbArticles) {
+      if (!combined.some((x) => x.slug === a.slug)) {
+        combined.push({
+          slug: a.slug,
+          title: a.title,
+          kicker: "How to",
+          hero_image: a.hero_image || "idea",
+          image: a.first_step_image || "",
+          expert: true,
+          featured: false,
+        });
       }
     }
 
