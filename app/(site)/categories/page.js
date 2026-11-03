@@ -85,7 +85,7 @@ export default function CategoriesPage() {
 
         <div style={{ display: "grid", gap: 30 }}>
           {categories.map((c) => {
-            const articles = listArticles({ categoryId: c.id, limit: 4 });
+            const articles = listArticles({ categoryId: c.id, limit: 8 });
             const enrich = getPrimaryEnrichment(c.slug);
             return (
               <section key={c.id} className="wk-card" style={{ padding: 22 }}>

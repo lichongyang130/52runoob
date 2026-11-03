@@ -99,7 +99,7 @@ export async function generateMetadata({ params }) {
   };
 }
 
-const PAGE_SIZE = 12;
+const PAGE_SIZE = 20;
 
 function CategoryArticleTile({ item }) {
   return (
