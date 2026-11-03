@@ -270,6 +270,7 @@ class InventoryTests(unittest.TestCase):
             ("Set-a-Personal-Boundary", "Relationships"),
             ("Handle-a-Disagreement-Calmly", "Relationships"),
             ("Ask-for-Feedback-in-a-Relationship", "Relationships"),
+            ("Start-a-Reflective-Journal", "Philosophy and Religion"),
         ):
             with self.subTest(slug=slug):
                 directory = ROOT / "content" / slug
@@ -458,6 +459,7 @@ class BundleTests(unittest.TestCase):
         "Set-a-Personal-Boundary",
         "Handle-a-Disagreement-Calmly",
         "Ask-for-Feedback-in-a-Relationship",
+        "Start-a-Reflective-Journal",
     )
 
     def test_bundle_matches_the_single_article_packages_exactly(self):

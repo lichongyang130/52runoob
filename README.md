@@ -42,7 +42,8 @@
 - `content/Set-a-Personal-Boundary/`（Relationships）：15 步英文稿，16 张插画全部为本文新制，体检 0 error；资料取自 Mayo Clinic《Being assertive》、Mary Immaculate College 学生咨询处的果断沟通自助表（when you/I feel/I would prefer 脚本与 broken record、fogging、defusing 技巧）、密歇根州立大学推广站《When boundaries are crossed》与 HelpGuide 的边界类型说明；素材包 `downloads/Set-a-Personal-Boundary-Upload.zip`。涉及人际与心理健康，须咨询师或心理师复核，强制控制关系与职场章节须按出版国的家暴服务与雇佣实务改写，未发布。
 - `content/Handle-a-Disagreement-Calmly/`（Relationships）：15 步英文稿，16 张插画全部为本文新制，体检 0 error；资料取自美国心理学会《Control anger before it controls you》（宣泄会升级愤怒、认知重构、禁用 never/always）、加州大学伯克利分校人力资源指南《Resolving Conflict Situations》（先找需要再找方案、达成最小共识、两周复盘）与哈佛法学院谈判项目《What is Conflict Resolution, and How Does It Work?》（自利式公平、过度自信、沉没成本加注、回避四类陷阱）；素材包 `downloads/Handle-a-Disagreement-Calmly-Upload.zip`。涉及人际冲突与愤怒管理，须咨询师、调解员或心理师复核，安全警示须按出版国的家暴服务与雇佣实务改写，未发布。
 - `content/Ask-for-Feedback-in-a-Relationship/`（Relationships）：15 步英文稿，16 张插画全部为本文新制，体检 0 error；资料取自美国心理学会《Speaking of Psychology》第 381 集（罗切斯特大学 Harry Reis 谈「被爱」与「觉得被爱」的差别，以及要判决式的问法必然引发反弹）、第 386 集（海法大学 Guy Itzchakov 谈高质量倾听如何降低防御）与创新领导力中心的 SBI／SBII 反馈模型（情境-行为-影响，再问意图）；素材包 `downloads/Ask-for-Feedback-in-a-Relationship-Upload.zip`。涉及亲密关系与心理健康，须咨询师或伴侣治疗师复核，虐待关系警示须按出版国的家暴服务改写，未发布。**本篇只提供单篇包，未并入增量包。**
-- 其余 71 篇为选题，尚未完成正文与配图。`expanded-plan.csv` 是进度记录，不要将选题当成成品。
+- `content/Start-a-Reflective-Journal/`（Philosophy and Religion）：15 步英文稿，16 张插画全部为本文新制，体检 0 error；资料取自爱丁堡大学 Reflection Toolkit 的反思模型总览与 What? So what? Now what?（Driscoll 1994，承 Borton 1970）以及斯坦福哲学百科《Marcus Aurelius》《Stoicism》（《沉思录》是写给自己的自我训诫，爱比克泰德主张每天写下备用的应对）；素材包 `downloads/Start-a-Reflective-Journal-Upload.zip`。涉及反思写作与心理健康邻域，须咨询师或反思实践教育者复核反刍与创伤警示，隐私建议须按出版国的数据保护惯例核对，未发布。**本篇只提供单篇包，未并入增量包。**
+- 其余 70 篇为选题，尚未完成正文与配图。`expanded-plan.csv` 是进度记录，不要将选题当成成品。
 - `content/Keep-Running-Through-Winter/`：此前制作的旧版 12 步样稿及 13 张插画；其原素材包为 `downloads/Winter-Running-Upload.zip`。公开网站的分类和详情页现已显示该稿，但旧稿不计入本批 15–20 步的新稿目标。
 
 ## 生产规范
