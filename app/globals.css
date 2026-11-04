@@ -2997,12 +2997,29 @@ p { margin: 0 0 1em; }
 }
 
 /* ============================ Header Log in hover dropdown ============================ */
-.wk-login-wrap {
+.wk-header {
+  overflow: visible !important;
+  z-index: 900 !important;
+}
+.wk-header-inner {
   position: relative;
-  display: flex;
-  align-items: center;
+  z-index: 950;
+  overflow: visible !important;
+}
+.wk-catbar {
+  position: relative;
+  z-index: 1;
 }
 
+.wk-login-wrap {
+  position: relative;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  padding: 6px 2px;
+}
+
+.wk-login-wrap:hover .wk-action-login .wk-action-icon,
 .wk-login-wrap .wk-action-login.is-open .wk-action-icon {
   opacity: 1;
   transform: translateY(-1px);
@@ -3010,15 +3027,15 @@ p { margin: 0 0 1em; }
 
 .wk-login-dropdown {
   position: absolute;
-  top: calc(100% + 10px);
+  top: calc(100% + 6px);
   right: -12px;
   width: 266px;
-  background: #ffffff;
-  border: 1px solid #e2e6df;
+  background: #fcf8f0;
+  border: 1px solid #dfd1b8;
   border-radius: 6px;
-  box-shadow: 0 12px 30px rgba(22, 32, 22, 0.18);
+  box-shadow: 0 14px 34px rgba(42, 28, 14, 0.24);
   padding: 18px 22px 18px;
-  z-index: 85;
+  z-index: 1001;
   visibility: hidden;
   opacity: 0;
   transform: translateY(-6px);
@@ -3027,11 +3044,23 @@ p { margin: 0 0 1em; }
   text-align: left;
 }
 
+/* Invisible hover bridge so moving the cursor from "Log in" down to the panel never drops :hover */
+.wk-login-dropdown::before {
+  content: "";
+  position: absolute;
+  top: -18px;
+  left: -12px;
+  right: -12px;
+  height: 18px;
+}
+
+.wk-login-wrap:hover .wk-login-dropdown,
+.wk-login-dropdown:hover,
 .wk-login-dropdown.is-open {
-  visibility: visible;
-  opacity: 1;
-  transform: translateY(0);
-  pointer-events: auto;
+  visibility: visible !important;
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+  pointer-events: auto !important;
 }
 
 .wk-login-title {

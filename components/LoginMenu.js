@@ -79,6 +79,9 @@ export default function LoginMenu() {
 
   const show = () => {
     clearTimer();
+    if (typeof window !== "undefined") {
+      window.dispatchEvent(new CustomEvent("wk-close-explore"));
+    }
     setOpen(true);
   };
 
@@ -109,7 +112,7 @@ export default function LoginMenu() {
 
   return (
     <div
-      className="wk-login-wrap wk-hide-sm"
+      className="wk-login-wrap"
       ref={wrapRef}
       onMouseEnter={show}
       onMouseLeave={scheduleHide}

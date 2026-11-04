@@ -69,25 +69,39 @@ export default function ExploreMenu({ allCategories = [] }) {
   const [open, setOpen] = useState(false);
   const wrapRef = useRef(null);
   const closeTimer = useRef(null);
+  const openTimer = useRef(null);
 
   const clearTimer = () => {
     if (closeTimer.current) {
       clearTimeout(closeTimer.current);
       closeTimer.current = null;
     }
+    if (openTimer.current) {
+      clearTimeout(openTimer.current);
+      openTimer.current = null;
+    }
   };
 
   const show = () => {
     clearTimer();
-    setOpen(true);
+    openTimer.current = setTimeout(() => setOpen(true), 70);
   };
 
   /* Small grace period so the pointer can travel from the trigger into the
      panel without the menu flickering shut. */
   const scheduleHide = () => {
     clearTimer();
-    closeTimer.current = setTimeout(() => setOpen(false), 140);
+    closeTimer.current = setTimeout(() => setOpen(false), 120);
   };
+
+  useEffect(() => {
+    const onCloseExplore = () => {
+      clearTimer();
+      setOpen(false);
+    };
+    window.addEventListener('wk-close-explore', onCloseExplore);
+    return () => window.removeEventListener('wk-close-explore', onCloseExplore);
+  }, []);
 
   useEffect(() => {
     if (!open) return;
