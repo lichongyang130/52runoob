@@ -20,6 +20,29 @@ const BADGE_BY_CATEGORY = {
   "Work-World": "Review",
 };
 
+const CAT_ICON_BY_SLUG = {
+  "Arts-and-Entertainment": "/img/cat-icons/arts.jpg",
+  "Food-and-Entertaining": "/img/cat-icons/food.jpg",
+  "Finance-and-Business": "/img/cat-icons/finance.jpg",
+  Health: "/img/cat-icons/health.jpg",
+  "Hobbies-and-Crafts": "/img/cat-icons/hobbies.jpg",
+  "Home-and-Garden": "/img/cat-icons/home.jpg",
+  "Pets-and-Animals": "/img/cat-icons/pets.jpg",
+  "Work-World": "/img/cat-icons/work.jpg",
+  "Computers-and-Electronics": "/img/cat-icons/computers.jpg",
+  "Education-and-Communications": "/img/cat-icons/education.jpg",
+  "Family-Life": "/img/cat-icons/family.jpg",
+  "Sports-and-Fitness": "/img/cat-icons/sports.jpg",
+  "Cars-and-Other-Vehicles": "/img/cat-icons/cars.jpg",
+  "Holidays-and-Traditions": "/img/cat-icons/holidays.jpg",
+  "Personal-Care-and-Style": "/img/cat-icons/style.jpg",
+  "Philosophy-and-Religion": "/img/cat-icons/philosophy.jpg",
+  Relationships: "/img/cat-icons/relationships.jpg",
+  "Relationship-Quizzes": "/img/cat-icons/quizzes.jpg",
+  Travel: "/img/cat-icons/travel.jpg",
+  Youth: "/img/cat-icons/youth.jpg",
+};
+
 export default function HomePage() {
   /* Homepage showcases categories that actually have articles, most-filled
      first — empty ones stay reachable from /categories and the Explore menu. */
@@ -222,11 +245,12 @@ export default function HomePage() {
                 href={`/category/${c.slug}`}
                 className="wk-cat-card"
               >
-                <span
-                  className="wk-cat-emoji"
-                  style={{ background: `${c.color}22` }}
-                >
-                  {c.emoji}
+                <span className="wk-cat-emoji">
+                  <img
+                    src={CAT_ICON_BY_SLUG[c.slug] || "/img/cat-icons/arts.jpg"}
+                    alt={c.name}
+                    className="wk-cat-icon-img"
+                  />
                 </span>
                 <span className="wk-cat-text">
                   <strong>{c.name}</strong>

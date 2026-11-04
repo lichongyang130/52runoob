@@ -11,15 +11,38 @@ export const metadata = {
 };
 
 const POPULAR_SUBCATEGORIES = [
-  { name: "Games", slug: "Games", parent: "Hobbies and Crafts", emoji: "🎲" },
-  { name: "Drawing", slug: "Drawing", parent: "Hobbies and Crafts", emoji: "✏️" },
-  { name: "Crafts", slug: "Crafts", parent: "Hobbies and Crafts", emoji: "🧶" },
-  { name: "Board Games", slug: "Board-Games", parent: "Games", emoji: "♟️" },
-  { name: "Card Games", slug: "Card-Games", parent: "Games", emoji: "🃏" },
-  { name: "Party Games", slug: "Party-Games", parent: "Games", emoji: "🎉" },
-  { name: "Computers", slug: "Computers", parent: "Computers and Electronics", emoji: "💻" },
-  { name: "Houseplants", slug: "Houseplants", parent: "Home and Garden", emoji: "🪴" },
+  { name: "Games", slug: "Games", parent: "Hobbies and Crafts", icon: "/img/cat-icons/games.jpg" },
+  { name: "Drawing", slug: "Drawing", parent: "Hobbies and Crafts", icon: "/img/cat-icons/drawing.jpg" },
+  { name: "Crafts", slug: "Crafts", parent: "Hobbies and Crafts", icon: "/img/cat-icons/crafts.jpg" },
+  { name: "Board Games", slug: "Board-Games", parent: "Games", icon: "/img/cat-icons/boardgames.jpg" },
+  { name: "Card Games", slug: "Card-Games", parent: "Games", icon: "/img/cat-icons/cardgames.jpg" },
+  { name: "Party Games", slug: "Party-Games", parent: "Games", icon: "/img/cat-icons/partygames.jpg" },
+  { name: "Computers", slug: "Computers", parent: "Computers and Electronics", icon: "/img/cat-icons/computers.jpg" },
+  { name: "Houseplants", slug: "Houseplants", parent: "Home and Garden", icon: "/img/cat-icons/home.jpg" },
 ];
+
+const CAT_ICON_BY_SLUG = {
+  "Arts-and-Entertainment": "/img/cat-icons/arts.jpg",
+  "Food-and-Entertaining": "/img/cat-icons/food.jpg",
+  "Finance-and-Business": "/img/cat-icons/finance.jpg",
+  Health: "/img/cat-icons/health.jpg",
+  "Hobbies-and-Crafts": "/img/cat-icons/hobbies.jpg",
+  "Home-and-Garden": "/img/cat-icons/home.jpg",
+  "Pets-and-Animals": "/img/cat-icons/pets.jpg",
+  "Work-World": "/img/cat-icons/work.jpg",
+  "Computers-and-Electronics": "/img/cat-icons/computers.jpg",
+  "Education-and-Communications": "/img/cat-icons/education.jpg",
+  "Family-Life": "/img/cat-icons/family.jpg",
+  "Sports-and-Fitness": "/img/cat-icons/sports.jpg",
+  "Cars-and-Other-Vehicles": "/img/cat-icons/cars.jpg",
+  "Holidays-and-Traditions": "/img/cat-icons/holidays.jpg",
+  "Personal-Care-and-Style": "/img/cat-icons/style.jpg",
+  "Philosophy-and-Religion": "/img/cat-icons/philosophy.jpg",
+  Relationships: "/img/cat-icons/relationships.jpg",
+  "Relationship-Quizzes": "/img/cat-icons/quizzes.jpg",
+  Travel: "/img/cat-icons/travel.jpg",
+  Youth: "/img/cat-icons/youth.jpg",
+};
 
 export default function CategoriesPage() {
   const categories = listMainCategories();
@@ -68,11 +91,12 @@ export default function CategoriesPage() {
                 href={`/category/${s.slug}`}
                 className="wk-cat-card"
               >
-                <span
-                  className="wk-cat-emoji"
-                  style={{ background: "rgba(124, 179, 66, 0.14)" }}
-                >
-                  {s.emoji}
+                <span className="wk-cat-emoji">
+                  <img
+                    src={s.icon}
+                    alt={s.name}
+                    className="wk-cat-icon-img"
+                  />
                 </span>
                 <span className="wk-cat-text">
                   <strong>{s.name}</strong>
@@ -93,11 +117,12 @@ export default function CategoriesPage() {
                   <div
                     style={{ display: "flex", gap: 12, alignItems: "center" }}
                   >
-                    <span
-                      className="cat-emoji"
-                      style={{ background: `${c.color}1f` }}
-                    >
-                      {c.emoji}
+                    <span className="cat-emoji wk-cat-emoji">
+                      <img
+                        src={CAT_ICON_BY_SLUG[c.slug] || "/img/cat-icons/arts.jpg"}
+                        alt={c.name}
+                        className="wk-cat-icon-img"
+                      />
                     </span>
                     <div>
                       <h2 style={{ margin: 0, fontSize: "1.3rem" }}>

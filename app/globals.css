@@ -3718,4 +3718,28 @@ h1, h2, h3, h4 {
   background: #f2e5ce;
 }
 
+/* --- Oil-Painting Category Icon Emblems (.wk-cat-emoji & .wk-cat-icon-img) --- */
+.wk-cat-emoji,
+.cat-emoji {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 2px;
+  background: linear-gradient(145deg, #d7b274, #9c6b31) !important;
+  box-shadow: 0 2px 7px rgba(45, 28, 12, 0.18);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.wk-cat-icon-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+}
+
+
 
