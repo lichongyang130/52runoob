@@ -10,6 +10,8 @@ import {
   SidebarStarRating,
   HelpfulBox,
   CommentList,
+  StepProgressTracker,
+  StepCheckButton,
 } from "../../../../components/ArticleInteractions";
 import ReadingProgress from "../../../../components/ReadingProgress";
 import {
@@ -249,6 +251,15 @@ export default async function ArticlePage({ params }) {
             {/* Download PDF / Share / Preferred Source Buttons */}
             <ArticleActionButtons title={article.title} />
 
+            {/* Interactive Step Completion Progress Tracker */}
+            <StepProgressTracker
+              slug={article.slug}
+              totalSteps={article.methods.reduce(
+                (acc, m) => acc + (m.steps?.length || 0),
+                0
+              )}
+            />
+
             {/* Intro Paragraph with inline links to methods */}
             <p className="wk-intro-p">
               {article.intro || article.summary}{" "}
@@ -405,6 +416,13 @@ export default async function ArticlePage({ params }) {
                               ))}
                             </ul>
                           ) : null}
+
+                          <div className="wk-step-check-row">
+                            <StepCheckButton
+                              slug={article.slug}
+                              stepNumber={n}
+                            />
+                          </div>
                         </div>
                       </div>
                     </div>

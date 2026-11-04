@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ArticleCard } from "../../../components/ArticleCard";
 import { searchArticles, listMainCategories } from "../../../lib/queries";
+import { getCatIcon } from "../../../lib/cat-icons";
 
 export const dynamic = "force-dynamic";
 
@@ -49,7 +50,9 @@ export default async function SearchPage({ searchParams }) {
 
         {q && results.length === 0 ? (
           <div className="empty">
-            <span className="big">🔍</span>
+            <span className="wk-cat-emoji" style={{ margin: "0 auto 12px" }}>
+              <img src="/img/cat-icons/travel.jpg" alt="" className="wk-cat-icon-img" />
+            </span>
             <h3>No results for “{q}”</h3>
             <p>Try a broader phrase, like “pasta”, “garden”, or “resume”.</p>
             <div
@@ -83,22 +86,23 @@ export default async function SearchPage({ searchParams }) {
             <h2 style={{ fontSize: "1.3rem", marginBottom: 14 }}>
               Popular categories
             </h2>
-            <div className="cat-grid">
+            <div className="wk-cat-grid">
               {categories.map((c) => (
                 <Link
                   key={c.id}
                   href={`/category/${c.slug}`}
-                  className="cat-card"
+                  className="wk-cat-card"
                 >
-                  <span
-                    className="cat-emoji"
-                    style={{ background: `${c.color}1f` }}
-                  >
-                    {c.emoji}
+                  <span className="wk-cat-emoji">
+                    <img
+                      src={getCatIcon(c.slug)}
+                      alt={c.name}
+                      className="wk-cat-icon-img"
+                    />
                   </span>
-                  <span>
-                    <h3>{c.name}</h3>
-                    <span className="count">{c.article_count} how-tos</span>
+                  <span className="wk-cat-text">
+                    <strong>{c.name}</strong>
+                    <span>{c.article_count} how-tos</span>
                   </span>
                 </Link>
               ))}

@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Illustration } from "../../components/Illustration";
 import BooksIllustration from "../../components/BooksIllustration";
 import { MiniCard } from "../../components/ArticleCard";
+import SearchAutocomplete from "../../components/SearchAutocomplete";
 import {
   listMainCategories,
   listArticles,
@@ -67,61 +68,33 @@ export default function HomePage() {
             </h1>
             <p className="wk-hero-sub">What will you learn on Howcompass today?</p>
 
-            <form
-              className="wk-hero-search"
-              action="/search"
-              method="get"
-              role="search"
-            >
-              <svg
-                viewBox="0 0 24 24"
-                aria-hidden="true"
-                className="wk-search-icon"
-              >
-                <circle
-                  cx="11"
-                  cy="11"
-                  r="7"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                />
-                <path
-                  d="M16.5 16.5L21 21"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                />
-              </svg>
-              <input
-                type="search"
-                name="q"
-                placeholder="Search how to..."
-                aria-label="Search how to"
-              />
-              <button type="submit">Search</button>
-            </form>
+            <SearchAutocomplete variant="hero" placeholder="Search how to..." />
 
-            <Link href="/random" className="wk-dice">
-              Roll the Compass
-              <svg viewBox="0 0 24 24" aria-hidden="true">
-                <rect
-                  x="3.5"
-                  y="3.5"
-                  width="17"
-                  height="17"
-                  rx="4"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="1.8"
-                />
-                <circle cx="8.5" cy="8.5" r="1.5" fill="currentColor" />
-                <circle cx="15.5" cy="8.5" r="1.5" fill="currentColor" />
-                <circle cx="12" cy="12" r="1.5" fill="currentColor" />
-                <circle cx="8.5" cy="15.5" r="1.5" fill="currentColor" />
-                <circle cx="15.5" cy="15.5" r="1.5" fill="currentColor" />
-              </svg>
-            </Link>
+            <div className="wk-hero-quicklinks">
+              <Link href="/random" className="wk-dice">
+                Roll the Compass
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <rect
+                    x="3.5"
+                    y="3.5"
+                    width="17"
+                    height="17"
+                    rx="4"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.8"
+                  />
+                  <circle cx="8.5" cy="8.5" r="1.5" fill="currentColor" />
+                  <circle cx="15.5" cy="8.5" r="1.5" fill="currentColor" />
+                  <circle cx="12" cy="12" r="1.5" fill="currentColor" />
+                  <circle cx="8.5" cy="15.5" r="1.5" fill="currentColor" />
+                  <circle cx="15.5" cy="15.5" r="1.5" fill="currentColor" />
+                </svg>
+              </Link>
+              <Link href="/quizzes" className="wk-dice">
+                Interactive Quizzes →
+              </Link>
+            </div>
           </div>
 
           <div className="wk-hero-art">
@@ -259,6 +232,141 @@ export default function HomePage() {
                   </span>
                 </span>
               </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ------------------- Editor's Curated Collections ------------------- */}
+      <section className="wk-section wk-section-tint">
+        <div className="container">
+          <div className="wk-section-head">
+            <h2>Editor’s Curated Collections</h2>
+            <Link href="/quizzes" className="wk-more">
+              Test your skills in our Quizzes
+              <span aria-hidden="true">›</span>
+            </Link>
+          </div>
+
+          <div className="wk-collections-grid">
+            {[
+              {
+                tag: "Atelier & Creative Craft",
+                title: "The European Studio & Sketchbook Series",
+                desc: "Master classical sight-size proportion, chiaroscuro shading, woodworking joinery, and travel sketching.",
+                banner: "/img/steps/Learn-to-Draw-for-Beginners/24.jpg",
+                links: [
+                  { label: "How to Learn to Draw for Beginners (24 Steps)", href: "/how-to/Learn-to-Draw-for-Beginners" },
+                  { label: "How to Start Woodworking and Paper Crafts (22 Steps)", href: "/how-to/Start-Woodworking-and-Paper-Crafts-at-Home" },
+                  { label: "How to Keep a Daily Visual Sketchbook Diary", href: "/how-to/Keep-a-Daily-Visual-Sketchbook-Diary-While-Traveling" },
+                ],
+              },
+              {
+                tag: "Hearth, Home & Sanctuary",
+                title: "Artisan Kitchen & Sunlit Conservatory",
+                desc: "From wild-fermented Dutch-oven boules and family dinner rituals to thriving indoor botanicals.",
+                banner: "/img/steps/Bake-Bread-at-Home/22.jpg",
+                links: [
+                  { label: "How to Bake Bread at Home (23 Steps)", href: "/how-to/Bake-Bread-at-Home" },
+                  { label: "How to Keep Houseplants Alive (25 Steps)", href: "/how-to/Keep-Houseplants-Alive" },
+                  { label: "How to Build Happy Family Routines (22 Steps)", href: "/how-to/Build-Happy-Family-Routines" },
+                ],
+              },
+              {
+                tag: "Mind, Career & Digital Craft",
+                title: "Scholar’s Study & Modern Mastery",
+                desc: "Evidence-based active recall, personal finance systems, laptop optimization, and career leadership.",
+                banner: "/img/steps/Study-Effectively-for-Exams/08.jpg",
+                links: [
+                  { label: "How to Study Effectively for Exams (22 Steps)", href: "/how-to/Study-Effectively-for-Exams" },
+                  { label: "How to Speed Up a Slow Laptop (25 Steps)", href: "/how-to/Speed-Up-a-Slow-Laptop" },
+                  { label: "How to Manage Personal Finances & Budget (22 Steps)", href: "/how-to/Manage-Personal-Finances-and-Budget" },
+                ],
+              },
+            ].map((col) => (
+              <div key={col.title} className="wk-collection-card">
+                <div className="wk-collection-art">
+                  <img src={col.banner} alt={col.title} />
+                  <span className="wk-collection-tag">{col.tag}</span>
+                </div>
+                <div className="wk-collection-body">
+                  <h3>{col.title}</h3>
+                  <p>{col.desc}</p>
+                  <ul className="wk-collection-links">
+                    {col.links.map((l) => (
+                      <li key={l.href}>
+                        <Link href={l.href}>{l.label} →</Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ------------------- Verified by Our Expert Guild ------------------- */}
+      <section className="wk-section">
+        <div className="container">
+          <div className="wk-section-head">
+            <h2>Verified by Our Editorial &amp; Expert Guild</h2>
+            <Link href="/about" className="wk-more">
+              Our editorial standards
+              <span aria-hidden="true">›</span>
+            </Link>
+          </div>
+
+          <div className="wk-guild-grid">
+            {[
+              {
+                name: "Clara Vance, MFA",
+                role: "Fine Arts & Classical Atelier Instructor",
+                avatar: "/img/cat-icons/arts.jpg",
+                quote: "Every drawing guide is tested on easel paper to ensure proportions, perspective lines, and tonal values are reproducible by beginners.",
+                guideHref: "/how-to/Learn-to-Draw-for-Beginners",
+                guideLabel: "Learn to Draw for Beginners",
+              },
+              {
+                name: "Chef Marco Bellini",
+                role: "Artisan Baker & Culinary Instructor",
+                avatar: "/img/cat-icons/food.jpg",
+                quote: "We verify hydration ratios, fermentation temperatures, and internal crumb targets in grams and degrees—never vague guesswork.",
+                guideHref: "/how-to/Bake-Bread-at-Home",
+                guideLabel: "Bake Bread at Home",
+              },
+              {
+                name: "Dr. Elena Rostova",
+                role: "Botanist & Horticultural Specialist",
+                avatar: "/img/cat-icons/home.jpg",
+                quote: "Understanding soil aeration, drainage physics, and window orientation transforms indoor plant care from luck into a reliable craft.",
+                guideHref: "/how-to/Keep-Houseplants-Alive",
+                guideLabel: "Keep Houseplants Alive",
+              },
+              {
+                name: "Prof. Julian Sterling",
+                role: "Cognitive Learning & Study Systems Advisor",
+                avatar: "/img/cat-icons/education.jpg",
+                quote: "Active recall, spaced repetition, and interleaved problem sets consistently outperform passive re-reading in every controlled study.",
+                guideHref: "/how-to/Study-Effectively-for-Exams",
+                guideLabel: "Study Effectively for Exams",
+              },
+            ].map((ex) => (
+              <div key={ex.name} className="wk-guild-card">
+                <div className="wk-guild-head">
+                  <span className="wk-cat-emoji">
+                    <img src={ex.avatar} alt={ex.name} className="wk-cat-icon-img" />
+                  </span>
+                  <div>
+                    <strong>{ex.name}</strong>
+                    <span>{ex.role}</span>
+                  </div>
+                </div>
+                <p>“{ex.quote}”</p>
+                <Link href={ex.guideHref} className="wk-guild-link">
+                  Reviewed: How to {ex.guideLabel} →
+                </Link>
+              </div>
             ))}
           </div>
         </div>

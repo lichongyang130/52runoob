@@ -39,10 +39,10 @@ export default function Footer({ categories = [] }) {
         <div>
           <h4>More</h4>
           <Link href="/about">About</Link>
+          <Link href="/quizzes">Interactive Quizzes</Link>
           <Link href="/about#contribute">Contribute</Link>
           <Link href="/privacy">Privacy Policy</Link>
           <Link href="/terms">Terms of Use</Link>
-          <Link href="/admin">Admin Dashboard</Link>
         </div>
       </div>
 

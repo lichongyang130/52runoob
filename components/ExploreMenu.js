@@ -35,15 +35,15 @@ const TOP_LINKS = [
   ],
   [
     { label: 'About Us', href: '/about' },
-    { label: 'Community Dashboard', href: '/admin' },
+    { label: 'All How-To Guides', href: '/how-to' },
   ],
   [
     { label: 'Random Article', href: '/random' },
-    { label: 'Forums', href: '/categories' },
+    { label: 'Browse Categories', href: '/categories' },
   ],
   [
-    { label: 'Quizzes', href: '/categories' },
-    { label: 'Community Quizzes', href: '/categories', badge: 'New' },
+    { label: 'Quizzes', href: '/quizzes' },
+    { label: 'Interactive Quizzes', href: '/quizzes', badge: 'New' },
   ],
 ];
 

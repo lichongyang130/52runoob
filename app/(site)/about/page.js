@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Illustration } from "../../../components/Illustration";
 import { adminStats, listMainCategories } from "../../../lib/queries";
+import { getCatIcon } from "../../../lib/cat-icons";
 
 export const dynamic = "force-dynamic";
 export const metadata = { title: "About Howcompass" };
@@ -14,7 +15,7 @@ export default function AboutPage() {
       <section className="hero">
         <div className="container hero-grid">
           <div>
-            <span className="hero-badge">🌱 Our mission</span>
+            <span className="hero-badge">Our mission</span>
             <h1>
               We&apos;re building the world&apos;s most useful how-to manual.
             </h1>
@@ -60,29 +61,32 @@ export default function AboutPage() {
           <div className="card-grid" style={{ marginTop: 26 }}>
             {[
               {
-                icon: "📝",
+                icon: "/img/cat-icons/education.jpg",
                 title: "1. Write",
                 body: "Someone shares the steps they actually used — including the parts that went wrong.",
               },
               {
-                icon: "✏️",
+                icon: "/img/cat-icons/drawing.jpg",
                 title: "2. Edit",
                 body: "Editors tighten the language, cut filler, and make each step one clear action.",
               },
               {
-                icon: "🎨",
+                icon: "/img/cat-icons/arts.jpg",
                 title: "3. Illustrate",
-                body: "Flat, friendly illustrations show the important detail in every step.",
+                body: "Golden-hour European oil-painted scenes illustrate the key action in every step.",
               },
               {
-                icon: "✅",
+                icon: "/img/cat-icons/philosophy.jpg",
                 title: "4. Verify",
                 body: "Facts get checked, warnings added, and readers test the steps in real life.",
               },
             ].map((c) => (
               <div key={c.title} className="panel" style={{ margin: 0 }}>
-                <h3>
-                  <span className="panel-icon">{c.icon}</span> {c.title}
+                <h3 style={{ display: "flex", alignItems: "center", gap: 10 }}>
+                  <span className="wk-cat-emoji" style={{ width: 40, height: 40 }}>
+                    <img src={c.icon} alt="" className="wk-cat-icon-img" />
+                  </span>
+                  {c.title}
                 </h3>
                 <p
                   style={{
@@ -122,8 +126,8 @@ export default function AboutPage() {
               marginTop: 18,
             }}
           >
-            <Link href="/admin/articles/new" className="btn btn-primary btn-lg">
-              Write a how-to
+            <Link href="/quizzes" className="btn btn-primary btn-lg">
+              Take an Interactive Quiz
             </Link>
             <Link href="/categories" className="btn btn-outline btn-lg">
               Browse categories
@@ -140,22 +144,23 @@ export default function AboutPage() {
           </p>
 
           <h2 style={{ marginTop: 36 }}>Categories we cover</h2>
-          <div className="cat-grid">
+          <div className="wk-cat-grid">
             {categories.map((c) => (
               <Link
                 key={c.id}
                 href={`/category/${c.slug}`}
-                className="cat-card"
+                className="wk-cat-card"
               >
-                <span
-                  className="cat-emoji"
-                  style={{ background: `${c.color}1f` }}
-                >
-                  {c.emoji}
+                <span className="wk-cat-emoji">
+                  <img
+                    src={getCatIcon(c.slug)}
+                    alt={c.name}
+                    className="wk-cat-icon-img"
+                  />
                 </span>
-                <span>
-                  <h3>{c.name}</h3>
-                  <span className="count">{c.article_count} how-tos</span>
+                <span className="wk-cat-text">
+                  <strong>{c.name}</strong>
+                  <span>{c.article_count} how-tos</span>
                 </span>
               </Link>
             ))}

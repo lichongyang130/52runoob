@@ -1,6 +1,136 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
+
+function readCompletedSteps(slug) {
+  if (typeof window === "undefined") return [];
+  try {
+    const raw = window.localStorage.getItem(`hc_steps_${slug}`);
+    const parsed = raw ? JSON.parse(raw) : [];
+    return Array.isArray(parsed) ? parsed : [];
+  } catch {
+    return [];
+  }
+}
+
+function writeCompletedSteps(slug, list) {
+  if (typeof window === "undefined") return;
+  try {
+    window.localStorage.setItem(`hc_steps_${slug}`, JSON.stringify(list));
+    window.dispatchEvent(
+      new CustomEvent("hc-steps-updated", { detail: { slug, list } })
+    );
+  } catch {
+    // ignore storage quota errors
+  }
+}
+
+export function StepProgressTracker({ slug, totalSteps = 0 }) {
+  const [done, setDone] = useState([]);
+
+  useEffect(() => {
+    setDone(readCompletedSteps(slug));
+    const onUpdate = (e) => {
+      if (e.detail?.slug === slug) {
+        setDone(e.detail.list);
+      }
+    };
+    window.addEventListener("hc-steps-updated", onUpdate);
+    return () => window.removeEventListener("hc-steps-updated", onUpdate);
+  }, [slug]);
+
+  if (!totalSteps || totalSteps < 1) return null;
+
+  const pct = Math.min(100, Math.round((done.length / totalSteps) * 100));
+
+  const toggleStep = (n) => {
+    const exists = done.includes(n);
+    const next = exists ? done.filter((x) => x !== n) : [...done, n];
+    setDone(next);
+    writeCompletedSteps(slug, next);
+  };
+
+  const resetAll = () => {
+    setDone([]);
+    writeCompletedSteps(slug, []);
+  };
+
+  return (
+    <div className="wk-step-tracker">
+      <div className="wk-step-tracker-head">
+        <div>
+          <strong>Interactive Step Checklist</strong>
+          <span>
+            {done.length} of {totalSteps} steps completed ({pct}%)
+          </span>
+        </div>
+        {done.length > 0 ? (
+          <button
+            type="button"
+            className="wk-step-tracker-reset"
+            onClick={resetAll}
+          >
+            Reset progress
+          </button>
+        ) : null}
+      </div>
+      <div className="wk-step-tracker-bar">
+        <div className="wk-step-tracker-fill" style={{ width: `${pct}%` }} />
+      </div>
+      <div className="wk-step-tracker-pills">
+        {Array.from({ length: totalSteps }, (_, idx) => {
+          const n = idx + 1;
+          const isDone = done.includes(n);
+          return (
+            <button
+              key={n}
+              type="button"
+              className={`wk-step-pill-btn ${isDone ? "is-done" : ""}`}
+              onClick={() => toggleStep(n)}
+              title={`Toggle Step ${n} completion`}
+            >
+              {isDone ? `✓ ${n}` : n}
+            </button>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
+
+export function StepCheckButton({ slug, stepNumber }) {
+  const [isDone, setIsDone] = useState(false);
+
+  useEffect(() => {
+    setIsDone(readCompletedSteps(slug).includes(stepNumber));
+    const onUpdate = (e) => {
+      if (e.detail?.slug === slug) {
+        setIsDone(e.detail.list.includes(stepNumber));
+      }
+    };
+    window.addEventListener("hc-steps-updated", onUpdate);
+    return () => window.removeEventListener("hc-steps-updated", onUpdate);
+  }, [slug, stepNumber]);
+
+  const toggle = () => {
+    const current = readCompletedSteps(slug);
+    const next = current.includes(stepNumber)
+      ? current.filter((x) => x !== stepNumber)
+      : [...current, stepNumber];
+    setIsDone(next.includes(stepNumber));
+    writeCompletedSteps(slug, next);
+  };
+
+  return (
+    <button
+      type="button"
+      className={`wk-step-check-btn ${isDone ? "is-done" : ""}`}
+      onClick={toggle}
+    >
+      {isDone ? "✓ Step Completed" : "○ Mark Step Done"}
+    </button>
+  );
+}
 
 export function ArticleActionButtons({ title }) {
   const [shareMsg, setShareMsg] = useState(null);

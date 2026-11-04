@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { listArticles, listCategories } from "../../../lib/queries";
+import { getCatIcon } from "../../../lib/cat-icons";
 
 export const dynamic = "force-dynamic";
 export const metadata = { title: "All How-Tos" };
@@ -65,7 +66,7 @@ export default async function AllHowTosPage({ searchParams }) {
               </button>
             </form>
             <Link href="/random" className="btn btn-outline btn-sm">
-              🎲 Surprise me
+              Surprise me
             </Link>
           </div>
         </div>
@@ -77,8 +78,14 @@ export default async function AllHowTosPage({ searchParams }) {
               className="panel"
               style={{ marginBottom: 0 }}
             >
-              <h3 style={{ marginBottom: 12 }}>
-                <span style={{ marginRight: 8 }}>{category.emoji}</span>
+              <h3 style={{ marginBottom: 12, display: "flex", alignItems: "center", gap: 10 }}>
+                <span className="wk-cat-emoji" style={{ width: 38, height: 38 }}>
+                  <img
+                    src={getCatIcon(category.slug)}
+                    alt={category.name}
+                    className="wk-cat-icon-img"
+                  />
+                </span>
                 <Link href={`/category/${category.slug}`}>{category.name}</Link>
                 <span
                   style={{

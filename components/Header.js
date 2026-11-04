@@ -2,13 +2,12 @@ import Link from "next/link";
 import CategoryBar from "./CategoryBar";
 import ExploreMenu from "./ExploreMenu";
 import LoginMenu from "./LoginMenu";
+import SearchAutocomplete from "./SearchAutocomplete";
 
 const ICONS = {
   quizzes: (
     <svg
       viewBox="0 0 24 24"
-      aria-hidden="true"
-      focusable="false"
       aria-hidden="true"
       focusable="false"
       fill="none"
@@ -21,45 +20,9 @@ const ICONS = {
       <path d="M2 20.5h20" />
     </svg>
   ),
-  explore: (
-    <svg
-      viewBox="0 0 24 24"
-      aria-hidden="true"
-      focusable="false"
-      aria-hidden="true"
-      focusable="false"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.9"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <circle cx="12" cy="12" r="9" />
-      <path d="M15.5 8.5l-2 5-5 2 2-5z" />
-    </svg>
-  ),
-  login: (
-    <svg
-      viewBox="0 0 24 24"
-      aria-hidden="true"
-      focusable="false"
-      aria-hidden="true"
-      focusable="false"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.9"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <circle cx="12" cy="8" r="4" />
-      <path d="M4.5 20.5c1.6-3.7 4.3-5.5 7.5-5.5s5.9 1.8 7.5 5.5" />
-    </svg>
-  ),
   random: (
     <svg
       viewBox="0 0 24 24"
-      aria-hidden="true"
-      focusable="false"
       aria-hidden="true"
       focusable="false"
       fill="none"
@@ -93,27 +56,14 @@ export default function Header({ categories = [], allCategories = [] }) {
           </span>
         </Link>
 
-        <form
-          className="wk-header-search"
-          action="/search"
-          method="get"
-          role="search"
-        >
-          <input
-            type="search"
-            name="q"
-            placeholder="Search how-to guides"
-            aria-label="Search how-to guides"
-          />
-          <button type="submit">Search</button>
-        </form>
+        <SearchAutocomplete variant="header" placeholder="Search how-to guides" />
 
         <nav className="wk-actions" aria-label="Site">
-          <Link href="/admin/login" className="wk-pro wk-hide-sm">
+          <Link href="/quizzes" className="wk-pro wk-hide-sm">
             <span className="wk-pro-text">PRO</span>
             <span className="wk-pro-bolt">⚡</span>
           </Link>
-          <Link href="/categories" className="wk-action wk-action-quizzes wk-hide-md">
+          <Link href="/quizzes" className="wk-action wk-action-quizzes wk-hide-md">
             <span className="wk-action-icon">{ICONS.quizzes}</span>
             <span className="wk-action-label">Quizzes</span>
           </Link>
