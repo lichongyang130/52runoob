@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 
 function UserTriggerIcon() {
@@ -17,17 +16,6 @@ function UserTriggerIcon() {
     >
       <circle cx="12" cy="8" r="4" />
       <path d="M4.5 20.5c1.6-3.7 4.3-5.5 7.5-5.5s5.9 1.8 7.5 5.5" />
-    </svg>
-  );
-}
-
-function FacebookIcon() {
-  return (
-    <svg viewBox="0 0 36 36" width="28" height="28" aria-hidden="true">
-      <path
-        fill="#3b5998"
-        d="M21.5 34V20.8h4.4l.7-5.1h-5.1v-3.3c0-1.5.4-2.5 2.5-2.5h2.7V5.3c-.5-.1-2.1-.2-3.9-.2-3.9 0-6.5 2.4-6.5 6.7v3.9h-4.4v5.1h4.4V34h5.2z"
-      />
     </svg>
   );
 }
@@ -55,13 +43,23 @@ function GoogleIcon() {
   );
 }
 
-function AccountAvatarIcon() {
+function GitHubIcon() {
+  return (
+    <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+      <path
+        fill="#24292f"
+        d="M12 1.5a10.5 10.5 0 0 0-3.32 20.46c.53.1.72-.23.72-.5v-1.8c-2.93.64-3.55-1.24-3.55-1.24-.48-1.2-1.17-1.53-1.17-1.53-.96-.65.07-.64.07-.64 1.06.08 1.62 1.09 1.62 1.09.94 1.61 2.47 1.15 3.07.88.1-.68.37-1.15.67-1.41-2.34-.27-4.8-1.17-4.8-5.2 0-1.15.41-2.09 1.08-2.83-.11-.27-.47-1.35.1-2.8 0 0 .89-.29 2.9 1.08a10.1 10.1 0 0 1 5.28 0c2.01-1.37 2.9-1.08 2.9-1.08.57 1.45.21 2.53.1 2.8.67.74 1.08 1.68 1.08 2.83 0 4.04-2.47 4.93-4.82 5.19.38.33.72.97.72 1.96v2.9c0 .28.19.61.73.5A10.5 10.5 0 0 0 12 1.5z"
+      />
+    </svg>
+  );
+}
+
+function FacebookIcon() {
   return (
     <svg viewBox="0 0 36 36" width="28" height="28" aria-hidden="true">
-      <circle cx="18" cy="12.5" r="5.8" fill="#93b874" />
       <path
-        d="M7.5 31c1.2-6.2 5.1-9.8 10.5-9.8S27.3 24.8 28.5 31H7.5z"
-        fill="#93b874"
+        fill="#3b5998"
+        d="M21.5 34V20.8h4.4l.7-5.1h-5.1v-3.3c0-1.5.4-2.5 2.5-2.5h2.7V5.3c-.5-.1-2.1-.2-3.9-.2-3.9 0-6.5 2.4-6.5 6.7v3.9h-4.4v5.1h4.4V34h5.2z"
       />
     </svg>
   );
@@ -109,27 +107,27 @@ export default function LoginMenu() {
 
   useEffect(() => () => clearTimer(), []);
 
-  const closeMenu = () => setOpen(false);
-
   return (
     <div
       className="wk-login-wrap wk-hide-sm"
       ref={wrapRef}
       onMouseEnter={show}
       onMouseLeave={scheduleHide}
-      onFocus={show}
     >
-      <Link
-        href="/admin/login"
+      <span
         className={`wk-action wk-action-login ${open ? "is-open" : ""}`}
         aria-haspopup="dialog"
         aria-expanded={open}
+        onClick={(e) => {
+          e.preventDefault();
+          e.stopPropagation();
+        }}
       >
         <span className="wk-action-icon">
           <UserTriggerIcon />
         </span>
         <span className="wk-action-label">Log in</span>
-      </Link>
+      </span>
 
       <div
         className={`wk-login-dropdown ${open ? "is-open" : ""}`}
@@ -140,45 +138,38 @@ export default function LoginMenu() {
         <div className="wk-login-title">Log in</div>
 
         <div className="wk-login-btns">
-          <Link
-            href="/admin/login?provider=facebook"
-            className="wk-login-btn wk-login-btn-fb"
-            onClick={closeMenu}
-          >
-            <span className="wk-login-btn-icon">
-              <FacebookIcon />
-            </span>
-            <span className="wk-login-btn-text">Facebook</span>
-          </Link>
-
-          <Link
-            href="/admin/login?provider=google"
+          <button
+            type="button"
             className="wk-login-btn wk-login-btn-google"
-            onClick={closeMenu}
+            onClick={(e) => e.preventDefault()}
           >
             <span className="wk-login-btn-icon">
               <GoogleIcon />
             </span>
             <span className="wk-login-btn-text">Google</span>
-          </Link>
+          </button>
 
-          <Link
-            href="/admin/login"
-            className="wk-login-btn wk-login-btn-account"
-            onClick={closeMenu}
+          <button
+            type="button"
+            className="wk-login-btn wk-login-btn-github"
+            onClick={(e) => e.preventDefault()}
           >
             <span className="wk-login-btn-icon">
-              <AccountAvatarIcon />
+              <GitHubIcon />
             </span>
-            <span className="wk-login-btn-text">Howcompass Account</span>
-          </Link>
-        </div>
+            <span className="wk-login-btn-text">GitHub</span>
+          </button>
 
-        <div className="wk-login-footer">
-          No account yet?{" "}
-          <Link href="/admin/login?mode=signup" onClick={closeMenu}>
-            Create an account
-          </Link>
+          <button
+            type="button"
+            className="wk-login-btn wk-login-btn-fb"
+            onClick={(e) => e.preventDefault()}
+          >
+            <span className="wk-login-btn-icon">
+              <FacebookIcon />
+            </span>
+            <span className="wk-login-btn-text">Facebook</span>
+          </button>
         </div>
       </div>
     </div>

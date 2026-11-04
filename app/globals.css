@@ -3049,13 +3049,20 @@ p { margin: 0 0 1em; }
   gap: 10px;
 }
 
+.wk-action-login {
+  cursor: default;
+  user-select: none;
+}
+
 .wk-login-btn {
   display: flex;
   align-items: center;
   width: 100%;
   height: 46px;
   padding: 5px;
+  border: 0;
   border-radius: 5px;
+  cursor: pointer;
   text-decoration: none !important;
   color: #ffffff !important;
   font-family: var(--font-body);
@@ -3076,6 +3083,10 @@ p { margin: 0 0 1em; }
 
 .wk-login-btn-google {
   background: #4285f4;
+}
+
+.wk-login-btn-github {
+  background: #24292f;
 }
 
 .wk-login-btn-account {
