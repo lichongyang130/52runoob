@@ -973,35 +973,100 @@ const ACCENTS = [
   PALETTE.sand,
 ];
 
+const KEYWORD_OIL_MAP = {
+  carbonara: "/img/thumbs/cat/food-01.jpg",
+  pasta: "/img/thumbs/cat/food-02.jpg",
+  soup: "/img/thumbs/cat/food-03.jpg",
+  salad: "/img/thumbs/cat/food-04.jpg",
+  cookies: "/img/thumbs/cat/food-05.jpg",
+  bread: "/img/steps/Bake-Bread-at-Home/21.jpg",
+  cake: "/img/thumbs/cat/food-06.jpg",
+  pie: "/img/thumbs/cat/food-07.jpg",
+  egg: "/img/thumbs/cat/food-08.jpg",
+  coffee: "/img/thumbs/cat/food-09.jpg",
+  tea: "/img/thumbs/cat/food-10.jpg",
+  tomatoes: "/img/steps/Keep-Houseplants-Alive/01.jpg",
+  plant: "/img/steps/Keep-Houseplants-Alive/02.jpg",
+  garden: "/img/categories/home-hero.jpg",
+  flower: "/img/steps/Keep-Houseplants-Alive/14.jpg",
+  tree: "/img/steps/Keep-Houseplants-Alive/25.jpg",
+  guitar: "/img/categories/topic-music.jpg",
+  music: "/img/categories/topic-music.jpg",
+  piano: "/img/categories/topic-music.jpg",
+  watercolor: "/img/categories/topic-artwork.jpg",
+  art: "/img/categories/arts-hero.jpg",
+  paint: "/img/categories/topic-artwork.jpg",
+  draw: "/img/steps/Learn-to-Draw-for-Beginners/01.jpg",
+  puppy: "/img/categories/pets-hero.jpg",
+  dog: "/img/categories/pets-hero.jpg",
+  cat: "/img/thumbs/cat/pets-02.jpg",
+  bird: "/img/thumbs/cat/pets-03.jpg",
+  fish: "/img/thumbs/cat/pets-04.jpg",
+  resume: "/img/categories/work-hero.jpg",
+  job: "/img/categories/work-hero.jpg",
+  work: "/img/categories/work-hero.jpg",
+  tie: "/img/categories/style-hero.jpg",
+  money: "/img/categories/finance-hero.jpg",
+  camera: "/img/categories/topic-photography.jpg",
+  stretch: "/img/categories/health-hero.jpg",
+  run: "/img/categories/sports-hero.jpg",
+  trophy: "/img/categories/sports-hero.jpg",
+  laptop: "/img/steps/Speed-Up-a-Slow-Laptop/01.jpg",
+  phone: "/img/steps/Speed-Up-a-Slow-Laptop/05.jpg",
+  code: "/img/steps/Speed-Up-a-Slow-Laptop/11.jpg",
+  wifi: "/img/categories/computers-hero.jpg",
+  books: "/img/categories/topic-books.jpg",
+  book: "/img/thumbs/reading.jpg",
+  heart: "/img/categories/relationships-hero.jpg",
+  star: "/img/categories/holidays-hero.jpg",
+  smile: "/img/categories/family-hero.jpg",
+  user: "/img/categories/youth-hero.jpg",
+  craft: "/img/categories/crafts-hero.jpg",
+  puzzle: "/img/categories/games-hero.jpg",
+  target: "/img/thumbs/darts.jpg",
+  wood: "/img/categories/topic-crafts.jpg",
+  sew: "/img/categories/style-hero.jpg",
+  globe: "/img/categories/travel-hero.jpg",
+  paw: "/img/categories/pets-hero.jpg",
+  idea: "/img/categories/philosophy-hero.jpg",
+};
+
 export function Illustration({ name = "idea", className = "", ratio, style }) {
-  if (typeof name === "string" && name.startsWith("/")) {
-    return (
-      <span className={`illus-wrap ${className}`} style={style}>
-        <img
-          src={name}
-          alt=""
-          className="illus"
-          style={{ aspectRatio: ratio || "4 / 3", objectFit: "cover", width: "100%", display: "block" }}
-          loading="lazy"
-        />
-      </span>
-    );
-  }
-  const Scene = SCENES[name] || SCENES.idea;
+  const resolvedSrc =
+    typeof name === "string" && name.startsWith("/")
+      ? name
+      : KEYWORD_OIL_MAP[name] || "/img/categories/travel-hero.jpg";
+
   return (
     <span className={`illus-wrap ${className}`} style={style}>
-      <Scene ratio={ratio} bg={ACCENTS[(name || "").length % ACCENTS.length]} />
+      <img
+        src={resolvedSrc}
+        alt=""
+        className="illus"
+        style={{ aspectRatio: ratio || "4 / 3", objectFit: "cover", width: "100%", display: "block" }}
+        loading="lazy"
+      />
     </span>
   );
 }
 
-/* Step illustrations reuse the article scene with a rotating tint + badge,
-   the way Howcompass steps each get their own art panel. */
+/* Step illustrations reuse the golden-hour oil painting bank with a step badge. */
 export function StepIllustration({ name = "idea", index = 0, className = "" }) {
-  const Scene = SCENES[name] || SCENES.idea;
+  const num = String((index % 20) + 1).padStart(2, "0");
+  const resolvedSrc =
+    typeof name === "string" && name.startsWith("/")
+      ? name
+      : `/img/thumbs/cat/arts-${num}.jpg`;
+
   return (
     <span className={`illus-wrap step-illus ${className}`}>
-      <Scene bg={ACCENTS[index % ACCENTS.length]} ratio="1 / 1" />
+      <img
+        src={resolvedSrc}
+        alt=""
+        className="illus"
+        style={{ aspectRatio: "1 / 1", objectFit: "cover", width: "100%", display: "block" }}
+        loading="lazy"
+      />
       <span className="step-illus-badge">{index + 1}</span>
     </span>
   );

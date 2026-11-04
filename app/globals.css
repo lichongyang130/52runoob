@@ -3126,7 +3126,7 @@ p { margin: 0 0 1em; }
 }
 
 .wk-login-footer a {
-  color: #3f6f29;
+  color: #8c5222;
   font-weight: 700;
   text-decoration: none;
 }
@@ -3134,4 +3134,548 @@ p { margin: 0 0 1em; }
 .wk-login-footer a:hover {
   text-decoration: underline;
 }
+
+/* ============================================================================
+   SCHEME A: European Museum Parchment & Golden-Hour Warm Linen Theme
+   Harmonized with the golden-hour impasto European oil paintings
+   ============================================================================ */
+:root {
+  --green: #9e622d;
+  --wikigreen: #9e622d;
+  --green-dark: #7a481c;
+  --green-light: #c88a3e;
+  --wk-green: #3a2b22;
+  --wk-green-dark: #281d16;
+  --wk-green-soft: #c88a3e;
+  --wk-hero-bg: #f1e7d5;
+  --wk-text: #2e241d;
+  --wk-badge: #c0602b;
+  --navy: #2e241d;
+  --navy-dark: #1f1813;
+  --ink: #2c221b;
+  --ink-soft: #5c4b3e;
+  --muted: #7d6b5c;
+  --line: #e4d9c5;
+  --line-strong: #d4c4aa;
+  --bg: #f6efe2;
+  --bg-soft: #efe5d3;
+  --bg-warm: #fbf7f0;
+  --parchment-page: #f4ecdd;
+  --parchment-card: #fcf9f2;
+  --parchment-tint: #efe4d0;
+  --parchment-border: #e2d5be;
+  --amber-gold: #c88a3e;
+  --terracotta-ink: #8c5222;
+  --walnut-header: #31241c;
+}
+
+body {
+  background: radial-gradient(circle at 50% 0%, #faf4e8 0%, #f3ead8 55%, #ede1cb 100%);
+  color: var(--ink);
+}
+
+a {
+  color: #8c5222;
+}
+a:hover {
+  color: #633712;
+}
+
+h1, h2, h3, h4 {
+  color: #2b2018;
+}
+
+::selection {
+  background: #ebd5b3;
+  color: #2b1f17;
+}
+
+/* --- Top Header & Category Bar in Warm Walnut & Amber Gold --- */
+.wk-header {
+  background: linear-gradient(180deg, #35271e 0%, #2a1e17 100%);
+  border-bottom: 1px solid #4a372b;
+  box-shadow: 0 3px 16px rgba(32, 20, 10, 0.22);
+}
+.wk-logo-mark {
+  background: linear-gradient(145deg, #d89b4c, #a86428);
+  box-shadow: inset 0 1px 0 rgba(255, 240, 210, 0.35), 0 2px 6px rgba(0, 0, 0, 0.25);
+}
+.wk-logo-word {
+  color: #fbf5ea;
+}
+.wk-logo-word span {
+  color: #e4a858;
+}
+.wk-header-search input {
+  border-bottom-color: rgba(245, 228, 200, 0.65);
+  color: #fdf8ef;
+}
+.wk-header-search input::placeholder {
+  color: rgba(245, 228, 200, 0.72);
+}
+.wk-header-search button {
+  background: linear-gradient(145deg, #cf8e3e, #ab6826);
+  color: #fffaf0;
+  border: 1px solid rgba(255, 232, 195, 0.28);
+  box-shadow: 0 2px 6px rgba(20, 12, 6, 0.25);
+}
+.wk-header-search button:hover {
+  background: linear-gradient(145deg, #dc9b49, #b8722d);
+}
+.wk-action {
+  color: #f6ecdc;
+}
+.wk-pro {
+  background: #fcf6eb;
+  border: 1px solid #e5cfb0;
+}
+.wk-pro-text {
+  color: #a85522;
+}
+.wk-pro-bolt {
+  color: #d98829;
+}
+
+.wk-catbar {
+  background: #f8f2e6;
+  border-bottom: 1px solid #e2d4bc;
+}
+.wk-catbar-inner a {
+  color: #5a483a;
+}
+.wk-catbar-inner a:hover,
+.wk-catbar-inner a.active {
+  color: #8c5222;
+  border-bottom-color: #c88a3e;
+}
+.wk-catbar-home {
+  color: #2b2018 !important;
+}
+
+/* --- Explore Mega Menu & Login Dropdown on Warm Parchment --- */
+.wk-explore-inner {
+  background: #fbf7ef;
+  border-top: 1px solid #e2d5be;
+  box-shadow: 0 18px 36px rgba(45, 30, 15, 0.22);
+}
+.wk-ex-top a,
+.wk-ex-cat,
+.wk-ex-bottom a {
+  color: #8c5222;
+}
+.wk-ex-top a:hover,
+.wk-ex-cat:hover,
+.wk-ex-bottom a:hover {
+  color: #5e3310;
+}
+.wk-ex-mid {
+  border-top-color: #e4d8c3;
+  border-bottom-color: #e4d8c3;
+}
+.wk-ex-mid li a {
+  color: #5c4b3e;
+}
+.wk-ex-mid li a:hover {
+  color: #8c5222;
+}
+.wk-login-dropdown {
+  background: #fcf8f0;
+  border-color: #dfd1b8;
+  box-shadow: 0 14px 34px rgba(42, 28, 14, 0.24);
+}
+.wk-login-title {
+  color: #2c2119;
+}
+.wk-login-btn-account {
+  background: #b67332;
+}
+
+/* --- Homepage Background, Hero & Museum-Framed Painting --- */
+.wk-home {
+  background: transparent;
+}
+.wk-hero {
+  background: linear-gradient(180deg, #efe4cf 0%, #f6efe1 100%);
+  border-bottom: 1px solid #e2d4bc;
+  padding: 38px 0 26px;
+}
+.wk-hero-copy h1 {
+  color: #2c2017;
+}
+.wk-hero-sub {
+  color: #5a4738;
+}
+.wk-hero-search {
+  background: #fdfaf3;
+  border: 2px solid #c28238;
+  box-shadow: 0 4px 16px rgba(70, 45, 20, 0.1);
+}
+.wk-hero-search button {
+  background: linear-gradient(145deg, #c8873b, #9e5f23);
+  color: #fffdf8;
+}
+.wk-hero-search button:hover {
+  background: linear-gradient(145deg, #d49243, #ad6929);
+}
+.wk-dice {
+  color: #6b4e35;
+}
+.wk-dice:hover {
+  color: #9e5f23;
+}
+
+/* Museum matboard frame around the Homepage Hero Oil Painting */
+.wk-hero-painting-frame {
+  max-width: 460px;
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(145deg, #d7b377 0%, #9f7237 50%, #c89f62 100%);
+  border-radius: 12px;
+  box-shadow:
+    0 16px 38px rgba(45, 28, 12, 0.24),
+    inset 0 1px 1px rgba(255, 245, 220, 0.65);
+}
+.wk-hero-painting-mat {
+  background: #fbf6eb;
+  padding: 10px 10px 8px;
+  border-radius: 7px;
+  border: 1px solid #dfd0b6;
+  box-shadow: inset 0 2px 6px rgba(60, 40, 20, 0.12);
+}
+.wk-hero-painting-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(35, 20, 10, 0.18);
+}
+.wk-hero-painting-caption {
+  display: block;
+  text-align: center;
+  margin-top: 7px;
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #785c43;
+}
+
+/* --- Homepage Sections & Cards on Warm Parchment --- */
+.wk-section {
+  background: transparent;
+}
+.wk-section-tint {
+  background: #efe5d3;
+  border-top: 1px solid #e1d3ba;
+  border-bottom: 1px solid #e1d3ba;
+}
+.wk-section-head h2 {
+  color: #2c2017;
+}
+.wk-more {
+  color: #8c5222;
+}
+.wk-more:hover {
+  color: #5e3310;
+}
+
+.wk-trend-card,
+.wk-feature-main,
+.wk-cat-card,
+.wk-latest-card,
+.mini-card {
+  background: #fcf9f2;
+  border-color: #e2d5be;
+  box-shadow: 0 3px 12px rgba(55, 36, 16, 0.06);
+}
+.wk-trend-card:hover,
+.wk-feature-main:hover,
+.wk-cat-card:hover,
+.wk-latest-card:hover,
+.mini-card:hover {
+  border-color: #c88a3e;
+  box-shadow: 0 8px 24px rgba(55, 36, 16, 0.14);
+}
+.wk-trend-art,
+.wk-step-media,
+.wk-overview-media,
+.wk-feattopic-banner-art,
+.wk-cattile-art {
+  background: #eadec9;
+}
+.wk-trend-body h3,
+.wk-feature-body h3,
+.wk-cat-text strong,
+.wk-latest-card h3 {
+  color: #2b2018;
+}
+.wk-kicker {
+  color: #7d6752;
+}
+.wk-pill {
+  background: #efe2cb;
+  color: #8c5222;
+}
+.wk-pill-float {
+  background: rgba(252, 248, 240, 0.94);
+}
+.wk-cta {
+  background: linear-gradient(180deg, #ecdfca 0%, #e5d5bb 100%);
+  border-top: 1px solid #d8c5a6;
+}
+.wk-cta h2 {
+  color: #2c2017;
+}
+.wk-cta p {
+  color: #5a4738;
+}
+.wk-btn-solid {
+  background: linear-gradient(145deg, #c28035, #96581f);
+  color: #fffdf9;
+}
+.wk-btn-solid:hover {
+  background: linear-gradient(145deg, #cf8c3e, #a66325);
+}
+.wk-btn-ghost {
+  background: #fcf8f0;
+  color: #3a2b20;
+  border-color: #d4c0a1;
+}
+.wk-btn-ghost:hover {
+  border-color: #b87832;
+  color: #7a4416;
+}
+
+/* --- Article Detail Page (.wk-article-page) in Museum Parchment --- */
+.wk-article-page,
+.wk-catpage,
+.wk-pcat-page {
+  background: radial-gradient(circle at 50% 0%, #f9f3e6 0%, #f3ead8 55%, #ece0c9 100%);
+  color: #2b2119;
+}
+.wk-trust-bar {
+  background: #eadcc5;
+  border-bottom: 1px solid #d8c6a8;
+  color: #4a3828;
+}
+.wk-trust-icon {
+  background: #9e622d;
+}
+.wk-trust-inner a {
+  color: #7a4416;
+}
+
+.wk-card,
+.wk-side-card {
+  background: #fcf9f2 !important;
+  border: 1px solid #e1d3bb !important;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(55, 36, 16, 0.07);
+}
+.wk-breadcrumbs,
+.wk-breadcrumbs a,
+.wk-cat-crumbs,
+.wk-cat-crumbs a {
+  color: #8c5222;
+}
+.wk-article-title,
+.wk-cat-h1,
+.wk-pcat-lead h2,
+.wk-pcat-sec-title {
+  color: #281d15;
+}
+.wk-article-sub {
+  color: #695645;
+}
+.wk-byline-author,
+.wk-fact-link,
+.wk-jump-item a,
+.wk-inline-link,
+.wk-cite a,
+.wk-cite-inline a {
+  color: #8c5222;
+}
+.wk-byline-author:hover,
+.wk-jump-item a:hover,
+.wk-inline-link:hover {
+  color: #5e3310;
+}
+.wk-act-pdf,
+.wk-method-pdf {
+  background: linear-gradient(145deg, #b8732f, #8f5219);
+  border-color: #7c4513;
+  color: #fffdf9;
+}
+.wk-act-pdf:hover,
+.wk-method-pdf:hover {
+  background: linear-gradient(145deg, #c67f37, #9e5c1e);
+}
+.wk-act-outline {
+  background: #faf5ea;
+  border-color: #d8c7ac;
+  color: #3d2e22;
+}
+.wk-act-outline:hover {
+  background: #f2e8d5;
+  border-color: #c2a982;
+}
+
+/* Overview & Step Cards: Warm Matboard Framing around Oil Paintings */
+.wk-overview-header {
+  background: #f7efe0;
+  border-bottom: 1px solid #e2d4bc;
+}
+.wk-overview-header h2,
+.wk-method-heading {
+  color: #2a1f17;
+}
+.wk-method-bar {
+  background: #f7efe0;
+  border-bottom: 1px solid #e2d4bc;
+}
+.wk-method-badge {
+  background: linear-gradient(160deg, #b8732f 0%, #8c4f19 100%);
+  color: #fffaf0;
+}
+.wk-step-item {
+  border-bottom: 1px solid #e6dac4;
+}
+.wk-step-media {
+  background: #efe4d0;
+  padding: 12px 12px 0;
+  border-bottom: 1px solid #e4d7c0;
+}
+.wk-step-media img {
+  border-radius: 6px;
+  border: 1px solid #d8c6a9;
+  box-shadow: 0 4px 14px rgba(45, 28, 12, 0.12);
+}
+.wk-watermark {
+  right: 18px;
+  bottom: 8px;
+  background: rgba(48, 33, 22, 0.78);
+  border-radius: 4px;
+}
+.wk-step-num {
+  color: #9e622d;
+}
+.wk-step-p,
+.wk-step-bullets li,
+.wk-bullet-list li,
+.wk-intro-p {
+  color: #2f241c;
+}
+.wk-step-lead {
+  color: #1f1610;
+}
+.wk-cite-check,
+.wk-qa-avatar {
+  background: #9e622d;
+}
+.wk-section-bar {
+  background: linear-gradient(90deg, #8f5624 0%, #b57638 100%);
+}
+.wk-warn-card .wk-section-bar {
+  background: linear-gradient(90deg, #a84224 0%, #c95b38 100%);
+}
+.wk-qa-q {
+  color: #8c5222;
+}
+.wk-helpful-card {
+  background: #f5ebd8 !important;
+}
+.wk-related-tile {
+  background: #faf5ea;
+  border-color: #dfd1b8;
+}
+.wk-related-tile:hover {
+  border-color: #c88a3e;
+}
+
+/* --- Category & Topic Pages on Warm Parchment --- */
+.wk-feattopic-banner,
+.wk-cattile {
+  background: #fcf9f2;
+  border-color: #dfd1b8;
+  box-shadow: 0 3px 10px rgba(50, 32, 14, 0.06);
+}
+.wk-feattopic-banner:hover,
+.wk-cattile:hover {
+  border-color: #c88a3e;
+  box-shadow: 0 6px 18px rgba(50, 32, 14, 0.14);
+}
+.wk-cattile:hover .wk-cattile-title {
+  color: #8c5222;
+}
+.wk-reltopic-parent {
+  color: #7a4416;
+}
+.wk-reltopic-pill {
+  background: #f3ead8;
+  border-color: #dfd0b5;
+  color: #4d3a2a;
+}
+.wk-reltopic-pill:hover {
+  background: #e8d8bc;
+  border-color: #c49a62;
+  color: #2b1e14;
+}
+.wk-cat-newsletter {
+  background: #f3e8d4 !important;
+  border-color: #dcc9a9 !important;
+}
+.wk-cat-nl-form button,
+.wk-mission-btn {
+  background: linear-gradient(145deg, #b8732f, #8f5219);
+}
+.wk-cat-nl-form button:hover,
+.wk-mission-btn:hover {
+  background: linear-gradient(145deg, #c8823b, #9e5d21);
+}
+.wk-pager-btn {
+  background: #fcf9f2;
+  border-color: #d8c8ae;
+  color: #3a2b20;
+}
+.wk-pager-btn:hover,
+.wk-pager-nums a:hover {
+  border-color: #b8732f;
+  color: #8c5222;
+  background: #f6ecdc;
+}
+.wk-pager-nums a.is-active {
+  background: #9e622d;
+  border-color: #9e622d;
+}
+.wk-pcat-bottom-grid {
+  border-top-color: #dfd1b8;
+}
+
+/* --- Footer in Deep Warm Walnut --- */
+.site-footer {
+  background: linear-gradient(180deg, #2d2119 0%, #211812 100%) !important;
+  border-top: 2px solid #5a402c !important;
+  color: #e8dccb !important;
+}
+.site-footer h4,
+.site-footer strong {
+  color: #f7ead7 !important;
+}
+.site-footer a {
+  color: #d8c5ac !important;
+}
+.site-footer a:hover {
+  color: #f0b365 !important;
+}
+.to-top {
+  background: #fcf8f0;
+  border-color: #d9c5a3;
+  color: #8c5222;
+}
+.to-top:hover {
+  background: #f2e5ce;
+}
+
 
