@@ -1705,15 +1705,25 @@ p { margin: 0 0 1em; }
 .wk-step-prose {
   min-width: 0;
 }
+.wk-step-heading {
+  font-family: var(--font-body);
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1.38;
+  color: #1a1a1a;
+  margin: 0 0 8px;
+}
 .wk-step-p {
   font-size: 15.5px;
   line-height: 1.64;
   color: #2b2b2b;
   margin: 0;
 }
-.wk-step-lead {
-  font-weight: 800;
-  color: #1a1a1a;
+.wk-link-arrow {
+  display: inline-block;
+  font-size: 0.82em;
+  margin-left: 3px;
+  text-decoration: none;
 }
 .wk-cite {
   font-size: 11px;
@@ -3607,7 +3617,7 @@ h1, h2, h3, h4 {
 .wk-intro-p {
   color: #2f241c;
 }
-.wk-step-lead {
+.wk-step-heading {
   color: #1f1610;
 }
 .wk-cite-check,

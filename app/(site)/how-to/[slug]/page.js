@@ -51,7 +51,47 @@ function lowerFirst(str = "") {
 }
 
 /**
- * Splits a step's text into a bold imperative lead sentence, main body explanation,
+ * Render the small Markdown-link subset used by guide content. Only root-relative
+ * and HTTP(S) destinations are accepted; all other text remains plain text.
+ */
+function renderInlineLinks(text) {
+  const value = String(text || "");
+  const linkPattern = /(\[[^\]]+\]\((?:https?:\/\/|\/)[^)\s]+\))/g;
+
+  return value.split(linkPattern).map((part, index) => {
+    const match = part.match(
+      /^\[([^\]]+)\]\((https?:\/\/[^)\s]+|\/[^)\s]+)\)$/,
+    );
+    if (!match) return part;
+
+    const [, label, href] = match;
+    if (href.startsWith("/")) {
+      return (
+        <Link href={href} className="wk-inline-link" key={`link-${index}`}>
+          {label}
+        </Link>
+      );
+    }
+
+    return (
+      <a
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="wk-inline-link wk-external-link"
+        key={`link-${index}`}
+      >
+        {label}
+        <span className="wk-link-arrow" aria-hidden="true">
+          ↗
+        </span>
+      </a>
+    );
+  });
+}
+
+/**
+ * Splits a step's text into an H3 imperative heading, main body explanation,
  * and 2 practical sub-bullets so every step matches the wikiHow step layout.
  */
 function parseStepParts(step, stepNumber, methodTitle, article) {
@@ -262,7 +302,7 @@ export default async function ArticlePage({ params }) {
 
             {/* Intro Paragraph with inline links to methods */}
             <p className="wk-intro-p">
-              {article.intro || article.summary}{" "}
+              {renderInlineLinks(article.intro || article.summary)}{" "}
               {article.methods.length > 1 ? (
                 <>
                   Whether you are starting with{" "}
@@ -379,9 +419,11 @@ export default async function ArticlePage({ params }) {
                           {n}
                         </div>
                         <div className="wk-step-prose">
+                          <h3 className="wk-step-heading">
+                            {renderInlineLinks(lead)}
+                          </h3>
                           <p className="wk-step-p">
-                            <strong className="wk-step-lead">{lead}</strong>{" "}
-                            {body}
+                            {renderInlineLinks(body)}
                             {refIdx ? (
                               <sup className="wk-cite">
                                 <a
@@ -398,7 +440,7 @@ export default async function ArticlePage({ params }) {
                             <ul className="wk-step-bullets">
                               {bullets.map((b, bi) => (
                                 <li key={bi}>
-                                  {b}
+                                  {renderInlineLinks(b)}
                                   {bi === bullets.length - 1 && refIdx ? (
                                     <span className="wk-cite-inline">
                                       <a href="#references">
